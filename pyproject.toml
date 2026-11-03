@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "horoi"
+version = "0.1.0"
+description = "Publish an OWL ontology as a documentation page with a diagram."
+readme = "README.md"
+license = "Apache-2.0"
+license-files = ["LICENSE", "NOTICE"]
+requires-python = ">=3.10"
+dependencies = ["rdflib>=7.0"]
+
+[project.scripts]
+horoi = "horoi.cli:main"
+
+[tool.setuptools]
+packages = ["horoi"]

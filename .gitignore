@@ -1,0 +1,10 @@
+decision-log.md
+
+# Build output and local environments
+dist/
+.venv/
+__pycache__/
+*.egg-info/
+
+# Local task list
+TODO.md

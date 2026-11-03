@@ -1,0 +1,26 @@
+@prefix do:      <https://w3id.org/do#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex:      <https://example.org/> .
+
+ex:D2 a do:Decision ;
+    dcterms:title "Keep the handbook in Markdown" ;
+    dcterms:date "2026-03-02"^^xsd:date ;
+    do:inContext ex:handbook ;
+    do:attributedTo ex:alice ;
+    do:hasOption ex:D2-a, ex:D2-b ;
+    do:chooses ex:D2-a ;
+    do:hasArgument "Everyone already edits Markdown, and the graph is generated from it." ;
+    do:hasPremise ex:D1, ex:D2-given ;
+    do:revises ex:D0 .
+
+ex:D2-a a do:Option ;
+    rdfs:label "Markdown, converted to RDF" ;
+    do:attributedTo ex:bob .
+
+ex:D2-b a do:Option ;
+    rdfs:label "RDF, edited directly" ;
+    do:attributedTo ex:alice .
+
+ex:D2-given rdfs:label "The team has no RDF editor" .

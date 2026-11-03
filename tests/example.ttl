@@ -1,0 +1,107 @@
+@prefix do:      <https://w3id.org/do#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf:    <http://xmlns.com/foaf/0.1/> .
+@prefix schema:  <https://schema.org/> .
+@prefix vann:    <http://purl.org/vocab/vann/> .
+
+<https://w3id.org/do> a owl:Ontology ;
+    dcterms:title "Decision ontology"@en ;
+    rdfs:label "Decision ontology"@en ;
+    dcterms:description "An ontology of decisions and their options, premises, contexts and revisions."@en ;
+    rdfs:comment "An ontology of decisions and their options, premises, contexts and revisions."@en ;
+    dcterms:creator <https://velitchkov.eu/#me> ;
+    dcterms:created "2026-08-09"^^xsd:date ;
+    dcterms:modified "2026-11-03"^^xsd:date ;
+    dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
+    vann:preferredNamespacePrefix "do" ;
+    vann:preferredNamespaceUri "https://w3id.org/do#" ;
+    owl:versionInfo "0.2.0" .
+
+do:Communication a owl:Class ;
+    rdfs:label "Communication"@en ;
+    rdfs:comment "An event that synthesises information, utterance and understanding."@en ;
+    rdfs:isDefinedBy <https://w3id.org/do> .
+
+do:Decision a owl:Class ;
+    rdfs:label "Decision"@en ;
+    rdfs:comment "A communication that indicates the possibility it prefers among several."@en ;
+    rdfs:subClassOf do:Communication ;
+    rdfs:isDefinedBy <https://w3id.org/do> .
+
+do:Option a owl:Class ;
+    rdfs:label "Option"@en ;
+    rdfs:comment "A decision that puts a possibility forward for another decision."@en ;
+    rdfs:subClassOf do:Decision ;
+    rdfs:isDefinedBy <https://w3id.org/do> .
+
+do:Context a owl:Class ;
+    rdfs:label "Context"@en ;
+    rdfs:comment "Anything within which a decision is made, e.g. a particular project."@en ;
+    rdfs:isDefinedBy <https://w3id.org/do> .
+
+do:inContext a owl:ObjectProperty ;
+    rdfs:label "in context"@en ;
+    rdfs:comment "Relates a communication to anything within which it is made."@en ;
+    rdfs:domain do:Communication ;
+    rdfs:range do:Context ;
+    rdfs:isDefinedBy <https://w3id.org/do> .
+
+do:attributedTo a owl:ObjectProperty ;
+    rdfs:label "attributed to"@en ;
+    rdfs:comment "Relates a decision to an agent that is taken to have made it."@en ;
+    rdfs:domain do:Decision ;
+    rdfs:range foaf:Agent ;
+    rdfs:isDefinedBy <https://w3id.org/do> .
+
+do:hasOption a owl:ObjectProperty ;
+    rdfs:label "has option"@en ;
+    rdfs:comment "Relates a decision to a nomination made for it."@en ;
+    rdfs:domain do:Decision ;
+    rdfs:range do:Option ;
+    rdfs:isDefinedBy <https://w3id.org/do> .
+
+do:chooses a owl:ObjectProperty ;
+    rdfs:label "chooses"@en ;
+    rdfs:comment "Relates a decision to the option it indicates."@en ;
+    rdfs:subPropertyOf do:hasOption ;
+    rdfs:isDefinedBy <https://w3id.org/do> .
+
+do:hasArgument a owl:DatatypeProperty ;
+    rdfs:label "has argument"@en ;
+    rdfs:comment "Relates a decision to the justification it communicates for the option it indicates."@en ;
+    rdfs:domain do:Decision ;
+    rdfs:isDefinedBy <https://w3id.org/do> .
+
+do:hasPremise a owl:ObjectProperty ;
+    rdfs:label "has premise"@en ;
+    rdfs:comment "Relates a decision to a precondition that it uses without checking it, and that limits it without determining it. One such precondition can be an earlier decision."@en ;
+    rdfs:domain do:Decision ;
+    rdfs:isDefinedBy <https://w3id.org/do> .
+
+do:hasUnconfirmedPremise a owl:ObjectProperty ;
+    rdfs:label "has unconfirmed premise"@en ;
+    rdfs:comment "Relates a decision to a proposed premise of it that is not yet confirmed."@en ;
+    rdfs:domain do:Decision ;
+    rdfs:range do:Decision ;
+    rdfs:isDefinedBy <https://w3id.org/do> .
+
+do:revises a owl:ObjectProperty ;
+    rdfs:label "revises"@en ;
+    rdfs:comment "Relates a decision to an earlier decision that it overturns."@en ;
+    rdfs:domain do:Decision ;
+    rdfs:range do:Decision ;
+    rdfs:isDefinedBy <https://w3id.org/do> .
+
+do:triggeredBy a owl:ObjectProperty ;
+    rdfs:label "triggered by"@en ;
+    rdfs:comment "Relates a decision to an earlier decision that occasioned it."@en ;
+    rdfs:domain do:Decision ;
+    rdfs:range do:Decision ;
+    rdfs:isDefinedBy <https://w3id.org/do> .
+
+<https://velitchkov.eu/#me> schema:name "Ivo Velitchkov"@en .
+
