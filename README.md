@@ -76,7 +76,7 @@ jobs:
       - uses: actions/deploy-pages@v5
 ```
 
-A release tag must match the `owl:versionInfo` of the ontology it holds.
+A release tag must match the `owl:versionInfo` of the ontology.
 
 ## Build from source
 
