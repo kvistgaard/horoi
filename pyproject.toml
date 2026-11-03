@@ -8,7 +8,7 @@ version = "0.1.0"
 description = "Publish an OWL ontology as a documentation page with a diagram."
 readme = "README.md"
 license = "Apache-2.0"
-license-files = ["LICENSE", "NOTICE"]
+license-files = ["LICENSE"]
 requires-python = ">=3.10"
 dependencies = ["rdflib>=7.0"]
 
