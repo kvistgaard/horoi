@@ -107,8 +107,8 @@ class Page:
                 dom = dom if dom is not None else g.value(s, RDFS.domain)
                 rng = rng if rng is not None else g.value(s, RDFS.range)
             rng = rng if rng is not None else ("literal" if datatype else None)
-            rows.append(("Connects", f'{ref(dom)}<span class="arrow">→</span><code>{escape(n)}</code>'
-                                     f'<span class="arrow">→</span>{ref(rng)}'))
+            rows.append(("Connects", f'{ref(dom)}<span class="edge"><span class="arrow">–</span><code>{escape(n)}</code>'
+                                     f'<span class="arrow">→</span></span>{ref(rng)}'))
             if supers:
                 rows.append(("Sub-property of", " ".join(ref(o) for o in supers)))
             subs = sorted(g.subjects(RDFS.subPropertyOf, t), key=str)
@@ -247,7 +247,7 @@ h2 {{ font-size:13px; letter-spacing:2px; text-transform:uppercase; color:var(--
 .chip.any {{ background:var(--code); color:var(--muted); font-style:italic; font-family:var(--sans); }}
 .chip.lit {{ background:var(--code); color:var(--ink); font-family:var(--sans); }}
 .chip.ext {{ background:var(--code); color:var(--muted); }}
-.arrow {{ color:var(--faint); }}
+.edge {{ white-space:nowrap; }} .arrow {{ color:var(--faint); }}
 pre {{ background:var(--code); border:1px solid var(--line); border-radius:6px; padding:16px 18px; overflow:auto;
   font:13.5px/1.6 var(--mono); }}
 pre .k {{ color:var(--faint); }} pre .s {{ color:var(--green); }} pre .t {{ color:var(--blue); font-weight:600; }}
