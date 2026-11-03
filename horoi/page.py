@@ -215,7 +215,7 @@ code {{ font-family:var(--mono); font-size:.9em; }}
 aside {{ position:sticky; top:90px; align-self:start; max-height:calc(100vh - 110px); overflow:auto; }}
 aside input {{ width:100%; padding:8px 11px; border:1px solid var(--line); border-radius:4px; background:var(--panel);
   color:var(--ink); font:14px var(--sans); margin-bottom:14px; }}
-aside a {{ display:block; padding:3px 10px; border-radius:4px; color:var(--muted); font:13.5px var(--mono); }}
+aside a {{ display:block; padding:3px 10px; border-radius:4px; color:var(--muted); font:13.5px var(--sans); }}
 aside a:hover {{ background:var(--accent-soft); color:var(--accent); text-decoration:none; }}
 .navh {{ margin:14px 0 4px; font:700 11px var(--sans); letter-spacing:1.6px; text-transform:uppercase; color:var(--faint); }}
 main section {{ margin-bottom:56px; }}
