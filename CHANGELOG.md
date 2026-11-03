@@ -10,10 +10,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 
 - The sidebar now lists terms by their labels, with each term's CURIE on hover
+- A property's **Connects** row now shows one arrow, with the property's name on it
 
 ### Fixed
 
 - In dark mode, the prefix badge beside the title now matches the favicon's colour
+- The sidebar labels now use the page's text font
+- Hovering **any resource** now says that no range or domain is declared
 
 ## [0.1.0] – 2026-11-03
 

@@ -60,9 +60,9 @@ class Page:
         self.g = g
         self.ns, self.prefix = namespace(g)
 
-    def ref(self, iri):
+    def ref(self, iri, missing="range"):
         if iri is None:
-            return '<span class="chip any">any resource</span>'
+            return f'<span class="chip any" title="No {missing} declared.">any resource</span>'
         if iri == "literal":
             return '<span class="chip lit">literal</span>'
         if str(iri).startswith(self.ns):
@@ -107,7 +107,7 @@ class Page:
                 dom = dom if dom is not None else g.value(s, RDFS.domain)
                 rng = rng if rng is not None else g.value(s, RDFS.range)
             rng = rng if rng is not None else ("literal" if datatype else None)
-            rows.append(("Connects", f'{ref(dom)}<span class="edge"><span class="arrow">–</span><code>{escape(n)}</code>'
+            rows.append(("Connects", f'{ref(dom, 'domain')}<span class="edge"><span class="arrow">–</span><code>{escape(n)}</code>'
                                      f'<span class="arrow">→</span></span>{ref(rng)}'))
             if supers:
                 rows.append(("Sub-property of", " ".join(ref(o) for o in supers)))

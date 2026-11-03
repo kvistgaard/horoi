@@ -2,9 +2,11 @@
 
 Documentation pages for web ontologies.
 
-Horoi writes one page that documents every term of an ontology, each on a card with its definition, and axioms. Each term's IRI leads to its card.
+Horoi writes one page that documents every term of an ontology, each on a card with its definition, and axioms. 
 
-The page also shows a diagram drawn from the file and, optionally, an example of the ontology in use.
+Each term's IRI leads to its card.
+
+The ontology diagram is generated from the ontology file.
 
 The name Horoi comes from the Greek ὅροι, the plural of *horos*, which means a boundary or boundary stone, and in Aristotle's logic both a term and a definition. *Horoi*, or *Definitions*, is also the title of an ancient collection of definitions handed down with Plato's works, though not written by him.
 

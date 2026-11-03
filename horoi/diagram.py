@@ -148,10 +148,11 @@ class Svg:
             f'<rect class="l" x="{cx - SIDE_W / 2:.0f}" y="{cy - h / 2:.0f}" width="{SIDE_W}" height="{h:.0f}"/>'
             f'<text class="ln" x="{cx:.0f}" y="{cy + 5:.0f}" text-anchor="middle">literal</text>')
 
-    def any(self, cx, cy, h=SIDE_H):
+    def any(self, cx, cy, h=SIDE_H, tip="No range declared."):
         self.nodes.append(
+            f'<g class="t"><title>{tip}</title>'
             f'<rect class="a" x="{cx - SIDE_W / 2:.0f}" y="{cy - h / 2:.0f}" width="{SIDE_W}" height="{h:.0f}" rx="7"/>'
-            f'<text class="an" x="{cx:.0f}" y="{cy + 5:.0f}" text-anchor="middle">any resource</text>')
+            f'<text class="an" x="{cx:.0f}" y="{cy + 5:.0f}" text-anchor="middle">any resource</text></g>')
 
     def arrow(self, d, kind):
         self.edges.append(f'<path class="e {kind}" d="{d}" marker-end="url(#m-{kind})"/>')
@@ -302,7 +303,9 @@ def draw(g):
             e = ext(ps)
             gy = ly + e / 2
             if target is None:
-                s.any(lx, gy, e)
+                tip = ("No range declared." if not (c == centre and ups)
+                       else "No domain or range declared." if ps else "No domain declared.")
+                s.any(lx, gy, e, tip)
                 any_box[c] = (lx, gy - e / 2)
             else:
                 s.literal(lx, gy, e)
