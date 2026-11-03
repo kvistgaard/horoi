@@ -138,8 +138,13 @@ class Page:
         classes = sorted(ours(OWL.Class), key=key)
         props = sorted(ours(OWL.ObjectProperty) + ours(OWL.DatatypeProperty), key=key)
 
-        nav = ('<p class="navh">Classes</p>' + "".join(f'<a href="#{local(c, self.ns)}">{local(c, self.ns)}</a>' for c in classes)
-               + '<p class="navh">Properties</p>' + "".join(f'<a href="#{local(p, self.ns)}">{local(p, self.ns)}</a>' for p in props))
+        def link(t):
+            n = local(t, self.ns)
+            return (f'<a href="#{escape(n)}" title="{escape(self.prefix)}:{escape(n)}">'
+                    f'{escape(en(g, t, RDFS.label) or n)}</a>')
+        by_label = lambda s: (en(g, s, RDFS.label) or local(s, self.ns)).lower()
+        nav = ('<p class="navh">Classes</p>' + "".join(link(c) for c in sorted(classes, key=by_label))
+               + '<p class="navh">Properties</p>' + "".join(link(p) for p in sorted(props, key=by_label)))
         meta = [("Version", escape(version)), ("Modified", escape(modified))]
         if creators:
             meta.append(("Creator", ", ".join(creators)))
@@ -199,7 +204,7 @@ a {{ color:var(--accent); text-decoration:none; }} a:hover {{ text-decoration:un
 code {{ font-family:var(--mono); font-size:.9em; }}
 .top {{ position:sticky; top:0; z-index:5; display:flex; align-items:center; gap:14px; padding:12px 28px;
   background:color-mix(in srgb, var(--bg) 85%, transparent); backdrop-filter:blur(10px); border-bottom:1px solid var(--line); }}
-.mark {{ width:30px; height:30px; border-radius:6px; background:var(--accent); display:grid; place-items:center; color:#fff;
+.mark {{ width:30px; height:30px; border-radius:6px; background:#EA580C; display:grid; place-items:center; color:#fff;
   font:700 15px var(--sans); }}
 .top .name {{ font-size:21px; font-weight:400; letter-spacing:-.2px; align-self:baseline; }}
 .top .v {{ font:500 12px var(--mono); color:var(--muted); border:1px solid var(--line); padding:2px 8px; border-radius:4px; align-self:baseline; }}
@@ -289,7 +294,7 @@ footer {{ border-top:1px solid var(--line); padding:24px 28px; color:var(--faint
 const q = document.getElementById('q');
 q.addEventListener('input', () => {{
   const s = q.value.toLowerCase();
-  document.querySelectorAll('aside a').forEach(a => a.style.display = a.textContent.toLowerCase().includes(s) ? '' : 'none');
+  document.querySelectorAll('aside a').forEach(a => a.style.display = (a.textContent + ' ' + a.title).toLowerCase().includes(s) ? '' : 'none');
 }});
 document.getElementById('copy').addEventListener('click', e => {{
   navigator.clipboard.writeText(document.getElementById('nsiri').textContent).then(() => {{ e.target.textContent = 'Copied'; }});

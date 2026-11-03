@@ -64,6 +64,16 @@ class Build(unittest.TestCase):
         self.assertIn(">pets:Owner<", html.replace("</a>", "<"))
         self.assertNotIn("do:", html)
 
+    def test_sidebar_lists_labels_with_their_curie_on_hover(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            src = Path(tmp) / "pets.ttl"
+            src.write_text(SMALL, encoding="utf-8")
+            build(src, Path(tmp) / "dist")
+            html = (Path(tmp) / "dist" / "index.html").read_text(encoding="utf-8")
+        aside = re.search(r"<aside>(.*?)</aside>", html, re.S).group(1)
+        self.assertIn('<a href="#keptBy" title="pets:keptBy">kept by</a>', aside)
+        self.assertIn('<a href="#Owner" title="pets:Owner">Owner</a>', aside)
+
 
 class Diagram(unittest.TestCase):
     def test_every_term_has_its_curie_on_hover(self):
