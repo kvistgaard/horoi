@@ -7,6 +7,7 @@ comes from the ontology file.
 """
 import re
 from html import escape
+from typing import Callable, NamedTuple
 from urllib.parse import quote
 
 from rdflib import Literal, Namespace
@@ -17,7 +18,7 @@ from .diagram import DARK, LIGHT, draw, namespace
 REPO = "https://github.com/kvistgaard/horoi"
 SDO = Namespace("https://schema.org/")
 FORMATS = [(".ttl", "Turtle"), (".rdf", "RDF/XML"), (".jsonld", "JSON-LD"), (".nt", "N-Triples")]
-DARK_CSS = ("--bg:#121212; --panel:#1A1A1A; --ink:#ECECEC; --muted:#A3A3A3; --faint:#737373; --line:#2E2E2E; "
+DARK_CSS = ("--bg:#121212; --panel:#1A1A1A; --ink:#ECECEC; --muted:#A3A3A3; --faint:#737373; --section:#7D7D7D; --line:#2E2E2E; "
             "--accent:#FB923C; --accent-soft:#2A1D14; --blue:#60A5FA; --blue-soft:#172131; --green:#4ADE80; "
             "--green-soft:#15261B; --code:#1F1F1F;")
 
@@ -55,10 +56,43 @@ def favicon(prefix):
     return "data:image/svg+xml," + quote(svg)
 
 
+def in_words(parts):
+    """'a', 'a and b', 'a, b and c'."""
+    return " and ".join(filter(None, [", ".join(parts[:-1]), "".join(parts[-1:])]))
+
+
+class Group(NamedTuple):
+    """Terms the page lists together. The sidebar, the header, the main sections
+    and the diagram's caption all take their wording from these two names."""
+    one: str            # "property shape", for a count of one
+    many: str           # "property shapes", for its title, its anchor and other counts
+    terms: list
+    facts: Callable     # a term -> its badge, and the rows of its card
+
+    @property
+    def title(self):
+        return self.many.capitalize()
+
+    @property
+    def anchor(self):
+        return self.many.replace(" ", "-")
+
+    @property
+    def count(self):
+        return f"{len(self.terms)} {self.one if len(self.terms) == 1 else self.many}"
+
+
 class Page:
     def __init__(self, g):
         self.g = g
         self.ns, self.prefix = namespace(g)
+
+    def groups(self):
+        """What this ontology lists, in page order. A group with no terms doesn't appear."""
+        def ours(*kinds):
+            return [s for kind in kinds for s in self.g.subjects(RDF.type, kind) if str(s).startswith(self.ns)]
+        return [Group("class", "classes", ours(OWL.Class), self.class_facts),
+                Group("property", "properties", ours(OWL.ObjectProperty, OWL.DatatypeProperty), self.property_facts)]
 
     def ref(self, iri, missing="range"):
         if iri is None:
@@ -79,47 +113,54 @@ class Page:
             out.append(line)
         return "\n".join(out)
 
-    def card(self, t, kind):
+    def class_facts(self, t):
         g, ref = self.g, self.ref
+        rows = []
+        supers = list(g.objects(t, RDFS.subClassOf))
+        subs = sorted(g.subjects(RDFS.subClassOf, t), key=str)
+        dom = sorted(g.subjects(RDFS.domain, t), key=str)
+        rng = sorted(g.subjects(RDFS.range, t), key=str)
+        if supers:
+            rows.append(("Subclass of", " ".join(ref(o) for o in supers)))
+        if subs:
+            rows.append(("Subclasses", " ".join(ref(o) for o in subs)))
+        if dom:
+            rows.append(("Properties from it", " ".join(ref(o) for o in dom)))
+        if rng:
+            rows.append(("Properties to it", " ".join(ref(o) for o in rng)))
+        return "class", rows
+
+    def property_facts(self, t):
+        g, ref = self.g, self.ref
+        n = local(t, self.ns)
+        rows = []
+        datatype = (t, RDF.type, OWL.DatatypeProperty) in g
+        supers = list(g.objects(t, RDFS.subPropertyOf))
+        dom, rng = g.value(t, RDFS.domain), g.value(t, RDFS.range)
+        for s in supers:
+            dom = dom if dom is not None else g.value(s, RDFS.domain)
+            rng = rng if rng is not None else g.value(s, RDFS.range)
+        rng = rng if rng is not None else ("literal" if datatype else None)
+        rows.append(("Connects", f'{ref(dom, "domain")}<span class="edge"><span class="arrow">–</span><code>{escape(n)}</code>'
+                                 f'<span class="arrow">→</span></span>{ref(rng)}'))
+        if supers:
+            rows.append(("Sub-property of", " ".join(ref(o) for o in supers)))
+        subs = sorted(g.subjects(RDFS.subPropertyOf, t), key=str)
+        if subs:
+            rows.append(("Sub-properties", " ".join(ref(o) for o in subs)))
+        return "datatype property" if datatype else "object property", rows
+
+    def card(self, t, facts):
+        g = self.g
         n = local(t, self.ns)
         label = en(g, t, RDFS.label) or n
         definition = en(g, t, RDFS.comment) or ""
-        rows = []
-        if kind == "class":
-            supers = list(g.objects(t, RDFS.subClassOf))
-            subs = sorted(g.subjects(RDFS.subClassOf, t), key=str)
-            dom = sorted(g.subjects(RDFS.domain, t), key=str)
-            rng = sorted(g.subjects(RDFS.range, t), key=str)
-            if supers:
-                rows.append(("Subclass of", " ".join(ref(o) for o in supers)))
-            if subs:
-                rows.append(("Subclasses", " ".join(ref(o) for o in subs)))
-            if dom:
-                rows.append(("Properties from it", " ".join(ref(o) for o in dom)))
-            if rng:
-                rows.append(("Properties to it", " ".join(ref(o) for o in rng)))
-            badge = "class"
-        else:
-            datatype = (t, RDF.type, OWL.DatatypeProperty) in g
-            supers = list(g.objects(t, RDFS.subPropertyOf))
-            dom, rng = g.value(t, RDFS.domain), g.value(t, RDFS.range)
-            for s in supers:
-                dom = dom if dom is not None else g.value(s, RDFS.domain)
-                rng = rng if rng is not None else g.value(s, RDFS.range)
-            rng = rng if rng is not None else ("literal" if datatype else None)
-            rows.append(("Connects", f'{ref(dom, 'domain')}<span class="edge"><span class="arrow">–</span><code>{escape(n)}</code>'
-                                     f'<span class="arrow">→</span></span>{ref(rng)}'))
-            if supers:
-                rows.append(("Sub-property of", " ".join(ref(o) for o in supers)))
-            subs = sorted(g.subjects(RDFS.subPropertyOf, t), key=str)
-            if subs:
-                rows.append(("Sub-properties", " ".join(ref(o) for o in subs)))
-            badge = "datatype property" if datatype else "object property"
-        facts = "".join(f"<dt>{k}</dt><dd>{v}</dd>" for k, v in rows)
+        badge, rows = facts(t)
+        dl = "".join(f"<dt>{k}</dt><dd>{v}</dd>" for k, v in rows)
         return (f'<article class="term" id="{escape(n)}">'
                 f'<header><h3>{escape(n)}</h3><span class="badge {badge.split()[0]}">{badge}</span></header>'
                 f'<p class="iri">{escape(str(t))}<span class="lbl">label “{escape(label)}”</span></p>'
-                f'<p class="def">{escape(definition)}</p><dl>{facts}</dl></article>')
+                f'<p class="def">{escape(definition)}</p><dl>{dl}</dl></article>')
 
     def render(self, svg, stem, example=None, version_links=""):
         g = self.g
@@ -131,20 +172,20 @@ class Page:
         licence = g.value(onto, DCTERMS.license)
         creators = [agent(g, c) for c in g.objects(onto, DCTERMS.creator)]
         contributors = [agent(g, c) for c in g.objects(onto, DCTERMS.contributor)]
-
-        def ours(kind):
-            return [s for s in g.subjects(RDF.type, kind) if str(s).startswith(self.ns)]
-        key = lambda s: local(s, self.ns).lower()
-        classes = sorted(ours(OWL.Class), key=key)
-        props = sorted(ours(OWL.ObjectProperty) + ours(OWL.DatatypeProperty), key=key)
+        groups = [group for group in self.groups() if group.terms]
 
         def link(t):
             n = local(t, self.ns)
             return (f'<a href="#{escape(n)}" title="{escape(self.prefix)}:{escape(n)}">'
                     f'{escape(en(g, t, RDFS.label) or n)}</a>')
-        by_label = lambda s: (en(g, s, RDFS.label) or local(s, self.ns)).lower()
-        nav = ('<p class="navh">Classes</p>' + "".join(link(c) for c in sorted(classes, key=by_label))
-               + '<p class="navh">Properties</p>' + "".join(link(p) for p in sorted(props, key=by_label)))
+
+        def sidebar(group):
+            links = "".join(link(t) for t in sorted(group.terms, key=lambda s: (en(g, s, RDFS.label) or local(s, self.ns)).lower()))
+            return f'<div class="group"><p class="navh">{group.title}</p>{links}</div>'
+
+        def section(group):
+            cards = "".join(self.card(t, group.facts) for t in sorted(group.terms, key=lambda s: local(s, self.ns).lower()))
+            return f'<section id="{group.anchor}"><h2>{group.title}</h2>{cards}</section>'
         meta = [("Version", escape(version)), ("Modified", escape(modified))]
         if creators:
             meta.append(("Creator", ", ".join(creators)))
@@ -163,11 +204,13 @@ class Page:
         return TEMPLATE.format(
             title=escape(title), desc=escape(desc), version=escape(version), ns=escape(self.ns),
             prefix=escape(self.prefix), favicon=favicon(self.prefix), stem=escape(stem), credit=f' · generated by <a href="{REPO}">horoi</a>',
-            meta=meta_html, nav=nav, svg=svg_inline,
-            classes="".join(self.card(c, "class") for c in classes),
-            props="".join(self.card(p, "property") for p in props),
+            meta=meta_html, svg=svg_inline,
+            nav="".join(sidebar(group) for group in groups),
+            group_links="".join(f'<a href="#{group.anchor}">{group.title}</a>' for group in groups),
+            sections="\n".join(section(group) for group in groups),
+            counts=in_words([group.count for group in groups]),
             example=example_html, example_nav=example_nav, downloads=downloads, versions=version_links,
-            ncls=len(classes), nprop=len(props), dark=DARK_CSS, svg_light=svg_vars(LIGHT), svg_dark=svg_vars(DARK))
+            dark=DARK_CSS, svg_light=svg_vars(LIGHT), svg_dark=svg_vars(DARK))
 
 
 def write(g, folder, stem, example=None, version_links=""):
@@ -187,12 +230,16 @@ TEMPLATE = """<!doctype html>
 <meta name="description" content="{desc}">
 <link rel="icon" href="{favicon}">
 <link rel="alternate" type="text/turtle" href="{stem}.ttl">
+<script>try {{ if (localStorage.getItem('horoi-sidebar') === 'closed') document.documentElement.dataset.side = 'closed'; }} catch (e) {{}}</script>
 <style>
 :root {{ color-scheme:light dark;
-  --bg:#FFFFFF; --panel:#FFFFFF; --ink:#111827; --muted:#4B5563; --faint:#9CA3AF; --line:#E5E7EB;
+  --bg:#FFFFFF; --panel:#FFFFFF; --ink:#111827; --muted:#4B5563; --faint:#9CA3AF; --section:#6E7788; --line:#E5E7EB;
   --accent:#EA580C; --accent-soft:#FFF1E8; --blue:#2563EB; --blue-soft:#EEF4FF; --green:#16A34A; --green-soft:#ECFBF1; --code:#F6F7F9;
   --mono:ui-monospace,"Cascadia Mono",Consolas,"SF Mono",Menlo,monospace;
-  --sans:Inter,"Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif; }}
+  --sans:Inter,"Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif;
+  --gutter:28px; --side:230px; --toggle:36px; --rail:calc(var(--gutter) + var(--side) + 40px);
+  --fold:240ms; --ease:cubic-bezier(.2,0,.38,.9); }}
+:root[data-side="closed"] {{ --rail:calc(var(--gutter) + var(--toggle) + 16px); }}
 @media (prefers-color-scheme: dark) {{ :root:not([data-theme="light"]) {{ {dark} }} }}
 :root[data-theme="dark"] {{ {dark} }}
 :root[data-theme="light"] svg.hr-diagram {{ {svg_light} }}
@@ -202,7 +249,7 @@ html {{ scroll-behavior:smooth; scroll-padding-top:84px; }}
 body {{ margin:0; background:var(--bg); color:var(--ink); font:16px/1.6 var(--sans); }}
 a {{ color:var(--accent); text-decoration:none; }} a:hover {{ text-decoration:underline; }}
 code {{ font-family:var(--mono); font-size:.9em; }}
-.top {{ position:sticky; top:0; z-index:5; display:flex; align-items:center; gap:14px; padding:12px 28px;
+.top {{ position:sticky; top:0; z-index:5; display:flex; align-items:center; gap:14px; padding:12px var(--gutter);
   background:color-mix(in srgb, var(--bg) 85%, transparent); backdrop-filter:blur(10px); border-bottom:1px solid var(--line); }}
 .mark {{ width:30px; height:30px; border-radius:6px; background:#EA580C; display:grid; place-items:center; color:#fff;
   font:700 15px var(--sans); }}
@@ -211,13 +258,29 @@ code {{ font-family:var(--mono); font-size:.9em; }}
 .top nav {{ margin-left:auto; display:flex; gap:20px; font-size:14px; align-items:center; }} .top nav a {{ color:var(--muted); }}
 #theme {{ border:none; background:transparent; color:var(--muted); border-radius:4px; width:32px; height:28px;
   cursor:pointer; font-size:15px; line-height:1; }}
-.wrap {{ display:grid; grid-template-columns:230px minmax(0,1fr); gap:40px; max-width:1240px; margin:0 auto; padding:36px 28px 80px; }}
-aside {{ position:sticky; top:90px; align-self:start; max-height:calc(100vh - 110px); overflow:auto; }}
-aside input {{ width:100%; padding:8px 11px; border:1px solid var(--line); border-radius:4px; background:var(--panel);
-  color:var(--ink); font:14px var(--sans); margin-bottom:14px; }}
-aside a {{ display:block; padding:3px 10px; border-radius:4px; color:var(--muted); font:13.5px var(--sans); }}
+.wrap {{ display:grid; grid-template-columns:minmax(var(--rail),1fr) minmax(0,914px) minmax(var(--gutter),1fr);
+  padding:36px 0 80px; transition:grid-template-columns var(--fold) var(--ease); }}
+aside {{ position:sticky; top:95px; align-self:start; width:var(--side); margin-left:var(--gutter); }}
+#side {{ position:absolute; top:0; left:0; z-index:1; display:grid; place-items:center; width:var(--toggle); height:var(--toggle); padding:0;
+  border:1px solid var(--line); border-radius:4px; background:transparent; color:var(--muted); cursor:pointer; }}
+#side:hover {{ background:var(--accent-soft); color:var(--accent); }}
+#side svg {{ display:block; width:18px; height:18px; fill:none; stroke:currentColor; stroke-width:1.5; }}
+#side .pane {{ fill:currentColor; stroke:none; opacity:.35; transform-box:fill-box; transform-origin:left;
+  transition:transform var(--fold) var(--ease); }}
+.fold {{ display:flex; flex-direction:column; max-height:calc(100vh - 115px); clip-path:inset(-4px -10px -4px -10px);
+  transition:clip-path var(--fold) var(--ease), opacity var(--fold) var(--ease), visibility var(--fold); }}
+aside input {{ flex:none; width:calc(100% - var(--toggle) - 8px); height:var(--toggle); margin:0 0 28px calc(var(--toggle) + 8px); padding:0 11px;
+  border:1px solid var(--line); border-radius:4px; background:var(--panel); color:var(--ink); font:14.5px var(--sans); }}
+.list {{ flex:1; min-height:0; overflow:auto; margin:0 -10px; padding:0 10px; }}
+aside a {{ display:block; margin-left:-10px; padding:3px 10px; border-radius:4px; color:var(--muted); font:14.5px var(--sans); }}
 aside a:hover {{ background:var(--accent-soft); color:var(--accent); text-decoration:none; }}
-.navh {{ margin:14px 0 4px; font:700 11px var(--sans); letter-spacing:1.6px; text-transform:uppercase; color:var(--faint); }}
+.group:not([hidden]) ~ .group {{ margin-top:24px; }}
+.navh {{ margin:0 0 6px; font:700 13px var(--sans); letter-spacing:1.6px; text-transform:uppercase; color:var(--section); }}
+:root[data-side="closed"] aside {{ pointer-events:none; }}
+:root[data-side="closed"] #side {{ pointer-events:auto; }}
+:root[data-side="closed"] #side .pane {{ transform:scaleX(0); }}
+:root[data-side="closed"] .fold {{ clip-path:inset(-4px 100% -4px 0); opacity:0; visibility:hidden; }}
+@media (prefers-reduced-motion:reduce) {{ .wrap, .fold, #side .pane {{ transition:none; }} }}
 main section {{ margin-bottom:56px; }}
 h1 {{ font-size:44px; line-height:1.1; letter-spacing:-.8px; margin:0 0 14px; font-weight:600; }}
 h2 {{ font-size:13px; letter-spacing:2px; text-transform:uppercase; color:var(--accent); margin:0 0 18px; }}
@@ -256,15 +319,16 @@ pre .k {{ color:var(--faint); }} pre .s {{ color:var(--green); }} pre .t {{ colo
 .dl:hover {{ border-color:var(--accent); text-decoration:none; }} .dl span {{ display:block; font-weight:600; }}
 .dl code {{ color:var(--muted); }}
 footer {{ border-top:1px solid var(--line); padding:24px 28px; color:var(--faint); font-size:13px; text-align:center; }}
-@media (max-width:900px) {{ .wrap {{ grid-template-columns:1fr; padding:24px 16px 60px; }} aside {{ display:none; }}
+@media (max-width:900px) {{ .wrap {{ grid-template-columns:minmax(0,1fr); padding:24px 16px 60px; }} aside {{ display:none; }}
   .top nav a {{ display:none; }} h1 {{ font-size:34px; }} .term dl {{ grid-template-columns:1fr; }} }}
 </style>
 </head>
 <body>
 <div class="top"><span class="mark">{prefix}</span><span class="name">{title}</span><span class="v">{version}</span>
-<nav><a href="#diagram">Diagram</a><a href="#classes">Classes</a><a href="#properties">Properties</a>{example_nav}<a href="#download">Download</a><button id="theme" type="button" title="Switch between light and dark" aria-label="Switch between light and dark">◐</button></nav></div>
+<nav><a href="#diagram">Diagram</a>{group_links}{example_nav}<a href="#download">Download</a><button id="theme" type="button" title="Switch between light and dark" aria-label="Switch between light and dark">◐</button></nav></div>
 <div class="wrap">
-<aside><input id="q" type="search" placeholder="Find a term" aria-label="Find a term">{nav}</aside>
+<aside><button id="side" type="button" title="Hide sidebar" aria-label="Sidebar" aria-expanded="true" aria-controls="terms" aria-keyshortcuts="Control+["><svg viewBox="0 0 18 18" aria-hidden="true"><path class="pane" d="M7 3H4a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h3z"/><rect x="2" y="3" width="14" height="12" rx="2"/><path d="M7 3v12"/></svg></button>
+<div class="fold" id="terms"><input id="q" type="search" placeholder="Find a term" aria-label="Find a term"><div class="list">{nav}</div></div></aside>
 <main>
 <section id="top">
 <h1>{title}</h1>
@@ -273,9 +337,8 @@ footer {{ border-top:1px solid var(--line); padding:24px 28px; color:var(--faint
 <dl class="meta">{meta}</dl>
 </section>
 <section id="diagram"><h2>Diagram</h2><div class="diagram">{svg}</div>
-<p class="cap">{ncls} classes and {nprop} properties, drawn from <a href="{stem}.ttl">{stem}.ttl</a>; also as <a href="{stem}.svg">{stem}.svg</a>.</p></section>
-<section id="classes"><h2>Classes</h2>{classes}</section>
-<section id="properties"><h2>Properties</h2>{props}</section>
+<p class="cap">{counts}, drawn from <a href="{stem}.ttl">{stem}.ttl</a>; also as <a href="{stem}.svg">{stem}.svg</a>.</p></section>
+{sections}
 {example}
 <section id="download"><h2>Download</h2><div class="dls">{downloads}</div>{versions}</section>
 </main>
@@ -291,10 +354,42 @@ footer {{ border-top:1px solid var(--line); padding:24px 28px; color:var(--faint
     try {{ localStorage.setItem(key, root.dataset.theme); }} catch (e) {{}}
   }});
 }})();
+(() => {{
+  const root = document.documentElement, side = document.getElementById('side'), fold = document.getElementById('terms');
+  const keys = /Mac|iPhone|iPad/.test(navigator.platform) ? '⌃ [' : 'Ctrl + [';
+  const show = open => {{
+    side.setAttribute('aria-expanded', open);
+    side.title = `${{open ? 'Hide' : 'Show'}} sidebar: ${{keys}}`;
+  }};
+  show(root.dataset.side !== 'closed');
+  side.addEventListener('click', () => {{
+    const open = root.dataset.side === 'closed';
+    if (!open && fold.contains(document.activeElement)) side.focus();
+    if (open) delete root.dataset.side; else root.dataset.side = 'closed';
+    show(open);
+    try {{ localStorage.setItem('horoi-sidebar', open ? 'open' : 'closed'); }} catch (e) {{}}
+  }});
+  // AltGr reports as Ctrl+Alt, so typing [ on many layouts must not count. Where this
+  // key types no ASCII character, as on a Cyrillic layout, it counts by its position.
+  document.addEventListener('keydown', e => {{
+    const bracket = e.key === '[' || (e.code === 'BracketLeft' && !/^[ -~]$/.test(e.key));
+    if (!bracket || !e.ctrlKey || e.altKey || e.shiftKey || e.metaKey || !side.offsetParent) return;
+    e.preventDefault();
+    if (!e.repeat) side.click();
+  }});
+}})();
 const q = document.getElementById('q');
 q.addEventListener('input', () => {{
   const s = q.value.toLowerCase();
-  document.querySelectorAll('aside a').forEach(a => a.style.display = (a.textContent + ' ' + a.title).toLowerCase().includes(s) ? '' : 'none');
+  document.querySelectorAll('aside .group').forEach(group => {{
+    let found = false;
+    group.querySelectorAll('a').forEach(a => {{
+      const hit = (a.textContent + ' ' + a.title).toLowerCase().includes(s);
+      a.style.display = hit ? '' : 'none';
+      found = found || hit;
+    }});
+    group.hidden = !found;
+  }});
 }});
 document.getElementById('copy').addEventListener('click', e => {{
   navigator.clipboard.writeText(document.getElementById('nsiri').textContent).then(() => {{ e.target.textContent = 'Copied'; }});

@@ -7,11 +7,12 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from rdflib import Graph
+from rdflib import Graph, URIRef
 
 from horoi.build import build
 from horoi.cli import main
 from horoi.diagram import draw
+from horoi.page import DARK_CSS, Group, Page
 
 HERE = Path(__file__).resolve().parent
 EXAMPLE = HERE / "example.ttl"          # the Decision ontology, do, as a real case
@@ -73,6 +74,85 @@ class Build(unittest.TestCase):
         aside = re.search(r"<aside>(.*?)</aside>", html, re.S).group(1)
         self.assertIn('<a href="#keptBy" title="pets:keptBy">kept by</a>', aside)
         self.assertIn('<a href="#Owner" title="pets:Owner">Owner</a>', aside)
+
+    def test_sidebar_folds_and_its_button_stays_out(self):
+        with tempfile.TemporaryDirectory() as out:
+            build(EXAMPLE, out)
+            html = (Path(out) / "index.html").read_text(encoding="utf-8")
+        aside = re.search(r"<aside>(.*?)</aside>", html, re.S).group(1)
+        button = re.search(r'<button id="side"[^>]*>', aside).group(0)
+        self.assertIn('aria-expanded="true"', button)
+        self.assertIn('aria-keyshortcuts="Control+["', button)
+        panel ='id="%s"' % re.search(r'aria-controls="([^"]+)"', button).group(1)
+        self.assertIn(panel, aside)
+        self.assertLess(aside.index(button), aside.index(panel))    # the button stays when the panel folds
+        self.assertIn('id="q"', aside[aside.index(panel):])
+
+    def test_the_shortcut_on_hover_stays_legible(self):
+        with tempfile.TemporaryDirectory() as out:
+            build(EXAMPLE, out)
+            html = (Path(out) / "index.html").read_text(encoding="utf-8")
+        self.assertIn("Ctrl + [", html)
+        self.assertNotIn("[)", html)                    # a closing bracket beside it reads as one symbol
+
+    def test_section_titles_just_reach_the_contrast_guideline(self):
+        def luminance(colour):
+            def channel(i):
+                c = int(colour[i:i + 2], 16) / 255
+                return c / 12.92 if c <= 0.03928 else ((c + 0.055) / 1.055) ** 2.4
+            return 0.2126 * channel(1) + 0.7152 * channel(3) + 0.0722 * channel(5)
+
+        def ratio(css):
+            pair = sorted((luminance(re.search(rf"--{name}:(#\w+)", css).group(1)) for name in ("bg", "section")), reverse=True)
+            return (pair[0] + 0.05) / (pair[1] + 0.05)
+        with tempfile.TemporaryDirectory() as out:
+            build(EXAMPLE, out)
+            html = (Path(out) / "index.html").read_text(encoding="utf-8")
+        for theme in (html, DARK_CSS):
+            self.assertGreaterEqual(ratio(theme), 4.5)
+            self.assertLess(ratio(theme), 4.6)          # enough to comply, not more
+
+    def test_a_folded_sidebar_is_restored_before_the_page_paints(self):
+        with tempfile.TemporaryDirectory() as out:
+            build(EXAMPLE, out)
+            html = (Path(out) / "index.html").read_text(encoding="utf-8")
+        self.assertIn("localStorage.getItem('horoi-sidebar')", html[:html.index("</head>")])
+
+    def test_header_and_sidebar_share_their_left_edge(self):
+        with tempfile.TemporaryDirectory() as out:
+            build(EXAMPLE, out)
+            html = (Path(out) / "index.html").read_text(encoding="utf-8")
+        self.assertRegex(html, r"\.top \{[^}]*padding:12px var\(--gutter\)")
+        self.assertRegex(html, r"aside \{[^}]*margin-left:var\(--gutter\)")
+        self.assertRegex(html, r"\.wrap \{[^}]*padding:36px 0 80px")    # nothing else offsets the sidebar
+
+    def test_every_place_on_the_page_follows_the_list_of_groups(self):
+        pets = "https://example.org/pets#"
+
+        class Shapes(Page):                             # the shape of a later SHACL reader
+            def groups(self):
+                facts = lambda t: ("shape", [])
+                terms = [URIRef(pets + n) for n in ("Pet", "Owner", "keptBy")]
+                return [Group("node shape", "node shapes", terms[:2], facts),
+                        Group("property shape", "property shapes", [], facts),
+                        Group("rule", "rules", terms[2:], facts)]
+        html = Shapes(graph(SMALL)).render('<svg class="hr-diagram"></svg>', "pets")
+        aside = re.search(r"<aside>(.*?)</aside>", html, re.S).group(1)
+        self.assertEqual(re.findall(r'<p class="navh">([^<]+)</p>', aside), ["Node shapes", "Rules"])
+        self.assertIn('<a href="#node-shapes">Node shapes</a><a href="#rules">Rules</a>', html)
+        self.assertIn('<section id="node-shapes"><h2>Node shapes</h2>', html)
+        self.assertIn('<section id="rules"><h2>Rules</h2>', html)
+        self.assertIn("2 node shapes and 1 rule, drawn from", html)
+        self.assertNotIn("property shapes", html.lower())   # a group with no terms doesn't appear
+        for fixed in ("Classes", "Properties"):
+            self.assertNotIn(fixed, html)
+
+    def test_an_ontology_keeps_its_existing_anchors(self):
+        with tempfile.TemporaryDirectory() as out:
+            build(EXAMPLE, out)
+            html = (Path(out) / "index.html").read_text(encoding="utf-8")
+        self.assertIn('<section id="classes"><h2>Classes</h2>', html)
+        self.assertIn('<section id="properties"><h2>Properties</h2>', html)
 
 
 class Diagram(unittest.TestCase):
