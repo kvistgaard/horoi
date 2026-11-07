@@ -90,6 +90,7 @@ python -m unittest discover horoi/tests
 
 ## Roadmap
 
+- Mobile optimisation
 - Repository links
 - SHACL support
 - Collapsible sidebars
