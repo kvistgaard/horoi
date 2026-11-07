@@ -90,6 +90,7 @@ python -m unittest discover horoi/tests
 
 ## Roadmap
 
+- Repository links
 - SHACL support
 - Collapsible sidebars
 - Zoomable diagrams and other features supporting larger ontologies
