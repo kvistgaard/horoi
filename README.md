@@ -88,6 +88,12 @@ pip install -e horoi
 python -m unittest discover horoi/tests
 ```
 
+## Roadmap
+
+- SHACL support
+- Collapsible sidebars
+- Zoomable diagrams and other features supporting larger ontologies
+
 ## Licence
 
 Apache License 2.0. See [LICENSE](LICENSE).
