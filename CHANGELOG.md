@@ -10,8 +10,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 
 - A button and a shortcut, Ctrl+[, to hide and show the sidebar
+- A workflow that an ontology's repository calls to publish on GitHub Pages
 
 ### Changed
+
+- If the diagram can't be drawn, `horoi build` now publishes the page without it
 
 - The sidebar now lists terms by their labels, with each term's CURIE on hover
 - A property's **Connects** row now shows one arrow, with the property's name on it
@@ -28,6 +31,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - On wide screens, the sidebar now lines up with the prefix and title in the header
 - The sidebar's section titles now meet the WCAG AA contrast ratio
 - On Python versions before 3.12, Horoi no longer stops with a syntax error
+
+### Removed
+
+- The `--check` option of `horoi diagram`
 
 ## [0.1.0] – 2026-11-03
 

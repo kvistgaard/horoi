@@ -5,8 +5,8 @@ along the arrow, with "any resource" where it has none, and every property
 has an arrow of its own. A subclass is a hollow-headed arrow, and a
 sub-property is named after its property with "⊑". Nothing is placed by hand:
 each property goes to a slot by the kind of its domain and range, so a change
-to the ontology changes the drawing. A shape the slots don't cover stops the script,
-and the layout gets a new slot.
+to the ontology changes the drawing. A shape the slots don't cover raises
+Undrawable rather than drawing something wrong, and the layout gets a new slot.
 
 The slots are the same for every class on the spine: the class with the most
 properties, its superclasses above it and one subclass below.
@@ -31,6 +31,10 @@ from rdflib import Literal, URIRef
 from rdflib.namespace import OWL, RDF, RDFS, Namespace
 
 VANN = Namespace("http://purl.org/vocab/vann/")
+
+
+class Undrawable(Exception):
+    """A shape of the ontology that the diagram's slots don't cover."""
 
 
 NAMES = "label"      # how a term is written: "label", "slug" or "curie"
@@ -194,6 +198,8 @@ def style():
 
 def draw(g):
     prefix, classes, labels, props, subclass = read(g)
+    if not classes:
+        raise Undrawable("the ontology declares no class of its own")
     count = defaultdict(int)
     for p in props:
         if p["domain"]:
@@ -210,7 +216,7 @@ def draw(g):
     children = sorted(c for c, d in subclass if d == centre)
     spine += children[:1]
     if len(children) > 1 or set(subclass) != set(zip(spine[1:], spine[:-1])):
-        sys.exit("horoi: only one chain of subclasses, through the central class, has a slot")
+        raise Undrawable("only one chain of subclasses, through the central class, has a slot")
     at = {c: i for i, c in enumerate(spine)}
 
     left, loops, right = defaultdict(list), defaultdict(list), defaultdict(list)
@@ -229,14 +235,14 @@ def draw(g):
         elif d is None and r in classes and r not in at:
             ups[r].append(p)
         else:
-            sys.exit(f"horoi: no slot for {p['name']} ({d} -> {r})")
+            raise Undrawable(f"no slot for {p['name']} ({d} -> {r})")
     owner = {}
     for c in spine:
         for p in right[c]:
             if p["range"] is not None and owner.setdefault(p["range"], c) != c:
-                sys.exit(f"horoi: no slot for {p['range']}, which two classes of the spine reach")
+                raise Undrawable(f"no slot for {p['range']}, which two classes of the spine reach")
     if ups and (len(ups) > 1 or spine[0] != centre or set(ups) & set(owner)):
-        sys.exit("horoi: only one class reached from any resource, with no class above the central one, has a slot")
+        raise Undrawable("only one class reached from any resource, with no class above the central one, has a slot")
     free = sorted(set(classes) - set(spine) - set(owner) - set(ups))     # classes no property reaches
 
     def curie(c):

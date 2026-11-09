@@ -2,17 +2,22 @@
 
     python -m unittest discover tests
 """
+import contextlib
+import io
+import os
 import re
+import subprocess
 import tempfile
 import unittest
 from pathlib import Path
+from unittest import mock
 
 from rdflib import Graph, URIRef
 
 from horoi.build import build
 from horoi.cli import main
-from horoi.diagram import draw
-from horoi.page import DARK_CSS, Group, Page
+from horoi.diagram import Undrawable, draw
+from horoi.page import DARK_CSS, Group, Page, warn
 
 HERE = Path(__file__).resolve().parent
 EXAMPLE = HERE / "example.ttl"          # the Decision ontology, do, as a real case
@@ -28,6 +33,7 @@ ex:Owner a owl:Class ; rdfs:label "Owner" ; rdfs:comment "Whoever keeps a pet." 
 ex:keptBy a owl:ObjectProperty ; rdfs:label "kept by" ; rdfs:domain ex:Pet ; rdfs:comment "Relates a pet to its keeper." .
 ex:name a owl:DatatypeProperty ; rdfs:label "name" ; rdfs:domain ex:Pet ; rdfs:comment "Relates a pet to what it is called." .
 """
+ODD = SMALL + "ex:Toy a owl:Class ; rdfs:subClassOf ex:Owner .\n"     # a shape the diagram has no slot for
 
 
 def graph(text=None, path=None):
@@ -64,6 +70,47 @@ class Build(unittest.TestCase):
         self.assertIn('<span class="mark">pets</span>', html)
         self.assertIn(">pets:Owner<", html.replace("</a>", "<"))
         self.assertNotIn("do:", html)
+
+    def test_an_undrawable_ontology_is_published_without_a_diagram(self):
+        said = io.StringIO()
+        with tempfile.TemporaryDirectory() as tmp:
+            src = Path(tmp) / "pets.ttl"
+            src.write_text(ODD, encoding="utf-8")
+            with mock.patch.dict(os.environ, {"GITHUB_ACTIONS": ""}), contextlib.redirect_stderr(said):
+                build(src, Path(tmp) / "dist")
+            html = (Path(tmp) / "dist" / "index.html").read_text(encoding="utf-8")
+            self.assertFalse((Path(tmp) / "dist" / "pets.svg").exists())
+        self.assertIn('id="Toy"', html)
+        self.assertNotIn('id="diagram"', html)
+        self.assertNotIn('href="#diagram"', html)
+        self.assertIn("the page of pets 1.0.0 has no diagram", said.getvalue())
+
+    def test_a_release_that_cant_be_drawn_does_not_stop_the_build(self):
+        said = io.StringIO()
+        with tempfile.TemporaryDirectory() as tmp:
+            repo, src = Path(tmp), Path(tmp) / "pets.ttl"
+
+            def git(*args):
+                subprocess.run(["git", "-c", "user.name=t", "-c", "user.email=t@example.org", *args],
+                               cwd=repo, check=True, capture_output=True)
+            git("init", "-q")
+            src.write_text(ODD, encoding="utf-8")
+            git("add", "pets.ttl")
+            git("commit", "-q", "-m", "1.0.0")
+            git("tag", "v1.0.0")
+            src.write_text(SMALL.replace('"1.0.0"', '"1.1.0"'), encoding="utf-8")
+            with mock.patch.dict(os.environ, {"GITHUB_ACTIONS": ""}), contextlib.redirect_stderr(said):
+                latest, built = build(src, repo / "dist", all_tags=True)
+            self.assertEqual((latest, built), ("1.1.0", ["1.0.0"]))
+            self.assertIn('id="diagram"', (repo / "dist" / "index.html").read_text(encoding="utf-8"))
+            self.assertNotIn('id="diagram"', (repo / "dist" / "1.0.0" / "index.html").read_text(encoding="utf-8"))
+        self.assertIn("the page of pets 1.0.0 has no diagram", said.getvalue())
+
+    def test_on_github_a_warning_shows_on_the_run(self):
+        said = io.StringIO()
+        with mock.patch.dict(os.environ, {"GITHUB_ACTIONS": "true"}), contextlib.redirect_stdout(said):
+            warn("no diagram")
+        self.assertEqual(said.getvalue(), "::warning::horoi: no diagram\n")
 
     def test_sidebar_lists_labels_with_their_curie_on_hover(self):
         with tempfile.TemporaryDirectory() as tmp:
@@ -167,23 +214,24 @@ class Diagram(unittest.TestCase):
         self.assertIn(">has premise<", svg)
         self.assertNotIn(">hasPremise<", svg)
 
-    def test_check_fails_on_a_stale_drawing(self):
-        with tempfile.TemporaryDirectory() as tmp:
-            out = Path(tmp) / "do.svg"
-            self.assertEqual(main(["diagram", str(EXAMPLE), "--out", str(out)]), 0)
-            self.assertEqual(main(["diagram", str(EXAMPLE), "--out", str(out), "--check"]), 0)
-            out.write_text(out.read_text(encoding="utf-8").replace("has premise", "has premiss"), encoding="utf-8")
-            self.assertEqual(main(["diagram", str(EXAMPLE), "--out", str(out), "--check"]), 1)
-
     def test_a_class_no_property_reaches_still_appears(self):
         svg = draw(graph(SMALL))
         self.assertIn("<title>pets:Owner</title>", svg)
 
-    def test_an_unsupported_shape_stops_with_a_message(self):
-        odd = SMALL + "ex:Toy a owl:Class ; rdfs:subClassOf ex:Owner .\n"
-        with self.assertRaises(SystemExit) as e:
-            draw(graph(odd))
-        self.assertIn("horoi:", str(e.exception.code))
+    def test_an_unsupported_shape_is_not_drawn(self):
+        with self.assertRaises(Undrawable):
+            draw(graph(ODD))
+        with self.assertRaises(Undrawable):
+            draw(graph(SMALL.split("ex:Pet a")[0]))      # no class at all
+
+    def test_the_diagram_command_stops_on_an_unsupported_shape(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            src = Path(tmp) / "pets.ttl"
+            src.write_text(ODD, encoding="utf-8")
+            with self.assertRaises(SystemExit) as e:
+                main(["diagram", str(src)])
+            self.assertTrue(str(e.exception.code).startswith("horoi: "))
+            self.assertFalse((Path(tmp) / "pets.svg").exists())
 
     def test_superclasses_sit_above_and_self_loops_stack_on_the_right(self):
         svg = draw(graph(path=EXAMPLE))

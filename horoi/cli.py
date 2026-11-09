@@ -1,5 +1,5 @@
 """horoi build ONTOLOGY [--out dist] [--example FILE] [--all-tags]
-horoi diagram ONTOLOGY [--out FILE] [--check]"""
+horoi diagram ONTOLOGY [--out FILE]"""
 import argparse
 import sys
 from pathlib import Path
@@ -8,7 +8,7 @@ from rdflib import Graph
 
 from . import __version__
 from .build import build
-from .diagram import draw
+from .diagram import Undrawable, draw
 
 
 def main(argv=None):
@@ -25,7 +25,6 @@ def main(argv=None):
     d = sub.add_parser("diagram", help="draw the diagram only")
     d.add_argument("ontology", help="the ontology, in Turtle")
     d.add_argument("--out", help="the SVG file (default: <ontology>.svg beside it)")
-    d.add_argument("--check", action="store_true", help="exit 1 if the SVG file differs from a fresh drawing")
 
     args = ap.parse_args(argv)
     if args.command == "build":
@@ -35,14 +34,11 @@ def main(argv=None):
 
     g = Graph()
     g.parse(args.ontology, format="turtle")
-    svg = draw(g)
+    try:
+        svg = draw(g)
+    except Undrawable as e:
+        sys.exit(f"horoi: {e}")
     out = Path(args.out) if args.out else Path(args.ontology).with_suffix(".svg")
-    if args.check:
-        if not out.exists() or out.read_text(encoding="utf-8") != svg:
-            print(f"{out} is out of date; run horoi diagram {args.ontology} --out {out}", file=sys.stderr)
-            return 1
-        print(f"{out} is up to date")
-        return 0
     out.parent.mkdir(parents=True, exist_ok=True)
     out.write_text(svg, encoding="utf-8", newline="\n")
     print(f"wrote {out}")

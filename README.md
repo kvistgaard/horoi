@@ -18,7 +18,7 @@ Here's an ontology page, written by Horoi: [Decision ontology](https://w3id.org/
 horoi build my-ontology.ttl                          # writes dist/
 horoi build my-ontology.ttl --example example.ttl    # with an example in Turtle
 horoi build my-ontology.ttl --all-tags               # also every release tag v<x.y.z>
-horoi diagram my-ontology.ttl --out docs/diagram.svg # the diagram alone
+horoi diagram my-ontology.ttl --out diagram.svg      # the diagram alone
 ```
 
 `horoi build` writes into `dist/`:
@@ -43,40 +43,26 @@ Classes are `owl:Class`, and properties `owl:ObjectProperty` or `owl:DatatypePro
 
 ## Publishing on GitHub Pages
 
-Set the repository's Pages source to GitHub Actions, and add a workflow:
+Set the repository's Pages source to GitHub Actions. Under **Settings > Environments > github-pages**, add a deployment tag rule for `v*.*.*`, so that release tags can deploy. Then add a workflow that calls Horoi's:
 
 ```yaml
 on:
   push:
     tags: ["v*.*.*"]
   workflow_dispatch:
-permissions:
-  contents: read
-  pages: write
-  id-token: write
 jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v7
-        with:
-          fetch-depth: 0
-      - uses: actions/setup-python@v7
-        with:
-          python-version: "3.12"
-      - run: pip install git+https://github.com/kvistgaard/horoi
-      - run: horoi build my-ontology.ttl --all-tags
-      - uses: actions/upload-pages-artifact@v5
-        with:
-          path: dist
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-    steps:
-      - uses: actions/deploy-pages@v5
+  publish:
+    uses: kvistgaard/horoi/.github/workflows/publish.yml@main
+    with:
+      ontology: my-ontology.ttl
+      example: example.ttl     # optional
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
 ```
+
+To run your own tests first, give them a job and name it under `needs:` in `publish`.
 
 A release tag must match the `owl:versionInfo` of the ontology.
 

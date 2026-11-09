@@ -1,0 +1,52 @@
+name: publish
+
+# Publishes an ontology's documentation on GitHub Pages: the page, the diagram
+# and the ontology in four serialisations, for the commit it runs on and for
+# every release tag. An ontology's repository calls it from a workflow of its
+# own, as the README's "Publishing on GitHub Pages" shows. Building and
+# deploying both happen here, so that nothing of Horoi's sits in that
+# repository and every change to Horoi reaches the page with no change there.
+
+on:
+  workflow_call:
+    inputs:
+      ontology:
+        description: The ontology, in Turtle, as a path in the calling repository
+        type: string
+        required: true
+      example:
+        description: A Turtle file to show as the example
+        type: string
+        default: ""
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+      - run: pip install git+https://github.com/kvistgaard/horoi@main
+      - run: horoi build "$ONTOLOGY" ${EXAMPLE:+--example "$EXAMPLE"} --all-tags --out dist
+        env:
+          ONTOLOGY: ${{ inputs.ontology }}
+          EXAMPLE: ${{ inputs.example }}
+      - uses: actions/upload-pages-artifact@v5
+        with:
+          path: dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    concurrency:
+      group: pages
+      cancel-in-progress: false
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v5
