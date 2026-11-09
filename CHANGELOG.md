@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.2.0] – 2026-11-09
+
 ### Added
 
 - A button and a shortcut, Ctrl+[, to hide and show the sidebar
@@ -15,7 +17,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 
 - If the diagram can't be drawn, `horoi build` now publishes the page without it
-
 - The sidebar now lists terms by their labels, with each term's CURIE on hover
 - A property's **Connects** row now shows one arrow, with the property's name on it
 - On wide screens, the page's main column is now centred
@@ -40,5 +41,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 First release.
 
-[Unreleased]: https://github.com/kvistgaard/horoi/compare/v0.1.0...HEAD
+[Unreleased]: https://github.com/kvistgaard/horoi/compare/v0.2.0...HEAD
+[0.2.0]: https://github.com/kvistgaard/horoi/compare/v0.1.0...v0.2.0
 [0.1.0]: https://github.com/kvistgaard/horoi/releases/tag/v0.1.0
