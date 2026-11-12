@@ -1,5 +1,52 @@
 [
   {
+    "@id": "https://w3id.org/aooe#Rulebook",
+    "@type": [
+      "https://w3id.org/aooe#AdoptionLevel"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Rulebook"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "Validation and behavior: SHACL shapes, negative examples, Behavioral Concept Specifications, policy envelopes, gates, eval items and reward specs. Done when Map is done and the full definition of done holds: shapes target the class, positives conform, negatives fail independently, the non-vacuity sentinel passes, the BCS has eleven sections, the envelope is signed, and eval and reward execute."
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#scopeNote": [
+      {
+        "@language": "en",
+        "@value": "Grants agency. Only data governed at Rulebook level may be acted on by an agent (Core Rule 8). The Lab-private compilation layer (rewards, traces, benchmarks, curriculum releases) is the top of the Rulebook, not a fourth level."
+      }
+    ],
+    "https://w3id.org/aooe#includesLevel": [
+      {
+        "@id": "https://w3id.org/aooe#Map"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/aooe#importedVocabulary",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "imported vocabulary"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "Links a manifest annotation block to the vocabulary it pins."
+      }
+    ]
+  },
+  {
     "@id": "https://w3id.org/aooe#governanceNote",
     "@type": [
       "http://www.w3.org/2002/07/owl#DatatypeProperty"
@@ -13,6 +60,115 @@
     "http://www.w3.org/2000/01/rdf-schema#range": [
       {
         "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/aooe#adoptedRelease",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/aooe#AdoptionRecord"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "adopted release"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "The release tag of the bundle the adopter pins (for example core/v0.2.0)."
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/aooe#termsReused",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "terms reused"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "The external terms a bundle actually wires into its ontology body. A term listed here but never used is manifest drift (gate C4)."
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#scopeNote": [
+      {
+        "@language": "en",
+        "@value": "Carried as a comma-separated CURIE string (v0.3 convention) or as repeated IRIs (v0.6 convention)."
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/aooe#adopter",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/aooe#AdoptionRecord"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "adopter"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "The team, system or organisation unit that adopts."
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/aooe#providesLevel",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "provides level"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/aooe#AdoptionLevel"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "The highest adoption level a package (an ontology module, bundle or brand layer) ships and proves. The gate runner refuses a declared level the package does not pass."
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#scopeNote": [
+      {
+        "@language": "en",
+        "@value": "Optional in v0.7 (absent is reported as undeclared); required from v0.8."
       }
     ]
   },
@@ -42,6 +198,250 @@
       {
         "@language": "en",
         "@value": "The lower level a level contains. Levels are cumulative: claiming a level claims every level it includes."
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/aooe#refines",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "refines"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "Links a refinement BCS to its parent; definition of done is parent plus delta, and the delta may only tighten."
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/aooe#AdoptionRecord",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Adoption record"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "One row of a bundle's adoption register: who adopts, for which use case, at which level, since when, pinned to which release."
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/aooe#AdoptionLevel",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Adoption level"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "A cumulative conformance level of the AOOE methodology. Each level has its own definition of done and its own gate subset."
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/aooe#reuseMode",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "reuse mode"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "identity: the term and IRI are reused and property characteristics are added locally; axioms: the source axiomatization is adopted as well."
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/aooe#adoptedSince",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/aooe#AdoptionRecord"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "adopted since"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#date"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/aooe#servesACQ",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "serves agent competency question"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "The competency question(s) that justify an import."
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/aooe#pinnedVersion",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "pinned version"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "The verified version of an imported vocabulary, stated on the vocabulary IRI (v0.6 convention). The v0.3 convention states owl:versionInfo on the annotation block instead; both are accepted."
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#scopeNote": [
+      {
+        "@language": "en",
+        "@value": "A pin is verified, never asserted. An unverifiable pin is written UNVERIFIED-<date> and reported."
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/aooe#Map",
+    "@type": [
+      "https://w3id.org/aooe#AdoptionLevel"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Map"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "The data model: classes, properties, application profiles, qualified relations and locally added property characteristics. Done when Legend is done, every term carries a label and a definition, reused external terms are wired, no external property carries a local domain or range, the module is reasoner-consistent, and at least one positive example uses the term with only declared terms."
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#scopeNote": [
+      {
+        "@language": "en",
+        "@value": "Grants readability and analysis. A Map-level consumer can load and query the data. It cannot let an agent act on it."
+      }
+    ],
+    "https://w3id.org/aooe#includesLevel": [
+      {
+        "@id": "https://w3id.org/aooe#Legend"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/aooe#Legend",
+    "@type": [
+      "https://w3id.org/aooe#AdoptionLevel"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Legend"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "The vocabulary reference: which external vocabularies are reused, at which verified versions, under which prefixes, and how instance identifiers are minted. Done when every import is pinned and verified, every prefix binds to one IRI, pins live only in the import manifest, and the identity policy is written."
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#scopeNote": [
+      {
+        "@language": "en",
+        "@value": "Grants addressability. A Legend-level consumer can read and name the data. It cannot claim the data model or any validation."
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/aooe#useCase",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/aooe#AdoptionRecord"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "use case"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/aooe#governs",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "governs"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "Links a BCS to the behavioral class whose instances it governs."
       }
     ]
   },
@@ -91,261 +491,6 @@
     ]
   },
   {
-    "@id": "https://w3id.org/aooe#useCase",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#DatatypeProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "https://w3id.org/aooe#AdoptionRecord"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "use case"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.w3.org/2001/XMLSchema#string"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/aooe#adopter",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#DatatypeProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "https://w3id.org/aooe#AdoptionRecord"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "adopter"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.w3.org/2001/XMLSchema#string"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#definition": [
-      {
-        "@language": "en",
-        "@value": "The team, system or organisation unit that adopts."
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/aooe#importedVocabulary",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "imported vocabulary"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#definition": [
-      {
-        "@language": "en",
-        "@value": "Links a manifest annotation block to the vocabulary it pins."
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/aooe#Legend",
-    "@type": [
-      "https://w3id.org/aooe#AdoptionLevel"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "Legend"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#definition": [
-      {
-        "@language": "en",
-        "@value": "The vocabulary reference: which external vocabularies are reused, at which verified versions, under which prefixes, and how instance identifiers are minted. Done when every import is pinned and verified, every prefix binds to one IRI, pins live only in the import manifest, and the identity policy is written."
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#scopeNote": [
-      {
-        "@language": "en",
-        "@value": "Grants addressability. A Legend-level consumer can read and name the data. It cannot claim the data model or any validation."
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/aooe#AdoptionRecord",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "Adoption record"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#definition": [
-      {
-        "@language": "en",
-        "@value": "One row of a bundle's adoption register: who adopts, for which use case, at which level, since when, pinned to which release."
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/aooe#termsReused",
-    "@type": [
-      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "terms reused"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#definition": [
-      {
-        "@language": "en",
-        "@value": "The external terms a bundle actually wires into its ontology body. A term listed here but never used is manifest drift (gate C4)."
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#scopeNote": [
-      {
-        "@language": "en",
-        "@value": "Carried as a comma-separated CURIE string (v0.3 convention) or as repeated IRIs (v0.6 convention)."
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/aooe#reuseMode",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#DatatypeProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "reuse mode"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.w3.org/2001/XMLSchema#string"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#definition": [
-      {
-        "@language": "en",
-        "@value": "identity: the term and IRI are reused and property characteristics are added locally; axioms: the source axiomatization is adopted as well."
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/aooe#pinnedVersion",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#DatatypeProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "pinned version"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.w3.org/2001/XMLSchema#string"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#definition": [
-      {
-        "@language": "en",
-        "@value": "The verified version of an imported vocabulary, stated on the vocabulary IRI (v0.6 convention). The v0.3 convention states owl:versionInfo on the annotation block instead; both are accepted."
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#scopeNote": [
-      {
-        "@language": "en",
-        "@value": "A pin is verified, never asserted. An unverifiable pin is written UNVERIFIED-<date> and reported."
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/aooe#adoptedSince",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#DatatypeProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "https://w3id.org/aooe#AdoptionRecord"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "adopted since"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.w3.org/2001/XMLSchema#date"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/aooe#AdoptionLevel",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "Adoption level"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#definition": [
-      {
-        "@language": "en",
-        "@value": "A cumulative conformance level of the AOOE methodology. Each level has its own definition of done and its own gate subset."
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/aooe#Rulebook",
-    "@type": [
-      "https://w3id.org/aooe#AdoptionLevel"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "Rulebook"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#definition": [
-      {
-        "@language": "en",
-        "@value": "Validation and behavior: SHACL shapes, negative examples, Behavioral Concept Specifications, policy envelopes, gates, eval items and reward specs. Done when Map is done and the full definition of done holds: shapes target the class, positives conform, negatives fail independently, the non-vacuity sentinel passes, the BCS has eleven sections, the envelope is signed, and eval and reward execute."
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#scopeNote": [
-      {
-        "@language": "en",
-        "@value": "Grants agency. Only data governed at Rulebook level may be acted on by an agent (Core Rule 8). The Lab-private compilation layer (rewards, traces, benchmarks, curriculum releases) is the top of the Rulebook, not a fourth level."
-      }
-    ],
-    "https://w3id.org/aooe#includesLevel": [
-      {
-        "@id": "https://w3id.org/aooe#Map"
-      }
-    ]
-  },
-  {
     "@id": "https://w3id.org/aooe#adoptsLevel",
     "@type": [
       "http://www.w3.org/2002/07/owl#ObjectProperty"
@@ -370,151 +515,6 @@
       {
         "@language": "en",
         "@value": "The level a consumer claims for one use case."
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/aooe#refines",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "refines"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#definition": [
-      {
-        "@language": "en",
-        "@value": "Links a refinement BCS to its parent; definition of done is parent plus delta, and the delta may only tighten."
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/aooe#servesACQ",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#DatatypeProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "serves agent competency question"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.w3.org/2001/XMLSchema#string"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#definition": [
-      {
-        "@language": "en",
-        "@value": "The competency question(s) that justify an import."
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/aooe#governs",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "governs"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#definition": [
-      {
-        "@language": "en",
-        "@value": "Links a BCS to the behavioral class whose instances it governs."
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/aooe#providesLevel",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "provides level"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "https://w3id.org/aooe#AdoptionLevel"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#definition": [
-      {
-        "@language": "en",
-        "@value": "The highest adoption level a package (an ontology module, bundle or brand layer) ships and proves. The gate runner refuses a declared level the package does not pass."
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#scopeNote": [
-      {
-        "@language": "en",
-        "@value": "Optional in v0.7 (absent is reported as undeclared); required from v0.8."
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/aooe#Map",
-    "@type": [
-      "https://w3id.org/aooe#AdoptionLevel"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "Map"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#definition": [
-      {
-        "@language": "en",
-        "@value": "The data model: classes, properties, application profiles, qualified relations and locally added property characteristics. Done when Legend is done, every term carries a label and a definition, reused external terms are wired, no external property carries a local domain or range, the module is reasoner-consistent, and at least one positive example uses the term with only declared terms."
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#scopeNote": [
-      {
-        "@language": "en",
-        "@value": "Grants readability and analysis. A Map-level consumer can load and query the data. It cannot let an agent act on it."
-      }
-    ],
-    "https://w3id.org/aooe#includesLevel": [
-      {
-        "@id": "https://w3id.org/aooe#Legend"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/aooe#adoptedRelease",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#DatatypeProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "https://w3id.org/aooe#AdoptionRecord"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "adopted release"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.w3.org/2001/XMLSchema#string"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#definition": [
-      {
-        "@language": "en",
-        "@value": "The release tag of the bundle the adopter pins (for example core/v0.2.0)."
       }
     ]
   }
