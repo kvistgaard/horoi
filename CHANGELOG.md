@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+
+- The diagram now draws properties with no domain, from an *any resource* node under the classes
+- The diagram now draws a class only once when properties from two classes point to it
+- The diagram now draws self-loops on a class that is the range of another class's property
+
 ## [0.2.0] – 2026-11-09
 
 ### Added

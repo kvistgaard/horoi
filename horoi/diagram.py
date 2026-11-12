@@ -18,6 +18,10 @@ properties, its superclasses above it and one subclass below.
   stacked rather than nested, so each name has a row of its own. Arrows to
   other classes, the ontology's own or another vocabulary's, come below them.
 - A box grows with the lanes on its busier side.
+- The properties with no domain start from an "any resource" node under the
+  spine, which has the same sides as a class.
+- A box on the right has its own self-loops on its right edge, and a box that
+  two neighbouring rows reach is drawn once, spanning both.
 
 The background is transparent, and the colours are CSS variables with a light
 and a dark value, so the drawing works on either theme. A page that embeds it
@@ -152,10 +156,10 @@ class Svg:
             f'<rect class="l" x="{cx - SIDE_W / 2:.0f}" y="{cy - h / 2:.0f}" width="{SIDE_W}" height="{h:.0f}"/>'
             f'<text class="ln" x="{cx:.0f}" y="{cy + 5:.0f}" text-anchor="middle">literal</text>')
 
-    def any(self, cx, cy, h=SIDE_H, tip="No range declared."):
+    def any(self, cx, cy, h=SIDE_H, tip="No range declared.", w=SIDE_W):
         self.nodes.append(
             f'<g class="t"><title>{tip}</title>'
-            f'<rect class="a" x="{cx - SIDE_W / 2:.0f}" y="{cy - h / 2:.0f}" width="{SIDE_W}" height="{h:.0f}" rx="7"/>'
+            f'<rect class="a" x="{cx - w / 2:.0f}" y="{cy - h / 2:.0f}" width="{w:.0f}" height="{h:.0f}" rx="7"/>'
             f'<text class="an" x="{cx:.0f}" y="{cy + 5:.0f}" text-anchor="middle">any resource</text></g>')
 
     def arrow(self, d, kind):
@@ -217,33 +221,44 @@ def draw(g):
     spine += children[:1]
     if len(children) > 1 or set(subclass) != set(zip(spine[1:], spine[:-1])):
         raise Undrawable("only one chain of subclasses, through the central class, has a slot")
-    at = {c: i for i, c in enumerate(spine)}
+    # The rows: the classes of the spine, then any resource, for the properties with no domain.
+    rows = spine + ([None] if any(p["domain"] is None for p in props) else [])
+    at = {c: i for i, c in enumerate(rows)}
 
     left, loops, right = defaultdict(list), defaultdict(list), defaultdict(list)
     between = defaultdict(list)          # arrows between neighbours on the spine, by the upper one
-    ups = defaultdict(list)              # arrows from any resource up to a class off the spine
+    side_loops = defaultdict(list)       # self-loops of a class drawn on the right
     for p in props:
         d, r = p["domain"], p["range"]
         if d in at and r in ("literal", None):
             left[d].append(p)
         elif d in at and r == d:
             loops[d].append(p)
-        elif d in at and r in at and abs(at[d] - at[r]) == 1:
+        elif d is not None and d in at and r in at and abs(at[d] - at[r]) == 1:
             between[min(d, r, key=at.get)].append(p)
         elif d in at and r not in at:
             right[d].append(p)
-        elif d is None and r in classes and r not in at:
-            ups[r].append(p)
+        elif d is not None and d == r:
+            side_loops[d].append(p)
         else:
             raise Undrawable(f"no slot for {p['name']} ({d} -> {r})")
-    owner = {}
-    for c in spine:
+    reached = defaultdict(set)           # the rows that reach each box on the right
+    for c in rows:
         for p in right[c]:
-            if p["range"] is not None and owner.setdefault(p["range"], c) != c:
-                raise Undrawable(f"no slot for {p['range']}, which two classes of the spine reach")
-    if ups and (len(ups) > 1 or spine[0] != centre or set(ups) & set(owner)):
-        raise Undrawable("only one class reached from any resource, with no class above the central one, has a slot")
-    free = sorted(set(classes) - set(spine) - set(owner) - set(ups))     # classes no property reaches
+            reached[p["range"]].add(at[c])
+    shared = {}                          # a box two neighbouring rows reach, by the upper row
+    for t, ix in sorted(reached.items()):
+        if len(ix) == 1:
+            continue
+        if len(ix) > 2 or max(ix) - min(ix) != 1:
+            raise Undrawable(f"no slot for {t}, which rows that are not neighbours reach")
+        if min(ix) in shared.values():
+            raise Undrawable(f"no slot for {t}, a second class that the same two rows reach")
+        shared[t] = min(ix)
+    for c in side_loops:
+        if c not in reached:
+            raise Undrawable(f"no slot for the self-loops of {c}, which no row reaches")
+    free = sorted(set(classes) - set(spine) - set(reached))     # classes no property reaches
 
     def curie(c):
         return c if ":" in c else f"{prefix}:{c}"
@@ -254,30 +269,36 @@ def draw(g):
     def ext(ps):          # the height of a box beside a class, and of its arrows
         return max(SIDE_H, LANE * len(ps) + 12)
 
+    def own_loops(t):     # the height a box on the right needs for its own self-loops
+        return LOOP_ROW * len(side_loops.get(t, [])) + 12 if t not in shared else 0
+
+    def box_ext(t, ps):   # the room a box on the right takes in its row
+        return max(ext(ps), own_loops(t))
+
     def left_groups(c):
-        """The boxes on the left of a class, top to bottom: any resource, then literals."""
+        """The boxes on the left of a row, top to bottom: any resource, then literals."""
         by = defaultdict(list)
         for p in left[c]:
             by[p["range"]].append(p)
-        if c == centre and ups:
-            by.setdefault(None, [])
         return sorted(by.items(), key=lambda kv: kv[0] is not None)
 
     def groups(c):
-        """The boxes on the right of a class, top to bottom: the classes by name."""
+        """The boxes on the right of a row, top to bottom: the box it shares with the row
+        above, the classes by name, then the box it shares with the row below."""
         by = defaultdict(list)
         for p in right[c]:
             by[p["range"]].append(p)
-        return sorted(by.items())
+        place = lambda t: 0 if shared.get(t) == at[c] - 1 else 2 if shared.get(t) == at[c] else 1
+        return sorted(by.items(), key=lambda kv: (place(kv[0]), kv[0]))
 
-    def left_block(c):    # the height of a class's left side
+    def left_block(c):    # the height of a row's left side
         gs = left_groups(c)
         return sum(ext(ps) for _, ps in gs) + GROUP_GAP * max(len(gs) - 1, 0)
 
-    def block(c):         # the height of a class's right side: its loops, then its boxes
+    def block(c):         # the height of a row's right side: its loops, then its boxes
         gs = groups(c)
         gaps = max(len(gs) - 1, 0) + (1 if loops[c] and gs else 0)
-        return LOOP_ROW * len(loops[c]) + sum(ext(ps) for _, ps in gs) + GROUP_GAP * gaps
+        return LOOP_ROW * len(loops[c]) + sum(box_ext(t, ps) for t, ps in gs) + GROUP_GAP * gaps
 
     def box_h(c):         # a box grows with its busier side
         return max(BOX_H, max(left_block(c), block(c)) + 16)
@@ -288,31 +309,53 @@ def draw(g):
     cw = max([BOX_W] + [2 * (max(map(abs, xs[u])) + 24) for u, _ in pairs if between[u]])
 
     cx = W / 2
-    all_left = [p for c in spine for p in left[c]]
+    all_left = [p for c in rows for p in left[c]]
     lx = cx - cw / 2 - reach(all_left) - SIDE_W / 2
     loop_reach = max((LOOP_W + GAP + text_w(p["text"]) + 24 for c in spine for p in loops[c]), default=0)
-    tx = cx + cw / 2 + max(reach([p for c in spine for p in right[c]]), loop_reach)   # where the boxes on the right start
+    tx = cx + cw / 2 + max(reach([p for c in rows for p in right[c]]), loop_reach)   # where the boxes on the right start
 
     s = Svg()
-    lo, hi = (lx - SIDE_W / 2 if all_left or ups else cx - cw / 2), cx + cw / 2
-    up_len = max((text_w(p["text"]) for ps in ups.values() for p in ps), default=0)
-    y = 24 + (BOX_H + up_len + 60 if ups else 0)
-    span, any_box = {}, {}
-    for i, c in enumerate(spine):
+    lo, hi = (lx - SIDE_W / 2 if all_left else cx - cw / 2), cx + cw / 2
+
+    def stack(x0, top, ps):
+        """Self-loops down the right edge of a box, each name on its own row beside its loop."""
+        nonlocal hi
+        x1 = x0 + LOOP_W
+        for p in ps:
+            y0 = top + (LOOP_ROW - LOOP_H) / 2
+            y1 = y0 + LOOP_H
+            s.prop(f"M{x0:.0f},{y0:.0f} H{x1 - 6:.0f} Q{x1:.0f},{y0:.0f} {x1:.0f},{y0 + 6:.0f} "
+                   f"V{y1 - 6:.0f} Q{x1:.0f},{y1:.0f} {x1 - 6:.0f},{y1:.0f} H{x0 + 2:.0f}", p,
+                   x1 + GAP, (y0 + y1) / 2, beside=True)
+            hi = max(hi, x1 + GAP + text_w(p["text"]))
+            top += LOOP_ROW
+
+    def side_box(t, top, bottom):
+        """A box on the right, with its own self-loops centred on its right edge."""
+        nonlocal hi
+        s.cls(tx + BOX_W / 2, (top + bottom) / 2, labels.get(t, t), curie(t), BOX_W, bottom - top)
+        ps = side_loops.get(t, [])
+        stack(tx + BOX_W, (top + bottom) / 2 - LOOP_ROW * len(ps) / 2, ps)
+        hi = max(hi, tx + BOX_W)
+
+    y = 24
+    span = {}
+    spans = defaultdict(list)            # where the arrows of each row meet a shared box
+    for i, c in enumerate(rows):
         h = box_h(c)
         cy = y + h / 2
         span[c] = (y, y + h)
-        s.cls(cx, cy, labels[c], curie(c), cw, h)
+        if c is None:
+            s.any(cx, cy, h, "No domain declared.", cw)
+        else:
+            s.cls(cx, cy, labels[c], curie(c), cw, h)
 
         ly = cy - left_block(c) / 2
         for target, ps in left_groups(c):
             e = ext(ps)
             gy = ly + e / 2
             if target is None:
-                tip = ("No range declared." if not (c == centre and ups)
-                       else "No domain or range declared." if ps else "No domain declared.")
-                s.any(lx, gy, e, tip)
-                any_box[c] = (lx, gy - e / 2)
+                s.any(lx, gy, e)
             else:
                 s.literal(lx, gy, e)
             for off, p in zip(lanes(len(ps)), ps):
@@ -320,34 +363,33 @@ def draw(g):
                        (cx - cw / 2 + lx + SIDE_W / 2) / 2, gy + off)
             ly += e + GROUP_GAP
 
-        # Self-loops stack down the right edge, each name on its own row beside its loop.
-        x0, x1 = cx + cw / 2, cx + cw / 2 + LOOP_W
+        x0 = cx + cw / 2
         ry = cy - block(c) / 2
-        for p in loops[c]:
-            y0 = ry + (LOOP_ROW - LOOP_H) / 2
-            y1 = y0 + LOOP_H
-            s.prop(f"M{x0:.0f},{y0:.0f} H{x1 - 6:.0f} Q{x1:.0f},{y0:.0f} {x1:.0f},{y0 + 6:.0f} "
-                   f"V{y1 - 6:.0f} Q{x1:.0f},{y1:.0f} {x1 - 6:.0f},{y1:.0f} H{x0 + 2:.0f}", p,
-                   x1 + GAP, (y0 + y1) / 2, beside=True)
-            hi = max(hi, x1 + GAP + text_w(p["text"]))
-            ry += LOOP_ROW
+        stack(x0, ry, loops[c])
+        ry += LOOP_ROW * len(loops[c])
         if loops[c] and groups(c):
             ry += GROUP_GAP
         for target, ps in groups(c):
-            e = ext(ps)
+            e = box_ext(target, ps)
             gy = ry + e / 2
-            w = BOX_W
-            s.cls(tx + w / 2, gy, labels.get(target, target), curie(target), w, max(BOX_H, LANE * len(ps) + 12))
+            bh = max(BOX_H, LANE * len(ps) + 12, own_loops(target))
+            if target in shared:
+                spans[target] += [gy - bh / 2, gy + bh / 2]
+            else:
+                side_box(target, gy - bh / 2, gy + bh / 2)
             for off, p in zip(lanes(len(ps)), ps):
                 s.prop(f"M{x0:.0f},{gy + off:.0f} H{tx - 2:.0f}", p, (x0 + tx) / 2, gy + off)
-            hi = max(hi, tx + w)
             ry += e + GROUP_GAP
 
-        if i < len(pairs):
+        if i + 1 < len(rows) and rows[i + 1] is None:
+            y += h + 60
+        elif i + 1 < len(rows):
             names = [text_w(p["text"]) for p in between[c]]
             y += h + max(70, max(names, default=0) + 40)
         else:
             y += h
+    for t, ys in spans.items():
+        side_box(t, min(ys), max(ys))
 
     for u, l in pairs:
         y0, y1 = span[u][1], span[l][0]
@@ -355,16 +397,6 @@ def draw(g):
         for i, p in enumerate(between[u]):
             a, b = (y0, y1 - 2) if p["domain"] == u else (y1, y0 + 2)
             s.prop(f"M{cx + xs[u][i + 1]:.0f},{a:.0f} V{b:.0f}", p, cx + xs[u][i + 1], (y0 + y1) / 2, vertical=True)
-
-    if ups:
-        target, up = next(iter(ups.items()))
-        bx, btop = any_box[centre]
-        ty = 24 + BOX_H / 2
-        s.cls(bx, ty, labels[target], curie(target))
-        for off, p in zip(lanes(len(up)), up):
-            s.prop(f"M{bx + off:.0f},{btop:.0f} V{ty + BOX_H / 2 + 2:.0f}", p,
-                   bx + off, (btop + ty + BOX_H / 2) / 2, vertical=True)
-        lo, hi = min(lo, bx - BOX_W / 2), max(hi, bx + BOX_W / 2)
 
     height = y
     if free:                             # a row of their own, under the rest

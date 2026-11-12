@@ -1,0 +1,148 @@
+@prefix aooe: <https://w3id.org/aooe#> .
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dct:  <http://purl.org/dc/terms/> .
+
+#################################################################
+# AOOE vocabulary — the methodology's own terms.
+#
+# One namespace, declared once: https://w3id.org/aooe#
+# (methodology v0.7). The former https://wordlift.io/aooe/ binding
+# is DEPRECATED: gates accept it with a warning through v0.7 and
+# reject it from v0.8.
+#
+# Two groups of terms:
+#   1. the import-manifest terms that already existed in v0.3–v0.6
+#      (declared here for the first time);
+#   2. the adoption-level terms introduced in v0.7.
+#################################################################
+
+<https://w3id.org/aooe#> a owl:Ontology ;
+    rdfs:label "AOOE — Agent-Oriented Ontology Engineering vocabulary"@en ;
+    dct:description "Terms the AOOE methodology uses to annotate import manifests, Behavioral Concept Specifications and adoption levels. This is a methodology vocabulary, not a domain vocabulary: it never appears in a public projection."@en ;
+    owl:versionInfo "0.7.0" ;
+    dct:created "2026-10-27"^^xsd:date ;
+    dct:publisher <https://wordlift.io/> ;
+    dct:license <https://creativecommons.org/licenses/by/4.0/> ;
+    dct:rights "Copyright WordLift. This vocabulary is released under the Creative Commons Attribution 4.0 International licence (CC BY 4.0). The AOOE methodology, its tooling and templates are maintained separately and are not covered by this licence."@en .
+
+#----------------------------------------------------------------
+# 1. Import-manifest terms (Phase 1.5)
+#----------------------------------------------------------------
+
+aooe:importedVocabulary a owl:ObjectProperty ;
+    rdfs:label "imported vocabulary"@en ;
+    skos:definition "Links a manifest annotation block to the vocabulary it pins."@en .
+
+aooe:pinnedVersion a owl:DatatypeProperty ;
+    rdfs:label "pinned version"@en ;
+    rdfs:range xsd:string ;
+    skos:definition "The verified version of an imported vocabulary, stated on the vocabulary IRI (v0.6 convention). The v0.3 convention states owl:versionInfo on the annotation block instead; both are accepted."@en ;
+    skos:scopeNote "A pin is verified, never asserted. An unverifiable pin is written UNVERIFIED-<date> and reported."@en .
+
+aooe:reuseMode a owl:DatatypeProperty ;
+    rdfs:label "reuse mode"@en ;
+    rdfs:range xsd:string ;
+    skos:definition "identity: the term and IRI are reused and property characteristics are added locally; axioms: the source axiomatization is adopted as well."@en .
+
+aooe:termsReused a rdf:Property ;
+    rdfs:label "terms reused"@en ;
+    skos:definition "The external terms a bundle actually wires into its ontology body. A term listed here but never used is manifest drift (gate C4)."@en ;
+    skos:scopeNote "Carried as a comma-separated CURIE string (v0.3 convention) or as repeated IRIs (v0.6 convention)."@en .
+
+aooe:servesACQ a owl:DatatypeProperty ;
+    rdfs:label "serves agent competency question"@en ;
+    rdfs:range xsd:string ;
+    skos:definition "The competency question(s) that justify an import."@en .
+
+aooe:governanceNote a owl:DatatypeProperty ;
+    rdfs:label "governance note"@en ;
+    rdfs:range xsd:string .
+
+#----------------------------------------------------------------
+# 2. BCS terms
+#----------------------------------------------------------------
+
+aooe:governs a owl:ObjectProperty ;
+    rdfs:label "governs"@en ;
+    skos:definition "Links a BCS to the behavioral class whose instances it governs."@en .
+
+aooe:refines a owl:ObjectProperty ;
+    rdfs:label "refines"@en ;
+    skos:definition "Links a refinement BCS to its parent; definition of done is parent plus delta, and the delta may only tighten."@en .
+
+#----------------------------------------------------------------
+# 3. Adoption levels (v0.7)
+#
+# Legend ⊂ Map ⊂ Rulebook. A consumer claims exactly one level per
+# use case. Agency (Core Rule 8) is bound to the Rulebook: an agent
+# may act only on data governed at Rulebook level.
+#----------------------------------------------------------------
+
+aooe:AdoptionLevel a owl:Class ;
+    rdfs:label "Adoption level"@en ;
+    skos:definition "A cumulative conformance level of the AOOE methodology. Each level has its own definition of done and its own gate subset."@en .
+
+aooe:includesLevel a owl:ObjectProperty , owl:TransitiveProperty ;
+    rdfs:label "includes level"@en ;
+    rdfs:domain aooe:AdoptionLevel ;
+    rdfs:range aooe:AdoptionLevel ;
+    skos:definition "The lower level a level contains. Levels are cumulative: claiming a level claims every level it includes."@en .
+
+aooe:Legend a aooe:AdoptionLevel ;
+    rdfs:label "Legend"@en ;
+    skos:definition "The vocabulary reference: which external vocabularies are reused, at which verified versions, under which prefixes, and how instance identifiers are minted. Done when every import is pinned and verified, every prefix binds to one IRI, pins live only in the import manifest, and the identity policy is written."@en ;
+    skos:scopeNote "Grants addressability. A Legend-level consumer can read and name the data. It cannot claim the data model or any validation."@en .
+
+aooe:Map a aooe:AdoptionLevel ;
+    rdfs:label "Map"@en ;
+    aooe:includesLevel aooe:Legend ;
+    skos:definition "The data model: classes, properties, application profiles, qualified relations and locally added property characteristics. Done when Legend is done, every term carries a label and a definition, reused external terms are wired, no external property carries a local domain or range, the module is reasoner-consistent, and at least one positive example uses the term with only declared terms."@en ;
+    skos:scopeNote "Grants readability and analysis. A Map-level consumer can load and query the data. It cannot let an agent act on it."@en .
+
+aooe:Rulebook a aooe:AdoptionLevel ;
+    rdfs:label "Rulebook"@en ;
+    aooe:includesLevel aooe:Map ;
+    skos:definition "Validation and behavior: SHACL shapes, negative examples, Behavioral Concept Specifications, policy envelopes, gates, eval items and reward specs. Done when Map is done and the full definition of done holds: shapes target the class, positives conform, negatives fail independently, the non-vacuity sentinel passes, the BCS has eleven sections, the envelope is signed, and eval and reward execute."@en ;
+    skos:scopeNote "Grants agency. Only data governed at Rulebook level may be acted on by an agent (Core Rule 8). The Lab-private compilation layer (rewards, traces, benchmarks, curriculum releases) is the top of the Rulebook, not a fourth level."@en .
+
+aooe:providesLevel a owl:ObjectProperty ;
+    rdfs:label "provides level"@en ;
+    rdfs:range aooe:AdoptionLevel ;
+    skos:definition "The highest adoption level a package (an ontology module, bundle or brand layer) ships and proves. The gate runner refuses a declared level the package does not pass."@en ;
+    skos:scopeNote "Optional in v0.7 (absent is reported as undeclared); required from v0.8."@en .
+
+aooe:adoptsLevel a owl:ObjectProperty ;
+    rdfs:label "adopts level"@en ;
+    rdfs:domain aooe:AdoptionRecord ;
+    rdfs:range aooe:AdoptionLevel ;
+    skos:definition "The level a consumer claims for one use case."@en .
+
+aooe:AdoptionRecord a owl:Class ;
+    rdfs:label "Adoption record"@en ;
+    skos:definition "One row of a bundle's adoption register: who adopts, for which use case, at which level, since when, pinned to which release."@en .
+
+aooe:adopter a owl:DatatypeProperty ;
+    rdfs:label "adopter"@en ;
+    rdfs:domain aooe:AdoptionRecord ;
+    rdfs:range xsd:string ;
+    skos:definition "The team, system or organisation unit that adopts."@en .
+
+aooe:useCase a owl:DatatypeProperty ;
+    rdfs:label "use case"@en ;
+    rdfs:domain aooe:AdoptionRecord ;
+    rdfs:range xsd:string .
+
+aooe:adoptedRelease a owl:DatatypeProperty ;
+    rdfs:label "adopted release"@en ;
+    rdfs:domain aooe:AdoptionRecord ;
+    rdfs:range xsd:string ;
+    skos:definition "The release tag of the bundle the adopter pins (for example core/v0.2.0)."@en .
+
+aooe:adoptedSince a owl:DatatypeProperty ;
+    rdfs:label "adopted since"@en ;
+    rdfs:domain aooe:AdoptionRecord ;
+    rdfs:range xsd:date .

@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AOOE — Agent-Oriented Ontology Engineering vocabulary 0.7.0</title>
+<meta name="description" content="Terms the AOOE methodology uses to annotate import manifests, Behavioral Concept Specifications and adoption levels. This is a methodology vocabulary, not a domain vocabulary: it never appears in a public projection.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%2032%2032%27%3E%3Crect%20width%3D%2732%27%20height%3D%2732%27%20rx%3D%276%27%20fill%3D%27%23EA580C%27/%3E%3Ctext%20x%3D%2716%27%20y%3D%2722%27%20text-anchor%3D%27middle%27%20font-family%3D%27Segoe%20UI%2CArial%2Csans-serif%27%20font-size%3D%2712%27%20font-weight%3D%27700%27%20fill%3D%27white%27%3Eaooe%3C/text%3E%3C/svg%3E">
+<link rel="alternate" type="text/turtle" href="aooe.ttl">
+<script>try { if (localStorage.getItem('horoi-sidebar') === 'closed') document.documentElement.dataset.side = 'closed'; } catch (e) {}</script>
+<style>
+:root { color-scheme:light dark;
+  --bg:#FFFFFF; --panel:#FFFFFF; --ink:#111827; --muted:#4B5563; --faint:#9CA3AF; --section:#6E7788; --line:#E5E7EB;
+  --accent:#EA580C; --accent-soft:#FFF1E8; --blue:#2563EB; --blue-soft:#EEF4FF; --green:#16A34A; --green-soft:#ECFBF1; --code:#F6F7F9;
+  --mono:ui-monospace,"Cascadia Mono",Consolas,"SF Mono",Menlo,monospace;
+  --sans:Inter,"Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif;
+  --gutter:28px; --side:230px; --toggle:36px; --rail:calc(var(--gutter) + var(--side) + 40px);
+  --fold:240ms; --ease:cubic-bezier(.2,0,.38,.9); }
+:root[data-side="closed"] { --rail:calc(var(--gutter) + var(--toggle) + 16px); }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --bg:#121212; --panel:#1A1A1A; --ink:#ECECEC; --muted:#A3A3A3; --faint:#737373; --section:#7D7D7D; --line:#2E2E2E; --accent:#FB923C; --accent-soft:#2A1D14; --blue:#60A5FA; --blue-soft:#172131; --green:#4ADE80; --green-soft:#15261B; --code:#1F1F1F; } }
+:root[data-theme="dark"] { --bg:#121212; --panel:#1A1A1A; --ink:#ECECEC; --muted:#A3A3A3; --faint:#737373; --section:#7D7D7D; --line:#2E2E2E; --accent:#FB923C; --accent-soft:#2A1D14; --blue:#60A5FA; --blue-soft:#172131; --green:#4ADE80; --green-soft:#15261B; --code:#1F1F1F; }
+:root[data-theme="light"] svg.hr-diagram { --hr-ink:#111827;--hr-muted:#6B7280;--hr-class:#EA580C;--hr-obj:#2563EB;--hr-data:#16A34A;--hr-any:#9CA3AF;--hr-fill:#FFFFFF; }
+:root[data-theme="dark"] svg.hr-diagram { --hr-ink:#F3F4F6;--hr-muted:#9CA3AF;--hr-class:#FB923C;--hr-obj:#60A5FA;--hr-data:#4ADE80;--hr-any:#6B7280;--hr-fill:#1C1C1E; }
+* { box-sizing:border-box; }
+html { scroll-behavior:smooth; scroll-padding-top:84px; }
+body { margin:0; background:var(--bg); color:var(--ink); font:16px/1.6 var(--sans); }
+a { color:var(--accent); text-decoration:none; } a:hover { text-decoration:underline; }
+code { font-family:var(--mono); font-size:.9em; }
+.top { position:sticky; top:0; z-index:5; display:flex; align-items:center; gap:14px; padding:12px var(--gutter);
+  background:color-mix(in srgb, var(--bg) 85%, transparent); backdrop-filter:blur(10px); border-bottom:1px solid var(--line); }
+.mark { width:30px; height:30px; border-radius:6px; background:#EA580C; display:grid; place-items:center; color:#fff;
+  font:700 15px var(--sans); }
+.top .name { font-size:21px; font-weight:400; letter-spacing:-.2px; align-self:baseline; }
+.top .v { font:500 12px var(--mono); color:var(--muted); border:1px solid var(--line); padding:2px 8px; border-radius:4px; align-self:baseline; }
+.top nav { margin-left:auto; display:flex; gap:20px; font-size:14px; align-items:center; } .top nav a { color:var(--muted); }
+#theme { border:none; background:transparent; color:var(--muted); border-radius:4px; width:32px; height:28px;
+  cursor:pointer; font-size:15px; line-height:1; }
+.wrap { display:grid; grid-template-columns:minmax(var(--rail),1fr) minmax(0,914px) minmax(var(--gutter),1fr);
+  padding:36px 0 80px; transition:grid-template-columns var(--fold) var(--ease); }
+aside { position:sticky; top:95px; align-self:start; width:var(--side); margin-left:var(--gutter); }
+#side { position:absolute; top:0; left:0; z-index:1; display:grid; place-items:center; width:var(--toggle); height:var(--toggle); padding:0;
+  border:1px solid var(--line); border-radius:4px; background:transparent; color:var(--muted); cursor:pointer; }
+#side:hover { background:var(--accent-soft); color:var(--accent); }
+#side svg { display:block; width:18px; height:18px; fill:none; stroke:currentColor; stroke-width:1.5; }
+#side .pane { fill:currentColor; stroke:none; opacity:.35; transform-box:fill-box; transform-origin:left;
+  transition:transform var(--fold) var(--ease); }
+.fold { display:flex; flex-direction:column; max-height:calc(100vh - 115px); clip-path:inset(-4px -10px -4px -10px);
+  transition:clip-path var(--fold) var(--ease), opacity var(--fold) var(--ease), visibility var(--fold); }
+aside input { flex:none; width:calc(100% - var(--toggle) - 8px); height:var(--toggle); margin:0 0 28px calc(var(--toggle) + 8px); padding:0 11px;
+  border:1px solid var(--line); border-radius:4px; background:var(--panel); color:var(--ink); font:14.5px var(--sans); }
+.list { flex:1; min-height:0; overflow:auto; margin:0 -10px; padding:0 10px; }
+aside a { display:block; margin-left:-10px; padding:3px 10px; border-radius:4px; color:var(--muted); font:14.5px var(--sans); }
+aside a:hover { background:var(--accent-soft); color:var(--accent); text-decoration:none; }
+.group:not([hidden]) ~ .group { margin-top:24px; }
+.navh { margin:0 0 6px; font:700 13px var(--sans); letter-spacing:1.6px; text-transform:uppercase; color:var(--section); }
+:root[data-side="closed"] aside { pointer-events:none; }
+:root[data-side="closed"] #side { pointer-events:auto; }
+:root[data-side="closed"] #side .pane { transform:scaleX(0); }
+:root[data-side="closed"] .fold { clip-path:inset(-4px 100% -4px 0); opacity:0; visibility:hidden; }
+@media (prefers-reduced-motion:reduce) { .wrap, .fold, #side .pane { transition:none; } }
+main section { margin-bottom:56px; }
+h1 { font-size:44px; line-height:1.1; letter-spacing:-.8px; margin:0 0 14px; font-weight:600; }
+h2 { font-size:13px; letter-spacing:2px; text-transform:uppercase; color:var(--accent); margin:0 0 18px; }
+.lead { font-size:20px; color:var(--muted); max-width:760px; margin:0 0 28px; }
+.ns { display:flex; align-items:center; gap:12px; flex-wrap:wrap; background:var(--panel); border:1px solid var(--line);
+  border-radius:6px; padding:12px 16px; margin-bottom:16px; }
+.ns .p { font:700 13px var(--mono); color:var(--accent); background:var(--accent-soft); padding:3px 9px; border-radius:4px; }
+.ns code { font-size:15px; } .ns button { margin-left:auto; border:1px solid var(--line); background:transparent; color:var(--muted);
+  border-radius:4px; padding:5px 11px; font:13px var(--sans); cursor:pointer; }
+.meta { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:12px; margin:0; }
+.meta div { background:var(--panel); border:1px solid var(--line); border-radius:6px; padding:11px 14px; }
+.meta dt { font-size:12px; color:var(--faint); } .meta dd { margin:2px 0 0; font-weight:600; }
+.diagram { border:1px solid var(--line); border-radius:6px; padding:16px; overflow:auto; }
+.diagram svg { display:block; width:100%; height:auto; min-width:640px; }
+.cap { font-size:14px; color:var(--muted); margin-top:10px; }
+.term { background:var(--panel); border:1px solid var(--line); border-radius:6px; padding:20px 22px; margin-bottom:14px; }
+.term:target { border-color:var(--accent); box-shadow:0 0 0 3px var(--accent-soft); }
+.term header { display:flex; align-items:center; gap:12px; }
+.term h3 { margin:0; font:600 20px var(--mono); }
+.badge { font-size:12px; font-weight:600; padding:2px 8px; border-radius:4px; background:var(--accent-soft); color:var(--accent); }
+.badge.datatype { background:var(--green-soft); color:var(--green); } .badge.object { background:var(--blue-soft); color:var(--blue); }
+.iri { margin:6px 0 12px; font:13px var(--mono); color:var(--faint); } .iri .lbl { font-family:var(--sans); margin-left:12px; }
+.def { font-size:17.5px; margin:0 0 6px; }
+.term dl { display:grid; grid-template-columns:150px 1fr; gap:8px 16px; margin:16px 0 0; padding-top:14px; border-top:1px dashed var(--line); }
+.term dt { font-size:13px; color:var(--faint); padding-top:3px; } .term dd { margin:0; display:flex; flex-wrap:wrap; gap:6px; align-items:center; }
+.chip { font:13px var(--mono); padding:2px 8px; border-radius:4px; background:var(--accent-soft); color:var(--accent); }
+.chip.any { background:var(--code); color:var(--muted); font-style:italic; font-family:var(--sans); }
+.chip.lit { background:var(--code); color:var(--ink); font-family:var(--sans); }
+.chip.ext { background:var(--code); color:var(--muted); }
+.edge { white-space:nowrap; } .arrow { color:var(--faint); }
+pre { background:var(--code); border:1px solid var(--line); border-radius:6px; padding:16px 18px; overflow:auto;
+  font:13.5px/1.6 var(--mono); }
+pre .k { color:var(--faint); } pre .s { color:var(--green); } pre .t { color:var(--blue); font-weight:600; }
+.dls { display:grid; grid-template-columns:repeat(auto-fit,minmax(170px,1fr)); gap:12px; }
+.dl { background:var(--panel); border:1px solid var(--line); border-radius:6px; padding:12px 16px; color:var(--ink); }
+.dl:hover { border-color:var(--accent); text-decoration:none; } .dl span { display:block; font-weight:600; }
+.dl code { color:var(--muted); }
+footer { border-top:1px solid var(--line); padding:24px 28px; color:var(--faint); font-size:13px; text-align:center; }
+@media (max-width:900px) { .wrap { grid-template-columns:minmax(0,1fr); padding:24px 16px 60px; } aside { display:none; }
+  .top nav a { display:none; } h1 { font-size:34px; } .term dl { grid-template-columns:1fr; } }
+</style>
+</head>
+<body>
+<div class="top"><span class="mark">aooe</span><span class="name">AOOE — Agent-Oriented Ontology Engineering vocabulary</span><span class="v">0.7.0</span>
+<nav><a href="#diagram">Diagram</a><a href="#classes">Classes</a><a href="#properties">Properties</a><a href="#download">Download</a><button id="theme" type="button" title="Switch between light and dark" aria-label="Switch between light and dark">◐</button></nav></div>
+<div class="wrap">
+<aside><button id="side" type="button" title="Hide sidebar" aria-label="Sidebar" aria-expanded="true" aria-controls="terms" aria-keyshortcuts="Control+["><svg viewBox="0 0 18 18" aria-hidden="true"><path class="pane" d="M7 3H4a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h3z"/><rect x="2" y="3" width="14" height="12" rx="2"/><path d="M7 3v12"/></svg></button>
+<div class="fold" id="terms"><input id="q" type="search" placeholder="Find a term" aria-label="Find a term"><div class="list"><div class="group"><p class="navh">Classes</p><a href="#AdoptionLevel" title="aooe:AdoptionLevel">Adoption level</a><a href="#AdoptionRecord" title="aooe:AdoptionRecord">Adoption record</a></div><div class="group"><p class="navh">Properties</p><a href="#adoptedRelease" title="aooe:adoptedRelease">adopted release</a><a href="#adoptedSince" title="aooe:adoptedSince">adopted since</a><a href="#adopter" title="aooe:adopter">adopter</a><a href="#adoptsLevel" title="aooe:adoptsLevel">adopts level</a><a href="#governanceNote" title="aooe:governanceNote">governance note</a><a href="#governs" title="aooe:governs">governs</a><a href="#importedVocabulary" title="aooe:importedVocabulary">imported vocabulary</a><a href="#includesLevel" title="aooe:includesLevel">includes level</a><a href="#pinnedVersion" title="aooe:pinnedVersion">pinned version</a><a href="#providesLevel" title="aooe:providesLevel">provides level</a><a href="#refines" title="aooe:refines">refines</a><a href="#reuseMode" title="aooe:reuseMode">reuse mode</a><a href="#servesACQ" title="aooe:servesACQ">serves agent competency question</a><a href="#useCase" title="aooe:useCase">use case</a></div></div></div></aside>
+<main>
+<section id="top">
+<h1>AOOE — Agent-Oriented Ontology Engineering vocabulary</h1>
+<p class="lead">Terms the AOOE methodology uses to annotate import manifests, Behavioral Concept Specifications and adoption levels. This is a methodology vocabulary, not a domain vocabulary: it never appears in a public projection.</p>
+<div class="ns"><span class="p">aooe:</span><code id="nsiri">https://w3id.org/aooe#</code><button id="copy" type="button">Copy</button></div>
+<dl class="meta"><div><dt>Version</dt><dd>0.7.0</dd></div><div><dt>Licence</dt><dd><a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a></dd></div></dl>
+</section>
+<section id="diagram"><h2>Diagram</h2><div class="diagram"><svg xmlns="http://www.w3.org/2000/svg" class="hr-diagram" viewBox="-26 0 1183 518" role="img" aria-label="The terms of the ontology and how they connect">
+<title>The terms of the ontology and how they connect</title>
+<defs><marker id="m-obj" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto"><path class="mo" d="M0,0 L10,5 L0,10 z"/></marker><marker id="m-data" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto"><path class="md" d="M0,0 L10,5 L0,10 z"/></marker><marker id="m-sub" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="13" markerHeight="13" orient="auto"><path class="ms" d="M1,1 L11,6 L1,11 z"/></marker><style>svg{--hr-ink:#111827;--hr-muted:#6B7280;--hr-class:#EA580C;--hr-obj:#2563EB;--hr-data:#16A34A;--hr-any:#9CA3AF;--hr-fill:#FFFFFF}@media (prefers-color-scheme:dark){svg{--hr-ink:#F3F4F6;--hr-muted:#9CA3AF;--hr-class:#FB923C;--hr-obj:#60A5FA;--hr-data:#4ADE80;--hr-any:#6B7280;--hr-fill:#1C1C1E}}text{font-family:Inter,'Segoe UI',system-ui,-apple-system,'Helvetica Neue',Arial,sans-serif}.c{fill:none;stroke:var(--hr-class);stroke-width:2}.cn{font-size:20px;font-weight:600;fill:var(--hr-ink)}.hit{fill:none;stroke:transparent;stroke-width:12}.l{fill:none;stroke:var(--hr-ink);stroke-width:1.8}.ln{font-size:15px;font-weight:600;fill:var(--hr-ink)}.a{fill:none;stroke:var(--hr-any);stroke-width:1.6;stroke-dasharray:6 5}.an{font-size:15px;font-style:italic;fill:var(--hr-muted)}.e{fill:none;stroke-width:1.7}.e.obj{stroke:var(--hr-obj)}.e.data{stroke:var(--hr-data)}.e.sub{stroke:var(--hr-class)}.pn{font-size:15.5px}.pn.obj{fill:var(--hr-obj)}.pn.data{fill:var(--hr-data)}.mo{fill:var(--hr-obj)}.md{fill:var(--hr-data)}.ms{fill:var(--hr-fill);stroke:var(--hr-class);stroke-width:1.4}</style></defs>
+<g class="t"><title>aooe:adoptedRelease</title><path class="hit" d="M460,53 H150"/><path class="e data" d="M460,53 H150" marker-end="url(#m-data)"/><text class="pn data" x="304.0" y="46.0" text-anchor="middle">adopted release</text></g>
+<g class="t"><title>aooe:adoptedSince</title><path class="hit" d="M460,83 H150"/><path class="e data" d="M460,83 H150" marker-end="url(#m-data)"/><text class="pn data" x="304.0" y="76.0" text-anchor="middle">adopted since</text></g>
+<g class="t"><title>aooe:adopter</title><path class="hit" d="M460,113 H150"/><path class="e data" d="M460,113 H150" marker-end="url(#m-data)"/><text class="pn data" x="304.0" y="106.0" text-anchor="middle">adopter</text></g>
+<g class="t"><title>aooe:useCase</title><path class="hit" d="M460,143 H150"/><path class="e data" d="M460,143 H150" marker-end="url(#m-data)"/><text class="pn data" x="304.0" y="136.0" text-anchor="middle">use case</text></g>
+<g class="t"><title>aooe:adoptsLevel</title><path class="hit" d="M640,98 H806"/><path class="e obj" d="M640,98 H806" marker-end="url(#m-obj)"/><text class="pn obj" x="724.0" y="91.0" text-anchor="middle">adopts level</text></g>
+<g class="t"><title>aooe:governs</title><path class="hit" d="M460,261 H150"/><path class="e obj" d="M460,261 H150" marker-end="url(#m-obj)"/><text class="pn obj" x="304.0" y="254.0" text-anchor="middle">governs</text></g>
+<g class="t"><title>aooe:importedVocabulary</title><path class="hit" d="M460,291 H150"/><path class="e obj" d="M460,291 H150" marker-end="url(#m-obj)"/><text class="pn obj" x="304.0" y="284.0" text-anchor="middle">imported vocabulary</text></g>
+<g class="t"><title>aooe:refines</title><path class="hit" d="M460,321 H150"/><path class="e obj" d="M460,321 H150" marker-end="url(#m-obj)"/><text class="pn obj" x="304.0" y="314.0" text-anchor="middle">refines</text></g>
+<g class="t"><title>aooe:governanceNote</title><path class="hit" d="M460,375 H150"/><path class="e data" d="M460,375 H150" marker-end="url(#m-data)"/><text class="pn data" x="304.0" y="368.0" text-anchor="middle">governance note</text></g>
+<g class="t"><title>aooe:pinnedVersion</title><path class="hit" d="M460,405 H150"/><path class="e data" d="M460,405 H150" marker-end="url(#m-data)"/><text class="pn data" x="304.0" y="398.0" text-anchor="middle">pinned version</text></g>
+<g class="t"><title>aooe:reuseMode</title><path class="hit" d="M460,435 H150"/><path class="e data" d="M460,435 H150" marker-end="url(#m-data)"/><text class="pn data" x="304.0" y="428.0" text-anchor="middle">reuse mode</text></g>
+<g class="t"><title>aooe:servesACQ</title><path class="hit" d="M460,465 H150"/><path class="e data" d="M460,465 H150" marker-end="url(#m-data)"/><text class="pn data" x="304.0" y="458.0" text-anchor="middle">serves agent competency question</text></g>
+<g class="t"><title>aooe:providesLevel</title><path class="hit" d="M640,363 H806"/><path class="e obj" d="M640,363 H806" marker-end="url(#m-obj)"/><text class="pn obj" x="724.0" y="356.0" text-anchor="middle">provides level</text></g>
+<g class="t"><title>aooe:includesLevel</title><path class="hit" d="M988,222 H1008 Q1014,222 1014,228 V234 Q1014,240 1008,240 H990"/><path class="e obj" d="M988,222 H1008 Q1014,222 1014,228 V234 Q1014,240 1008,240 H990" marker-end="url(#m-obj)"/><text class="pn obj" x="1021.0" y="235.5" text-anchor="start">includes level</text></g>
+<g class="t"><title>aooe:AdoptionRecord</title><rect class="c" x="460" y="24" width="180" height="148" rx="7"/><text class="cn" x="550" y="105" text-anchor="middle">Adoption record</text></g>
+<rect class="l" x="-2" y="32" width="150" height="132"/><text class="ln" x="73" y="103" text-anchor="middle">literal</text>
+<g class="t"><title>No domain declared.</title><rect class="a" x="460" y="232" width="180" height="262" rx="7"/><text class="an" x="550" y="368" text-anchor="middle">any resource</text></g>
+<g class="t"><title>No range declared.</title><rect class="a" x="-2" y="240" width="150" height="102" rx="7"/><text class="an" x="73" y="296" text-anchor="middle">any resource</text></g>
+<rect class="l" x="-2" y="354" width="150" height="132"/><text class="ln" x="73" y="425" text-anchor="middle">literal</text>
+<g class="t"><title>aooe:AdoptionLevel</title><rect class="c" x="808" y="72" width="180" height="317" rx="7"/><text class="cn" x="898" y="238" text-anchor="middle">Adoption level</text></g>
+</svg>
+</div>
+<p class="cap">2 classes and 14 properties, drawn from <a href="aooe.ttl">aooe.ttl</a>; also as <a href="aooe.svg">aooe.svg</a>.</p></section>
+<section id="classes"><h2>Classes</h2><article class="term" id="AdoptionLevel"><header><h3>AdoptionLevel</h3><span class="badge class">class</span></header><p class="iri">https://w3id.org/aooe#AdoptionLevel<span class="lbl">label “Adoption level”</span></p><p class="def"></p><dl><dt>Properties from it</dt><dd><a class="chip" href="#includesLevel">aooe:includesLevel</a></dd><dt>Properties to it</dt><dd><a class="chip" href="#adoptsLevel">aooe:adoptsLevel</a> <a class="chip" href="#includesLevel">aooe:includesLevel</a> <a class="chip" href="#providesLevel">aooe:providesLevel</a></dd></dl></article><article class="term" id="AdoptionRecord"><header><h3>AdoptionRecord</h3><span class="badge class">class</span></header><p class="iri">https://w3id.org/aooe#AdoptionRecord<span class="lbl">label “Adoption record”</span></p><p class="def"></p><dl><dt>Properties from it</dt><dd><a class="chip" href="#adoptedRelease">aooe:adoptedRelease</a> <a class="chip" href="#adoptedSince">aooe:adoptedSince</a> <a class="chip" href="#adopter">aooe:adopter</a> <a class="chip" href="#adoptsLevel">aooe:adoptsLevel</a> <a class="chip" href="#useCase">aooe:useCase</a></dd></dl></article></section>
+<section id="properties"><h2>Properties</h2><article class="term" id="adoptedRelease"><header><h3>adoptedRelease</h3><span class="badge datatype">datatype property</span></header><p class="iri">https://w3id.org/aooe#adoptedRelease<span class="lbl">label “adopted release”</span></p><p class="def"></p><dl><dt>Connects</dt><dd><a class="chip" href="#AdoptionRecord">aooe:AdoptionRecord</a><span class="edge"><span class="arrow">–</span><code>adoptedRelease</code><span class="arrow">→</span></span><span class="chip ext">http://www.w3.org/2001/XMLSchema#string</span></dd></dl></article><article class="term" id="adoptedSince"><header><h3>adoptedSince</h3><span class="badge datatype">datatype property</span></header><p class="iri">https://w3id.org/aooe#adoptedSince<span class="lbl">label “adopted since”</span></p><p class="def"></p><dl><dt>Connects</dt><dd><a class="chip" href="#AdoptionRecord">aooe:AdoptionRecord</a><span class="edge"><span class="arrow">–</span><code>adoptedSince</code><span class="arrow">→</span></span><span class="chip ext">http://www.w3.org/2001/XMLSchema#date</span></dd></dl></article><article class="term" id="adopter"><header><h3>adopter</h3><span class="badge datatype">datatype property</span></header><p class="iri">https://w3id.org/aooe#adopter<span class="lbl">label “adopter”</span></p><p class="def"></p><dl><dt>Connects</dt><dd><a class="chip" href="#AdoptionRecord">aooe:AdoptionRecord</a><span class="edge"><span class="arrow">–</span><code>adopter</code><span class="arrow">→</span></span><span class="chip ext">http://www.w3.org/2001/XMLSchema#string</span></dd></dl></article><article class="term" id="adoptsLevel"><header><h3>adoptsLevel</h3><span class="badge object">object property</span></header><p class="iri">https://w3id.org/aooe#adoptsLevel<span class="lbl">label “adopts level”</span></p><p class="def"></p><dl><dt>Connects</dt><dd><a class="chip" href="#AdoptionRecord">aooe:AdoptionRecord</a><span class="edge"><span class="arrow">–</span><code>adoptsLevel</code><span class="arrow">→</span></span><a class="chip" href="#AdoptionLevel">aooe:AdoptionLevel</a></dd></dl></article><article class="term" id="governanceNote"><header><h3>governanceNote</h3><span class="badge datatype">datatype property</span></header><p class="iri">https://w3id.org/aooe#governanceNote<span class="lbl">label “governance note”</span></p><p class="def"></p><dl><dt>Connects</dt><dd><span class="chip any" title="No domain declared.">any resource</span><span class="edge"><span class="arrow">–</span><code>governanceNote</code><span class="arrow">→</span></span><span class="chip ext">http://www.w3.org/2001/XMLSchema#string</span></dd></dl></article><article class="term" id="governs"><header><h3>governs</h3><span class="badge object">object property</span></header><p class="iri">https://w3id.org/aooe#governs<span class="lbl">label “governs”</span></p><p class="def"></p><dl><dt>Connects</dt><dd><span class="chip any" title="No domain declared.">any resource</span><span class="edge"><span class="arrow">–</span><code>governs</code><span class="arrow">→</span></span><span class="chip any" title="No range declared.">any resource</span></dd></dl></article><article class="term" id="importedVocabulary"><header><h3>importedVocabulary</h3><span class="badge object">object property</span></header><p class="iri">https://w3id.org/aooe#importedVocabulary<span class="lbl">label “imported vocabulary”</span></p><p class="def"></p><dl><dt>Connects</dt><dd><span class="chip any" title="No domain declared.">any resource</span><span class="edge"><span class="arrow">–</span><code>importedVocabulary</code><span class="arrow">→</span></span><span class="chip any" title="No range declared.">any resource</span></dd></dl></article><article class="term" id="includesLevel"><header><h3>includesLevel</h3><span class="badge object">object property</span></header><p class="iri">https://w3id.org/aooe#includesLevel<span class="lbl">label “includes level”</span></p><p class="def"></p><dl><dt>Connects</dt><dd><a class="chip" href="#AdoptionLevel">aooe:AdoptionLevel</a><span class="edge"><span class="arrow">–</span><code>includesLevel</code><span class="arrow">→</span></span><a class="chip" href="#AdoptionLevel">aooe:AdoptionLevel</a></dd></dl></article><article class="term" id="pinnedVersion"><header><h3>pinnedVersion</h3><span class="badge datatype">datatype property</span></header><p class="iri">https://w3id.org/aooe#pinnedVersion<span class="lbl">label “pinned version”</span></p><p class="def"></p><dl><dt>Connects</dt><dd><span class="chip any" title="No domain declared.">any resource</span><span class="edge"><span class="arrow">–</span><code>pinnedVersion</code><span class="arrow">→</span></span><span class="chip ext">http://www.w3.org/2001/XMLSchema#string</span></dd></dl></article><article class="term" id="providesLevel"><header><h3>providesLevel</h3><span class="badge object">object property</span></header><p class="iri">https://w3id.org/aooe#providesLevel<span class="lbl">label “provides level”</span></p><p class="def"></p><dl><dt>Connects</dt><dd><span class="chip any" title="No domain declared.">any resource</span><span class="edge"><span class="arrow">–</span><code>providesLevel</code><span class="arrow">→</span></span><a class="chip" href="#AdoptionLevel">aooe:AdoptionLevel</a></dd></dl></article><article class="term" id="refines"><header><h3>refines</h3><span class="badge object">object property</span></header><p class="iri">https://w3id.org/aooe#refines<span class="lbl">label “refines”</span></p><p class="def"></p><dl><dt>Connects</dt><dd><span class="chip any" title="No domain declared.">any resource</span><span class="edge"><span class="arrow">–</span><code>refines</code><span class="arrow">→</span></span><span class="chip any" title="No range declared.">any resource</span></dd></dl></article><article class="term" id="reuseMode"><header><h3>reuseMode</h3><span class="badge datatype">datatype property</span></header><p class="iri">https://w3id.org/aooe#reuseMode<span class="lbl">label “reuse mode”</span></p><p class="def"></p><dl><dt>Connects</dt><dd><span class="chip any" title="No domain declared.">any resource</span><span class="edge"><span class="arrow">–</span><code>reuseMode</code><span class="arrow">→</span></span><span class="chip ext">http://www.w3.org/2001/XMLSchema#string</span></dd></dl></article><article class="term" id="servesACQ"><header><h3>servesACQ</h3><span class="badge datatype">datatype property</span></header><p class="iri">https://w3id.org/aooe#servesACQ<span class="lbl">label “serves agent competency question”</span></p><p class="def"></p><dl><dt>Connects</dt><dd><span class="chip any" title="No domain declared.">any resource</span><span class="edge"><span class="arrow">–</span><code>servesACQ</code><span class="arrow">→</span></span><span class="chip ext">http://www.w3.org/2001/XMLSchema#string</span></dd></dl></article><article class="term" id="useCase"><header><h3>useCase</h3><span class="badge datatype">datatype property</span></header><p class="iri">https://w3id.org/aooe#useCase<span class="lbl">label “use case”</span></p><p class="def"></p><dl><dt>Connects</dt><dd><a class="chip" href="#AdoptionRecord">aooe:AdoptionRecord</a><span class="edge"><span class="arrow">–</span><code>useCase</code><span class="arrow">→</span></span><span class="chip ext">http://www.w3.org/2001/XMLSchema#string</span></dd></dl></article></section>
+
+<section id="download"><h2>Download</h2><div class="dls"><a class="dl" href="aooe.ttl" download><span>Turtle</span><code>aooe.ttl</code></a><a class="dl" href="aooe.rdf" download><span>RDF/XML</span><code>aooe.rdf</code></a><a class="dl" href="aooe.jsonld" download><span>JSON-LD</span><code>aooe.jsonld</code></a><a class="dl" href="aooe.nt" download><span>N-Triples</span><code>aooe.nt</code></a></div></section>
+</main>
+</div>
+<footer>AOOE — Agent-Oriented Ontology Engineering vocabulary 0.7.0 · generated by <a href="https://github.com/kvistgaard/horoi">horoi</a></footer>
+<script>
+(() => {
+  const root = document.documentElement, key = 'horoi-theme';
+  try { const t = localStorage.getItem(key); if (t) root.dataset.theme = t; } catch (e) {}
+  document.getElementById('theme').addEventListener('click', () => {
+    const dark = root.dataset.theme ? root.dataset.theme === 'dark' : matchMedia('(prefers-color-scheme: dark)').matches;
+    root.dataset.theme = dark ? 'light' : 'dark';
+    try { localStorage.setItem(key, root.dataset.theme); } catch (e) {}
+  });
+})();
+(() => {
+  const root = document.documentElement, side = document.getElementById('side'), fold = document.getElementById('terms');
+  const keys = /Mac|iPhone|iPad/.test(navigator.platform) ? '⌃ [' : 'Ctrl + [';
+  const show = open => {
+    side.setAttribute('aria-expanded', open);
+    side.title = `${open ? 'Hide' : 'Show'} sidebar: ${keys}`;
+  };
+  show(root.dataset.side !== 'closed');
+  side.addEventListener('click', () => {
+    const open = root.dataset.side === 'closed';
+    if (!open && fold.contains(document.activeElement)) side.focus();
+    if (open) delete root.dataset.side; else root.dataset.side = 'closed';
+    show(open);
+    try { localStorage.setItem('horoi-sidebar', open ? 'open' : 'closed'); } catch (e) {}
+  });
+  // AltGr reports as Ctrl+Alt, so typing [ on many layouts must not count. Where this
+  // key types no ASCII character, as on a Cyrillic layout, it counts by its position.
+  document.addEventListener('keydown', e => {
+    const bracket = e.key === '[' || (e.code === 'BracketLeft' && !/^[ -~]$/.test(e.key));
+    if (!bracket || !e.ctrlKey || e.altKey || e.shiftKey || e.metaKey || !side.offsetParent) return;
+    e.preventDefault();
+    if (!e.repeat) side.click();
+  });
+})();
+const q = document.getElementById('q');
+q.addEventListener('input', () => {
+  const s = q.value.toLowerCase();
+  document.querySelectorAll('aside .group').forEach(group => {
+    let found = false;
+    group.querySelectorAll('a').forEach(a => {
+      const hit = (a.textContent + ' ' + a.title).toLowerCase().includes(s);
+      a.style.display = hit ? '' : 'none';
+      found = found || hit;
+    });
+    group.hidden = !found;
+  });
+});
+document.getElementById('copy').addEventListener('click', e => {
+  navigator.clipboard.writeText(document.getElementById('nsiri').textContent).then(() => { e.target.textContent = 'Copied'; });
+});
+</script>
+</body>
+</html>

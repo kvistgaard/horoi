@@ -255,11 +255,39 @@ class Diagram(unittest.TestCase):
         self.assertIn("<title>foaf:Agent</title>", svg)
         self.assertIn(">foaf:Agent<", svg)
 
-    def test_a_property_from_any_resource_reaches_a_class_above(self):
-        owns = 'ex:owns a owl:ObjectProperty ; rdfs:label "owns" ; rdfs:range ex:Owner .\n'
-        svg = draw(graph(SMALL + owns))
-        self.assertIn("<title>pets:owns</title>", svg)
-        self.assertIn("<title>pets:Owner</title>", svg)
+    def test_properties_with_no_domain_start_from_any_resource_under_the_spine(self):
+        extra = ('ex:owns a owl:ObjectProperty ; rdfs:label "owns" ; rdfs:range ex:Owner .\n'
+                 'ex:note a owl:DatatypeProperty ; rdfs:label "note" .\n'
+                 'ex:seeAlso a owl:ObjectProperty ; rdfs:label "see also" .\n')
+        svg = draw(graph(SMALL + extra))
+        node = re.search(r'<title>No domain declared\.</title><rect class="a" x="(-?\d+)" y="(-?\d+)"', svg)
+        pet = re.search(r'<title>pets:Pet</title><rect class="c" x="(-?\d+)" y="(-?\d+)" width="\d+" height="(\d+)"', svg)
+        self.assertIsNotNone(node)
+        self.assertEqual(node[1], pet[1])                                   # in the column
+        self.assertGreater(int(node[2]), int(pet[2]) + int(pet[3]))         # under the spine
+        for t in ("pets:owns", "pets:note", "pets:seeAlso", "pets:Owner"):
+            self.assertIn(f"<title>{t}</title>", svg)
+
+    def test_a_class_two_neighbouring_rows_reach_is_drawn_once_with_its_self_loops(self):
+        extra = ('ex:Owner rdfs:label "Owner" .\n'
+                 'ex:keptBy rdfs:range ex:Owner .\n'
+                 'ex:owns a owl:ObjectProperty ; rdfs:label "owns" ; rdfs:range ex:Owner .\n'
+                 'ex:knows a owl:ObjectProperty ; rdfs:label "knows" ; rdfs:domain ex:Owner ; rdfs:range ex:Owner .\n')
+        svg = draw(graph(SMALL + extra))
+        self.assertEqual(svg.count("<title>pets:Owner</title>"), 1)
+        owner = re.search(r'<title>pets:Owner</title><rect class="c" x="(-?\d+)" y="(-?\d+)" width="(\d+)" height="(\d+)"', svg)
+        x, y, w, h = map(int, owner.groups())
+        lx, ly = map(float, re.search(r'x="([\d.]+)" y="([\d.]+)" text-anchor="start">knows<', svg).groups())
+        self.assertGreater(lx, x + w)                                       # on its right edge
+        self.assertTrue(y < ly < y + h)
+
+    def test_a_class_rows_apart_reach_is_not_drawn(self):
+        extra = ('ex:Kitten a owl:Class ; rdfs:subClassOf ex:Pet .\n'
+                 'ex:Breeder a owl:Class .\n'
+                 'ex:breeds a owl:ObjectProperty ; rdfs:range ex:Breeder .\n'
+                 'ex:soldBy a owl:ObjectProperty ; rdfs:domain ex:Pet ; rdfs:range ex:Breeder .\n')
+        with self.assertRaises(Undrawable):         # Pet, then Kitten, then any resource
+            draw(graph(SMALL + extra))
 
 
 if __name__ == "__main__":
