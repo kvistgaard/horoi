@@ -1,0 +1,2117 @@
+[
+  {
+    "@id": "http://data.europa.eu/a4g/ontology#describesResultNotice",
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://data.europa.eu/a4g/ontology#NoticeAwardInformation"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://data.europa.eu/a4g/ontology#ResultNotice"
+      }
+    ]
+  },
+  {
+    "@id": "http://data.europa.eu/a4g/ontology#refersToAwardDecision",
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "_:n32ca45884ddd43ee85e616709674fa88b18"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://data.europa.eu/a4g/ontology#AwardDecision"
+      }
+    ]
+  },
+  {
+    "@id": "_:n32ca45884ddd43ee85e616709674fa88b18",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#CompletionNotice"
+          },
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#ContractModificationNotice"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "http://data.europa.eu/a4g/ontology#announcesPlannedProcurement",
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://data.europa.eu/a4g/ontology#PlanningNotice"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://data.europa.eu/a4g/ontology#PlannedProcurement"
+      }
+    ]
+  },
+  {
+    "@id": "_:n32ca45884ddd43ee85e616709674fa88b265",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#AllDisjointClasses"
+    ],
+    "http://www.w3.org/2002/07/owl#members": [
+      {
+        "@list": [
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#CNSocialNotice-D25"
+          },
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#Notice20"
+          },
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#CNSocial-D25"
+          },
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#Notice21"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:n32ca45884ddd43ee85e616709674fa88b126",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#AllDisjointClasses"
+    ],
+    "http://www.w3.org/2002/07/owl#members": [
+      {
+        "@list": [
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#QS-D25"
+          },
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#QSNotice-D25"
+          },
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#Notice15"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "http://data.europa.eu/a4g/ontology#announcesRole",
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "_:n32ca45884ddd43ee85e616709674fa88b43"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://data.europa.eu/a4g/ontology#AgentInRole"
+      }
+    ]
+  },
+  {
+    "@id": "_:n32ca45884ddd43ee85e616709674fa88b43",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#CompetitionNotice"
+          },
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#CompletionNotice"
+          },
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#DirectAwardPrenotificationNotice"
+          },
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#PlanningNotice"
+          },
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#ResultNotice"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:n32ca45884ddd43ee85e616709674fa88b249",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#AllDisjointClasses"
+    ],
+    "http://www.w3.org/2002/07/owl#members": [
+      {
+        "@list": [
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#DesignContest-D24"
+          },
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#DesignContest-D25"
+          },
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#Notice23"
+          },
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#Notice24"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "http://data.europa.eu/a4g/ontology#announcesPlannedProcurementPart",
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://data.europa.eu/a4g/ontology#PlanningNotice"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://data.europa.eu/a4g/ontology#PlannedProcurementPart"
+      }
+    ]
+  },
+  {
+    "@id": "_:n32ca45884ddd43ee85e616709674fa88b261",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#AllDisjointClasses"
+    ],
+    "http://www.w3.org/2002/07/owl#members": [
+      {
+        "@list": [
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#PIN-CFCStandard-D24"
+          },
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#Notice11"
+          },
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#Notice10"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:n32ca45884ddd43ee85e616709674fa88b270",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#AllDisjointClasses"
+    ],
+    "http://www.w3.org/2002/07/owl#members": [
+      {
+        "@list": [
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#Modification-D24"
+          },
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#Notice39"
+          },
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#NoticeE6"
+          },
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#Modification-D25"
+          },
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#Notice38"
+          },
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#Modification-D23"
+          },
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#Notice40"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:n32ca45884ddd43ee85e616709674fa88b181",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#AllDisjointClasses"
+    ],
+    "http://www.w3.org/2002/07/owl#members": [
+      {
+        "@list": [
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#Notice14"
+          },
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#Notice13"
+          },
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#Notice12"
+          },
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#PIN-CFCSocialNotice-D25"
+          },
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#PIN-CFCSocial-D25"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:n32ca45884ddd43ee85e616709674fa88b237",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#AllDisjointClasses"
+    ],
+    "http://www.w3.org/2002/07/owl#members": [
+      {
+        "@list": [
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#PIN-RTL-D25"
+          },
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#Notice9"
+          },
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#PIN-RTL-D24"
+          },
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#Notice7"
+          },
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#Notice8"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "http://data.europa.eu/a4g/ontology#not-restriction",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Ontology"
+    ],
+    "http://purl.org/dc/terms/created": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2021-06-01"
+      }
+    ],
+    "http://purl.org/dc/terms/description": [
+      {
+        "@language": "en",
+        "@value": "The eProcurement Ontology Notice core restrictions provides the restrictions and the inference-related specifications on the concepts and properties in the eProcurement Ontology Notice core."
+      }
+    ],
+    "http://purl.org/dc/terms/issued": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2025-10-10"
+      }
+    ],
+    "http://purl.org/dc/terms/license": [
+      {
+        "@value": "© European Union, 2014. Unless otherwise noted, the reuse of the Ontology is authorised under the European Union Public Licence v1.2 (https://eupl.eu/)."
+      }
+    ],
+    "http://purl.org/dc/terms/publisher": [
+      {
+        "@value": "http://publications.europa.eu/resource/authority/corporate-body/PUBL"
+      }
+    ],
+    "http://purl.org/dc/terms/title": [
+      {
+        "@language": "en",
+        "@value": "eProcurement Ontology Notice - core restrictions"
+      }
+    ],
+    "http://purl.org/vocab/vann/preferredNamespacePrefix": [
+      {
+        "@value": "epo"
+      }
+    ],
+    "http://purl.org/vocab/vann/preferredNamespaceUri": [
+      {
+        "@value": "http://data.europa.eu/a4g/ontology#"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "This version is automatically generated from eNotice.xml on \n                2025-10-10"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "eProcurement Ontology Notice - core restrictions"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+      {
+        "@id": "https://docs.ted.europa.eu/home/index.html"
+      },
+      {
+        "@id": "https://github.com/OP-TED/ePO/releases"
+      },
+      {
+        "@id": "https://joinup.ec.europa.eu/collection/eprocurement/solution/eprocurement-ontology/about"
+      },
+      {
+        "@id": "https://op.europa.eu/en/web/eu-vocabularies/e-procurement"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#imports": [
+      {
+        "@id": "http://data.europa.eu/a4g/ontology#con"
+      },
+      {
+        "@id": "http://data.europa.eu/a4g/ontology#core"
+      },
+      {
+        "@id": "http://data.europa.eu/a4g/ontology#not"
+      },
+      {
+        "@id": "http://data.europa.eu/eli/ontology#"
+      },
+      {
+        "@id": "http://data.europa.eu/m8g/"
+      },
+      {
+        "@id": "http://purl.org/dc/terms/"
+      },
+      {
+        "@id": "http://www.w3.org/2004/02/skos/core#"
+      },
+      {
+        "@id": "http://www.w3.org/2006/time"
+      },
+      {
+        "@id": "http://www.w3.org/ns/adms"
+      },
+      {
+        "@id": "http://www.w3.org/ns/locn"
+      },
+      {
+        "@id": "http://www.w3.org/ns/org#"
+      },
+      {
+        "@id": "http://www.w3.org/ns/person"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#incompatibleWith": [
+      {
+        "@value": "4.2.0"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#priorVersion": [
+      {
+        "@value": "http://data.europa.eu/a4g/ontology#not-restriction-5.1.0"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#versionIRI": [
+      {
+        "@id": "http://data.europa.eu/a4g/ontology#not-restriction-5.2.0"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#versionInfo": [
+      {
+        "@value": "5.2.0"
+      }
+    ]
+  },
+  {
+    "@id": "http://data.europa.eu/a4g/ontology#announcesLotGroup",
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "_:n32ca45884ddd43ee85e616709674fa88b7"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://data.europa.eu/a4g/ontology#LotGroup"
+      }
+    ]
+  },
+  {
+    "@id": "_:n32ca45884ddd43ee85e616709674fa88b7",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#CompetitionNotice"
+          },
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#DirectAwardPrenotificationNotice"
+          },
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#PlanningNotice"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:n32ca45884ddd43ee85e616709674fa88b254",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#AllDisjointClasses"
+    ],
+    "http://www.w3.org/2002/07/owl#members": [
+      {
+        "@list": [
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#Notice2"
+          },
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#PINProfile-D25"
+          },
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#PINProfile-D81"
+          },
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#Notice3"
+          },
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#PINProfile-D24"
+          },
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#Notice1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "http://data.europa.eu/a4g/ontology#ResultNotice",
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "_:n32ca45884ddd43ee85e616709674fa88b78"
+      },
+      {
+        "@id": "_:n32ca45884ddd43ee85e616709674fa88b79"
+      },
+      {
+        "@id": "_:n32ca45884ddd43ee85e616709674fa88b80"
+      },
+      {
+        "@id": "_:n32ca45884ddd43ee85e616709674fa88b81"
+      }
+    ]
+  },
+  {
+    "@id": "_:n32ca45884ddd43ee85e616709674fa88b78",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#minCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://data.europa.eu/a4g/ontology#concernsLot"
+      }
+    ]
+  },
+  {
+    "@id": "_:n32ca45884ddd43ee85e616709674fa88b79",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#maxCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://data.europa.eu/a4g/ontology#announcesNoticeAwardInformation"
+      }
+    ]
+  },
+  {
+    "@id": "_:n32ca45884ddd43ee85e616709674fa88b80",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#minCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://data.europa.eu/a4g/ontology#refersToRole"
+      }
+    ]
+  },
+  {
+    "@id": "_:n32ca45884ddd43ee85e616709674fa88b81",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#cardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://data.europa.eu/a4g/ontology#concernsProcedure"
+      }
+    ]
+  },
+  {
+    "@id": "_:n32ca45884ddd43ee85e616709674fa88b110",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#AllDisjointClasses"
+    ],
+    "http://www.w3.org/2002/07/owl#members": [
+      {
+        "@list": [
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#CANDefence-D81"
+          },
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#CANTransportationNotice"
+          },
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#CANSocialNotice"
+          },
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#CANStandardNotice"
+          },
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#DesignContestResultNotice"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "http://data.europa.eu/a4g/ontology#CompletionNotice",
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "_:n32ca45884ddd43ee85e616709674fa88b74"
+      },
+      {
+        "@id": "_:n32ca45884ddd43ee85e616709674fa88b75"
+      },
+      {
+        "@id": "_:n32ca45884ddd43ee85e616709674fa88b76"
+      },
+      {
+        "@id": "_:n32ca45884ddd43ee85e616709674fa88b77"
+      }
+    ]
+  },
+  {
+    "@id": "_:n32ca45884ddd43ee85e616709674fa88b74",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#maxCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://data.europa.eu/a4g/ontology#refersToNoticeAwardInformation"
+      }
+    ]
+  },
+  {
+    "@id": "_:n32ca45884ddd43ee85e616709674fa88b75",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#minCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://data.europa.eu/a4g/ontology#concernsLot"
+      }
+    ]
+  },
+  {
+    "@id": "_:n32ca45884ddd43ee85e616709674fa88b76",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#cardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://data.europa.eu/a4g/ontology#announcesCompletionOfContract"
+      }
+    ]
+  },
+  {
+    "@id": "_:n32ca45884ddd43ee85e616709674fa88b77",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#cardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://data.europa.eu/a4g/ontology#concernsProcedure"
+      }
+    ]
+  },
+  {
+    "@id": "http://data.europa.eu/a4g/ontology#announcesProcedure",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#FunctionalProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "_:n32ca45884ddd43ee85e616709674fa88b39"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://data.europa.eu/a4g/ontology#Procedure"
+      }
+    ]
+  },
+  {
+    "@id": "_:n32ca45884ddd43ee85e616709674fa88b39",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#CompetitionNotice"
+          },
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#DirectAwardPrenotificationNotice"
+          },
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#PlanningNotice"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:n32ca45884ddd43ee85e616709674fa88b130",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#AllDisjointClasses"
+    ],
+    "http://www.w3.org/2002/07/owl#members": [
+      {
+        "@list": [
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#CANSocialNotice-D25"
+          },
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#VEAT-D25"
+          },
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#CNSocialNotice-D25"
+          },
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#PIN-CFCSocialNotice-D25"
+          },
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#PINOnly-D24"
+          },
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#SocialAndOtherSpecificServices-D23"
+          },
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#PINProfile-D24"
+          },
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#DesignContestResult-D24"
+          },
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#DesignContestResult-D25"
+          },
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#DesignContest-D25"
+          },
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#VEAT-D81"
+          },
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#PIN-RTL-D24"
+          },
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#PINOnly-D25"
+          },
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#CANStandard-D24"
+          },
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#PINProfile-D25"
+          },
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#CNDefence-D81"
+          },
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#PIN-RTL-D25"
+          },
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#SocialAndOtherSpecificServices-D24"
+          },
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#ConcessionNotice-D23"
+          },
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#Modification-D24"
+          },
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#CNStandard-D24"
+          },
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#DesignContest-D24"
+          },
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#QSNotice-D25"
+          },
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#CNSocial-D25"
+          },
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#Modification-D25"
+          },
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#CANSocial-D25"
+          },
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#PIN-CFCSocial-D25"
+          },
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#PINProfile-D81"
+          },
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#VEAT-D24"
+          },
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#QS-D25"
+          },
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#Subcontract-D81"
+          },
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#VEAT-D23"
+          },
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#ConcessionAwardNotice-D23"
+          },
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#PIN-CFCStandard-D24"
+          },
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#CANDefence-D81"
+          },
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#Modification-D23"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "http://data.europa.eu/a4g/ontology#concernsLot",
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "_:n32ca45884ddd43ee85e616709674fa88b49"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://data.europa.eu/a4g/ontology#Lot"
+      }
+    ]
+  },
+  {
+    "@id": "_:n32ca45884ddd43ee85e616709674fa88b49",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#CompletionNotice"
+          },
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#ContractModificationNotice"
+          },
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#ResultNotice"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "http://data.europa.eu/a4g/ontology#announcesNoticeAwardInformation",
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "_:n32ca45884ddd43ee85e616709674fa88b33"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://data.europa.eu/a4g/ontology#NoticeAwardInformation"
+      }
+    ]
+  },
+  {
+    "@id": "_:n32ca45884ddd43ee85e616709674fa88b33",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#DirectAwardPrenotificationNotice"
+          },
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#ResultNotice"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:n32ca45884ddd43ee85e616709674fa88b93",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#AllDisjointClasses"
+    ],
+    "http://www.w3.org/2002/07/owl#members": [
+      {
+        "@list": [
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#CompetitionNotice"
+          },
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#CompletionNotice"
+          },
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#ContractModificationNotice"
+          },
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#DirectAwardPrenotificationNotice"
+          },
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#PlanningNotice"
+          },
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#PreMarketConsultationNotice"
+          },
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#ResultNotice"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "http://data.europa.eu/a4g/ontology#refersToNoticeAwardInformation",
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "_:n32ca45884ddd43ee85e616709674fa88b36"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://data.europa.eu/a4g/ontology#NoticeAwardInformation"
+      }
+    ]
+  },
+  {
+    "@id": "_:n32ca45884ddd43ee85e616709674fa88b36",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#CompletionNotice"
+          },
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#ContractModificationNotice"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "http://data.europa.eu/a4g/ontology#announcesLot",
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "_:n32ca45884ddd43ee85e616709674fa88b29"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://data.europa.eu/a4g/ontology#Lot"
+      }
+    ]
+  },
+  {
+    "@id": "_:n32ca45884ddd43ee85e616709674fa88b29",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#CompetitionNotice"
+          },
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#DirectAwardPrenotificationNotice"
+          },
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#PlanningNotice"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:n32ca45884ddd43ee85e616709674fa88b101",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#AllDisjointClasses"
+    ],
+    "http://www.w3.org/2002/07/owl#members": [
+      {
+        "@list": [
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#CallForExpressionOfInterest"
+          },
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#PIN-CFCStandardNotice"
+          },
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#PIN-CFCSocialNotice"
+          },
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#CNSocialNotice"
+          },
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#QSNotice"
+          },
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#CNStandardNotice"
+          },
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#DesignContestNotice"
+          },
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#SubcontractNotice"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "http://data.europa.eu/a4g/ontology#announcesContract",
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "_:n32ca45884ddd43ee85e616709674fa88b4"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://data.europa.eu/a4g/ontology#Contract"
+      }
+    ]
+  },
+  {
+    "@id": "_:n32ca45884ddd43ee85e616709674fa88b4",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#DirectAwardPrenotificationNotice"
+          },
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#ResultNotice"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "http://data.europa.eu/a4g/ontology#preparesForPotentialProcurementObject",
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://data.europa.eu/a4g/ontology#PreMarketConsultationNotice"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://data.europa.eu/a4g/ontology#ProcurementObject"
+      }
+    ]
+  },
+  {
+    "@id": "_:n32ca45884ddd43ee85e616709674fa88b174",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#AllDisjointClasses"
+    ],
+    "http://www.w3.org/2002/07/owl#members": [
+      {
+        "@list": [
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#NoticeE2"
+          },
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#Notice4"
+          },
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#Notice5"
+          },
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#Notice6"
+          },
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#PINOnly-D24"
+          },
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#PINOnly-D25"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "http://data.europa.eu/a4g/ontology#refersToReviewRequest",
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://data.europa.eu/a4g/ontology#CompletionNotice"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://data.europa.eu/a4g/ontology#ReviewRequest"
+      }
+    ]
+  },
+  {
+    "@id": "http://data.europa.eu/a4g/ontology#announcesLotGroupAwardInformation",
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "_:n32ca45884ddd43ee85e616709674fa88b11"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://data.europa.eu/a4g/ontology#LotGroupAwardInformation"
+      }
+    ]
+  },
+  {
+    "@id": "_:n32ca45884ddd43ee85e616709674fa88b11",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#DirectAwardPrenotificationNotice"
+          },
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#ResultNotice"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "http://data.europa.eu/a4g/ontology#concernsLotGroup",
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "_:n32ca45884ddd43ee85e616709674fa88b14"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://data.europa.eu/a4g/ontology#LotGroup"
+      }
+    ]
+  },
+  {
+    "@id": "_:n32ca45884ddd43ee85e616709674fa88b14",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#CompletionNotice"
+          },
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#ContractModificationNotice"
+          },
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#ResultNotice"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:n32ca45884ddd43ee85e616709674fa88b278",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#AllDisjointClasses"
+    ],
+    "http://www.w3.org/2002/07/owl#members": [
+      {
+        "@list": [
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#VEAT-D81"
+          },
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#VEAT-D23"
+          },
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#VEAT-D24"
+          },
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#Notice25"
+          },
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#Notice27"
+          },
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#Notice26"
+          },
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#VEAT-D25"
+          },
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#Notice28"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "http://data.europa.eu/a4g/ontology#PlanningNotice",
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "_:n32ca45884ddd43ee85e616709674fa88b62"
+      },
+      {
+        "@id": "_:n32ca45884ddd43ee85e616709674fa88b63"
+      },
+      {
+        "@id": "_:n32ca45884ddd43ee85e616709674fa88b64"
+      }
+    ]
+  },
+  {
+    "@id": "_:n32ca45884ddd43ee85e616709674fa88b62",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#maxCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://data.europa.eu/a4g/ontology#announcesPlannedProcurement"
+      }
+    ]
+  },
+  {
+    "@id": "_:n32ca45884ddd43ee85e616709674fa88b63",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#minCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://data.europa.eu/a4g/ontology#announcesRole"
+      }
+    ]
+  },
+  {
+    "@id": "_:n32ca45884ddd43ee85e616709674fa88b64",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#maxCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://data.europa.eu/a4g/ontology#announcesProcedure"
+      }
+    ]
+  },
+  {
+    "@id": "_:n32ca45884ddd43ee85e616709674fa88b87",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#AllDisjointClasses"
+    ],
+    "http://www.w3.org/2002/07/owl#members": [
+      {
+        "@list": [
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#Notice33"
+          },
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#CANSocial-D25"
+          },
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#Notice35"
+          },
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#CANSocialNotice-D25"
+          },
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#Notice34"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:n32ca45884ddd43ee85e616709674fa88b243",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#AllDisjointClasses"
+    ],
+    "http://www.w3.org/2002/07/owl#members": [
+      {
+        "@list": [
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#PINTimeLimitNotice"
+          },
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#PINOnlyNotice"
+          },
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#PINTransportationNotice"
+          },
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#PINDefence-D81"
+          },
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#PINProfileNotice"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "http://data.europa.eu/a4g/ontology#describesDirectAwardPrenotificationNotice",
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://data.europa.eu/a4g/ontology#NoticeAwardInformation"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://data.europa.eu/a4g/ontology#DirectAwardPrenotificationNotice"
+      }
+    ]
+  },
+  {
+    "@id": "http://data.europa.eu/a4g/ontology#ContractModificationNotice",
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "_:n32ca45884ddd43ee85e616709674fa88b65"
+      },
+      {
+        "@id": "_:n32ca45884ddd43ee85e616709674fa88b66"
+      },
+      {
+        "@id": "_:n32ca45884ddd43ee85e616709674fa88b67"
+      },
+      {
+        "@id": "_:n32ca45884ddd43ee85e616709674fa88b68"
+      },
+      {
+        "@id": "_:n32ca45884ddd43ee85e616709674fa88b69"
+      }
+    ]
+  },
+  {
+    "@id": "_:n32ca45884ddd43ee85e616709674fa88b65",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#minCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://data.europa.eu/a4g/ontology#concernsLot"
+      }
+    ]
+  },
+  {
+    "@id": "_:n32ca45884ddd43ee85e616709674fa88b66",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#cardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://data.europa.eu/a4g/ontology#announcesContractAmendment"
+      }
+    ]
+  },
+  {
+    "@id": "_:n32ca45884ddd43ee85e616709674fa88b67",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#cardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://data.europa.eu/a4g/ontology#concernsProcedure"
+      }
+    ]
+  },
+  {
+    "@id": "_:n32ca45884ddd43ee85e616709674fa88b68",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#cardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://data.europa.eu/a4g/ontology#refersToContractToBeModified"
+      }
+    ]
+  },
+  {
+    "@id": "_:n32ca45884ddd43ee85e616709674fa88b69",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#maxCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://data.europa.eu/a4g/ontology#refersToNoticeAwardInformation"
+      }
+    ]
+  },
+  {
+    "@id": "http://data.europa.eu/a4g/ontology#announcesCompletionOfContract",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#FunctionalProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://data.europa.eu/a4g/ontology#CompletionNotice"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://data.europa.eu/a4g/ontology#Contract"
+      }
+    ]
+  },
+  {
+    "@id": "http://data.europa.eu/a4g/ontology#refersToContractToBeModified",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#FunctionalProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://data.europa.eu/a4g/ontology#ContractModificationNotice"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://data.europa.eu/a4g/ontology#Contract"
+      }
+    ]
+  },
+  {
+    "@id": "_:n32ca45884ddd43ee85e616709674fa88b116",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#AllDisjointClasses"
+    ],
+    "http://www.w3.org/2002/07/owl#members": [
+      {
+        "@list": [
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#Notice16"
+          },
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#Notice19"
+          },
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#CNStandard-D24"
+          },
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#Notice18"
+          },
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#Notice17"
+          },
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#NoticeE3"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "http://data.europa.eu/a4g/ontology#DirectAwardPrenotificationNotice",
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "_:n32ca45884ddd43ee85e616709674fa88b70"
+      },
+      {
+        "@id": "_:n32ca45884ddd43ee85e616709674fa88b71"
+      },
+      {
+        "@id": "_:n32ca45884ddd43ee85e616709674fa88b72"
+      },
+      {
+        "@id": "_:n32ca45884ddd43ee85e616709674fa88b73"
+      }
+    ]
+  },
+  {
+    "@id": "_:n32ca45884ddd43ee85e616709674fa88b70",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#minCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://data.europa.eu/a4g/ontology#announcesLot"
+      }
+    ]
+  },
+  {
+    "@id": "_:n32ca45884ddd43ee85e616709674fa88b71",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#cardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://data.europa.eu/a4g/ontology#announcesProcedure"
+      }
+    ]
+  },
+  {
+    "@id": "_:n32ca45884ddd43ee85e616709674fa88b72",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#maxCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://data.europa.eu/a4g/ontology#announcesNoticeAwardInformation"
+      }
+    ]
+  },
+  {
+    "@id": "_:n32ca45884ddd43ee85e616709674fa88b73",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#minCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://data.europa.eu/a4g/ontology#announcesRole"
+      }
+    ]
+  },
+  {
+    "@id": "_:n32ca45884ddd43ee85e616709674fa88b82",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#AllDisjointClasses"
+    ],
+    "http://www.w3.org/2002/07/owl#members": [
+      {
+        "@list": [
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#Notice36"
+          },
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#Notice37"
+          },
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#DesignContestResult-D25"
+          },
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#DesignContestResult-D24"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:n32ca45884ddd43ee85e616709674fa88b187",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#AllDisjointClasses"
+    ],
+    "http://www.w3.org/2002/07/owl#members": [
+      {
+        "@list": [
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#Notice13"
+          },
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#NoticeE6"
+          },
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#NoticeE2"
+          },
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#NoticeE3"
+          },
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#Notice12"
+          },
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#Notice40"
+          },
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#Notice9"
+          },
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#Notice20"
+          },
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#Notice26"
+          },
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#Notice31"
+          },
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#Notice8"
+          },
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#Notice19"
+          },
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#Notice29"
+          },
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#Notice5"
+          },
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#NoticeCEI"
+          },
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#Notice21"
+          },
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#Notice14"
+          },
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#Notice7"
+          },
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#Notice10"
+          },
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#Notice1"
+          },
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#Notice30"
+          },
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#Notice32"
+          },
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#Notice11"
+          },
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#NoticeT02"
+          },
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#Notice24"
+          },
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#Notice35"
+          },
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#Notice39"
+          },
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#Notice17"
+          },
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#NoticeE5"
+          },
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#Notice34"
+          },
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#Notice38"
+          },
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#Notice15"
+          },
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#Notice28"
+          },
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#Notice37"
+          },
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#NoticeE1"
+          },
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#Notice6"
+          },
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#NoticeE4"
+          },
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#Notice36"
+          },
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#Notice16"
+          },
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#NoticeT01"
+          },
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#Notice23"
+          },
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#Notice4"
+          },
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#Notice25"
+          },
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#Notice3"
+          },
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#Notice22"
+          },
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#Notice27"
+          },
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#Notice18"
+          },
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#Notice2"
+          },
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#Notice33"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "http://data.europa.eu/a4g/ontology#concernsProcedure",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#FunctionalProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "_:n32ca45884ddd43ee85e616709674fa88b53"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://data.europa.eu/a4g/ontology#Procedure"
+      }
+    ]
+  },
+  {
+    "@id": "_:n32ca45884ddd43ee85e616709674fa88b53",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#CompletionNotice"
+          },
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#ContractModificationNotice"
+          },
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#ResultNotice"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "http://data.europa.eu/a4g/ontology#announcesContractAmendment",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#FunctionalProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://data.europa.eu/a4g/ontology#ContractModificationNotice"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://data.europa.eu/a4g/ontology#ContractAmendment"
+      }
+    ]
+  },
+  {
+    "@id": "http://data.europa.eu/a4g/ontology#announcesReviewRequest",
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://data.europa.eu/a4g/ontology#ResultNotice"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://data.europa.eu/a4g/ontology#ReviewRequest"
+      }
+    ]
+  },
+  {
+    "@id": "http://data.europa.eu/a4g/ontology#announcesAwardDecision",
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "_:n32ca45884ddd43ee85e616709674fa88b1"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://data.europa.eu/a4g/ontology#AwardDecision"
+      }
+    ]
+  },
+  {
+    "@id": "_:n32ca45884ddd43ee85e616709674fa88b1",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#DirectAwardPrenotificationNotice"
+          },
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#ResultNotice"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "http://data.europa.eu/a4g/ontology#refersToRole",
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "_:n32ca45884ddd43ee85e616709674fa88b24"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://data.europa.eu/a4g/ontology#AgentInRole"
+      }
+    ]
+  },
+  {
+    "@id": "_:n32ca45884ddd43ee85e616709674fa88b24",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#CompletionNotice"
+          },
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#ContractModificationNotice"
+          },
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#PreMarketConsultationNotice"
+          },
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#ResultNotice"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "http://data.europa.eu/a4g/ontology#CompetitionNotice",
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "_:n32ca45884ddd43ee85e616709674fa88b59"
+      },
+      {
+        "@id": "_:n32ca45884ddd43ee85e616709674fa88b60"
+      },
+      {
+        "@id": "_:n32ca45884ddd43ee85e616709674fa88b61"
+      }
+    ]
+  },
+  {
+    "@id": "_:n32ca45884ddd43ee85e616709674fa88b59",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#cardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://data.europa.eu/a4g/ontology#announcesProcedure"
+      }
+    ]
+  },
+  {
+    "@id": "_:n32ca45884ddd43ee85e616709674fa88b60",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#minCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://data.europa.eu/a4g/ontology#announcesLot"
+      }
+    ]
+  },
+  {
+    "@id": "_:n32ca45884ddd43ee85e616709674fa88b61",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#minCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://data.europa.eu/a4g/ontology#announcesRole"
+      }
+    ]
+  },
+  {
+    "@id": "_:n32ca45884ddd43ee85e616709674fa88b167",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#AllDisjointClasses"
+    ],
+    "http://www.w3.org/2002/07/owl#members": [
+      {
+        "@list": [
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#Notice31"
+          },
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#CANStandard-D24"
+          },
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#Notice30"
+          },
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#Notice32"
+          },
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#NoticeE4"
+          },
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#Notice29"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "http://data.europa.eu/a4g/ontology#NoticeAwardInformation",
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "_:n32ca45884ddd43ee85e616709674fa88b57"
+      },
+      {
+        "@id": "_:n32ca45884ddd43ee85e616709674fa88b58"
+      }
+    ]
+  },
+  {
+    "@id": "_:n32ca45884ddd43ee85e616709674fa88b57",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#maxCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://data.europa.eu/a4g/ontology#describesDirectAwardPrenotificationNotice"
+      }
+    ]
+  },
+  {
+    "@id": "_:n32ca45884ddd43ee85e616709674fa88b58",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#maxCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": 1
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://data.europa.eu/a4g/ontology#describesResultNotice"
+      }
+    ]
+  },
+  {
+    "@id": "_:n32ca45884ddd43ee85e616709674fa88b123",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#AllDisjointClasses"
+    ],
+    "http://www.w3.org/2002/07/owl#members": [
+      {
+        "@list": [
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#Subcontract-D81"
+          },
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#Notice22"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "http://data.europa.eu/a4g/ontology#refersToLotGroupAwardInformation",
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "_:n32ca45884ddd43ee85e616709674fa88b21"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://data.europa.eu/a4g/ontology#LotGroupAwardInformation"
+      }
+    ]
+  },
+  {
+    "@id": "_:n32ca45884ddd43ee85e616709674fa88b21",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#CompletionNotice"
+          },
+          {
+            "@id": "http://data.europa.eu/a4g/ontology#ContractModificationNotice"
+          }
+        ]
+      }
+    ]
+  }
+]

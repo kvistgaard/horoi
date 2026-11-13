@@ -1,0 +1,715 @@
+[
+  {
+    "@id": "http://data.europa.eu/a4g/ontology#PaymentInformation",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://data.europa.eu/a4g/ontology#pay"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://data.europa.eu/a4g/ontology#InformationHub"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "Information about a remittance."
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Payment Information"
+      }
+    ]
+  },
+  {
+    "@id": "http://data.europa.eu/a4g/ontology#refersToInvoice",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://data.europa.eu/a4g/ontology#pay"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "Reference to an Invoice."
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#historyNote": [
+      {
+        "@language": "en",
+        "@value": "WG approval 25/09/2025"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "refers To Invoice"
+      }
+    ]
+  },
+  {
+    "@id": "http://data.europa.eu/a4g/ontology#hasBalanceAmount",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://data.europa.eu/a4g/ontology#pay"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "Relation indicating the outstanding amount that remains unpaid or unsettled."
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#historyNote": [
+      {
+        "@language": "en",
+        "@value": "WG approval 25/09/2025"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "has Balance Amount"
+      }
+    ]
+  },
+  {
+    "@id": "http://data.europa.eu/a4g/ontology#hasCreditAmount",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://data.europa.eu/a4g/ontology#pay"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "Relation indicating the Monetary Value that reduces the amount owed."
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#historyNote": [
+      {
+        "@language": "en",
+        "@value": "WG approval 25/09/2025"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "has Credit Amount"
+      }
+    ]
+  },
+  {
+    "@id": "http://data.europa.eu/a4g/ontology#RemittanceAdviceLine",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://data.europa.eu/a4g/ontology#pay"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://data.europa.eu/a4g/ontology#Line"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "Details concerning a given Invoice from the Remittance Advice."
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Remittance Advice Line"
+      }
+    ]
+  },
+  {
+    "@id": "http://data.europa.eu/a4g/ontology#pay",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Ontology"
+    ],
+    "http://purl.org/dc/terms/created": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2021-06-01"
+      }
+    ],
+    "http://purl.org/dc/terms/description": [
+      {
+        "@language": "en",
+        "@value": "The eProcurement Ontology Payment core describes the concepts and properties representing the European Public Procurement Payment domain. The provision of these semantics offers the basis for a common understanding of the domain for all stakeholders ensuring the quality of data exchange and transparency. The ontology restrictions are published in a separate artefact."
+      }
+    ],
+    "http://purl.org/dc/terms/issued": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2025-10-10"
+      }
+    ],
+    "http://purl.org/dc/terms/license": [
+      {
+        "@value": "© European Union, 2014. Unless otherwise noted, the reuse of the Ontology is authorised under the European Union Public Licence v1.2 (https://eupl.eu/)."
+      }
+    ],
+    "http://purl.org/dc/terms/publisher": [
+      {
+        "@value": "http://publications.europa.eu/resource/authority/corporate-body/PUBL"
+      }
+    ],
+    "http://purl.org/dc/terms/title": [
+      {
+        "@language": "en",
+        "@value": "eProcurement Ontology Payment - core"
+      }
+    ],
+    "http://purl.org/vocab/vann/preferredNamespacePrefix": [
+      {
+        "@value": "epo"
+      }
+    ],
+    "http://purl.org/vocab/vann/preferredNamespaceUri": [
+      {
+        "@value": "http://data.europa.eu/a4g/ontology#"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "This version is automatically generated from ePayment.xml on 2025-10-10"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "eProcurement Ontology Payment - core"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+      {
+        "@id": "https://docs.ted.europa.eu/home/index.html"
+      },
+      {
+        "@id": "https://github.com/OP-TED/ePO/releases"
+      },
+      {
+        "@id": "https://joinup.ec.europa.eu/collection/eprocurement/solution/eprocurement-ontology/about"
+      },
+      {
+        "@id": "https://op.europa.eu/en/web/eu-vocabularies/e-procurement"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#imports": [
+      {
+        "@id": "http://data.europa.eu/a4g/ontology#cat"
+      },
+      {
+        "@id": "http://data.europa.eu/a4g/ontology#core"
+      },
+      {
+        "@id": "http://data.europa.eu/a4g/ontology#inv"
+      },
+      {
+        "@id": "http://data.europa.eu/a4g/ontology#ord"
+      },
+      {
+        "@id": "http://data.europa.eu/eli/ontology#"
+      },
+      {
+        "@id": "http://data.europa.eu/m8g/"
+      },
+      {
+        "@id": "http://purl.org/dc/terms/"
+      },
+      {
+        "@id": "http://www.w3.org/2004/02/skos/core#"
+      },
+      {
+        "@id": "http://www.w3.org/2006/time"
+      },
+      {
+        "@id": "http://www.w3.org/ns/adms"
+      },
+      {
+        "@id": "http://www.w3.org/ns/locn"
+      },
+      {
+        "@id": "http://www.w3.org/ns/org#"
+      },
+      {
+        "@id": "http://www.w3.org/ns/person"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#incompatibleWith": [
+      {
+        "@value": "4.2.0"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#priorVersion": [
+      {
+        "@value": "http://data.europa.eu/a4g/ontology#pay-5.1.0"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#versionIRI": [
+      {
+        "@id": "http://data.europa.eu/a4g/ontology#pay-5.2.0"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#versionInfo": [
+      {
+        "@value": "5.2.0"
+      }
+    ]
+  },
+  {
+    "@id": "http://data.europa.eu/a4g/ontology#hasPaymentDate",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://data.europa.eu/a4g/ontology#pay"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "The date of the Payment. (epo-pay:PaymentInformation)"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#historyNote": [
+      {
+        "@language": "en",
+        "@value": "WG approval 25/09/2026"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "has Payment Date"
+      }
+    ]
+  },
+  {
+    "@id": "http://data.europa.eu/a4g/ontology#hasPaymentInformation",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://data.europa.eu/a4g/ontology#pay"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "Relation indicating the Payment Information."
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#historyNote": [
+      {
+        "@language": "en",
+        "@value": "WG approval 25/09/2025"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "has Payment Information"
+      }
+    ]
+  },
+  {
+    "@id": "http://data.europa.eu/a4g/ontology#hasPayerReference",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://data.europa.eu/a4g/ontology#pay"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "Reference to the Payer. (epo-pay:RemittanceAdvice)"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#historyNote": [
+      {
+        "@language": "en",
+        "@value": "WG approval 25/09/2026"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "has Payer Reference"
+      }
+    ]
+  },
+  {
+    "@id": "http://data.europa.eu/a4g/ontology#specifiesSeller",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://data.europa.eu/a4g/ontology#pay"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "Relation indicating that the instance of the concept involves the Seller."
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#historyNote": [
+      {
+        "@language": "en",
+        "@value": "WG approval 25/09/2025"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "specifies Seller"
+      }
+    ]
+  },
+  {
+    "@id": "http://data.europa.eu/a4g/ontology#hasPaymentMeansInformation",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://data.europa.eu/a4g/ontology#pay"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "Relation indicating the Payment Instruction Information."
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#historyNote": [
+      {
+        "@language": "en",
+        "@value": "WG approval 25/09/2025"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "has Payment Means Information"
+      }
+    ]
+  },
+  {
+    "@id": "http://data.europa.eu/a4g/ontology#specifiesPayee",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://data.europa.eu/a4g/ontology#pay"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "Relation indicating that the instance of the concept involves the Payee."
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#historyNote": [
+      {
+        "@language": "en",
+        "@value": "WG approval 25/09/2025"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "specifies Payee"
+      }
+    ]
+  },
+  {
+    "@id": "http://data.europa.eu/a4g/ontology#hasPaymentIdentifier",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://data.europa.eu/a4g/ontology#pay"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "Relation indicating the Identifier of the Payment."
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#historyNote": [
+      {
+        "@language": "en",
+        "@value": "WG approval 25/09/2025"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "has Payment Identifier"
+      }
+    ]
+  },
+  {
+    "@id": "http://data.europa.eu/a4g/ontology#hasPaymentOrderReference",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://data.europa.eu/a4g/ontology#pay"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "Reference to the Payment Order. (epo-pay:RemittanceAdvice)"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#historyNote": [
+      {
+        "@language": "en",
+        "@value": "WG approval 25/09/2026"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "has Payment Order Reference"
+      }
+    ]
+  },
+  {
+    "@id": "http://data.europa.eu/a4g/ontology#hasTotalDebitAmount",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://data.europa.eu/a4g/ontology#pay"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "Relation indicating the overall Monetary Value that increases the amount owed."
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#historyNote": [
+      {
+        "@language": "en",
+        "@value": "WG approval 25/09/2025"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "has Total Debit Amount"
+      }
+    ]
+  },
+  {
+    "@id": "http://data.europa.eu/a4g/ontology#hasTotalPaymentAmount",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://data.europa.eu/a4g/ontology#pay"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "Relation indicating the overall paid Monetary Value."
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#historyNote": [
+      {
+        "@language": "en",
+        "@value": "WG approval 25/09/2025"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "has Total Payment Amount"
+      }
+    ]
+  },
+  {
+    "@id": "http://data.europa.eu/a4g/ontology#hasTotalCreditAmount",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://data.europa.eu/a4g/ontology#pay"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "Relation indicating the overall Monetary Value that reduces the amount owed."
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#historyNote": [
+      {
+        "@language": "en",
+        "@value": "WG approval 25/09/2025"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "has Total Credit Amount"
+      }
+    ]
+  },
+  {
+    "@id": "http://data.europa.eu/a4g/ontology#specifiesBuyer",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://data.europa.eu/a4g/ontology#pay"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "Relation indicating that the instance of the concept involves the Buyer."
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#historyNote": [
+      {
+        "@language": "en",
+        "@value": "WG approval 25/09/2025"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "specifies Buyer"
+      }
+    ]
+  },
+  {
+    "@id": "http://data.europa.eu/a4g/ontology#hasDebitAmount",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://data.europa.eu/a4g/ontology#pay"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "Relation indicating the Monetary Value that increases the amount owed."
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#historyNote": [
+      {
+        "@language": "en",
+        "@value": "WG approval 25/09/2025"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "has Debit Amount"
+      }
+    ]
+  },
+  {
+    "@id": "http://data.europa.eu/a4g/ontology#RemittanceAdvice",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://data.europa.eu/a4g/ontology#pay"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://data.europa.eu/a4g/ontology#PostAwardDocument"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "Document sent by the Buyer to the Seller, informing about the payment made."
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Remittance Advice"
+      }
+    ]
+  },
+  {
+    "@id": "http://data.europa.eu/a4g/ontology#comprisesRemittanceAdviceLine",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://data.europa.eu/a4g/ontology#pay"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "Incorporates Remittance Advice Line."
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#historyNote": [
+      {
+        "@language": "en",
+        "@value": "WG approval 25/09/2025"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "comprises Remittance Advice Line"
+      }
+    ]
+  }
+]

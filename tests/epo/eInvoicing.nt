@@ -1,0 +1,404 @@
+<http://data.europa.eu/a4g/ontology#Payee> <http://www.w3.org/2004/02/skos/core#historyNote> "WG Approval 11/07/2024"@en .
+<http://data.europa.eu/a4g/ontology#hasPrice> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Price"@en .
+<http://data.europa.eu/a4g/ontology#specifiesBuyer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#hasDebitedAccountIdentifier> <http://www.w3.org/2004/02/skos/core#definition> "An identifier for the account to be debited by the direct debit."@en .
+<http://data.europa.eu/a4g/ontology#hasTaxBreakdownInformation> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Tax Breakdown Information"@en .
+<http://data.europa.eu/a4g/ontology#TaxBreakdownInformation> <http://www.w3.org/2004/02/skos/core#prefLabel> "Tax Breakdown Information"@en .
+<http://data.europa.eu/a4g/ontology#inv> <http://www.w3.org/2002/07/owl#imports> <http://data.europa.eu/a4g/ontology#ord> .
+<http://data.europa.eu/a4g/ontology#hasTotalAllowanceAmount> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#hasTaxInformation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#hasTotalChargeAmount> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#inv> .
+<http://data.europa.eu/a4g/ontology#hasPaymentDueDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://data.europa.eu/a4g/ontology#hasTaxExemptionReasonDescription> <http://www.w3.org/2004/02/skos/core#definition> "An explanation on why the amount is exempted from tax or why no tax is being charged according to the legislation, expressed as a text. (epo-inv:TaxBreakdownInformation)"@en .
+<http://data.europa.eu/a4g/ontology#hasRemittanceInformation> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Remittance Information"@en .
+<http://data.europa.eu/a4g/ontology#inv> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/ns/org#> .
+<http://data.europa.eu/a4g/ontology#Payee> <http://www.w3.org/2004/02/skos/core#definition> "A Role of an Agent that receives the payment. Additional Information: The role of Payee may be fulfilled by another party than the Seller, e.g. a factoring service."@en .
+<http://data.europa.eu/a4g/ontology#hasPaymentInstructionsInformation> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Payment Instructions Information"@en .
+<http://data.europa.eu/a4g/ontology#specifiesBuyer> <http://www.w3.org/2004/02/skos/core#definition> "Relation indicating that the instance of the concept involves the Buyer."@en .
+<http://data.europa.eu/a4g/ontology#CreditNote> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#Invoice> .
+<http://data.europa.eu/a4g/ontology#CreditTransferInformation> <http://www.w3.org/2004/02/skos/core#definition> "Information about a direct payment of money from one bank account into another."@en .
+<http://data.europa.eu/a4g/ontology#hasPaymentCardHolderName> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Payment Card Holder Name"@en .
+<http://data.europa.eu/a4g/ontology#hasInvoiceLineObjectIdentifier> <http://www.w3.org/2004/02/skos/core#definition> "An identifier for an object on which the invoice line is based, given by the Seller. Additional Information: It may be a subscription number, telephone number, meter point etc., as applicable."@en .
+<http://data.europa.eu/a4g/ontology#specifiesDeliveryInformation> <http://www.w3.org/2004/02/skos/core#prefLabel> "specifies Delivery Information"@en .
+<http://data.europa.eu/a4g/ontology#hasTotalTaxExclusiveAmount> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Total Tax Exclusive Amount"@en .
+<http://data.europa.eu/a4g/ontology#refersToInvoice> <http://www.w3.org/2004/02/skos/core#definition> "Reference to an Invoice."@en .
+<http://data.europa.eu/a4g/ontology#PaymentCardInformation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#specifiesPayee> <http://www.w3.org/2004/02/skos/core#prefLabel> "specifies Payee"@en .
+<http://data.europa.eu/a4g/ontology#PaymentCardInformation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#inv> .
+<http://data.europa.eu/a4g/ontology#InvoiceNote> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#inv> .
+<http://data.europa.eu/a4g/ontology#specifiesChargeInformation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#inv> .
+<http://data.europa.eu/a4g/ontology#hasTaxPointDate> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#inv> .
+<http://data.europa.eu/a4g/ontology#refersToProject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#hasTaxExemptionReason> <http://www.w3.org/2004/02/skos/core#definition> "An explanation on why the amount is exempted from tax or why no tax is being charged according to the legislation, expressed as a code."@en .
+<http://data.europa.eu/a4g/ontology#hasPrepaidAmount> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Prepaid Amount"@en .
+<http://data.europa.eu/a4g/ontology#CreditTransferInformation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#inv> .
+<http://data.europa.eu/a4g/ontology#inv> <http://purl.org/dc/terms/created> "2021-06-01"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://data.europa.eu/a4g/ontology#SellerTaxRepresentative> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#hasPaymentAccountName> <http://www.w3.org/2004/02/skos/core#historyNote> "WG Approval 07/11/2024"@en .
+<http://data.europa.eu/a4g/ontology#CreditTransferInformation> <http://www.w3.org/2004/02/skos/core#prefLabel> "Credit Transfer Information"@en .
+<http://data.europa.eu/a4g/ontology#hasAmountDueForPayment> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Amount Due For Payment"@en .
+<http://data.europa.eu/a4g/ontology#hasTotalTaxExclusiveAmount> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#inv> .
+<http://data.europa.eu/a4g/ontology#CreditNoteLine> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#InvoiceLine> .
+<http://data.europa.eu/a4g/ontology#specifiesSeller> <http://www.w3.org/2004/02/skos/core#prefLabel> "specifies Seller"@en .
+<http://data.europa.eu/a4g/ontology#hasTotalAccountingCurrencyTaxAmount> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#PaymentInstructionsInformation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#inv> .
+<http://data.europa.eu/a4g/ontology#hasQuantity> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#hasPaymentMeansType> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Payment Means Type"@en .
+<http://data.europa.eu/a4g/ontology#hasRemittanceInformation> <http://www.w3.org/2004/02/skos/core#definition> "A textual value used to establish a link between the payment and the Invoice, issued by the Seller. (epo-inv:PaymentInstructionsInformation)"@en .
+<http://data.europa.eu/a4g/ontology#hasRoundingAmount> <http://www.w3.org/2004/02/skos/core#definition> "Relation indicating the adjustment Monetary Value applied to bring calculated total to a convenient value."@en .
+<http://data.europa.eu/a4g/ontology#hasPaymentCardInformation> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#hasTaxInformation> <http://www.w3.org/2004/02/skos/core#definition> "Relation indicating the Tax Information."@en .
+<http://data.europa.eu/a4g/ontology#refersToInvoice> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#inv> .
+<http://data.europa.eu/a4g/ontology#specifiesSellerTaxRepresentative> <http://www.w3.org/2004/02/skos/core#definition> "Relation indicating that the instance of the concept involves the Seller Tax Representative."@en .
+<http://data.europa.eu/a4g/ontology#hasPrepaidAmount> <http://www.w3.org/2004/02/skos/core#definition> "Relation indicating the Monetary Value that is paid in advance."@en .
+<http://data.europa.eu/a4g/ontology#specifiesBuyer> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#hasBankingIdentifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#hasInvoiceLineObjectIdentifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#specifiesPayee> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#inv> .
+<http://data.europa.eu/a4g/ontology#hasPaymentMeansInformation> <http://www.w3.org/2004/02/skos/core#definition> "Relation indicating the Payment Instruction Information."@en .
+<http://data.europa.eu/a4g/ontology#inv> <http://www.w3.org/2002/07/owl#imports> <http://data.europa.eu/a4g/ontology#core> .
+<http://data.europa.eu/a4g/ontology#hasDebitedAccountIdentifier> <http://www.w3.org/2004/02/skos/core#historyNote> "WG Approval 11/07/2024"@en .
+<http://data.europa.eu/a4g/ontology#hasInvoicingPeriod> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#CreditNoteLine> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#hasAccountingCost> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Accounting Cost"@en .
+<http://data.europa.eu/a4g/ontology#comprisesCreditNoteLine> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#inv> .
+<http://data.europa.eu/a4g/ontology#hasPaymentTerm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://data.europa.eu/a4g/ontology#hasInvoiceNote> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#inv> .
+<http://data.europa.eu/a4g/ontology#CreditNoteLine> <http://www.w3.org/2004/02/skos/core#prefLabel> "Credit Note Line"@en .
+<http://data.europa.eu/a4g/ontology#Payee> <http://www.w3.org/2004/02/skos/core#prefLabel> "Payee"@en .
+<http://data.europa.eu/a4g/ontology#isSubmittedForInvoiceLine> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#inv> .
+<http://data.europa.eu/a4g/ontology#hasPaymentMeansDescription> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Payment Means Description"@en .
+<http://data.europa.eu/a4g/ontology#refersToOrderLine> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#inv> .
+<http://data.europa.eu/a4g/ontology#hasTaxBreakdownInformation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#isSubmittedForInvoiceLine> <http://www.w3.org/2004/02/skos/core#prefLabel> "is Submitted For Invoice Line"@en .
+<http://data.europa.eu/a4g/ontology#InvoiceLine> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#hasPaymentAccountIdentifier> <http://www.w3.org/2004/02/skos/core#historyNote> "WG Approval 11/07/2024"@en .
+<http://data.europa.eu/a4g/ontology#refersToInvoice> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#hasInvoiceNoteSubject> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Invoice Note Subject"@en .
+<http://data.europa.eu/a4g/ontology#hasPrepaidAmount> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#inv> .
+<http://data.europa.eu/a4g/ontology#hasAccountingCost> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://data.europa.eu/a4g/ontology#SellerTaxRepresentative> <http://www.w3.org/2004/02/skos/core#prefLabel> "Seller Tax Representative"@en .
+<http://data.europa.eu/a4g/ontology#refersToDespatchAdvice> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#hasPaymentAccountName> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Payment Account Name"@en .
+<http://data.europa.eu/a4g/ontology#hasPrice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#hasInvoiceNoteSubject> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#inv> .
+<http://data.europa.eu/a4g/ontology#specifiesChargeInformation> <http://www.w3.org/2004/02/skos/core#prefLabel> "specifies Charge Information"@en .
+<http://data.europa.eu/a4g/ontology#Invoice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#hasPaymentTerm> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Payment Term"@en .
+<http://data.europa.eu/a4g/ontology#hasNetAmount> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#inv> .
+<http://data.europa.eu/a4g/ontology#hasTotalTaxAmount> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#inv> .
+<http://data.europa.eu/a4g/ontology#hasBankingIdentifier> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Banking Identifier"@en .
+<http://data.europa.eu/a4g/ontology#hasTaxExemptionReason> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Tax Exemption Reason"@en .
+<http://data.europa.eu/a4g/ontology#refersToReceiptAdvice> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#hasMandateIdentifier> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#inv> .
+<http://data.europa.eu/a4g/ontology#hasPaymentMeansDescription> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#inv> .
+<http://data.europa.eu/a4g/ontology#PaymentInstructionsInformation> <http://www.w3.org/2004/02/skos/core#historyNote> "WG Approval 11/07/2024"@en .
+<http://data.europa.eu/a4g/ontology#hasInvoiceNoteDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://data.europa.eu/a4g/ontology#refersToOrder> <http://www.w3.org/2004/02/skos/core#prefLabel> "refers To Order"@en .
+<http://data.europa.eu/a4g/ontology#Invoice> <http://www.w3.org/2004/02/skos/core#definition> "A commercial Document issued by the Seller to the Buyer to collect payments for the goods or services provided and to state the VAT amount due by the Buyer."@en .
+<http://data.europa.eu/a4g/ontology#hasTaxPointDateCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#hasTotalLineAmount> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Total Line Amount"@en .
+<http://data.europa.eu/a4g/ontology#inv> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/ns/locn> .
+<http://data.europa.eu/a4g/ontology#refersToInvoice> <http://www.w3.org/2004/02/skos/core#prefLabel> "refers To Invoice"@en .
+<http://data.europa.eu/a4g/ontology#SellerTaxRepresentative> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#OfferingParty> .
+<http://data.europa.eu/a4g/ontology#hasTotalAllowanceAmount> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Total Allowance Amount"@en .
+<http://data.europa.eu/a4g/ontology#specifiesSellerTaxRepresentative> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#hasDebitedAccountIdentifier> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#inv> .
+<http://data.europa.eu/a4g/ontology#hasPaymentMeansInformation> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#refersToOrder> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#Invoice> <http://www.w3.org/2004/02/skos/core#historyNote> "WG Approval 04/07/2024"@en .
+<http://data.europa.eu/a4g/ontology#hasInvoiceLineObjectIdentifier> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Invoice Line Object Identifier"@en .
+<http://data.europa.eu/a4g/ontology#hasInvoiceNote> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Invoice Note"@en .
+<http://data.europa.eu/a4g/ontology#hasTaxPointDateCode> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Tax Point Date Code"@en .
+<http://data.europa.eu/a4g/ontology#hasQuantity> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#inv> .
+<http://data.europa.eu/a4g/ontology#refersToContract> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#inv> <http://purl.org/dc/terms/publisher> "http://publications.europa.eu/resource/authority/corporate-body/PUBL" .
+<http://data.europa.eu/a4g/ontology#inv> <http://purl.org/vocab/vann/preferredNamespacePrefix> "epo" .
+<http://data.europa.eu/a4g/ontology#specifiesDeliveryInformation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#hasInvoiceNote> <http://www.w3.org/2004/02/skos/core#historyNote> "WG Approval 11/07/2024"@en .
+<http://data.europa.eu/a4g/ontology#InvoiceLine> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#Line> .
+<http://data.europa.eu/a4g/ontology#hasInvoiceNoteDescription> <http://www.w3.org/2004/02/skos/core#definition> "A textual note that gives unstructured information that is relevant to the Invoice as a whole. (epo-inv:InvoiceNote)"@en .
+<http://data.europa.eu/a4g/ontology#hasInvoiceNoteDescription> <http://www.w3.org/2004/02/skos/core#historyNote> "WG Approval 11/07/2024"@en .
+<http://data.europa.eu/a4g/ontology#hasTotalLineAmount> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#inv> .
+<http://data.europa.eu/a4g/ontology#specifiesSellerTaxRepresentative> <http://www.w3.org/2004/02/skos/core#prefLabel> "specifies Seller Tax Representative"@en .
+<http://data.europa.eu/a4g/ontology#hasTotalAccountingCurrencyTaxAmount> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Total Accounting Currency Tax Amount"@en .
+<http://data.europa.eu/a4g/ontology#hasTotalChargeAmount> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#Payee> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#hasQuantity> <http://www.w3.org/2004/02/skos/core#definition> "Relation indicating that the instance of the concept has a Quantity."@en .
+<http://data.europa.eu/a4g/ontology#refersToDespatchAdvice> <http://www.w3.org/2004/02/skos/core#definition> "Reference to a Despatch Advice."@en .
+<http://data.europa.eu/a4g/ontology#PaymentCardInformation> <http://www.w3.org/2004/02/skos/core#historyNote> "WG Approval 11/07/2024"@en .
+<http://data.europa.eu/a4g/ontology#hasTotalAllowanceAmount> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#inv> .
+<http://data.europa.eu/a4g/ontology#TaxBreakdownInformation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#CreditNote> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#Invoice> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#inv> .
+<http://data.europa.eu/a4g/ontology#SellerTaxRepresentative> <http://www.w3.org/2004/02/skos/core#historyNote> "WG Approval 11/07/2024"@en .
+<http://data.europa.eu/a4g/ontology#hasPaymentInstructionsInformation> <http://www.w3.org/2004/02/skos/core#definition> "Relation indicating the Payment Instruction Information."@en .
+<http://data.europa.eu/a4g/ontology#hasBankingIdentifier> <http://www.w3.org/2004/02/skos/core#definition> "An unique banking reference identifier of the Payee or Seller, assigned by the Payee or Seller bank."@en .
+<http://data.europa.eu/a4g/ontology#specifiesChargeInformation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#hasLotReference> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#PaymentCardInformation> <http://www.w3.org/2004/02/skos/core#prefLabel> "Payment Card Information"@en .
+<http://data.europa.eu/a4g/ontology#hasInvoiceLinePeriod> <http://www.w3.org/2004/02/skos/core#definition> "Relation indicating the time range of the Invoice Line."@en .
+<http://data.europa.eu/a4g/ontology#hasQuantity> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Quantity"@en .
+<http://data.europa.eu/a4g/ontology#hasTotalTaxAmount> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Total Tax Amount"@en .
+<http://data.europa.eu/a4g/ontology#hasTotalTaxExclusiveAmount> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#refersToDespatchAdvice> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#inv> .
+<http://data.europa.eu/a4g/ontology#refersToDespatchAdvice> <http://www.w3.org/2004/02/skos/core#prefLabel> "refers To Despatch Advice"@en .
+<http://data.europa.eu/a4g/ontology#comprisesInvoiceLine> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#PaymentCardInformation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#InformationHub> .
+<http://data.europa.eu/a4g/ontology#hasTaxExemptionReason> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#inv> .
+<http://data.europa.eu/a4g/ontology#hasPaymentAccountIdentifier> <http://www.w3.org/2004/02/skos/core#definition> "A unique identifier of the financial payment account, at a payment service provider, to which payment should be made."@en .
+<http://data.europa.eu/a4g/ontology#CreditTransferInformation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#InformationHub> .
+<http://data.europa.eu/a4g/ontology#hasTotalAccountingCurrencyTaxAmount> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#inv> .
+<http://data.europa.eu/a4g/ontology#specifiesDeliveryInformation> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#refersToOrderLine> <http://www.w3.org/2004/02/skos/core#definition> "Reference to an Order Line."@en .
+<http://data.europa.eu/a4g/ontology#inv> <http://purl.org/dc/terms/issued> "2025-10-10"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://data.europa.eu/a4g/ontology#hasInvoiceNoteSubject> <http://www.w3.org/2004/02/skos/core#definition> "Relation indicating the Invoice Note Subject Code."@en .
+<http://data.europa.eu/a4g/ontology#specifiesPayee> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#inv> <http://purl.org/dc/terms/license> "© European Union, 2014. Unless otherwise noted, the reuse of the Ontology is authorised under the European Union Public Licence v1.2 (https://eupl.eu/)." .
+<http://data.europa.eu/a4g/ontology#hasPaymentCardInformation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#inv> .
+<http://data.europa.eu/a4g/ontology#hasRoundingAmount> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#inv> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://github.com/OP-TED/ePO/releases> .
+<http://data.europa.eu/a4g/ontology#hasTotalTaxExclusiveAmount> <http://www.w3.org/2004/02/skos/core#definition> "Relation indicating the overall Monetary Value without Tax."@en .
+<http://data.europa.eu/a4g/ontology#specifiesSeller> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#inv> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://data.europa.eu/a4g/ontology#" .
+<http://data.europa.eu/a4g/ontology#PaymentInstructionsInformation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#InformationHub> .
+<http://data.europa.eu/a4g/ontology#refersToProject> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#PaymentCardInformation> <http://www.w3.org/2004/02/skos/core#definition> "Information about card used for payment contemporaneous with invoice issuance."@en .
+<http://data.europa.eu/a4g/ontology#refersToReceiptAdvice> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#inv> .
+<http://data.europa.eu/a4g/ontology#inv> <http://www.w3.org/2002/07/owl#imports> <http://purl.org/dc/terms/> .
+<http://data.europa.eu/a4g/ontology#hasPaymentCardPrimaryAccountNumber> <http://www.w3.org/2004/02/skos/core#definition> "The series of digits embossed on the front of a card used for payment. (epo-inv:PaymentCardInformation)"@en .
+<http://data.europa.eu/a4g/ontology#hasPaymentCardPrimaryAccountNumber> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Payment Card Primary Account Number"@en .
+<http://data.europa.eu/a4g/ontology#InvoiceLine> <http://www.w3.org/2004/02/skos/core#historyNote> "WG Approval 11/07/2024"@en .
+<http://data.europa.eu/a4g/ontology#hasCreditTransferInformation> <http://www.w3.org/2004/02/skos/core#definition> "Relation indicating the Credit Transfer Information."@en .
+<http://data.europa.eu/a4g/ontology#hasTotalTaxInclusiveAmount> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#hasInvoiceLinePeriod> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#InvoiceLine> <http://www.w3.org/2004/02/skos/core#prefLabel> "Invoice Line"@en .
+<http://data.europa.eu/a4g/ontology#inv> <http://www.w3.org/2002/07/owl#imports> <http://data.europa.eu/m8g/> .
+<http://data.europa.eu/a4g/ontology#CreditNote> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#inv> .
+<http://data.europa.eu/a4g/ontology#inv> <http://www.w3.org/2000/01/rdf-schema#label> "eProcurement Ontology Invoicing - core"@en .
+<http://data.europa.eu/a4g/ontology#hasPrepaidAmount> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#hasPaymentCardInformation> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Payment Card Information"@en .
+<http://data.europa.eu/a4g/ontology#refersToContract> <http://www.w3.org/2004/02/skos/core#prefLabel> "refers To Contract"@en .
+<http://data.europa.eu/a4g/ontology#specifiesAllowanceInformation> <http://www.w3.org/2004/02/skos/core#definition> "Relation indicating the Allowance Information."@en .
+<http://data.europa.eu/a4g/ontology#specifiesSeller> <http://www.w3.org/2004/02/skos/core#definition> "Relation indicating that the instance of the concept involves the Seller."@en .
+<http://data.europa.eu/a4g/ontology#refersToOrderLine> <http://www.w3.org/2004/02/skos/core#prefLabel> "refers To Order Line"@en .
+<http://data.europa.eu/a4g/ontology#comprisesInvoiceLine> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#hasPaymentCardInformation> <http://www.w3.org/2004/02/skos/core#definition> "Relation indicating the Payment Card Information."@en .
+<http://data.europa.eu/a4g/ontology#hasPaymentTerm> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#inv> .
+<http://data.europa.eu/a4g/ontology#inv> <http://www.w3.org/2000/01/rdf-schema#comment> "This version is automatically generated from eInvoicing.xml on 2025-10-10" .
+<http://data.europa.eu/a4g/ontology#PaymentInstructionsInformation> <http://www.w3.org/2004/02/skos/core#definition> "Information about the payment."@en .
+<http://data.europa.eu/a4g/ontology#hasInvoiceNoteSubject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#hasPaymentInstructionsInformation> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#hasTaxExemptionReasonDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://data.europa.eu/a4g/ontology#inv> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://docs.ted.europa.eu/home/index.html> .
+<http://data.europa.eu/a4g/ontology#hasPaymentAccountIdentifier> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Payment Account Identifier"@en .
+<http://data.europa.eu/a4g/ontology#Payee> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#OfferingParty> .
+<http://data.europa.eu/a4g/ontology#refersToContract> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#isSpecificToInvoiceLine> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#hasTotalLineAmount> <http://www.w3.org/2004/02/skos/core#definition> "Relation indicating the overall Monetary Value of the Line."@en .
+<http://data.europa.eu/a4g/ontology#hasPaymentTerm> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2026"@en .
+<http://data.europa.eu/a4g/ontology#specifiesAllowanceInformation> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#hasNetAmount> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#hasTotalTaxAmount> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#refersToReceiptAdvice> <http://www.w3.org/2004/02/skos/core#prefLabel> "refers To Receipt Advice"@en .
+<http://data.europa.eu/a4g/ontology#hasInvoiceLineObjectIdentifier> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#inv> .
+<http://data.europa.eu/a4g/ontology#CreditNote> <http://www.w3.org/2004/02/skos/core#prefLabel> "Credit Note"@en .
+<http://data.europa.eu/a4g/ontology#hasMandateIdentifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#inv> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://op.europa.eu/en/web/eu-vocabularies/e-procurement> .
+<http://data.europa.eu/a4g/ontology#hasTaxInformation> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#refersToReceiptAdvice> <http://www.w3.org/2004/02/skos/core#definition> "Reference to a Receipt Advice."@en .
+<http://data.europa.eu/a4g/ontology#hasPaymentCardPrimaryAccountNumber> <http://www.w3.org/2004/02/skos/core#historyNote> "WG Approval 11/07/2024"@en .
+<http://data.europa.eu/a4g/ontology#hasPaymentCardHolderName> <http://www.w3.org/2004/02/skos/core#definition> "The name of the account holder of the card used for payment. Additional Information: An account holder is the entity listed or identified as the holder of a Financial Account by the Financial Institution. (epo-inv:PaymentCardInformation)"@en .
+<http://data.europa.eu/a4g/ontology#hasTaxPointDateCode> <http://www.w3.org/2004/02/skos/core#definition> "Relation indicating the a Tax Date."@en .
+<http://data.europa.eu/a4g/ontology#hasPaymentServiceProviderIdentifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#hasRemittanceInformation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://data.europa.eu/a4g/ontology#comprisesInvoiceLine> <http://www.w3.org/2004/02/skos/core#prefLabel> "comprises Invoice Line"@en .
+<http://data.europa.eu/a4g/ontology#hasDebitedAccountIdentifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#refersToProject> <http://www.w3.org/2004/02/skos/core#prefLabel> "refers To Project"@en .
+<http://data.europa.eu/a4g/ontology#CreditNoteLine> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#inv> .
+<http://data.europa.eu/a4g/ontology#hasInvoiceNoteDescription> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Invoice Note Description"@en .
+<http://data.europa.eu/a4g/ontology#specifiesAllowanceInformation> <http://www.w3.org/2004/02/skos/core#prefLabel> "specifies Allowance Information"@en .
+<http://data.europa.eu/a4g/ontology#hasPaymentMeansInformation> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Payment Means Information"@en .
+<http://data.europa.eu/a4g/ontology#specifiesAllowanceInformation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#hasInvoiceNoteDescription> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#inv> .
+<http://data.europa.eu/a4g/ontology#specifiesBuyer> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#inv> .
+<http://data.europa.eu/a4g/ontology#hasTotalTaxInclusiveAmount> <http://www.w3.org/2004/02/skos/core#definition> "Relation indicating the overall Monetary Value with Tax."@en .
+<http://data.europa.eu/a4g/ontology#hasPaymentMeansInformation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#inv> .
+<http://data.europa.eu/a4g/ontology#Invoice> <http://www.w3.org/2004/02/skos/core#prefLabel> "Invoice"@en .
+<http://data.europa.eu/a4g/ontology#hasMandateIdentifier> <http://www.w3.org/2004/02/skos/core#definition> "An unique identifier for referencing the direct debit mandate, assigned by the Payee."@en .
+<http://data.europa.eu/a4g/ontology#hasInvoiceLineObjectIdentifier> <http://www.w3.org/2004/02/skos/core#historyNote> "WG Approval 26/06/2024"@en .
+<http://data.europa.eu/a4g/ontology#hasPaymentAccountIdentifier> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#inv> .
+<http://data.europa.eu/a4g/ontology#TaxBreakdownInformation> <http://www.w3.org/2004/02/skos/core#historyNote> "WG Approval 11/07/2024"@en .
+<http://data.europa.eu/a4g/ontology#CreditNoteLine> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 16/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#hasTotalLineAmount> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#comprisesCreditNoteLine> <http://www.w3.org/2004/02/skos/core#definition> "Incorporates Credit Note Line."@en .
+<http://data.europa.eu/a4g/ontology#SellerTaxRepresentative> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#inv> .
+<http://data.europa.eu/a4g/ontology#specifiesSeller> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#inv> .
+<http://data.europa.eu/a4g/ontology#inv> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/ns/person> .
+<http://data.europa.eu/a4g/ontology#hasTaxExemptionReasonDescription> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Tax Exemption Reason Description"@en .
+<http://data.europa.eu/a4g/ontology#hasRemittanceInformation> <http://www.w3.org/2004/02/skos/core#historyNote> "WG Approval 11/07/2024"@en .
+<http://data.europa.eu/a4g/ontology#hasAmountDueForPayment> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#inv> .
+<http://data.europa.eu/a4g/ontology#InvoiceNote> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#hasInvoiceLinePeriod> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#inv> .
+<http://data.europa.eu/a4g/ontology#hasPaymentMeansDescription> <http://www.w3.org/2004/02/skos/core#definition> "The means for how a payment is expected to be or has been settled, expressed as text. (epo-inv:PaymentInstructionsInformation)"@en .
+<http://data.europa.eu/a4g/ontology#specifiesPayee> <http://www.w3.org/2004/02/skos/core#definition> "Relation indicating that the instance of the concept involves the Payee."@en .
+<http://data.europa.eu/a4g/ontology#CreditTransferInformation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#SellerTaxRepresentative> <http://www.w3.org/2004/02/skos/core#definition> "A Role of an Agent that can represent an Organization for taxation purposes. Additional Information: The Seller Tax Representative Role is not a Legal Representative."@en .
+<http://data.europa.eu/a4g/ontology#hasInvoicingPeriod> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#InvoiceLine> <http://www.w3.org/2004/02/skos/core#definition> "Details concerning a given unit of goods, services or works mentioned in the Invoice."@en .
+<http://data.europa.eu/a4g/ontology#hasPaymentServiceProviderIdentifier> <http://www.w3.org/2004/02/skos/core#definition> "An identifier for the payment service provider where a payment account is located."@en .
+<http://data.europa.eu/a4g/ontology#hasTaxPointDate> <http://www.w3.org/2004/02/skos/core#definition> "The date when the tax becomes accountable for the Seller and for the Buyer. Additional Information: That date can be determined and differs from the date of issue of the invoice, according to the national implementation of the directive. (epo-inv:Invoice)"@en .
+<http://data.europa.eu/a4g/ontology#hasLotReference> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#inv> .
+<http://data.europa.eu/a4g/ontology#hasPaymentDueDate> <http://www.w3.org/2004/02/skos/core#definition> "Final date until which the Payment can be made. (epo-inv:Invoice)"@en .
+<http://data.europa.eu/a4g/ontology#hasInvoicedObjectIdentifier> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#inv> .
+<http://data.europa.eu/a4g/ontology#hasTotalAccountingCurrencyTaxAmount> <http://www.w3.org/2004/02/skos/core#definition> "Relation indicating the overall Monetary Value of the Tax applied on the currency in which the financial transactions are recorded at the company level."@en .
+<http://data.europa.eu/a4g/ontology#refersToDespatchAdvice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#hasTotalChargeAmount> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#hasBankingIdentifier> <http://www.w3.org/2004/02/skos/core#historyNote> "WG Approval 11/07/2024"@en .
+<http://data.europa.eu/a4g/ontology#hasTaxExemptionReason> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#hasTaxBreakdownInformation> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#hasTotalAccountingCurrencyTaxAmount> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#hasTaxExemptionReasonDescription> <http://www.w3.org/2004/02/skos/core#historyNote> "WG Approval 11/07/2024"@en .
+<http://data.europa.eu/a4g/ontology#hasQuantity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#inv> <http://www.w3.org/2002/07/owl#incompatibleWith> "4.2.0" .
+<http://data.europa.eu/a4g/ontology#refersToContract> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#inv> .
+<http://data.europa.eu/a4g/ontology#isSpecificToInvoiceLine> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#inv> .
+<http://data.europa.eu/a4g/ontology#isSubmittedForInvoiceLine> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#InvoiceLine> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#inv> .
+<http://data.europa.eu/a4g/ontology#hasPaymentCardHolderName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://data.europa.eu/a4g/ontology#hasPaymentCardInformation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#inv> <http://www.w3.org/2002/07/owl#priorVersion> "http://data.europa.eu/a4g/ontology#inv-5.1.0" .
+<http://data.europa.eu/a4g/ontology#specifiesDeliveryInformation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#inv> .
+<http://data.europa.eu/a4g/ontology#refersToOrder> <http://www.w3.org/2004/02/skos/core#definition> "Reference to an Order."@en .
+<http://data.europa.eu/a4g/ontology#refersToReceiptAdvice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#hasPrice> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#hasPaymentMeansType> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#inv> .
+<http://data.europa.eu/a4g/ontology#hasPaymentTerm> <http://www.w3.org/2004/02/skos/core#definition> "Condition and stipulation of the Payment. (epo-inv:Invoice)"@en .
+<http://data.europa.eu/a4g/ontology#hasInvoicingPeriod> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Invoicing Period"@en .
+<http://data.europa.eu/a4g/ontology#hasTotalTaxAmount> <http://www.w3.org/2004/02/skos/core#definition> "Relation indicating the overall Monetary Value of the Tax applied."@en .
+<http://data.europa.eu/a4g/ontology#hasPaymentAccountIdentifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#specifiesSellerTaxRepresentative> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#inv> .
+<http://data.europa.eu/a4g/ontology#hasCreditTransferInformation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#TaxBreakdownInformation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#inv> .
+<http://data.europa.eu/a4g/ontology#hasPrice> <http://www.w3.org/2004/02/skos/core#definition> "Relation indicating that the instance of the concept has a Price."@en .
+<http://data.europa.eu/a4g/ontology#hasTotalTaxInclusiveAmount> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#inv> .
+<http://data.europa.eu/a4g/ontology#hasDebitedAccountIdentifier> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Debited Account Identifier"@en .
+<http://data.europa.eu/a4g/ontology#hasTotalChargeAmount> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Total Charge Amount"@en .
+<http://data.europa.eu/a4g/ontology#inv> <http://www.w3.org/2002/07/owl#imports> <http://data.europa.eu/eli/ontology#> .
+<http://data.europa.eu/a4g/ontology#comprisesInvoiceLine> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#inv> .
+<http://data.europa.eu/a4g/ontology#refersToContract> <http://www.w3.org/2004/02/skos/core#definition> "Reference to a Contract."@en .
+<http://data.europa.eu/a4g/ontology#CreditNote> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 16/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#inv> <http://www.w3.org/2002/07/owl#imports> <http://data.europa.eu/a4g/ontology#cat> .
+<http://data.europa.eu/a4g/ontology#hasPaymentCardPrimaryAccountNumber> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#inv> .
+<http://data.europa.eu/a4g/ontology#isSubmittedForInvoiceLine> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#hasTotalChargeAmount> <http://www.w3.org/2004/02/skos/core#definition> "Relation indicating the overall Monetary Value of the Charge."@en .
+<http://data.europa.eu/a4g/ontology#specifiesDeliveryInformation> <http://www.w3.org/2004/02/skos/core#definition> "Relation indicating the Delivery Information."@en .
+<http://data.europa.eu/a4g/ontology#InvoiceNote> <http://www.w3.org/2004/02/skos/core#prefLabel> "Invoice Note"@en .
+<http://data.europa.eu/a4g/ontology#hasPaymentInstructionsInformation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#inv> .
+<http://data.europa.eu/a4g/ontology#refersToInvoice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#inv> <http://purl.org/dc/terms/title> "eProcurement Ontology Invoicing - core"@en .
+<http://data.europa.eu/a4g/ontology#hasPaymentMeansType> <http://www.w3.org/2004/02/skos/core#definition> "The means for how a payment is expected to be or has been settled, expressed as code."@en .
+<http://data.europa.eu/a4g/ontology#hasTotalTaxInclusiveAmount> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Total Tax Inclusive Amount"@en .
+<http://data.europa.eu/a4g/ontology#inv> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/ns/adms> .
+<http://data.europa.eu/a4g/ontology#hasAccountingCost> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#inv> .
+<http://data.europa.eu/a4g/ontology#InvoiceNote> <http://www.w3.org/2004/02/skos/core#definition> "Textual note that is relevant to the Invoice as a whole."@en .
+<http://data.europa.eu/a4g/ontology#hasTaxExemptionReasonDescription> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#inv> .
+<http://data.europa.eu/a4g/ontology#hasTaxPointDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://data.europa.eu/a4g/ontology#hasCreditTransferInformation> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#refersToProject> <http://www.w3.org/2004/02/skos/core#definition> "Reference to a Project."@en .
+<http://data.europa.eu/a4g/ontology#hasTaxInformation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#inv> .
+<http://data.europa.eu/a4g/ontology#Payee> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#inv> .
+<http://data.europa.eu/a4g/ontology#hasPaymentMeansType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#hasInvoiceNote> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#hasMandateIdentifier> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Mandate Identifier"@en .
+<http://data.europa.eu/a4g/ontology#hasPaymentAccountName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://data.europa.eu/a4g/ontology#hasRoundingAmount> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#inv> .
+<http://data.europa.eu/a4g/ontology#refersToOrderLine> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#specifiesChargeInformation> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#specifiesSellerTaxRepresentative> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#hasLotReference> <http://www.w3.org/2004/02/skos/core#definition> "Relation indicating the instance of the concept refers to a Lot."@en .
+<http://data.europa.eu/a4g/ontology#hasPaymentMeansInformation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#inv> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://joinup.ec.europa.eu/collection/eprocurement/solution/eprocurement-ontology/about> .
+<http://data.europa.eu/a4g/ontology#isSubmittedForInvoiceLine> <http://www.w3.org/2004/02/skos/core#definition> "Relation indicating that the instance of the concept is sent for a specific Invoice Line."@en .
+<http://data.europa.eu/a4g/ontology#hasPaymentCardPrimaryAccountNumber> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://data.europa.eu/a4g/ontology#comprisesInvoiceLine> <http://www.w3.org/2004/02/skos/core#definition> "Incorporates Invoice Line."@en .
+<http://data.europa.eu/a4g/ontology#hasNetAmount> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Net Amount"@en .
+<http://data.europa.eu/a4g/ontology#hasRemittanceInformation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#inv> .
+<http://data.europa.eu/a4g/ontology#hasTotalTaxExclusiveAmount> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#refersToProject> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#inv> .
+<http://data.europa.eu/a4g/ontology#hasPaymentCardHolderName> <http://www.w3.org/2004/02/skos/core#historyNote> "WG Approval 11/07/2024"@en .
+<http://data.europa.eu/a4g/ontology#specifiesSeller> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#inv> <http://purl.org/dc/terms/description> "The eProcurement Ontology Invoicing core describes the concepts and properties representing the European Public Procurement Invoicing domain. The provision of these semantics offers the basis for a common understanding of the domain for all stakeholders ensuring the quality of data exchange and transparency. The ontology restrictions are published in a separate artefact."@en .
+<http://data.europa.eu/a4g/ontology#hasInvoicedObjectIdentifier> <http://www.w3.org/2004/02/skos/core#definition> "An identifier for an object on which the invoice is based, given by the Seller."@en .
+<http://data.europa.eu/a4g/ontology#InvoiceNote> <http://www.w3.org/2004/02/skos/core#historyNote> "WG Approval 11/07/2024"@en .
+<http://data.europa.eu/a4g/ontology#hasPaymentServiceProviderIdentifier> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Payment Service Provider Identifier"@en .
+<http://data.europa.eu/a4g/ontology#hasTaxPointDate> <http://www.w3.org/2004/02/skos/core#historyNote> "WG Approval 11/07/2024"@en .
+<http://data.europa.eu/a4g/ontology#inv> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/2006/time> .
+<http://data.europa.eu/a4g/ontology#CreditTransferInformation> <http://www.w3.org/2004/02/skos/core#historyNote> "WG Approval 11/07/2024"@en .
+<http://data.europa.eu/a4g/ontology#specifiesPayee> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#hasAmountDueForPayment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#hasInvoicingPeriod> <http://www.w3.org/2004/02/skos/core#definition> "Relation indicating the time range for creating, sending, and managing Invoices."@en .
+<http://data.europa.eu/a4g/ontology#hasTaxInformation> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Tax Information"@en .
+<http://data.europa.eu/a4g/ontology#hasRoundingAmount> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#hasBankingIdentifier> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#inv> .
+<http://data.europa.eu/a4g/ontology#hasInvoiceLinePeriod> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#inv> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/2004/02/skos/core#> .
+<http://data.europa.eu/a4g/ontology#hasTaxBreakdownInformation> <http://www.w3.org/2004/02/skos/core#definition> "Relation indicating the Tax Breakdown Information."@en .
+<http://data.europa.eu/a4g/ontology#hasLotReference> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Lot Reference"@en .
+<http://data.europa.eu/a4g/ontology#hasTaxPointDate> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Tax Point Date"@en .
+<http://data.europa.eu/a4g/ontology#hasPaymentAccountName> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#inv> .
+<http://data.europa.eu/a4g/ontology#comprisesCreditNoteLine> <http://www.w3.org/2004/02/skos/core#prefLabel> "comprises Credit Note Line"@en .
+<http://data.europa.eu/a4g/ontology#hasInvoicedObjectIdentifier> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Invoiced Object Identifier"@en .
+<http://data.europa.eu/a4g/ontology#hasLotReference> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#hasInvoicedObjectIdentifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#hasTotalLineAmount> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#hasPaymentServiceProviderIdentifier> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#inv> .
+<http://data.europa.eu/a4g/ontology#hasInvoicingPeriod> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#inv> .
+<http://data.europa.eu/a4g/ontology#refersToOrderLine> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#comprisesCreditNoteLine> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#hasTaxBreakdownInformation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#inv> .
+<http://data.europa.eu/a4g/ontology#specifiesAllowanceInformation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#inv> .
+<http://data.europa.eu/a4g/ontology#specifiesBuyer> <http://www.w3.org/2004/02/skos/core#prefLabel> "specifies Buyer"@en .
+<http://data.europa.eu/a4g/ontology#inv> <http://www.w3.org/2002/07/owl#versionInfo> "5.2.0" .
+<http://data.europa.eu/a4g/ontology#hasNetAmount> <http://www.w3.org/2004/02/skos/core#definition> "Relation indicating the Monetary Value exclusive of taxes and after substracting price discounts."@en .
+<http://data.europa.eu/a4g/ontology#TaxBreakdownInformation> <http://www.w3.org/2004/02/skos/core#definition> "Information about tax breakdown by different categories, rates and exemption reasons."@en .
+<http://data.europa.eu/a4g/ontology#hasRoundingAmount> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Rounding Amount"@en .
+<http://data.europa.eu/a4g/ontology#hasPaymentMeansDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://data.europa.eu/a4g/ontology#specifiesChargeInformation> <http://www.w3.org/2004/02/skos/core#definition> "Relation indicating the Charge Information."@en .
+<http://data.europa.eu/a4g/ontology#CreditNoteLine> <http://www.w3.org/2004/02/skos/core#definition> "Details concerning a given unit of goods, services or works mentioned in the Credit Note."@en .
+<http://data.europa.eu/a4g/ontology#inv> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://data.europa.eu/a4g/ontology#hasTotalAllowanceAmount> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#hasAmountDueForPayment> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#hasPrice> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#inv> .
+<http://data.europa.eu/a4g/ontology#hasTotalAllowanceAmount> <http://www.w3.org/2004/02/skos/core#definition> "Relation indicating the overall Monetary Value of the Allowance."@en .
+<http://data.europa.eu/a4g/ontology#hasCreditTransferInformation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#inv> .
+<http://data.europa.eu/a4g/ontology#hasNetAmount> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#hasInvoiceNote> <http://www.w3.org/2004/02/skos/core#definition> "Contains Invoice Note."@en .
+<http://data.europa.eu/a4g/ontology#hasTotalTaxAmount> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#hasPaymentCardHolderName> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#inv> .
+<http://data.europa.eu/a4g/ontology#inv> <http://www.w3.org/2002/07/owl#versionIRI> <http://data.europa.eu/a4g/ontology#inv-5.2.0> .
+<http://data.europa.eu/a4g/ontology#hasPaymentAccountName> <http://www.w3.org/2004/02/skos/core#definition> "The name of the account that can send and receive payments to and from a payment service provider. (epo-inv:CreditTransferInformation)"@en .
+<http://data.europa.eu/a4g/ontology#Invoice> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#PostAwardDocument> .
+<http://data.europa.eu/a4g/ontology#hasAmountDueForPayment> <http://www.w3.org/2004/02/skos/core#definition> "Relation indicating the Monetary Value that has to be paid."@en .
+<http://data.europa.eu/a4g/ontology#hasTotalTaxInclusiveAmount> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#hasPaymentDueDate> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#inv> .
+<http://data.europa.eu/a4g/ontology#hasTaxPointDateCode> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#inv> .
+<http://data.europa.eu/a4g/ontology#hasPaymentDueDate> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Payment Due Date"@en .
+<http://data.europa.eu/a4g/ontology#PaymentInstructionsInformation> <http://www.w3.org/2004/02/skos/core#prefLabel> "Payment Instructions Information"@en .
+<http://data.europa.eu/a4g/ontology#comprisesCreditNoteLine> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#comprisesCreditNoteLine> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://data.europa.eu/a4g/ontology#comprisesInvoiceLine> .
+<http://data.europa.eu/a4g/ontology#PaymentInstructionsInformation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#hasMandateIdentifier> <http://www.w3.org/2004/02/skos/core#historyNote> "WG Approval 11/07/2024"@en .
+<http://data.europa.eu/a4g/ontology#hasInvoiceLinePeriod> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Invoice Line Period"@en .
+<http://data.europa.eu/a4g/ontology#hasPaymentMeansDescription> <http://www.w3.org/2004/02/skos/core#historyNote> "WG Approval 11/07/2024"@en .
+<http://data.europa.eu/a4g/ontology#refersToOrder> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#inv> .
+<http://data.europa.eu/a4g/ontology#isSpecificToInvoiceLine> <http://www.w3.org/2004/02/skos/core#prefLabel> "is Specific To Invoice Line"@en .
+<http://data.europa.eu/a4g/ontology#inv> <http://www.w3.org/2002/07/owl#imports> <http://data.europa.eu/a4g/ontology#ful> .
+<http://data.europa.eu/a4g/ontology#hasPaymentDueDate> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2026"@en .
+<http://data.europa.eu/a4g/ontology#hasPaymentInstructionsInformation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#isSpecificToInvoiceLine> <http://www.w3.org/2004/02/skos/core#definition> "Information that is particular to an Invoice Line."@en .
+<http://data.europa.eu/a4g/ontology#hasCreditTransferInformation> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Credit Transfer Information"@en .
+<http://data.europa.eu/a4g/ontology#CreditNote> <http://www.w3.org/2004/02/skos/core#definition> "A Document sent by the Seller to the Buyer to reduce or cancel all or part of the amount previously invoiced."@en .
+<http://data.europa.eu/a4g/ontology#hasPrepaidAmount> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#hasPaymentServiceProviderIdentifier> <http://www.w3.org/2004/02/skos/core#historyNote> "WG Approval 11/07/2024"@en .
+<http://data.europa.eu/a4g/ontology#isSpecificToInvoiceLine> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .

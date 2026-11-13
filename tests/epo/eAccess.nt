@@ -1,0 +1,64 @@
+<http://data.europa.eu/a4g/ontology#refersToNotice> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#acc> .
+<http://data.europa.eu/a4g/ontology#concernsProcedure> <http://www.w3.org/2004/02/skos/core#historyNote> "WG Approval 05/03/2024"@en .
+<http://data.europa.eu/a4g/ontology#acc> <http://purl.org/dc/terms/issued> "2025-10-10"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://data.europa.eu/a4g/ontology#refersToNotice> <http://www.w3.org/2004/02/skos/core#prefLabel> "refers To Notice"@en .
+<http://data.europa.eu/a4g/ontology#relatesToESPDRequest> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#acc> .
+<http://data.europa.eu/a4g/ontology#acc> <http://purl.org/dc/terms/license> "© European Union, 2014. Unless otherwise noted, the reuse of the Ontology is authorised under the European Union Public Licence v1.2 (https://eupl.eu/)." .
+<http://data.europa.eu/a4g/ontology#acc> <http://purl.org/vocab/vann/preferredNamespacePrefix> "epo" .
+<http://data.europa.eu/a4g/ontology#acc> <http://www.w3.org/2000/01/rdf-schema#comment> "This version is automatically generated from eAccess.xml on 2025-10-10" .
+<http://data.europa.eu/a4g/ontology#ESPDRequest> <http://www.w3.org/2004/02/skos/core#definition> "A document issued by a Buyer defining how the Exclusion Grounds and the Selection Criteria should be addressed in an European Single Procurement Document for a specific procurement."@en .
+<http://data.europa.eu/a4g/ontology#acc> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://data.europa.eu/a4g/ontology#" .
+<http://data.europa.eu/a4g/ontology#acc> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/ns/adms> .
+<http://data.europa.eu/a4g/ontology#acc> <http://www.w3.org/2002/07/owl#imports> <http://purl.org/dc/terms/> .
+<http://data.europa.eu/a4g/ontology#hasSubdivision> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#acc> .
+<http://data.europa.eu/a4g/ontology#acc> <http://www.w3.org/2002/07/owl#priorVersion> "http://data.europa.eu/a4g/ontology#acc-5.1.0" .
+<http://data.europa.eu/a4g/ontology#concernsProcedure> <http://www.w3.org/2004/02/skos/core#prefLabel> "concerns Procedure"@en .
+<http://data.europa.eu/a4g/ontology#hasResourceType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#acc> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://github.com/OP-TED/ePO/releases> .
+<http://data.europa.eu/a4g/ontology#concernsProcedure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#acc> <http://www.w3.org/2002/07/owl#incompatibleWith> "4.2.0" .
+<http://data.europa.eu/a4g/ontology#acc> <http://purl.org/dc/terms/description> "The eProcurement Ontology Access core describes the concepts and properties representing the European Public Procurement Access domain. The provision of these semantics offers the basis for a common understanding of the domain for all stakeholders ensuring the quality of data exchange and transparency. The ontology restrictions are published in a separate artefact."@en .
+<http://data.europa.eu/a4g/ontology#acc> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/ns/org#> .
+<http://data.europa.eu/a4g/ontology#specifiesProcurementCriterion> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#acc> .
+<http://data.europa.eu/a4g/ontology#hasSubdivision> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#ESPDRequest> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#ProcurementDocument> .
+<http://data.europa.eu/a4g/ontology#acc> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://joinup.ec.europa.eu/collection/eprocurement/solution/eprocurement-ontology/about> .
+<http://data.europa.eu/a4g/ontology#acc> <http://www.w3.org/2002/07/owl#versionIRI> <http://data.europa.eu/a4g/ontology#acc-5.2.0> .
+<http://data.europa.eu/a4g/ontology#ESPDRequest> <http://www.w3.org/2004/02/skos/core#historyNote> "WG Approval 05/03/2024"@en .
+<http://data.europa.eu/a4g/ontology#specifiesProcurementCriterion> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#specifiesProcurementCriterion> <http://www.w3.org/2004/02/skos/core#prefLabel> "specifies Procurement Criterion"@en .
+<http://data.europa.eu/a4g/ontology#concernsProcedure> <http://www.w3.org/2004/02/skos/core#definition> "Relates to Procedure."@en .
+<http://data.europa.eu/a4g/ontology#acc> <http://purl.org/dc/terms/created> "2021-06-01"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://data.europa.eu/a4g/ontology#acc> <http://www.w3.org/2002/07/owl#imports> <http://data.europa.eu/eli/ontology#> .
+<http://data.europa.eu/a4g/ontology#ESPDRequest> <http://www.w3.org/2004/02/skos/core#prefLabel> "ESPD Request"@en .
+<http://data.europa.eu/a4g/ontology#hasResourceType> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#acc> .
+<http://data.europa.eu/a4g/ontology#ESPDRequest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#concernsProcedure> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#acc> .
+<http://data.europa.eu/a4g/ontology#hasSubdivision> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Subdivision"@en .
+<http://data.europa.eu/a4g/ontology#specifiesProcurementCriterion> <http://www.w3.org/2004/02/skos/core#definition> "Relation indicating the Procurement Criterion to be used."@en .
+<http://data.europa.eu/a4g/ontology#relatesToESPDRequest> <http://www.w3.org/2004/02/skos/core#historyNote> "WG Approval 05/03/2024"@en .
+<http://data.europa.eu/a4g/ontology#acc> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://op.europa.eu/en/web/eu-vocabularies/e-procurement> .
+<http://data.europa.eu/a4g/ontology#hasResourceType> <http://www.w3.org/2004/02/skos/core#definition> "Relation indicating the Resource Type."@en .
+<http://data.europa.eu/a4g/ontology#acc> <http://purl.org/dc/terms/publisher> "http://publications.europa.eu/resource/authority/corporate-body/PUBL" .
+<http://data.europa.eu/a4g/ontology#acc> <http://www.w3.org/2002/07/owl#imports> <http://data.europa.eu/a4g/ontology#sub> .
+<http://data.europa.eu/a4g/ontology#acc> <http://www.w3.org/2002/07/owl#versionInfo> "5.2.0" .
+<http://data.europa.eu/a4g/ontology#hasResourceType> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Resource Type"@en .
+<http://data.europa.eu/a4g/ontology#refersToNotice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#acc> <http://www.w3.org/2000/01/rdf-schema#label> "eProcurement Ontology Access - core"@en .
+<http://data.europa.eu/a4g/ontology#relatesToESPDRequest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#acc> <http://www.w3.org/2002/07/owl#imports> <http://data.europa.eu/m8g/> .
+<http://data.europa.eu/a4g/ontology#hasSubdivision> <http://www.w3.org/2004/02/skos/core#definition> "Relation indicating the Subdivision."@en .
+<http://data.europa.eu/a4g/ontology#acc> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/ns/person> .
+<http://data.europa.eu/a4g/ontology#acc> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://data.europa.eu/a4g/ontology#relatesToESPDRequest> <http://www.w3.org/2004/02/skos/core#prefLabel> "relates To ESPD Request"@en .
+<http://data.europa.eu/a4g/ontology#ESPDRequest> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#acc> .
+<http://data.europa.eu/a4g/ontology#acc> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/2006/time> .
+<http://data.europa.eu/a4g/ontology#refersToNotice> <http://www.w3.org/2004/02/skos/core#definition> "Reference to a Notice."@en .
+<http://data.europa.eu/a4g/ontology#acc> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://docs.ted.europa.eu/home/index.html> .
+<http://data.europa.eu/a4g/ontology#specifiesProcurementCriterion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#acc> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/2004/02/skos/core#> .
+<http://data.europa.eu/a4g/ontology#relatesToESPDRequest> <http://www.w3.org/2004/02/skos/core#definition> "Is about an European Single Procurement Document (ESPD) Request."@en .
+<http://data.europa.eu/a4g/ontology#refersToNotice> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 12/03/2024"@en .
+<http://data.europa.eu/a4g/ontology#acc> <http://purl.org/dc/terms/title> "eProcurement Ontology Access - core"@en .
+<http://data.europa.eu/a4g/ontology#acc> <http://www.w3.org/2002/07/owl#imports> <http://data.europa.eu/a4g/ontology#core> .
+<http://data.europa.eu/a4g/ontology#acc> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/ns/locn> .

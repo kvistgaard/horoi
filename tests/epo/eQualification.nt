@@ -1,0 +1,125 @@
+<http://data.europa.eu/a4g/ontology#qua> <http://www.w3.org/2002/07/owl#imports> <http://data.europa.eu/eli/ontology#> .
+<http://data.europa.eu/a4g/ontology#providesDecisionFor> <http://www.w3.org/2004/02/skos/core#definition> "Makes available the resolution."@en .
+<http://data.europa.eu/a4g/ontology#QualificationReponse> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#EvidenceSubmission> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#hasQualificationDecisionDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://data.europa.eu/a4g/ontology#qua> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://docs.ted.europa.eu/home/index.html> .
+<http://data.europa.eu/a4g/ontology#qua> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/2004/02/skos/core#> .
+<http://data.europa.eu/a4g/ontology#refersToEvidenceRequest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#qua> <http://www.w3.org/2000/01/rdf-schema#label> "eProcurement Ontology Qualification - core"@en .
+<http://data.europa.eu/a4g/ontology#QualificationReponse> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#qua> .
+<http://data.europa.eu/a4g/ontology#qua> <http://www.w3.org/2002/07/owl#imports> <http://data.europa.eu/a4g/ontology#core> .
+<http://data.europa.eu/a4g/ontology#concernsProcedure> <http://www.w3.org/2004/02/skos/core#prefLabel> "concerns Procedure"@en .
+<http://data.europa.eu/a4g/ontology#fulfillsRequirement> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#qua> .
+<http://data.europa.eu/a4g/ontology#concernsProcedure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#hasRejectionDescription> <http://www.w3.org/2004/02/skos/core#definition> "Explanatory text about the rejection reason. (epo-qua:QualificationDecisionInformation)"@en .
+<http://data.europa.eu/a4g/ontology#isQualified> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#qua> .
+<http://data.europa.eu/a4g/ontology#qua> <http://www.w3.org/2002/07/owl#priorVersion> "http://data.europa.eu/a4g/ontology#qua-5.1.0" .
+<http://data.europa.eu/a4g/ontology#summarisesInformationForQualificationResponse> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#qua> .
+<http://data.europa.eu/a4g/ontology#qua> <http://www.w3.org/2002/07/owl#incompatibleWith> "4.2.0" .
+<http://data.europa.eu/a4g/ontology#summarisesInformationForQualificationResponse> <http://www.w3.org/2004/02/skos/core#definition> "Relation indicating the Qualification Response that the information refers to."@en .
+<http://data.europa.eu/a4g/ontology#qua> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://data.europa.eu/a4g/ontology#" .
+<http://data.europa.eu/a4g/ontology#specifiesEvidence> <http://www.w3.org/2004/02/skos/core#definition> "Relation indicating the Evidence."@en .
+<http://data.europa.eu/a4g/ontology#refersToEvidenceSubmission> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#EvidenceRequest> <http://www.w3.org/2004/02/skos/core#definition> "A Document sent by the Buyer to the Economic Operator asking for the submission of an Evidence."@en .
+<http://data.europa.eu/a4g/ontology#comprisesEvidenceOutcome> <http://www.w3.org/2004/02/skos/core#definition> "Incorporates Evidence Outcome."@en .
+<http://data.europa.eu/a4g/ontology#EvidenceOutcome> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#isQualified> <http://www.w3.org/2004/02/skos/core#definition> "Indicates whether the economic operator is eligible. (epo-qua:QualificationDecisionInformation)"@en .
+<http://data.europa.eu/a4g/ontology#EvidenceSubmission> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#Document> .
+<http://data.europa.eu/a4g/ontology#qua> <http://www.w3.org/2002/07/owl#imports> <http://purl.org/dc/terms/> .
+<http://data.europa.eu/a4g/ontology#QualificationDecisionInformation> <http://www.w3.org/2004/02/skos/core#prefLabel> "Qualification Decision Information"@en .
+<http://data.europa.eu/a4g/ontology#EvidenceRequest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#concernsLot> <http://www.w3.org/2004/02/skos/core#definition> "Relates to Lot."@en .
+<http://data.europa.eu/a4g/ontology#qua> <http://www.w3.org/2000/01/rdf-schema#comment> "This version is automatically generated from eQualification.xml on 2025-10-10" .
+<http://data.europa.eu/a4g/ontology#isQualified> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 09/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#providesEvidence> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#qua> .
+<http://data.europa.eu/a4g/ontology#refersToEvidenceSubmission> <http://www.w3.org/2004/02/skos/core#prefLabel> "refers To Evidence Submission"@en .
+<http://data.europa.eu/a4g/ontology#isQualified> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://data.europa.eu/a4g/ontology#qua> <http://purl.org/dc/terms/publisher> "http://publications.europa.eu/resource/authority/corporate-body/PUBL" .
+<http://data.europa.eu/a4g/ontology#specifiesEconomicOperator> <http://www.w3.org/2004/02/skos/core#prefLabel> "specifies Economic Operator"@en .
+<http://data.europa.eu/a4g/ontology#refersToEvidenceSubmission> <http://www.w3.org/2004/02/skos/core#definition> "Reference to an Evidence Submission."@en .
+<http://data.europa.eu/a4g/ontology#providesDecisionFor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#EvidenceSubmission> <http://www.w3.org/2004/02/skos/core#prefLabel> "Evidence Submission"@en .
+<http://data.europa.eu/a4g/ontology#EvidenceSubmission> <http://www.w3.org/2004/02/skos/core#definition> "A Document sent by the Economic Operator to the Buyer which contains an Evidence."@en .
+<http://data.europa.eu/a4g/ontology#QualificationDecisionInformation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#qua> .
+<http://data.europa.eu/a4g/ontology#providesEvidence> <http://www.w3.org/2004/02/skos/core#definition> "Makes available the Evidence."@en .
+<http://data.europa.eu/a4g/ontology#specifiesEvidence> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#qua> <http://www.w3.org/2002/07/owl#imports> <http://data.europa.eu/m8g/> .
+<http://data.europa.eu/a4g/ontology#qua> <http://purl.org/dc/terms/title> "eProcurement Ontology Qualification - core"@en .
+<http://data.europa.eu/a4g/ontology#EvidenceReceipt> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#Document> .
+<http://data.europa.eu/a4g/ontology#concernsProcedure> <http://www.w3.org/2004/02/skos/core#definition> "Relates to Procedure."@en .
+<http://data.europa.eu/a4g/ontology#qua> <http://www.w3.org/2002/07/owl#versionInfo> "5.2.0" .
+<http://data.europa.eu/a4g/ontology#qua> <http://purl.org/dc/terms/description> "The eProcurement Ontology Qualification core describes the concepts and properties representing the European Public Procurement Qualification domain. The provision of these semantics offers the basis for a common understanding of the domain for all stakeholders ensuring the quality of data exchange and transparency. The ontology restrictions are published in a separate artefact."@en .
+<http://data.europa.eu/a4g/ontology#EvidenceOutcome> <http://www.w3.org/2004/02/skos/core#prefLabel> "Evidence Outcome"@en .
+<http://data.europa.eu/a4g/ontology#qua> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://data.europa.eu/a4g/ontology#hasRejectionDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://data.europa.eu/a4g/ontology#qua> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://joinup.ec.europa.eu/collection/eprocurement/solution/eprocurement-ontology/about> .
+<http://data.europa.eu/a4g/ontology#refersToEvidenceRequest> <http://www.w3.org/2004/02/skos/core#prefLabel> "refers To Evidence Request"@en .
+<http://data.europa.eu/a4g/ontology#refersToEvidenceSubmission> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#qua> .
+<http://data.europa.eu/a4g/ontology#comprisesEvidenceOutcome> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#qua> .
+<http://data.europa.eu/a4g/ontology#providesEvidence> <http://www.w3.org/2004/02/skos/core#prefLabel> "provides Evidence"@en .
+<http://data.europa.eu/a4g/ontology#specifiesEvidence> <http://www.w3.org/2004/02/skos/core#prefLabel> "specifies Evidence"@en .
+<http://data.europa.eu/a4g/ontology#qua> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/2006/time> .
+<http://data.europa.eu/a4g/ontology#refersToEvidenceRequest> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#providesEvidence> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#specifiesEvidence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#isQualified> <http://www.w3.org/2004/02/skos/core#prefLabel> "is Qualified"@en .
+<http://data.europa.eu/a4g/ontology#EvidenceRequest> <http://www.w3.org/2004/02/skos/core#prefLabel> "Evidence Request"@en .
+<http://data.europa.eu/a4g/ontology#qua> <http://purl.org/dc/terms/created> "2021-06-01"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://data.europa.eu/a4g/ontology#summarisesInformationForQualificationResponse> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#hasQualificationDecisionDate> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 09/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#qua> <http://www.w3.org/2002/07/owl#versionIRI> <http://data.europa.eu/a4g/ontology#qua-5.2.0> .
+<http://data.europa.eu/a4g/ontology#QualificationDecisionInformation> <http://www.w3.org/2004/02/skos/core#definition> "Information about the aggregated result of the Evidence Outcomes."@en .
+<http://data.europa.eu/a4g/ontology#QualificationReponse> <http://www.w3.org/2004/02/skos/core#prefLabel> "Qualification Reponse"@en .
+<http://data.europa.eu/a4g/ontology#refersToEvidenceSubmission> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#providesDecisionFor> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#comprisesEvidenceOutcome> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#qua> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/ns/locn> .
+<http://data.europa.eu/a4g/ontology#hasQualificationDecisionDate> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Qualification Decision Date"@en .
+<http://data.europa.eu/a4g/ontology#specifiesEconomicOperator> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#qua> .
+<http://data.europa.eu/a4g/ontology#EvidenceSubmission> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#qua> .
+<http://data.europa.eu/a4g/ontology#providesEvidence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#qua> <http://purl.org/dc/terms/issued> "2025-10-10"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://data.europa.eu/a4g/ontology#fulfillsRequirement> <http://www.w3.org/2004/02/skos/core#prefLabel> "fulfills Requirement"@en .
+<http://data.europa.eu/a4g/ontology#summarisesInformationForQualificationResponse> <http://www.w3.org/2004/02/skos/core#prefLabel> "summarises Information For Qualification Response"@en .
+<http://data.europa.eu/a4g/ontology#comprisesEvidenceOutcome> <http://www.w3.org/2004/02/skos/core#prefLabel> "comprises Evidence Outcome"@en .
+<http://data.europa.eu/a4g/ontology#concernsLot> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#qua> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/ns/adms> .
+<http://data.europa.eu/a4g/ontology#specifiesEvidence> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#qua> .
+<http://data.europa.eu/a4g/ontology#EvidenceReceipt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#fulfillsRequirement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://data.europa.eu/a4g/ontology#qua> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://op.europa.eu/en/web/eu-vocabularies/e-procurement> .
+<http://data.europa.eu/a4g/ontology#QualificationReponse> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#Document> .
+<http://data.europa.eu/a4g/ontology#refersToEvidenceRequest> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#qua> .
+<http://data.europa.eu/a4g/ontology#qua> <http://purl.org/vocab/vann/preferredNamespacePrefix> "epo" .
+<http://data.europa.eu/a4g/ontology#EvidenceReceipt> <http://www.w3.org/2004/02/skos/core#prefLabel> "Evidence Receipt"@en .
+<http://data.europa.eu/a4g/ontology#qua> <http://purl.org/dc/terms/license> "© European Union, 2014. Unless otherwise noted, the reuse of the Ontology is authorised under the European Union Public Licence v1.2 (https://eupl.eu/)." .
+<http://data.europa.eu/a4g/ontology#EvidenceReceipt> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#qua> .
+<http://data.europa.eu/a4g/ontology#QualificationDecisionInformation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#fulfillsRequirement> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 09/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#qua> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://github.com/OP-TED/ePO/releases> .
+<http://data.europa.eu/a4g/ontology#concernsLot> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#qua> .
+<http://data.europa.eu/a4g/ontology#QualificationReponse> <http://www.w3.org/2004/02/skos/core#definition> "A formal reply from the Buyer to the Economic Operator informing the Economic Operator that it may participate in a procurement."@en .
+<http://data.europa.eu/a4g/ontology#concernsProcedure> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#qua> .
+<http://data.europa.eu/a4g/ontology#hasQualificationDecisionDate> <http://www.w3.org/2004/02/skos/core#definition> "The official date of the Qualification Decision. (epo-qua:QualificationDecisionInformation)"@en .
+<http://data.europa.eu/a4g/ontology#comprisesEvidenceOutcome> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#qua> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/ns/org#> .
+<http://data.europa.eu/a4g/ontology#summarisesInformationForQualificationResponse> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#EvidenceOutcome> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#qua> .
+<http://data.europa.eu/a4g/ontology#refersToEvidenceRequest> <http://www.w3.org/2004/02/skos/core#definition> "Reference to an Evidence Request."@en .
+<http://data.europa.eu/a4g/ontology#specifiesEconomicOperator> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#EvidenceRequest> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#qua> .
+<http://data.europa.eu/a4g/ontology#providesDecisionFor> <http://www.w3.org/2004/02/skos/core#prefLabel> "provides Decision For"@en .
+<http://data.europa.eu/a4g/ontology#hasRejectionDescription> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#qua> .
+<http://data.europa.eu/a4g/ontology#hasRejectionDescription> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Rejection Description"@en .
+<http://data.europa.eu/a4g/ontology#EvidenceReceipt> <http://www.w3.org/2004/02/skos/core#definition> "A Document sent by the Buyer to the Economic Operator confirming the receival of an Evidence Submission."@en .
+<http://data.europa.eu/a4g/ontology#EvidenceRequest> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#Document> .
+<http://data.europa.eu/a4g/ontology#qua> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/ns/person> .
+<http://data.europa.eu/a4g/ontology#EvidenceOutcome> <http://www.w3.org/2004/02/skos/core#definition> "Result concerning the submitted Evidence."@en .
+<http://data.europa.eu/a4g/ontology#concernsLot> <http://www.w3.org/2004/02/skos/core#prefLabel> "concerns Lot"@en .
+<http://data.europa.eu/a4g/ontology#hasQualificationDecisionDate> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#qua> .
+<http://data.europa.eu/a4g/ontology#hasRejectionDescription> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 09/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#fulfillsRequirement> <http://www.w3.org/2004/02/skos/core#definition> "Indicates whether the Requirement is satisfied. (epo-qua:EvidenceOutcome)"@en .
+<http://data.europa.eu/a4g/ontology#providesDecisionFor> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#qua> .
+<http://data.europa.eu/a4g/ontology#specifiesEconomicOperator> <http://www.w3.org/2004/02/skos/core#definition> "Relation indicating that the instance of the concept involves the Economic Operator."@en .
+<http://data.europa.eu/a4g/ontology#specifiesEconomicOperator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .

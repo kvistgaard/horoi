@@ -1,0 +1,628 @@
+@prefix adms: <http://www.w3.org/ns/adms#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix epo: <http://data.europa.eu/a4g/ontology#> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+epo:comprisesOrderAgreementLine rdfs:domain epo:OrderAgreement ;
+    rdfs:range epo:OrderAgreementLine .
+
+epo:comprisesOrderChangeLine rdfs:domain epo:OrderChange ;
+    rdfs:range epo:OrderChangeLine .
+
+epo:comprisesOrderLine rdfs:domain epo:Order ;
+    rdfs:range epo:OrderLine .
+
+epo:comprisesOrderResponseLine rdfs:domain epo:OrderResponse ;
+    rdfs:range epo:OrderResponseLine .
+
+epo:hasAcceptanceStatus rdfs:domain [ a owl:Class ;
+            owl:unionOf ( epo:ReceiptAdviceInformation epo:AbstractContainer ) ] ;
+    rdfs:range skos:Concept .
+
+epo:hasAccessURL rdfs:domain epo:DeliveryInformation ;
+    rdfs:range xsd:anyURI .
+
+epo:hasAllowanceChargeReason rdfs:domain epo:AllowanceChargeInformation ;
+    rdfs:range skos:Concept .
+
+epo:hasAllowanceChargeReasonDescription rdfs:domain epo:AllowanceChargeInformation ;
+    rdfs:range rdf:PlainLiteral .
+
+epo:hasDownloadURL rdfs:domain epo:DeliveryInformation ;
+    rdfs:range xsd:anyURI .
+
+epo:hasPrice rdfs:domain epo:OrderLine ;
+    rdfs:range epo:Price .
+
+epo:hasResponseStatus rdfs:domain epo:CatalogueResponseInformation ;
+    rdfs:range skos:Concept .
+
+epo:hasShippingMark rdfs:domain epo:DeliveryInformation ;
+    rdfs:range rdf:PlainLiteral .
+
+epo:hasStatus rdfs:domain [ a owl:Class ;
+            owl:unionOf ( epo:OrderResponseInformation epo:OrderChangeLine ) ] ;
+    rdfs:range skos:Concept .
+
+epo:hasTaxCategory rdfs:domain epo:TaxInformation ;
+    rdfs:range skos:Concept .
+
+epo:hasTaxScheme rdfs:domain epo:TaxInformation ;
+    rdfs:range skos:Concept .
+
+epo:isSpecificToInvoiceLine rdfs:domain epo:AllowanceInformation ;
+    rdfs:range epo:InvoiceLine .
+
+epo:isSpecificToOrderLine rdfs:domain [ a owl:Class ;
+            owl:unionOf ( epo:AllowanceInformation epo:ContractInformation epo:DeliveryInformation epo:ChargeInformation epo:OriginatorInformation ) ] ;
+    rdfs:range epo:OrderLine .
+
+epo:isSpecificToOrderResponseLine rdfs:domain epo:OrderResponseInformation ;
+    rdfs:range epo:OrderResponseLine .
+
+epo:isSpecificToRequestForOfferLine rdfs:domain epo:DeliveryInformation ;
+    rdfs:range epo:RequestForOfferLine .
+
+epo:ord-restriction a owl:Ontology ;
+    rdfs:label "eProcurement Ontology Ordering - core restrictions"@en ;
+    dcterms:created "2021-06-01"^^xsd:date ;
+    dcterms:description "The eProcurement Ontology Ordering core restrictions provides the restrictions and the inference-related specifications on the concepts and properties in the eProcurement Ontology Ordering core."@en ;
+    dcterms:issued "2025-10-10"^^xsd:date ;
+    dcterms:license "© European Union, 2014. Unless otherwise noted, the reuse of the Ontology is authorised under the European Union Public Licence v1.2 (https://eupl.eu/)." ;
+    dcterms:publisher "http://publications.europa.eu/resource/authority/corporate-body/PUBL" ;
+    dcterms:title "eProcurement Ontology Ordering - core restrictions"@en ;
+    vann:preferredNamespacePrefix "epo" ;
+    vann:preferredNamespaceUri "http://data.europa.eu/a4g/ontology#" ;
+    rdfs:comment """This version is automatically generated from eOrdering.xml on 
+                2025-10-10""" ;
+    rdfs:seeAlso <https://docs.ted.europa.eu/home/index.html>,
+        <https://github.com/OP-TED/ePO/releases>,
+        <https://joinup.ec.europa.eu/collection/eprocurement/solution/eprocurement-ontology/about>,
+        <https://op.europa.eu/en/web/eu-vocabularies/e-procurement> ;
+    owl:imports epo:cat,
+        epo:core,
+        epo:ful,
+        epo:ord,
+        <http://data.europa.eu/eli/ontology#>,
+        <http://data.europa.eu/m8g/>,
+        dcterms:,
+        skos:,
+        <http://www.w3.org/2006/time>,
+        <http://www.w3.org/ns/adms>,
+        <http://www.w3.org/ns/locn>,
+        org:,
+        <http://www.w3.org/ns/person> ;
+    owl:incompatibleWith "4.2.0" ;
+    owl:priorVersion "http://data.europa.eu/a4g/ontology#ord-restriction-5.1.0" ;
+    owl:versionIRI epo:ord-restriction-5.2.0 ;
+    owl:versionInfo "5.2.0" .
+
+epo:refersToCatalogue rdfs:domain epo:Order ;
+    rdfs:range epo:PostAwardCatalogue .
+
+epo:specifiesAllowanceInformation rdfs:domain [ a owl:Class ;
+            owl:unionOf ( epo:Invoice epo:Order ) ] ;
+    rdfs:range epo:AllowanceInformation .
+
+epo:specifiesChargeInformation rdfs:domain epo:Order ;
+    rdfs:range epo:ChargeInformation .
+
+epo:specifiesContractInformation rdfs:domain epo:Order ;
+    rdfs:range epo:ContractInformation .
+
+epo:specifiesOrderResponseInformation rdfs:domain epo:OrderResponse ;
+    rdfs:range epo:OrderResponseInformation .
+
+epo:DespatchLine rdfs:subClassOf [ a owl:Restriction ;
+            owl:cardinality 1 ;
+            owl:onProperty epo:refersToOrderLine ] .
+
+epo:RemittanceAdvice rdfs:subClassOf [ a owl:Restriction ;
+            owl:cardinality 1 ;
+            owl:onProperty epo:specifiesSeller ] .
+
+epo:ShipmentAgreement rdfs:subClassOf [ a owl:Restriction ;
+            owl:minCardinality 1 ;
+            owl:onProperty epo:agreedBySeller ] .
+
+epo:ShipmentInformation rdfs:subClassOf [ a owl:Restriction ;
+            owl:cardinality 1 ;
+            owl:onProperty epo:refersToDeliveryInformation ] .
+
+epo:TaxBreakdownInformation rdfs:subClassOf [ a owl:Restriction ;
+            owl:cardinality 1 ;
+            owl:onProperty epo:hasTaxInformation ] .
+
+epo:agreedBySeller rdfs:domain epo:ShipmentAgreement ;
+    rdfs:range epo:Seller .
+
+epo:concernsConsignee rdfs:domain epo:DeliveryInformation ;
+    rdfs:range epo:Consignee .
+
+epo:concernsContract a owl:FunctionalProperty ;
+    rdfs:domain epo:ContractInformation ;
+    rdfs:range epo:Contract .
+
+epo:concernsOriginator a owl:FunctionalProperty ;
+    rdfs:domain epo:OriginatorInformation ;
+    rdfs:range epo:Originator .
+
+epo:concernsOriginatorRequest rdfs:domain epo:OriginatorInformation ;
+    rdfs:range epo:OriginatorRequest .
+
+epo:hasActualDeliveryDate rdfs:domain epo:DeliveryInformation ;
+    rdfs:range xsd:dateTime .
+
+epo:hasAmountDueForPayment a owl:FunctionalProperty ;
+    rdfs:domain epo:Order ;
+    rdfs:range epo:MonetaryValue .
+
+epo:hasBackorderQuantity rdfs:domain epo:OrderResponseLine ;
+    rdfs:range epo:Quantity .
+
+epo:hasDeliveryDeadline rdfs:domain epo:DeliveryInformation ;
+    rdfs:range xsd:dateTime .
+
+epo:hasDeliveryEmail rdfs:domain epo:DeliveryInformation ;
+    rdfs:range rdf:PlainLiteral .
+
+epo:hasDeliveryPeriod rdfs:domain epo:DeliveryInformation ;
+    rdfs:range time:Interval .
+
+epo:hasGeneralDeliveryTerm rdfs:domain epo:DeliveryAgreement ;
+    rdfs:range rdf:PlainLiteral .
+
+epo:hasPaymentTerm rdfs:domain epo:Order ;
+    rdfs:range rdf:PlainLiteral .
+
+epo:hasPrepaidAmount rdfs:domain epo:Order ;
+    rdfs:range epo:MonetaryValue .
+
+epo:hasPriceDiscountInformation rdfs:domain epo:Price ;
+    rdfs:range epo:AllowanceInformation .
+
+epo:hasQuantity a owl:FunctionalProperty ;
+    rdfs:domain epo:OrderLine ;
+    rdfs:range epo:Quantity .
+
+epo:hasRequestedDeliveryPeriod rdfs:domain epo:DeliveryInformation ;
+    rdfs:range time:Interval .
+
+epo:hasRequestedShippingPriority rdfs:domain epo:DeliveryAgreement ;
+    rdfs:range rdf:PlainLiteral .
+
+epo:hasResponseDescription rdfs:domain epo:OrderResponse ;
+    rdfs:range rdf:PlainLiteral .
+
+epo:hasRoundingAmount rdfs:domain epo:Order ;
+    rdfs:range epo:MonetaryValue .
+
+epo:hasSellerOrderID rdfs:domain epo:Order ;
+    rdfs:range adms:Identifier .
+
+epo:hasTotalAllowanceAmount rdfs:domain epo:Order ;
+    rdfs:range epo:MonetaryValue .
+
+epo:hasTotalChargeAmount rdfs:domain epo:Order ;
+    rdfs:range epo:MonetaryValue .
+
+epo:hasTotalLineAmount a owl:FunctionalProperty ;
+    rdfs:domain epo:Order ;
+    rdfs:range epo:MonetaryValue .
+
+epo:hasTotalTaxExclusiveAmount rdfs:domain epo:Order ;
+    rdfs:range epo:MonetaryValue .
+
+epo:hasTotalTaxInclusiveAmount rdfs:domain epo:Order ;
+    rdfs:range epo:MonetaryValue .
+
+epo:hasTrackingID rdfs:domain epo:DeliveryInformation ;
+    rdfs:range adms:Identifier .
+
+epo:hasVATExemptionReason rdfs:domain epo:AllowanceChargeInformation ;
+    rdfs:range rdf:PlainLiteral .
+
+epo:hasVATExemptionReasonDescription rdfs:domain epo:AllowanceChargeInformation ;
+    rdfs:range rdf:PlainLiteral .
+
+epo:hasValidityPeriod rdfs:domain epo:Order ;
+    rdfs:range time:Interval .
+
+epo:isPartialDeliveryAllowed rdfs:domain epo:DeliveryAgreement ;
+    rdfs:range xsd:boolean .
+
+epo:refersToCatalogueLine rdfs:domain epo:OrderLine ;
+    rdfs:range epo:CatalogueLine .
+
+epo:refersToDeliveryInformation a owl:FunctionalProperty ;
+    rdfs:domain epo:ShipmentInformation ;
+    rdfs:range epo:DeliveryInformation .
+
+epo:refersToProject rdfs:domain epo:Order ;
+    rdfs:range epo:Project .
+
+epo:specifiesDeliveryAgreement rdfs:domain epo:DeliveryInformation ;
+    rdfs:range epo:DeliveryAgreement .
+
+epo:specifiesDeliveryAgreementLocation rdfs:domain epo:DeliveryAgreement ;
+    rdfs:range dcterms:Location .
+
+epo:specifiesDeliveryInformation rdfs:domain [ a owl:Class ;
+            owl:unionOf ( epo:RequestForOffer epo:Invoice epo:Order ) ] ;
+    rdfs:range epo:DeliveryInformation .
+
+epo:specifiesDespatcher rdfs:domain epo:Order ;
+    rdfs:range epo:Despatcher .
+
+epo:specifiesInvoicee rdfs:domain epo:Order ;
+    rdfs:range epo:Invoicee .
+
+epo:specifiesOriginator rdfs:domain [ a owl:Class ;
+            owl:unionOf ( epo:DespatchAdvice epo:RequestForOffer ) ] ;
+    rdfs:range epo:Originator .
+
+epo:specifiesOriginatorInformation rdfs:domain epo:Order ;
+    rdfs:range epo:OriginatorInformation .
+
+epo:specifiesPlaceOfDelivery rdfs:domain epo:DeliveryInformation ;
+    rdfs:range dcterms:Location .
+
+epo:Contract rdfs:subClassOf [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty epo:hasTaxInformation ] .
+
+epo:Price rdfs:subClassOf [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty epo:hasPriceDiscountInformation ] .
+
+epo:ReceiptAdvice rdfs:subClassOf [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty epo:specifiesSeller ],
+        [ a owl:Restriction ;
+            owl:minCardinality 1 ;
+            owl:onProperty epo:specifiesConsignee ] .
+
+epo:RequestForOffer rdfs:subClassOf [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty epo:specifiesOriginator ] .
+
+epo:hasAccountingCost rdfs:domain [ a owl:Class ;
+            owl:unionOf ( epo:Order epo:OrderLine ) ] ;
+    rdfs:range rdf:PlainLiteral .
+
+epo:hasAmount rdfs:domain [ a owl:Class ;
+            owl:unionOf ( epo:AllowanceChargeInformation epo:TaxInformation ) ] ;
+    rdfs:range epo:MonetaryValue .
+
+epo:hasPercentage rdfs:domain [ a owl:Class ;
+            owl:unionOf ( epo:AllowanceChargeInformation epo:TaxInformation ) ] ;
+    rdfs:range xsd:decimal .
+
+epo:isCalculatedOn rdfs:domain [ a owl:Class ;
+            owl:unionOf ( epo:AllowanceChargeInformation epo:TaxInformation ) ] ;
+    rdfs:range epo:MonetaryValue .
+
+epo:isSubmittedForOrderLine a owl:FunctionalProperty ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( epo:OrderChangeLine epo:OrderResponseLine ) ] ;
+    rdfs:range epo:OrderLine .
+
+epo:refersToOrder rdfs:domain [ a owl:Class ;
+            owl:unionOf ( epo:DespatchAdvice epo:Invoice ) ] ;
+    rdfs:range epo:Order .
+
+epo:refersToOrderLine a owl:FunctionalProperty ;
+    rdfs:domain epo:DespatchLine,
+        epo:InvoiceLine ;
+    rdfs:range epo:OrderLine .
+
+epo:respondsToOrderCancellation rdfs:domain [ a owl:Class ;
+            owl:unionOf ( epo:OrderCancellationConfirmation epo:OrderCancellationRejection ) ] ;
+    rdfs:range epo:OrderCancellation .
+
+epo:respondsToOrderChange a owl:FunctionalProperty ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( epo:OrderChangeRejection epo:OrderChangeConfirmation ) ] ;
+    rdfs:range epo:OrderChange .
+
+epo:specifiesConsignee rdfs:domain [ a owl:Class ;
+            owl:unionOf ( epo:DespatchAdvice epo:ReceiptAdvice ) ] ;
+    rdfs:range epo:Consignee .
+
+epo:DespatchAdvice rdfs:subClassOf [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty epo:refersToOrder ],
+        [ a owl:Restriction ;
+            owl:minCardinality 1 ;
+            owl:onProperty epo:specifiesConsignee ] .
+
+epo:InvoiceLine rdfs:subClassOf [ a owl:Restriction ;
+            owl:cardinality 1 ;
+            owl:onProperty epo:hasTaxInformation ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty epo:refersToOrderLine ] .
+
+epo:isSubmittedForOrder a owl:FunctionalProperty ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( epo:OrderCancellation epo:OrderChange epo:OrderResponse ) ] ;
+    rdfs:range epo:Order .
+
+epo:ContractInformation rdfs:subClassOf [ a owl:Restriction ;
+            owl:cardinality 1 ;
+            owl:onProperty epo:concernsContract ] .
+
+epo:OrderCancellationConfirmation rdfs:subClassOf [ a owl:Restriction ;
+            owl:cardinality 1 ;
+            owl:onProperty epo:specifiesSeller ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty epo:respondsToOrderCancellation ],
+        [ a owl:Restriction ;
+            owl:cardinality 1 ;
+            owl:onProperty epo:specifiesBuyer ] .
+
+epo:OrderCancellationRejection rdfs:subClassOf [ a owl:Restriction ;
+            owl:cardinality 1 ;
+            owl:onProperty epo:specifiesBuyer ],
+        [ a owl:Restriction ;
+            owl:cardinality 1 ;
+            owl:onProperty epo:specifiesSeller ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty epo:respondsToOrderCancellation ] .
+
+epo:OrderChange rdfs:subClassOf [ a owl:Restriction ;
+            owl:cardinality 1 ;
+            owl:onProperty epo:isSubmittedForOrder ] .
+
+epo:OrderChangeConfirmation rdfs:subClassOf [ a owl:Restriction ;
+            owl:cardinality 1 ;
+            owl:onProperty epo:specifiesSeller ],
+        [ a owl:Restriction ;
+            owl:cardinality 1 ;
+            owl:onProperty epo:specifiesBuyer ],
+        [ a owl:Restriction ;
+            owl:cardinality 1 ;
+            owl:onProperty epo:respondsToOrderChange ] .
+
+epo:OrderChangeLine rdfs:subClassOf [ a owl:Restriction ;
+            owl:cardinality 1 ;
+            owl:onProperty epo:isSubmittedForOrderLine ] .
+
+epo:OrderChangeRejection rdfs:subClassOf [ a owl:Restriction ;
+            owl:cardinality 1 ;
+            owl:onProperty epo:specifiesSeller ],
+        [ a owl:Restriction ;
+            owl:cardinality 1 ;
+            owl:onProperty epo:specifiesBuyer ],
+        [ a owl:Restriction ;
+            owl:cardinality 1 ;
+            owl:onProperty epo:respondsToOrderChange ] .
+
+epo:DeliveryAgreement rdfs:subClassOf [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty epo:specifiesDeliveryAgreementLocation ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty epo:hasRequestedShippingPriority ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty epo:hasGeneralDeliveryTerm ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty epo:isPartialDeliveryAllowed ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty dcterms:description ] .
+
+epo:Invoice rdfs:subClassOf [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty epo:specifiesDeliveryInformation ],
+        [ a owl:Restriction ;
+            owl:cardinality 1 ;
+            owl:onProperty epo:specifiesSeller ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty epo:refersToOrder ],
+        [ a owl:Restriction ;
+            owl:cardinality 1 ;
+            owl:onProperty epo:hasTaxInformation ] .
+
+epo:OrderCancellation rdfs:subClassOf [ a owl:Restriction ;
+            owl:cardinality 1 ;
+            owl:onProperty epo:specifiesBuyer ],
+        [ a owl:Restriction ;
+            owl:cardinality 1 ;
+            owl:onProperty epo:isSubmittedForOrder ],
+        [ a owl:Restriction ;
+            owl:cardinality 1 ;
+            owl:onProperty epo:specifiesSeller ] .
+
+epo:OrderResponse rdfs:subClassOf [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty epo:hasResponseDescription ],
+        [ a owl:Restriction ;
+            owl:cardinality 1 ;
+            owl:onProperty epo:isSubmittedForOrder ] .
+
+epo:OrderResponseLine rdfs:subClassOf [ a owl:Restriction ;
+            owl:cardinality 1 ;
+            owl:onProperty epo:isSubmittedForOrderLine ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty epo:hasBackorderQuantity ] .
+
+epo:OriginatorInformation rdfs:subClassOf [ a owl:Restriction ;
+            owl:cardinality 1 ;
+            owl:onProperty epo:concernsOriginator ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty epo:concernsOriginatorRequest ] .
+
+epo:hasTaxInformation a owl:FunctionalProperty ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( epo:AllowanceChargeInformation epo:AbstractItem epo:InvoiceLine epo:TaxBreakdownInformation epo:Invoice epo:Contract ) ] ;
+    rdfs:range epo:TaxInformation .
+
+epo:specifiesBuyer a owl:FunctionalProperty ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( epo:Order epo:OrderChangeConfirmation epo:OrderChangeRejection epo:OrderCancellation epo:OrderCancellationConfirmation epo:OrderCancellationRejection ) ] ;
+    rdfs:range epo:Buyer .
+
+epo:TaxInformation a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty epo:isCalculatedOn ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty epo:hasAmount ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty dcterms:description ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty epo:hasPercentage ] .
+
+epo:OrderLine a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty epo:hasAccountingCost ],
+        [ a owl:Restriction ;
+            owl:cardinality 1 ;
+            owl:onProperty epo:hasQuantity ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty epo:refersToCatalogueLine ] .
+
+epo:AllowanceChargeInformation a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty epo:hasVATExemptionReasonDescription ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty epo:hasVATExemptionReason ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty epo:hasTaxInformation ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty epo:hasAmount ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty epo:isCalculatedOn ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty epo:hasPercentage ] .
+
+epo:specifiesSeller a owl:FunctionalProperty ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( epo:Order epo:Catalogue epo:OrderCancellationConfirmation epo:OrderCancellationRejection epo:ReceiptAdvice epo:OrderCancellation epo:OrderChangeRejection epo:Invoice epo:OrderChangeConfirmation epo:RemittanceAdvice ) ] ;
+    rdfs:range epo:Seller .
+
+epo:DeliveryInformation rdfs:subClassOf [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty epo:concernsConsignee ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty epo:hasDeliveryPeriod ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty epo:hasActualDeliveryDate ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty epo:hasTrackingID ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty epo:hasDeliveryEmail ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty epo:hasDeliveryDeadline ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty epo:specifiesPlaceOfDelivery ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty epo:hasRequestedDeliveryPeriod ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty epo:specifiesDeliveryAgreement ] .
+
+epo:Order a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:cardinality 1 ;
+            owl:onProperty epo:specifiesSeller ],
+        [ a owl:Restriction ;
+            owl:cardinality 1 ;
+            owl:onProperty epo:hasTotalLineAmount ],
+        [ a owl:Restriction ;
+            owl:cardinality 1 ;
+            owl:onProperty epo:specifiesBuyer ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty epo:hasRoundingAmount ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty epo:hasSellerOrderID ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty epo:specifiesInvoicee ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty epo:hasTotalTaxInclusiveAmount ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty epo:hasValidityPeriod ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty epo:refersToProject ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty epo:hasTotalChargeAmount ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty epo:hasTotalTaxExclusiveAmount ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty epo:hasPaymentTerm ],
+        [ a owl:Restriction ;
+            owl:cardinality 1 ;
+            owl:onProperty epo:hasAmountDueForPayment ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty epo:specifiesDespatcher ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty epo:hasPrepaidAmount ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty epo:hasTotalAllowanceAmount ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty epo:specifiesOriginatorInformation ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty epo:hasAccountingCost ] .
+
+[] a owl:AllDisjointClasses ;
+    owl:members ( epo:OrderChange epo:OrderAgreement epo:OrderResponse ) .
+
+[] a owl:AllDisjointClasses ;
+    owl:members ( epo:Consignee epo:Invoicee epo:Originator ) .
+
+[] a owl:AllDisjointClasses ;
+    owl:members ( epo:AllowanceChargeInformation epo:ContractInformation epo:DeliveryInformation epo:OriginatorInformation epo:TaxInformation epo:OrderResponseInformation ) .
+
+[] a owl:AllDisjointClasses ;
+    owl:members ( epo:Order epo:OrderChangeConfirmation epo:OrderChangeRejection epo:OrderCancellation epo:OrderCancellationConfirmation epo:OrderCancellationRejection ) .
+
+[] a owl:AllDisjointClasses ;
+    owl:members ( epo:OrderAgreementLine epo:OrderChangeLine epo:OrderResponseLine ) .
+

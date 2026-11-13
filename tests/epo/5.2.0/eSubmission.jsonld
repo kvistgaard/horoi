@@ -1,0 +1,880 @@
+[
+  {
+    "@id": "http://data.europa.eu/a4g/ontology#concernsOrganisation",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://data.europa.eu/a4g/ontology#sub"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "Relates to Organization."
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#historyNote": [
+      {
+        "@language": "en",
+        "@value": "WG Approval 05/03/2024"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "concerns Organisation"
+      }
+    ]
+  },
+  {
+    "@id": "http://data.europa.eu/a4g/ontology#providesOrganisationFinancialCapability",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://data.europa.eu/a4g/ontology#sub"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "A monetary amount representing the financial capability of the Organization. Additional information: Used to represent the general Turnover of the Organization (for statistical purposes)."
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#historyNote": [
+      {
+        "@language": "en",
+        "@value": "WG Approval 05/03/2024"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "provides Organisation Financial Capability"
+      }
+    ]
+  },
+  {
+    "@id": "http://data.europa.eu/a4g/ontology#providesOrganisationCompletedTaskDescription",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://data.europa.eu/a4g/ontology#sub"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "Text describing the works, supplies or services executed, delivered or performed in a procurement project that can be used as an evidence for the classification of the Organization. (epo-sub:OrganisationInformationSummary)"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#historyNote": [
+      {
+        "@language": "en",
+        "@value": "WG Approval 05/03/2024"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "provides Organisation Completed Task Description"
+      }
+    ]
+  },
+  {
+    "@id": "http://data.europa.eu/a4g/ontology#coversAllSelectionCriteria",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://data.europa.eu/a4g/ontology#sub"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "Indicator that the Certificate proves whether the Organization fulfils all Selection Criteria. (epo-sub:EvidenceInformation)"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#historyNote": [
+      {
+        "@language": "en",
+        "@value": "WG Approval 12/03/2024"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "covers All Selection Criteria"
+      }
+    ]
+  },
+  {
+    "@id": "http://data.europa.eu/a4g/ontology#relatesToESPDRequest",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://data.europa.eu/a4g/ontology#sub"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "Is about an European Single Procurement Document (ESPD) Request."
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#historyNote": [
+      {
+        "@language": "en",
+        "@value": "WG Approval 05/03/2024"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "relates To ESPD Request"
+      }
+    ]
+  },
+  {
+    "@id": "http://data.europa.eu/a4g/ontology#summarisesInformationAboutEvidence",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://data.europa.eu/a4g/ontology#sub"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "Relation indicating the Certificate that the information refers to."
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#historyNote": [
+      {
+        "@language": "en",
+        "@value": "WG Approval 12/03/2024"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "summarises Information About Evidence"
+      }
+    ]
+  },
+  {
+    "@id": "http://data.europa.eu/a4g/ontology#answersQuestion",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://data.europa.eu/a4g/ontology#sub"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "Relation indicating that the Response replies to a question."
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#historyNote": [
+      {
+        "@language": "en",
+        "@value": "WG Approval 12/03/2024"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "answers Question"
+      }
+    ]
+  },
+  {
+    "@id": "http://data.europa.eu/a4g/ontology#PowerOfAttorney",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://data.europa.eu/a4g/ontology#sub"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://data.europa.eu/a4g/ontology#Document"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "A legal document that grants someone the authority to make decisions on behalf of an Organization."
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#historyNote": [
+      {
+        "@language": "en",
+        "@value": "WG Approval 05/03/2024"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Power Of Attorney"
+      }
+    ]
+  },
+  {
+    "@id": "http://data.europa.eu/a4g/ontology#LegalRepresentative",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://data.europa.eu/a4g/ontology#sub"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://data.europa.eu/a4g/ontology#AuxiliaryParty"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "The Role of an Agent that can represent an Organization."
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#historyNote": [
+      {
+        "@language": "en",
+        "@value": "WG Approval 05/03/2024"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Legal Representative"
+      }
+    ]
+  },
+  {
+    "@id": "http://data.europa.eu/a4g/ontology#hasMandate",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://data.europa.eu/a4g/ontology#sub"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "Relation indicating that a Legal Representative has a Mandate."
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#historyNote": [
+      {
+        "@language": "en",
+        "@value": "WG Approval 12/03/2024"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "has Mandate"
+      }
+    ]
+  },
+  {
+    "@id": "http://data.europa.eu/a4g/ontology#Response",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://data.europa.eu/a4g/ontology#sub"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "An answer given to a question that is part of an ESPD Request."
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#historyNote": [
+      {
+        "@language": "en",
+        "@value": "WG Approval 12/03/2024"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Response"
+      }
+    ]
+  },
+  {
+    "@id": "http://data.europa.eu/a4g/ontology#isReinforcedBy",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://data.europa.eu/a4g/ontology#sub"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "Relation indicating an Evidence that supports the Response."
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#historyNote": [
+      {
+        "@language": "en",
+        "@value": "WG Approval 12/03/2024"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "is Reinforced By"
+      }
+    ]
+  },
+  {
+    "@id": "http://data.europa.eu/a4g/ontology#refersToApplicablePeriod",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://data.europa.eu/a4g/ontology#sub"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "Relation indicating the period to which the Response shall apply."
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#historyNote": [
+      {
+        "@language": "en",
+        "@value": "WG Approval 12/03/2024"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "refers To Applicable Period"
+      }
+    ]
+  },
+  {
+    "@id": "http://data.europa.eu/a4g/ontology#actsOnBehalfOf",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://data.europa.eu/a4g/ontology#sub"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "acts On Behalf Of"
+      }
+    ]
+  },
+  {
+    "@id": "http://data.europa.eu/a4g/ontology#isContainedInTender",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://data.europa.eu/a4g/ontology#sub"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "Relation indicating that the instance of the concept is part of a Tender."
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#historyNote": [
+      {
+        "@language": "en",
+        "@value": "WG approval 25/09/2025"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "is Contained In Tender"
+      }
+    ]
+  },
+  {
+    "@id": "http://data.europa.eu/a4g/ontology#hasPowerOfAttorney",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://data.europa.eu/a4g/ontology#sub"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "Relation indicating that a Legal Representative has a Power of Attorney."
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#historyNote": [
+      {
+        "@language": "en",
+        "@value": "WG Approval 12/03/2024"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "has Power Of Attorney"
+      }
+    ]
+  },
+  {
+    "@id": "http://data.europa.eu/a4g/ontology#EvidenceInformation",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://data.europa.eu/a4g/ontology#sub"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://data.europa.eu/a4g/ontology#ContextDescription"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "Information about a Certificate."
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#historyNote": [
+      {
+        "@language": "en",
+        "@value": "WG Approval 12/03/2024"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Evidence Information"
+      }
+    ]
+  },
+  {
+    "@id": "http://data.europa.eu/a4g/ontology#sub",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Ontology"
+    ],
+    "http://purl.org/dc/terms/created": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2021-06-01"
+      }
+    ],
+    "http://purl.org/dc/terms/description": [
+      {
+        "@language": "en",
+        "@value": "The eProcurement Ontology Submission core describes the concepts and properties representing the European Public Procurement Submission domain. The provision of these semantics offers the basis for a common understanding of the domain for all stakeholders ensuring the quality of data exchange and transparency. The ontology restrictions are published in a separate artefact."
+      }
+    ],
+    "http://purl.org/dc/terms/issued": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2025-10-10"
+      }
+    ],
+    "http://purl.org/dc/terms/license": [
+      {
+        "@value": "© European Union, 2014. Unless otherwise noted, the reuse of the Ontology is authorised under the European Union Public Licence v1.2 (https://eupl.eu/)."
+      }
+    ],
+    "http://purl.org/dc/terms/publisher": [
+      {
+        "@value": "http://publications.europa.eu/resource/authority/corporate-body/PUBL"
+      }
+    ],
+    "http://purl.org/dc/terms/title": [
+      {
+        "@language": "en",
+        "@value": "eProcurement Ontology Submission - core"
+      }
+    ],
+    "http://purl.org/vocab/vann/preferredNamespacePrefix": [
+      {
+        "@value": "epo"
+      }
+    ],
+    "http://purl.org/vocab/vann/preferredNamespaceUri": [
+      {
+        "@value": "http://data.europa.eu/a4g/ontology#"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "This version is automatically generated from eSubmission.xml on 2025-10-10"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "eProcurement Ontology Submission - core"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+      {
+        "@id": "https://docs.ted.europa.eu/home/index.html"
+      },
+      {
+        "@id": "https://github.com/OP-TED/ePO/releases"
+      },
+      {
+        "@id": "https://joinup.ec.europa.eu/collection/eprocurement/solution/eprocurement-ontology/about"
+      },
+      {
+        "@id": "https://op.europa.eu/en/web/eu-vocabularies/e-procurement"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#imports": [
+      {
+        "@id": "http://data.europa.eu/a4g/ontology#acc"
+      },
+      {
+        "@id": "http://data.europa.eu/a4g/ontology#core"
+      },
+      {
+        "@id": "http://data.europa.eu/eli/ontology#"
+      },
+      {
+        "@id": "http://data.europa.eu/m8g/"
+      },
+      {
+        "@id": "http://purl.org/dc/terms/"
+      },
+      {
+        "@id": "http://www.w3.org/2004/02/skos/core#"
+      },
+      {
+        "@id": "http://www.w3.org/2006/time"
+      },
+      {
+        "@id": "http://www.w3.org/ns/adms"
+      },
+      {
+        "@id": "http://www.w3.org/ns/locn"
+      },
+      {
+        "@id": "http://www.w3.org/ns/org#"
+      },
+      {
+        "@id": "http://www.w3.org/ns/person"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#incompatibleWith": [
+      {
+        "@value": "4.2.0"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#priorVersion": [
+      {
+        "@value": "http://data.europa.eu/a4g/ontology#sub-5.1.0"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#versionIRI": [
+      {
+        "@id": "http://data.europa.eu/a4g/ontology#sub-5.2.0"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#versionInfo": [
+      {
+        "@value": "5.2.0"
+      }
+    ]
+  },
+  {
+    "@id": "http://data.europa.eu/a4g/ontology#OrganisationInformationSummary",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://data.europa.eu/a4g/ontology#sub"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://data.europa.eu/a4g/ontology#ContextDescription"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "Information about the specific features or characteristics that qualify an economic operator to take part in a tendering process."
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#historyNote": [
+      {
+        "@language": "en",
+        "@value": "WG Approval 03/03/2025"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Organisation Information Summary"
+      }
+    ]
+  },
+  {
+    "@id": "http://data.europa.eu/a4g/ontology#DocumentaryEvidence",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://data.europa.eu/a4g/ontology#sub"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://data.europa.eu/m8g/Evidence"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "An Evidence submitted by an Economic Operator to prove compliance with legal, technical or financial requirements, or inapplicability of exclusion grounds in a Procurement Procedure."
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#historyNote": [
+      {
+        "@language": "en",
+        "@value": "WG approval 16/09/2025"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Documentary Evidence"
+      }
+    ]
+  },
+  {
+    "@id": "http://data.europa.eu/a4g/ontology#specifiesResponse",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://data.europa.eu/a4g/ontology#sub"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "Relation indicating that an ESPD Response contains a Response."
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#historyNote": [
+      {
+        "@language": "en",
+        "@value": "WG Approval 12/03/2024"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "specifies Response"
+      }
+    ]
+  },
+  {
+    "@id": "http://data.europa.eu/a4g/ontology#Mandate",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://data.europa.eu/a4g/ontology#sub"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://data.europa.eu/a4g/ontology#Document"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "An authorization to act as a representative of an Organization."
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#historyNote": [
+      {
+        "@language": "en",
+        "@value": "WG Approval 05/03/2024"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Mandate"
+      }
+    ]
+  },
+  {
+    "@id": "http://data.europa.eu/a4g/ontology#hasBusinessClassificationDescription",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://data.europa.eu/a4g/ontology#sub"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "Explanatory text about the size of the Business. Additional information: The values of this property may come from the recommended codelist: http://publications.europa.eu/resource/authority/economic-operator-size (epo-sub:OrganisationInformationSummary)"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#historyNote": [
+      {
+        "@language": "en",
+        "@value": "WG approval 09/09/2025"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "has Business Classification Description"
+      }
+    ]
+  },
+  {
+    "@id": "http://data.europa.eu/a4g/ontology#ESPD",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://data.europa.eu/a4g/ontology#sub"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://data.europa.eu/a4g/ontology#Document"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "A self-declaration of an economic operator, stating that it does not fall under the Exclusion Grounds and that it meets the Selection Criteria for a specific procurement."
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#historyNote": [
+      {
+        "@language": "en",
+        "@value": "WG Approval 05/03/2024"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "ESPD"
+      }
+    ]
+  },
+  {
+    "@id": "http://data.europa.eu/a4g/ontology#providesInformationOn",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://data.europa.eu/a4g/ontology#sub"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "Offers information about an instance of a concept."
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#historyNote": [
+      {
+        "@language": "en",
+        "@value": "WG Approval 05/03/2024"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "provides Information On"
+      }
+    ]
+  },
+  {
+    "@id": "http://data.europa.eu/a4g/ontology#providesOrganisationEmployeeQuantity",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://data.europa.eu/a4g/ontology#sub"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "The number of people hired by the Organization."
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#historyNote": [
+      {
+        "@language": "en",
+        "@value": "WG Approval 05/03/2024"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "provides Organisation Employee Quantity"
+      }
+    ]
+  }
+]

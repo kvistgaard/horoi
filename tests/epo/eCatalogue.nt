@@ -1,0 +1,670 @@
+<http://data.europa.eu/a4g/ontology#DimensionInformation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#cat> .
+<http://data.europa.eu/a4g/ontology#refersToCatalogue> <http://www.w3.org/2004/02/skos/core#definition> "Additional information: If an order refers to multiple catalogues then all these catalogues ideally are subordinated to the same contract. Some countries however may allow multiple contracts per order (i.e Italy)."@en .
+<http://data.europa.eu/a4g/ontology#specifiesBuyer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#cat> <http://purl.org/vocab/vann/preferredNamespacePrefix> "epo" .
+<http://data.europa.eu/a4g/ontology#hasDeliveryClassification> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Delivery Classification"@en .
+<http://data.europa.eu/a4g/ontology#hasMaximumMeasure> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Maximum Measure"@en .
+<http://data.europa.eu/a4g/ontology#hasMaximumValue> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#hasTaxCategory> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#specifiesBuyer> <http://www.w3.org/2004/02/skos/core#definition> "Relation indicating that the instance of the concept involves the Buyer."@en .
+<http://data.europa.eu/a4g/ontology#CatalogueResponseInformation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#cat> .
+<http://data.europa.eu/a4g/ontology#foreseesPackage> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#hasCountryOfOrigin> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#hasQualifiedItemRelation> <http://www.w3.org/2004/02/skos/core#definition> "Relation indicating that the instance of the concept has an Item Relation."@en .
+<http://data.europa.eu/a4g/ontology#InformationHub> <http://www.w3.org/2004/02/skos/core#prefLabel> "Information Hub"@en .
+<http://data.europa.eu/a4g/ontology#isSpecificToOrderLine> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#CatalogueLine> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#cat> .
+<http://data.europa.eu/a4g/ontology#EnvironmentalEmissionInformation> <http://www.w3.org/2004/02/skos/core#definition> "Information about the emissions related to a product, work or service that are released into the environment."@en .
+<http://data.europa.eu/a4g/ontology#hasNetMonetaryValue> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#cat> .
+<http://data.europa.eu/a4g/ontology#hasValidityPeriod> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#concernsItem> <http://www.w3.org/2004/02/skos/core#prefLabel> "concerns Item"@en .
+<http://data.europa.eu/a4g/ontology#specifiesCatalogueReceiver> <http://www.w3.org/2004/02/skos/core#prefLabel> "specifies Catalogue Receiver"@en .
+<http://data.europa.eu/a4g/ontology#Manufacturer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#hasHazardousItemUNDGCode> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Hazardous Item UNDG Code"@en .
+<http://data.europa.eu/a4g/ontology#specifiesSeller> <http://www.w3.org/2004/02/skos/core#prefLabel> "specifies Seller"@en .
+<http://data.europa.eu/a4g/ontology#hasCustomerReference> <http://www.w3.org/2004/02/skos/core#historyNote> "WG Approval 04/03/2025"@en .
+<http://data.europa.eu/a4g/ontology#isRelatedToItem> <http://www.w3.org/2004/02/skos/core#prefLabel> "is Related To Item"@en .
+<http://data.europa.eu/a4g/ontology#hasLiteralValue> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Literal Value"@en .
+<http://data.europa.eu/a4g/ontology#specifiesItem> <http://www.w3.org/2004/02/skos/core#prefLabel> "specifies Item"@en .
+<http://data.europa.eu/a4g/ontology#ItemComposition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#hasManufacturerItemID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#concernsPackage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#hasManufacturerID> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#cat> .
+<http://data.europa.eu/a4g/ontology#hasOrderableUnitFactorRate> <http://www.w3.org/2004/02/skos/core#definition> "The factor by which the Item net price of an unit of an item can be converted to the orderable unit. (epo-cat:CatalogueLine)"@en .
+<http://data.europa.eu/a4g/ontology#AbstractItem> <http://www.w3.org/2004/02/skos/core#definition> "Gathering class for the Items, Item Requests and Deliverables. Additional information: The subclasses have in common that they are related to a procurement need."@en .
+<http://data.europa.eu/a4g/ontology#specifiesSeller> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#cat> .
+<http://data.europa.eu/a4g/ontology#cat> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://github.com/OP-TED/ePO/releases> .
+<http://data.europa.eu/a4g/ontology#hasExpiryDate> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#cat> .
+<http://data.europa.eu/a4g/ontology#cat> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://data.europa.eu/a4g/ontology#" .
+<http://data.europa.eu/a4g/ontology#ItemReplacement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#hasAdditionalInformation> <http://www.w3.org/2004/02/skos/core#definition> "Supplementary data about the instance of the concept. (epo-cat:Line)"@en .
+<http://data.europa.eu/a4g/ontology#hasOrderableUnit> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#cat> .
+<http://data.europa.eu/a4g/ontology#hasDeliveryClassification> <http://www.w3.org/2004/02/skos/core#definition> "Relation indicating the Delivery Item Type."@en .
+<http://data.europa.eu/a4g/ontology#ItemAccessoryRelation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#hasItemClassificationIdentifier> <http://www.w3.org/2004/02/skos/core#definition> "The Identifier of the Item categorisation."@en .
+<http://data.europa.eu/a4g/ontology#hasResponseDescription> <http://www.w3.org/2004/02/skos/core#definition> "Explanation of the response. (epo-cat:CatalogueResponse) Explanation of the response. (epo-cat:CatalogueResponseLine)"@en .
+<http://data.europa.eu/a4g/ontology#Batch> <http://www.w3.org/2004/02/skos/core#historyNote> "WG Approval 10/03/2022"@en .
+<http://data.europa.eu/a4g/ontology#AbstractItem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#hasChargeInformation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#hasAccessoryItem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#hasPrice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#hasMeasure> <http://www.w3.org/2004/02/skos/core#definition> "Relation indicating the unit used for stating the size."@en .
+<http://data.europa.eu/a4g/ontology#isSpecificToCatalogueResponseLine> <http://www.w3.org/2004/02/skos/core#definition> "Information that is particular to a Catalogue Response Line."@en .
+<http://data.europa.eu/a4g/ontology#hasLiteralValue> <http://www.w3.org/2004/02/skos/core#historyNote> "WG Approval 28/07/2022"@en .
+<http://data.europa.eu/a4g/ontology#hasResponseStatus> <http://www.w3.org/2004/02/skos/core#definition> "Relation indicating the response status."@en .
+<http://data.europa.eu/a4g/ontology#hasPriceType> <http://www.w3.org/2004/02/skos/core#definition> "Relation indicating the Price Type."@en .
+<http://data.europa.eu/a4g/ontology#cat> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://docs.ted.europa.eu/home/index.html> .
+<http://data.europa.eu/a4g/ontology#ItemComposition> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#ItemRelation> .
+<http://data.europa.eu/a4g/ontology#hasMeasuredAttributeCode> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Measured Attribute Code"@en .
+<http://data.europa.eu/a4g/ontology#hasCertification> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Certification"@en .
+<http://data.europa.eu/a4g/ontology#ItemComplementaryRelation> <http://www.w3.org/2004/02/skos/core#historyNote> "WG Approval 30/06/2022"@en .
+<http://data.europa.eu/a4g/ontology#hasActivityCode> <http://www.w3.org/2004/02/skos/core#definition> "Relation indicating the Activity Code."@en .
+<http://data.europa.eu/a4g/ontology#specifiesCatalogueReceiver> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#ChargeInformation> <http://www.w3.org/2004/02/skos/core#definition> "Information about fee or duty imposed. Additional Information: Charge category indicates the nature of the duty/fee, for example CAR, etc. Charge category modifier may be used in case different levels, exemptions or other modifications apply. The charge can be fixed or relative to the price."@en .
+<http://data.europa.eu/a4g/ontology#hasKeyword> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#cat> .
+<http://data.europa.eu/a4g/ontology#Price> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#hasPriceValidity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#hasManufacturer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#hasHazardousClassID> <http://www.w3.org/2004/02/skos/core#definition> "Specification of the hazardous nature of an item according to a classification schema. Provides detail of the classification and nature of a hazardous item."@en .
+<http://data.europa.eu/a4g/ontology#Batch> <http://www.w3.org/2004/02/skos/core#prefLabel> "Batch"@en .
+<http://data.europa.eu/a4g/ontology#hasChargeInformation> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Charge Information"@en .
+<http://data.europa.eu/a4g/ontology#hasImportanceCode> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#cat> .
+<http://data.europa.eu/a4g/ontology#isContractedItem> <http://www.w3.org/2004/02/skos/core#definition> "Indicator if the item is offered in accordance to an existing contract. (epo-cat:CatalogueLine)"@en .
+<http://data.europa.eu/a4g/ontology#refersToCatalogueLine> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#Manufacturer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#OfferingParty> .
+<http://data.europa.eu/a4g/ontology#CatalogueResponseInformation> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 11/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#hasMinimumValue> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Minimum Value"@en .
+<http://data.europa.eu/a4g/ontology#hasTransactionConditions> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Transaction Conditions"@en .
+<http://data.europa.eu/a4g/ontology#CatalogueResponseLine> <http://www.w3.org/2004/02/skos/core#prefLabel> "Catalogue Response Line"@en .
+<http://data.europa.eu/a4g/ontology#concernsTransportMeans> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#concernsItem> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#cat> .
+<http://data.europa.eu/a4g/ontology#hasMaximumValue> <http://www.w3.org/2004/02/skos/core#definition> "Relation indicating the upper limit of the numerical quantity."@en .
+<http://data.europa.eu/a4g/ontology#hasResponseDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://data.europa.eu/a4g/ontology#hasMinimumQuantityGuaranteedForDelivery> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Minimum Quantity Guaranteed For Delivery"@en .
+<http://data.europa.eu/a4g/ontology#hasItemClassification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#hasFreightCharge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#hasQuantityThreshold> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Quantity Threshold"@en .
+<http://data.europa.eu/a4g/ontology#isSpecificToOrderLine> <http://www.w3.org/2004/02/skos/core#definition> "Information that is particular to one or multiple Order Lines."@en .
+<http://data.europa.eu/a4g/ontology#hasAdditionalInformation> <http://www.w3.org/2004/02/skos/core#historyNote> "WG Approval 15/10/2019"@en .
+<http://data.europa.eu/a4g/ontology#hasModel> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Model"@en .
+<http://data.europa.eu/a4g/ontology#describesItem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#cat> <http://www.w3.org/2002/07/owl#priorVersion> "http://data.europa.eu/a4g/ontology#cat-5.1.0" .
+<http://data.europa.eu/a4g/ontology#hasDocumentStatus> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Document Status"@en .
+<http://data.europa.eu/a4g/ontology#isOrderable> <http://www.w3.org/2004/02/skos/core#definition> "Indicator, if the item is orderable or not, e.g. because it is temporarily out of stock. (epo-cat:CatalogueLine)"@en .
+<http://data.europa.eu/a4g/ontology#ItemRelation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#cat> .
+<http://data.europa.eu/a4g/ontology#hasMaximumOrderQuantity> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#cat> .
+<http://data.europa.eu/a4g/ontology#hasSpecificPaymentArrangement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://data.europa.eu/a4g/ontology#hasAdditionalInformation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#cat> .
+<http://data.europa.eu/a4g/ontology#hasExpiryDate> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Expiry Date"@en .
+<http://data.europa.eu/a4g/ontology#hasDimensionDescription> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Dimension Description"@en .
+<http://data.europa.eu/a4g/ontology#hasMinimumValue> <http://www.w3.org/2004/02/skos/core#definition> "Relation indicating the lower limit of the numerical quantity."@en .
+<http://data.europa.eu/a4g/ontology#hasDocumentType> <http://www.w3.org/2004/02/skos/core#definition> "Relation indicating the Document Type."@en .
+<http://data.europa.eu/a4g/ontology#hasKeyword> <http://www.w3.org/2004/02/skos/core#historyNote> "WG Approval 07/04/2022"@en .
+<http://data.europa.eu/a4g/ontology#ItemReplacement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#ItemRelation> .
+<http://data.europa.eu/a4g/ontology#hasQuantityThreshold> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#cat> .
+<http://data.europa.eu/a4g/ontology#hasCountryOfOrigin> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#cat> .
+<http://data.europa.eu/a4g/ontology#hasSellerItemID> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Seller Item ID"@en .
+<http://data.europa.eu/a4g/ontology#ItemAccessoryRelation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#ItemRelation> .
+<http://data.europa.eu/a4g/ontology#hasOrderableUnitFactorRate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://data.europa.eu/a4g/ontology#hasCalculationMethod> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Calculation Method"@en .
+<http://data.europa.eu/a4g/ontology#hasBrand> <http://www.w3.org/2004/02/skos/core#definition> "Relation indicating that the instance of the concept has a Brand."@en .
+<http://data.europa.eu/a4g/ontology#Brand> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#CatalogueLine> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#concernsPackage> <http://www.w3.org/2004/02/skos/core#prefLabel> "concerns Package"@en .
+<http://data.europa.eu/a4g/ontology#hasTaxCategory> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#cat> .
+<http://data.europa.eu/a4g/ontology#specifiesSeller> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#hasBatchID> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Batch ID"@en .
+<http://data.europa.eu/a4g/ontology#CatalogueResponseLine> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#hasAttributeType> <http://www.w3.org/2004/02/skos/core#definition> "The property defined in a classification scheme. Additional Information: For example, the following two properties are defined in the ECLASS classification of goods and services: (0173-1#02-AAA026#007) drilling diameter: drilling diameter, (0173-1#02-AAA030#007) flange diameter: flange diameter . (epo-cat:ItemProperty)"@en .
+<http://data.europa.eu/a4g/ontology#hasManufacturerItemID> <http://www.w3.org/2004/02/skos/core#definition> "The general identifier assigned to the concept as defined by the Manufacturer. ​"@en .
+<http://data.europa.eu/a4g/ontology#hasCountryOfOrigin> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Country Of Origin"@en .
+<http://data.europa.eu/a4g/ontology#specifiesItem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#Catalogue> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#Document> .
+<http://data.europa.eu/a4g/ontology#hasEnvironmentalEmissionCode> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Environmental Emission Code"@en .
+<http://data.europa.eu/a4g/ontology#hasOrderableQuantityIncrement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://data.europa.eu/a4g/ontology#isInStock> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#cat> .
+<http://data.europa.eu/a4g/ontology#hasCustomerReference> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Customer Reference"@en .
+<http://data.europa.eu/a4g/ontology#hasManufacturerItemID> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#cat> .
+<http://data.europa.eu/a4g/ontology#ItemRelation> <http://www.w3.org/2004/02/skos/core#historyNote> "WG Approval 30/06/2022"@en .
+<http://data.europa.eu/a4g/ontology#concernsItem> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#specifiesSeller> <http://www.w3.org/2004/02/skos/core#definition> "Relation indicating that the instance of the concept involves the Seller."@en .
+<http://data.europa.eu/a4g/ontology#Item> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#AbstractItem> .
+<http://data.europa.eu/a4g/ontology#cat> <http://www.w3.org/2000/01/rdf-schema#label> "eProcurement Ontology Catalogue - core"@en .
+<http://data.europa.eu/a4g/ontology#hasAssociatedDocument> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#cat> .
+<http://data.europa.eu/a4g/ontology#ChargeInformation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#cat> .
+<http://data.europa.eu/a4g/ontology#ProductSpecification> <http://www.w3.org/2004/02/skos/core#prefLabel> "Product Specification"@en .
+<http://data.europa.eu/a4g/ontology#hasDimensionDescription> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#cat> .
+<http://data.europa.eu/a4g/ontology#hasNetMonetaryValue> <http://www.w3.org/2004/02/skos/core#definition> "The price amount of an Item exclusive of taxes and after subtracting price discounts."@en .
+<http://data.europa.eu/a4g/ontology#hasFactor> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Factor"@en .
+<http://data.europa.eu/a4g/ontology#hasCustomerReference> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#hasHazardousItemUNDGCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#cat> <http://www.w3.org/2002/07/owl#imports> <http://data.europa.eu/eli/ontology#> .
+<http://data.europa.eu/a4g/ontology#comprisesCatalogueResponseLine> <http://www.w3.org/2004/02/skos/core#prefLabel> "comprises Catalogue Response Line"@en .
+<http://data.europa.eu/a4g/ontology#Item> <http://www.w3.org/2004/02/skos/core#prefLabel> "Item"@en .
+<http://data.europa.eu/a4g/ontology#hasResponseDescription> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Response Description"@en .
+<http://data.europa.eu/a4g/ontology#hasBrand> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#hasWarrantyInformation> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Warranty Information"@en .
+<http://data.europa.eu/a4g/ontology#hasCountryOfOrigin> <http://www.w3.org/2004/02/skos/core#definition> "The source country of the product or service. Additional Information: The country of origin can be provided by the buyer as a requirement or by the tenderer information of the item to be provided."@en .
+<http://data.europa.eu/a4g/ontology#hasNetMonetaryValue> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Net Monetary Value"@en .
+<http://data.europa.eu/a4g/ontology#comprisesCatalogueResponseLine> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#hasChargeInformation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#cat> .
+<http://data.europa.eu/a4g/ontology#hasAccessoryItem> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#cat> .
+<http://data.europa.eu/a4g/ontology#hasPrice> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#cat> .
+<http://data.europa.eu/a4g/ontology#Line> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#cat> .
+<http://data.europa.eu/a4g/ontology#concernsGoodsItem> <http://www.w3.org/2004/02/skos/core#definition> "Relates to Goods Item."@en .
+<http://data.europa.eu/a4g/ontology#describesItem> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#cat> .
+<http://data.europa.eu/a4g/ontology#isRelatedToItem> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#cat> .
+<http://data.europa.eu/a4g/ontology#CatalogueLine> <http://www.w3.org/2004/02/skos/core#prefLabel> "Catalogue Line"@en .
+<http://data.europa.eu/a4g/ontology#hasMaximumMeasure> <http://www.w3.org/2004/02/skos/core#definition> "Relation indicating the upper limit of the measure."@en .
+<http://data.europa.eu/a4g/ontology#isOrderable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://data.europa.eu/a4g/ontology#hasExpectedDeliveryTime> <http://www.w3.org/2004/02/skos/core#definition> "The expected amount of time between the order and delivery of an item."@en .
+<http://data.europa.eu/a4g/ontology#ProductSpecification> <http://www.w3.org/2004/02/skos/core#definition> "Document providing information about an Item."@en .
+<http://data.europa.eu/a4g/ontology#ItemProperty> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#cat> .
+<http://data.europa.eu/a4g/ontology#ItemComplementaryRelation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#hasSerialID> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#cat> .
+<http://data.europa.eu/a4g/ontology#hasItemClassification> <http://www.w3.org/2004/02/skos/core#definition> "A classification of this item according to a specific system for classifying products or services. Additional information: Examples of classification schemes are: CPV, UNSPC, eCl@ss, GPC, ..."@en .
+<http://data.europa.eu/a4g/ontology#hasExpiryDate> <http://www.w3.org/2004/02/skos/core#definition> "The last day until which the item can be used. (epo-cat:Batch)"@en .
+<http://data.europa.eu/a4g/ontology#hasPriceValidity> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#cat> .
+<http://data.europa.eu/a4g/ontology#concernsGoodsItem> <http://www.w3.org/2004/02/skos/core#prefLabel> "concerns Goods Item"@en .
+<http://data.europa.eu/a4g/ontology#hasMaximumOrderQuantity> <http://www.w3.org/2004/02/skos/core#definition> "The maximum number of orderable units that can be ordered according to details provided in the catalogue line, such as price."@en .
+<http://data.europa.eu/a4g/ontology#ItemComposition> <http://www.w3.org/2004/02/skos/core#definition> "Inclusion of an Item into in the described Item. Additional Information: The Item is provided with its components, however, the component Items may also be provided separately. For example, a bicycle has wheels as components, but they may be provided as spare parts as well. This relation is useful to describe different package levels of an item or hierarchies of Items."@en .
+<http://data.europa.eu/a4g/ontology#hasCalculationMethod> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#cat> .
+<http://data.europa.eu/a4g/ontology#hasClassificationScheme> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#cat> .
+<http://data.europa.eu/a4g/ontology#CatalogueResponse> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#cat> .
+<http://data.europa.eu/a4g/ontology#Line> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 11/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#isSpecificToCatalogueResponseLine> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#hasFactor> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#cat> .
+<http://data.europa.eu/a4g/ontology#isSubordinatedToContract> <http://www.w3.org/2004/02/skos/core#definition> "Relation indicating that the instance of the concept is governed by a specific Contract."@en .
+<http://data.europa.eu/a4g/ontology#cat> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/2006/time> .
+<http://data.europa.eu/a4g/ontology#InformationHub> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#ContextDescription> .
+<http://data.europa.eu/a4g/ontology#Brand> <http://www.w3.org/2004/02/skos/core#historyNote> "WG Approval 10/03/2022"@en .
+<http://data.europa.eu/a4g/ontology#hasDocumentType> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#cat> .
+<http://data.europa.eu/a4g/ontology#Brand> <http://www.w3.org/2004/02/skos/core#prefLabel> "Brand"@en .
+<http://data.europa.eu/a4g/ontology#concernsTransportMeans> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#cat> .
+<http://data.europa.eu/a4g/ontology#hasImportanceCode> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2026"@en .
+<http://data.europa.eu/a4g/ontology#cat> <http://purl.org/dc/terms/issued> "2025-10-10"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://data.europa.eu/a4g/ontology#cat> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/2004/02/skos/core#> .
+<http://data.europa.eu/a4g/ontology#hasLiteralValue> <http://www.w3.org/2004/02/skos/core#definition> "Simple value of the property, which is defined in a classification scheme. Additional Information: For example, the (0173-1#02-AAV139#001) coating 1 of an optical material has value of \"silver\". This simple literal value is for the cases when the property value does not have units, in which case the qualifiedValue shall be used. (epo-cat:ItemProperty)"@en .
+<http://data.europa.eu/a4g/ontology#hasNetQuantity> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#cat> .
+<http://data.europa.eu/a4g/ontology#hasOrderableUnit> <http://www.w3.org/2004/02/skos/core#definition> "The unit in which the item described in this catalogue line can be ordered."@en .
+<http://data.europa.eu/a4g/ontology#hasCatalogueLineValidity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#hasChargeInformation> <http://www.w3.org/2004/02/skos/core#definition> "Relation indicating that the instance of the concept has Charge Information."@en .
+<http://data.europa.eu/a4g/ontology#hasKeyword> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Keyword"@en .
+<http://data.europa.eu/a4g/ontology#hasPriceSurchargeInformation> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#hasExpiryDate> <http://www.w3.org/2004/02/skos/core#historyNote> "WG Approval 10/03/2021"@en .
+<http://data.europa.eu/a4g/ontology#hasExpiryDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://data.europa.eu/a4g/ontology#hasQualifiedValue> <http://www.w3.org/2004/02/skos/core#definition> "Qualified value of the property, which is defined in a classification scheme. Additional Information: For example, the (0173-1#02-AAA026#007) drilling diameter of an item has value of 12 inches."@en .
+<http://data.europa.eu/a4g/ontology#EnvironmentalEmissionInformation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#hasCertification> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#cat> .
+<http://data.europa.eu/a4g/ontology#hasTransactionConditionsCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#hasClassificationCode> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#cat> .
+<http://data.europa.eu/a4g/ontology#concernsTransportMeans> <http://www.w3.org/2004/02/skos/core#definition> "Relates to Transport Means."@en .
+<http://data.europa.eu/a4g/ontology#hasChargeInformation> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#PostAwardDocument> <http://www.w3.org/2004/02/skos/core#definition> "Document created after the award of a Contract during a Procurement Procedure."@en .
+<http://data.europa.eu/a4g/ontology#hasExpectedDeliveryTime> <http://www.w3.org/2004/02/skos/core#historyNote> "WG Approval 26/07/2022"@en .
+<http://data.europa.eu/a4g/ontology#hasLiteralValue> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#cat> .
+<http://data.europa.eu/a4g/ontology#hasPrice> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#hasMinimumMeasure> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Minimum Measure"@en .
+<http://data.europa.eu/a4g/ontology#hasSerialID> <http://www.w3.org/2004/02/skos/core#definition> "The identifier assigned to the specific instance of the produced concept."@en .
+<http://data.europa.eu/a4g/ontology#isRelatedToItem> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#concernsItem> <http://www.w3.org/2004/02/skos/core#definition> "Relates to Item."@en .
+<http://data.europa.eu/a4g/ontology#ChargeInformation> <http://www.w3.org/2004/02/skos/core#prefLabel> "Charge Information"@en .
+<http://data.europa.eu/a4g/ontology#hasTransactionConditionsCode> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Transaction Conditions Code"@en .
+<http://data.europa.eu/a4g/ontology#ProductSpecification> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#Document> .
+<http://data.europa.eu/a4g/ontology#hasBrand> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#cat> .
+<http://data.europa.eu/a4g/ontology#hasItemClassificationIdentifier> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#cat> .
+<http://data.europa.eu/a4g/ontology#CatalogueResponseInformation> <http://www.w3.org/2004/02/skos/core#definition> "Information about a Catalogue Response."@en .
+<http://data.europa.eu/a4g/ontology#hasPrice> <http://www.w3.org/2004/02/skos/core#definition> "Relation indicating that the instance of the concept has a Price."@en .
+<http://data.europa.eu/a4g/ontology#ItemProperty> <http://www.w3.org/2004/02/skos/core#prefLabel> "Item Property"@en .
+<http://data.europa.eu/a4g/ontology#cat> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://data.europa.eu/a4g/ontology#hasUUID> <http://www.w3.org/2004/02/skos/core#definition> "A universally unique identifier for an instance of this document."@en .
+<http://data.europa.eu/a4g/ontology#describesItem> <http://www.w3.org/2004/02/skos/core#definition> "Characterises Item."@en .
+<http://data.europa.eu/a4g/ontology#specifiesCatalogueReceiver> <http://www.w3.org/2004/02/skos/core#definition> "Relation indicating that the instance of the concept involves the Catalogue Receiver."@en .
+<http://data.europa.eu/a4g/ontology#hasUUID> <http://www.w3.org/2004/02/skos/core#prefLabel> "has UUID"@en .
+<http://data.europa.eu/a4g/ontology#specifiesCatalogueResponseInformation> <http://www.w3.org/2004/02/skos/core#prefLabel> "specifies Catalogue Response Information"@en .
+<http://data.europa.eu/a4g/ontology#hasPriceDiscountInformation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#cat> .
+<http://data.europa.eu/a4g/ontology#hasClassificationScheme> <http://www.w3.org/2004/02/skos/core#definition> "The classification scheme where a property is defined. Additional Information: For example, the following two properties are defined in the ECLASS classification of goods and services: (0173-1#02-AAA026#007) drilling diameter: drilling diameter, (0173-1#02-AAA030#007) flange diameter: flange diameter . (epo-cat:ItemProperty)"@en .
+<http://data.europa.eu/a4g/ontology#hasManufactureDate> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#cat> .
+<http://data.europa.eu/a4g/ontology#specifiesItem> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#cat> .
+<http://data.europa.eu/a4g/ontology#hasSellerItemID> <http://www.w3.org/2004/02/skos/core#definition> "The general identifier assigned to the concept as defined by the Seller.​"@en .
+<http://data.europa.eu/a4g/ontology#hasCatalogueLineValidity> <http://www.w3.org/2004/02/skos/core#historyNote> "WG Approval 21/09/2023"@en .
+<http://data.europa.eu/a4g/ontology#hasGrossMonetaryValue> <http://www.w3.org/2004/02/skos/core#definition> "The Monetary Value before any deductions."@en .
+<http://data.europa.eu/a4g/ontology#hasMinimumValue> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#cat> .
+<http://data.europa.eu/a4g/ontology#concernsTransportEquipment> <http://www.w3.org/2004/02/skos/core#definition> "Relates to Transport Equipment."@en .
+<http://data.europa.eu/a4g/ontology#CatalogueResponseLine> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#Line> .
+<http://data.europa.eu/a4g/ontology#hasAttributeType> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Attribute Type"@en .
+<http://data.europa.eu/a4g/ontology#hasMeasuredAttributeCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#ItemRelation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#hasFreightCharge> <http://www.w3.org/2004/02/skos/core#historyNote> "WG Approval 18/06/2024"@en .
+<http://data.europa.eu/a4g/ontology#hasImportanceCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://data.europa.eu/a4g/ontology#hasMeasure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#ItemComplementaryRelation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#ItemRelation> .
+<http://data.europa.eu/a4g/ontology#isSpecificToLine> <http://www.w3.org/2004/02/skos/core#definition> "Information that is particular to a Line."@en .
+<http://data.europa.eu/a4g/ontology#cat> <http://www.w3.org/2002/07/owl#imports> <http://data.europa.eu/a4g/ontology#ful> .
+<http://data.europa.eu/a4g/ontology#ItemRequirement> <http://www.w3.org/2004/02/skos/core#prefLabel> "Item Requirement"@en .
+<http://data.europa.eu/a4g/ontology#hasMaximumMeasure> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#cat> .
+<http://data.europa.eu/a4g/ontology#hasCertification> <http://www.w3.org/2004/02/skos/core#definition> "Relation to the proof of conformance."@en .
+<http://data.europa.eu/a4g/ontology#hasFreightCharge> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#cat> .
+<http://data.europa.eu/a4g/ontology#ItemModel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#hasWarrantyInformation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://data.europa.eu/a4g/ontology#Catalogue> <http://www.w3.org/2004/02/skos/core#prefLabel> "Catalogue"@en .
+<http://data.europa.eu/a4g/ontology#describesItem> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#cat> <http://www.w3.org/2002/07/owl#imports> <http://data.europa.eu/a4g/ontology#ord> .
+<http://data.europa.eu/a4g/ontology#PostAwardDocument> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#Document> .
+<http://data.europa.eu/a4g/ontology#specifiesItem> <http://www.w3.org/2004/02/skos/core#definition> "Relation indicating the Item."@en .
+<http://data.europa.eu/a4g/ontology#hasBrand> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#hasComplementaryItem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#hasTransactionConditions> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#cat> .
+<http://data.europa.eu/a4g/ontology#Line> <http://www.w3.org/2004/02/skos/core#definition> "Component of a document providing specific information."@en .
+<http://data.europa.eu/a4g/ontology#hasItemStandardID> <http://www.w3.org/2004/02/skos/core#definition> "The general identifier assigned to the concept based on a standard scheme.​ Additional information: For example the GTIN scheme (Global Trade Item Number)."@en .
+<http://data.europa.eu/a4g/ontology#comprisesCatalogueResponseLine> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#cat> .
+<http://data.europa.eu/a4g/ontology#hasHazardousItemUNDGCode> <http://www.w3.org/2004/02/skos/core#definition> "Specification of the hazardous nature of an item according to the UNDG classification schema. Provides detail of the classification and nature of a hazardous item."@en .
+<http://data.europa.eu/a4g/ontology#CatalogueResponseInformation> <http://www.w3.org/2004/02/skos/core#prefLabel> "Catalogue Response Information"@en .
+<http://data.europa.eu/a4g/ontology#DimensionInformation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#hasClassificationScheme> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Classification Scheme"@en .
+<http://data.europa.eu/a4g/ontology#cat> <http://purl.org/dc/terms/created> "2021-06-01"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://data.europa.eu/a4g/ontology#isInStock> <http://www.w3.org/2004/02/skos/core#prefLabel> "is In Stock"@en .
+<http://data.europa.eu/a4g/ontology#hasItemClassificationIdentifier> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#hasDeliveryClassification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#hasClassificationScheme> <http://www.w3.org/2004/02/skos/core#historyNote> "WG Approval 28/07/2022"@en .
+<http://data.europa.eu/a4g/ontology#hasDeliveryLocation> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Delivery Location"@en .
+<http://data.europa.eu/a4g/ontology#hasOrderableQuantityIncrement> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Orderable Quantity Increment"@en .
+<http://data.europa.eu/a4g/ontology#hasItemStandardID> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Item Standard ID"@en .
+<http://data.europa.eu/a4g/ontology#hasTransactionConditionsCode> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#cat> .
+<http://data.europa.eu/a4g/ontology#ItemComplementaryRelation> <http://www.w3.org/2004/02/skos/core#prefLabel> "Item Complementary Relation"@en .
+<http://data.europa.eu/a4g/ontology#ItemRelation> <http://www.w3.org/2004/02/skos/core#prefLabel> "Item Relation"@en .
+<http://data.europa.eu/a4g/ontology#ChargeInformation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#AllowanceChargeInformation> .
+<http://data.europa.eu/a4g/ontology#concernsTransportMeans> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#hasPriceDiscountInformation> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#ItemAccessoryRelation> <http://www.w3.org/2004/02/skos/core#definition> "Combination of two Items where the former enhances the latter."@en .
+<http://data.europa.eu/a4g/ontology#hasManufacturer> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Manufacturer"@en .
+<http://data.europa.eu/a4g/ontology#cat> <http://www.w3.org/2002/07/owl#imports> <http://data.europa.eu/a4g/ontology#core> .
+<http://data.europa.eu/a4g/ontology#hasAccessoryItem> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Accessory Item"@en .
+<http://data.europa.eu/a4g/ontology#hasActivityCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#CatalogueResponse> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#hasMinimumValue> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#hasDocumentType> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Document Type"@en .
+<http://data.europa.eu/a4g/ontology#ChargeInformation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#concernsGoodsItem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#ItemRequirement> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#cat> .
+<http://data.europa.eu/a4g/ontology#hasNetQuantity> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Net Quantity"@en .
+<http://data.europa.eu/a4g/ontology#specifiesBuyer> <http://www.w3.org/2004/02/skos/core#prefLabel> "specifies Buyer"@en .
+<http://data.europa.eu/a4g/ontology#hasPriceType> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Price Type"@en .
+<http://data.europa.eu/a4g/ontology#concernsTransportEquipment> <http://www.w3.org/2004/02/skos/core#prefLabel> "concerns Transport Equipment"@en .
+<http://data.europa.eu/a4g/ontology#hasUUID> <http://www.w3.org/2004/02/skos/core#historyNote> "WG Approval 12/05/2020"@en .
+<http://data.europa.eu/a4g/ontology#isInStock> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://data.europa.eu/a4g/ontology#comprisesCatalogueResponseLine> <http://www.w3.org/2004/02/skos/core#definition> "Incorporates Catalogue Response Line."@en .
+<http://data.europa.eu/a4g/ontology#InformationHub> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#cat> .
+<http://data.europa.eu/a4g/ontology#isSpecificToLine> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#hasQualifiedValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#Item> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 09/10/2025"@en .
+<http://data.europa.eu/a4g/ontology#hasFactor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://data.europa.eu/a4g/ontology#hasBatchID> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#cat> .
+<http://data.europa.eu/a4g/ontology#hasBestBeforeDate> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Best Before Date"@en .
+<http://data.europa.eu/a4g/ontology#hasCatalogueLineValidity> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Catalogue Line Validity"@en .
+<http://data.europa.eu/a4g/ontology#ProductSpecification> <http://www.w3.org/2004/02/skos/core#historyNote> "WG Approval 07/04/2022"@en .
+<http://data.europa.eu/a4g/ontology#hasStandardisedUnitPrice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#hasActivityCode> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Activity Code"@en .
+<http://data.europa.eu/a4g/ontology#hasOrderabableUnitFactorRate> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#cat> .
+<http://data.europa.eu/a4g/ontology#isSpecificToCatalogueResponseLine> <http://www.w3.org/2004/02/skos/core#prefLabel> "is Specific To Catalogue Response Line"@en .
+<http://data.europa.eu/a4g/ontology#hasDimensionDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://data.europa.eu/a4g/ontology#hasPriceDiscountInformation> <http://www.w3.org/2004/02/skos/core#definition> "Relation indicating the Allowance Information applied on the Price."@en .
+<http://data.europa.eu/a4g/ontology#hasExpectedDeliveryTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#comprisesCatalogueResponseLine> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#hasManufactureDate> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Manufacture Date"@en .
+<http://data.europa.eu/a4g/ontology#Item> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#cat> .
+<http://data.europa.eu/a4g/ontology#isProductionOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#ItemModel> <http://www.w3.org/2004/02/skos/core#prefLabel> "Item Model"@en .
+<http://data.europa.eu/a4g/ontology#specifiesCatalogueResponseInformation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#hasTaxScheme> <http://www.w3.org/2004/02/skos/core#definition> "Relation indicating the Tax Scheme."@en .
+<http://data.europa.eu/a4g/ontology#cat> <http://purl.org/dc/terms/license> "© European Union, 2014. Unless otherwise noted, the reuse of the Ontology is authorised under the European Union Public Licence v1.2 (https://eupl.eu/)." .
+<http://data.europa.eu/a4g/ontology#hasWarrantyInformation> <http://www.w3.org/2004/02/skos/core#definition> "Warranty information that applies to the catalogue line item. (epo-cat:CatalogueLine)"@en .
+<http://data.europa.eu/a4g/ontology#hasClassificationCode> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2026"@en .
+<http://data.europa.eu/a4g/ontology#isSpecificToInvoiceLine> <http://www.w3.org/2004/02/skos/core#prefLabel> "is Specific To Invoice Line"@en .
+<http://data.europa.eu/a4g/ontology#CatalogueResponseInformation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#isSpecificToOrderLine> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#cat> .
+<http://data.europa.eu/a4g/ontology#isSpecificToInvoiceLine> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#hasMaximumMeasure> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#hasResponseStatus> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Response Status"@en .
+<http://data.europa.eu/a4g/ontology#Batch> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#cat> .
+<http://data.europa.eu/a4g/ontology#hasModel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#hasPrice> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Price"@en .
+<http://data.europa.eu/a4g/ontology#hasBestBeforeDate> <http://www.w3.org/2004/02/skos/core#historyNote> "WG Approval 10/03/2021"@en .
+<http://data.europa.eu/a4g/ontology#hasBestBeforeDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://data.europa.eu/a4g/ontology#hasValidityPeriod> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#cat> .
+<http://data.europa.eu/a4g/ontology#PostAwardDocument> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#cat> .
+<http://data.europa.eu/a4g/ontology#describesItem> <http://www.w3.org/2004/02/skos/core#prefLabel> "describes Item"@en .
+<http://data.europa.eu/a4g/ontology#hasTaxInformation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#isSpecificToCatalogueResponseLine> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#isSpecificToLine> <http://www.w3.org/2004/02/skos/core#prefLabel> "is Specific To Line"@en .
+<http://data.europa.eu/a4g/ontology#hasHazardousClassID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#hasManufacturerID> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Manufacturer ID"@en .
+<http://data.europa.eu/a4g/ontology#hasMeasuredAttributeCode> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#cat> .
+<http://data.europa.eu/a4g/ontology#hasMeasure> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#cat> .
+<http://data.europa.eu/a4g/ontology#concernsPackage> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#cat> .
+<http://data.europa.eu/a4g/ontology#cat> <http://www.w3.org/2000/01/rdf-schema#comment> "This version is automatically generated from eCatalogue.xml on 2025-10-10" .
+<http://data.europa.eu/a4g/ontology#refersToCatalogueLine> <http://www.w3.org/2004/02/skos/core#definition> "Additional Information: The reference to the catalogue line is for information only, to trace the source of the information provided in the order line."@en .
+<http://data.europa.eu/a4g/ontology#hasOrderableUnit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#isOrderable> <http://www.w3.org/2004/02/skos/core#prefLabel> "is Orderable"@en .
+<http://data.europa.eu/a4g/ontology#hasMinimumMeasure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#Price> <http://www.w3.org/2004/02/skos/core#definition> "Amount of money required or given in exchange for Items. Additional information: The Price excludes any charges (such as taxes, duties and fees) and discounts."@en .
+<http://data.europa.eu/a4g/ontology#hasManufacturer> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#cat> .
+<http://data.europa.eu/a4g/ontology#hasValidityPeriod> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Validity Period"@en .
+<http://data.europa.eu/a4g/ontology#hasSellerItemID> <http://www.w3.org/2004/02/skos/core#historyNote> "WG Approval 16/05/2023"@en .
+<http://data.europa.eu/a4g/ontology#refersToCatalogue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#hasBuyerItemID> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Buyer Item ID"@en .
+<http://data.europa.eu/a4g/ontology#hasTaxScheme> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Tax Scheme"@en .
+<http://data.europa.eu/a4g/ontology#ItemRequirement> <http://www.w3.org/2004/02/skos/core#definition> "Necessity of an Item by the described item. Additional Information: The described item is provided without other items that are required for proper functionality. For example, a printer cannot be used without ink cartridge; or a Server cannot be used without its installation."@en .
+<http://data.europa.eu/a4g/ontology#specifiesBuyer> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#cat> .
+<http://data.europa.eu/a4g/ontology#hasMinimumQuantityGuaranteedForDelivery> <http://www.w3.org/2004/02/skos/core#definition> "The minimum quantity of an item that is guaranteed by the seller to be delivered."@en .
+<http://data.europa.eu/a4g/ontology#hasComplementaryItem> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#cat> .
+<http://data.europa.eu/a4g/ontology#hasTaxInformation> <http://www.w3.org/2004/02/skos/core#definition> "Relation indicating the Tax Information."@en .
+<http://data.europa.eu/a4g/ontology#specifiesBuyer> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#hasSpecification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#hasGrossMonetaryValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#cat> <http://purl.org/dc/terms/publisher> "http://publications.europa.eu/resource/authority/corporate-body/PUBL" .
+<http://data.europa.eu/a4g/ontology#hasItemClassification> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Item Classification"@en .
+<http://data.europa.eu/a4g/ontology#hasOrderabableUnitFactorRate> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Orderabable Unit Factor Rate"@en .
+<http://data.europa.eu/a4g/ontology#hasNetMonetaryValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#hasTransactionConditionsCode> <http://www.w3.org/2004/02/skos/core#definition> "Coded description of the specific transaction conditions (purchasing, sales, payment, delivery) for an item."@en .
+<http://data.europa.eu/a4g/ontology#comprisesCatalogueLine> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#cat> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/ns/adms> .
+<http://data.europa.eu/a4g/ontology#concernsTransportMeans> <http://www.w3.org/2004/02/skos/core#prefLabel> "concerns Transport Means"@en .
+<http://data.europa.eu/a4g/ontology#hasAccessoryItem> <http://www.w3.org/2004/02/skos/core#historyNote> "WG Approval 30/06/2022"@en .
+<http://data.europa.eu/a4g/ontology#concernsPackage> <http://www.w3.org/2004/02/skos/core#definition> "Relates to Package."@en .
+<http://data.europa.eu/a4g/ontology#hasClassificationCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://data.europa.eu/a4g/ontology#cat> <http://www.w3.org/2002/07/owl#imports> <http://purl.org/dc/terms/> .
+<http://data.europa.eu/a4g/ontology#hasValidityPeriod> <http://www.w3.org/2004/02/skos/core#definition> "The relation indicating until when a given instance of a concept is applicable."@en .
+<http://data.europa.eu/a4g/ontology#hasLiteralValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://data.europa.eu/a4g/ontology#isContractedItem> <http://www.w3.org/2004/02/skos/core#prefLabel> "is Contracted Item"@en .
+<http://data.europa.eu/a4g/ontology#refersToCatalogueLine> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#Catalogue> <http://www.w3.org/2004/02/skos/core#definition> "A phase-agnostic Document describing a set of Items offered for purchase that can be processed in an electronic way."@en .
+<http://data.europa.eu/a4g/ontology#CatalogueResponse> <http://www.w3.org/2004/02/skos/core#prefLabel> "Catalogue Response"@en .
+<http://data.europa.eu/a4g/ontology#cat> <http://www.w3.org/2002/07/owl#imports> <http://data.europa.eu/m8g/> .
+<http://data.europa.eu/a4g/ontology#hasManufacturerID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#hasCalculationMethod> <http://www.w3.org/2004/02/skos/core#definition> "Formula for obtaining values. Additional Information: The possible values are monetary values, ranking scores, criterion weighting. (epo-cat:EnvironmentalEmissionInformation)"@en .
+<http://data.europa.eu/a4g/ontology#hasAccessoryItem> <http://www.w3.org/2004/02/skos/core#definition> "An additional item that can enhance the original item."@en .
+<http://data.europa.eu/a4g/ontology#hasActivityCode> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#cat> .
+<http://data.europa.eu/a4g/ontology#hasTaxScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#ItemReplacement> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#cat> .
+<http://data.europa.eu/a4g/ontology#hasEnvironmentalEmissionCode> <http://www.w3.org/2004/02/skos/core#definition> "Relation indicating the Environmental Emission Code."@en .
+<http://data.europa.eu/a4g/ontology#PostAwardCatalogue> <http://www.w3.org/2004/02/skos/core#definition> "A Document describing a set of Items offered for purchase that can be processed in an electronic way, after a Contract is signed."@en .
+<http://data.europa.eu/a4g/ontology#PostAwardCatalogue> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#cat> .
+<http://data.europa.eu/a4g/ontology#Price> <http://www.w3.org/2004/02/skos/core#prefLabel> "Price"@en .
+<http://data.europa.eu/a4g/ontology#specifiesChargeInformation> <http://www.w3.org/2004/02/skos/core#prefLabel> "specifies Charge Information"@en .
+<http://data.europa.eu/a4g/ontology#ItemAccessoryRelation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#cat> .
+<http://data.europa.eu/a4g/ontology#hasBaseQuantity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#concernsPackage> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#hasMeasure> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#ItemAccessoryRelation> <http://www.w3.org/2004/02/skos/core#historyNote> "WG Approval 30/06/2022"@en .
+<http://data.europa.eu/a4g/ontology#ItemRelation> <http://www.w3.org/2004/02/skos/core#definition> "Connection between two Items."@en .
+<http://data.europa.eu/a4g/ontology#hasClassificationCode> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Classification Code"@en .
+<http://data.europa.eu/a4g/ontology#hasOrderableUnit> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Orderable Unit"@en .
+<http://data.europa.eu/a4g/ontology#hasModel> <http://www.w3.org/2004/02/skos/core#definition> "Relation indicating that the instance of the concept has an Item Model."@en .
+<http://data.europa.eu/a4g/ontology#Manufacturer> <http://www.w3.org/2004/02/skos/core#prefLabel> "Manufacturer"@en .
+<http://data.europa.eu/a4g/ontology#hasGrossMonetaryValue> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Gross Monetary Value"@en .
+<http://data.europa.eu/a4g/ontology#hasUUID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#isProductionOf> <http://www.w3.org/2004/02/skos/core#definition> "Relation indicating the Item that is manufactured."@en .
+<http://data.europa.eu/a4g/ontology#AbstractItem> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#cat> .
+<http://data.europa.eu/a4g/ontology#PostAwardDocument> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 11/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#isSubordinatedToContract> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#hasItemClassification> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#cat> .
+<http://data.europa.eu/a4g/ontology#hasItemStandardID> <http://www.w3.org/2004/02/skos/core#historyNote> "WG Approval 16/05/2023"@en .
+<http://data.europa.eu/a4g/ontology#hasAttributeType> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#cat> .
+<http://data.europa.eu/a4g/ontology#ChargeInformation> <http://www.w3.org/2004/02/skos/core#historyNote> "WG Approval 16/05/2023"@en .
+<http://data.europa.eu/a4g/ontology#hasPriceSurchargeInformation> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Price Surcharge Information"@en .
+<http://data.europa.eu/a4g/ontology#hasExpectedDeliveryTime> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#cat> .
+<http://data.europa.eu/a4g/ontology#hasQuantityThreshold> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#hasMaximumOrderQuantity> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Maximum Order Quantity"@en .
+<http://data.europa.eu/a4g/ontology#cat> <http://www.w3.org/2002/07/owl#versionInfo> "5.2.0" .
+<http://data.europa.eu/a4g/ontology#Price> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#cat> .
+<http://data.europa.eu/a4g/ontology#hasDeliveryClassification> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#cat> .
+<http://data.europa.eu/a4g/ontology#isContractedItem> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#cat> .
+<http://data.europa.eu/a4g/ontology#isProductionOf> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#cat> .
+<http://data.europa.eu/a4g/ontology#refersToCatalogue> <http://www.w3.org/2004/02/skos/core#prefLabel> "refers To Catalogue"@en .
+<http://data.europa.eu/a4g/ontology#hasTransactionConditions> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://data.europa.eu/a4g/ontology#Catalogue> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#cat> .
+<http://data.europa.eu/a4g/ontology#specifiesCatalogueResponseInformation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#cat> .
+<http://data.europa.eu/a4g/ontology#hasCustomerReference> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#cat> .
+<http://data.europa.eu/a4g/ontology#hasBaseQuantity> <http://www.w3.org/2004/02/skos/core#definition> "The quantity at which the net monetary value applies."@en .
+<http://data.europa.eu/a4g/ontology#isInStock> <http://www.w3.org/2004/02/skos/core#definition> "Indicator whether an item is in the supplier's stock. If not in stock the supplier has to order the item. (epo-cat:AbstractItem)"@en .
+<http://data.europa.eu/a4g/ontology#cat> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/ns/person> .
+<http://data.europa.eu/a4g/ontology#Line> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#hasSerialID> <http://www.w3.org/2004/02/skos/core#historyNote> "WG Approval 16/05/2023"@en .
+<http://data.europa.eu/a4g/ontology#hasQualifiedItemRelation> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Qualified Item Relation"@en .
+<http://data.europa.eu/a4g/ontology#hasCertification> <http://www.w3.org/2004/02/skos/core#historyNote> "WG Approval 30/05/2023"@en .
+<http://data.europa.eu/a4g/ontology#specifiesChargeInformation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#AbstractItem> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 09/10/2025"@en .
+<http://data.europa.eu/a4g/ontology#isProductionOf> <http://www.w3.org/2004/02/skos/core#prefLabel> "is Production Of"@en .
+<http://data.europa.eu/a4g/ontology#hasTaxInformation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#cat> .
+<http://data.europa.eu/a4g/ontology#InformationHub> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#specifiesCatalogueProvider> <http://www.w3.org/2004/02/skos/core#prefLabel> "specifies Catalogue Provider"@en .
+<http://data.europa.eu/a4g/ontology#concernsGoodsItem> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#ItemProperty> <http://www.w3.org/2004/02/skos/core#definition> "Construct meant to represent the association between an attribute defined in an external classification scheme and the value ascribed to it."@en .
+<http://data.europa.eu/a4g/ontology#hasStandardisedUnitPrice> <http://www.w3.org/2004/02/skos/core#definition> "The item price based on a standardised unit. Additional Information: The unit must be indicated in the Quantity, with a quantity value of 1."@en .
+<http://data.europa.eu/a4g/ontology#ItemComplementaryRelation> <http://www.w3.org/2004/02/skos/core#definition> "Combination of two Items which mutually enhance one another."@en .
+<http://data.europa.eu/a4g/ontology#hasMinimumQuantityGuaranteedForDelivery> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#Brand> <http://www.w3.org/2004/02/skos/core#definition> "Name given by an organisation to its product or service, or range of products or services. Additional information: Brand name allows economic operators to distinctively describe an item in their eCatalogue. This may be different from the \"item name\"."@en .
+<http://data.europa.eu/a4g/ontology#hasMinimumMeasure> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#cat> .
+<http://data.europa.eu/a4g/ontology#cat> <http://www.w3.org/2002/07/owl#incompatibleWith> "4.2.0" .
+<http://data.europa.eu/a4g/ontology#refersToCatalogue> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#cat> .
+<http://data.europa.eu/a4g/ontology#isOrderable> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#cat> .
+<http://data.europa.eu/a4g/ontology#refersToCatalogueLine> <http://www.w3.org/2004/02/skos/core#prefLabel> "refers To Catalogue Line"@en .
+<http://data.europa.eu/a4g/ontology#isSpecificToCatalogueResponseLine> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#cat> .
+<http://data.europa.eu/a4g/ontology#hasCalculationMethod> <http://www.w3.org/2004/02/skos/core#historyNote> "WG Approval 25/05/2018"@en .
+<http://data.europa.eu/a4g/ontology#hasDocumentStatus> <http://www.w3.org/2004/02/skos/core#definition> "https://test-docs.peppol.eu/logistics/transport-execution/codelist/DocumentStatusCode/"@en .
+<http://data.europa.eu/a4g/ontology#hasHazardousItemUNDGCode> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#cat> .
+<http://data.europa.eu/a4g/ontology#hasManufactureDate> <http://www.w3.org/2004/02/skos/core#definition> "The day of production. (epo-cat:Batch)"@en .
+<http://data.europa.eu/a4g/ontology#hasBuyerItemID> <http://www.w3.org/2004/02/skos/core#historyNote> "WG Approval 16/05/2023"@en .
+<http://data.europa.eu/a4g/ontology#hasAttributeType> <http://www.w3.org/2004/02/skos/core#historyNote> "WG Approval 28/07/2022"@en .
+<http://data.europa.eu/a4g/ontology#AbstractItem> <http://www.w3.org/2004/02/skos/core#prefLabel> "Abstract Item"@en .
+<http://data.europa.eu/a4g/ontology#hasSpecification> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#cat> .
+<http://data.europa.eu/a4g/ontology#isSubordinatedToContract> <http://www.w3.org/2004/02/skos/core#prefLabel> "is Subordinated To Contract"@en .
+<http://data.europa.eu/a4g/ontology#hasGrossMonetaryValue> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#cat> .
+<http://data.europa.eu/a4g/ontology#hasPriceType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#concernsTransportEquipment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#hasFreightCharge> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Freight Charge"@en .
+<http://data.europa.eu/a4g/ontology#Batch> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#CatalogueResponseLine> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#cat> .
+<http://data.europa.eu/a4g/ontology#comprisesCatalogueLine> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#cat> .
+<http://data.europa.eu/a4g/ontology#hasCatalogueLineValidity> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#cat> .
+<http://data.europa.eu/a4g/ontology#isSpecificToOrderLine> <http://www.w3.org/2004/02/skos/core#prefLabel> "is Specific To Order Line"@en .
+<http://data.europa.eu/a4g/ontology#hasDeliveryLocation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#specifiesCatalogueResponseInformation> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#hasAdditionalInformation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://data.europa.eu/a4g/ontology#hasMaximumValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#hasOrderableUnitFactorRate> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Orderable Unit Factor Rate"@en .
+<http://data.europa.eu/a4g/ontology#hasResponseStatus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#hasSellerItemID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#hasModel> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#cat> .
+<http://data.europa.eu/a4g/ontology#refersToCatalogueLine> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#cat> .
+<http://data.europa.eu/a4g/ontology#hasBatchID> <http://www.w3.org/2004/02/skos/core#historyNote> "WG Approval 16/05/2023"@en .
+<http://data.europa.eu/a4g/ontology#isSpecificToInvoiceLine> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#hasKeyword> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://data.europa.eu/a4g/ontology#hasMinimumMeasure> <http://www.w3.org/2004/02/skos/core#definition> "Relation indicating the lower limit of the measure."@en .
+<http://data.europa.eu/a4g/ontology#hasModel> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#ItemProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#hasTaxCategory> <http://www.w3.org/2004/02/skos/core#definition> "Relation indicating the Tax Category."@en .
+<http://data.europa.eu/a4g/ontology#hasBestBeforeDate> <http://www.w3.org/2004/02/skos/core#definition> "The day until which the quality of the item will remain optimal. (epo-cat:Batch)"@en .
+<http://data.europa.eu/a4g/ontology#ItemModel> <http://www.w3.org/2004/02/skos/core#historyNote> "WG Approval 10/03/2022"@en .
+<http://data.europa.eu/a4g/ontology#Item> <http://www.w3.org/2004/02/skos/core#definition> "A product, work, service or any combination of them. Additional Information: An Item can be an atomic Thing or a composition of things that together are seen as a unit, e.g. a tetrabrik of milk or an indivisible package of six tetrabriks. No distinction is provided between services, goods and works to leave room for innovation. An Item is used to fulfill a need which is described in an Item Request."@en .
+<http://data.europa.eu/a4g/ontology#hasTaxInformation> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#hasEnvironmentalEmissionCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#CatalogueLine> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#Line> .
+<http://data.europa.eu/a4g/ontology#hasTaxScheme> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#cat> .
+<http://data.europa.eu/a4g/ontology#comprisesCatalogueLine> <http://www.w3.org/2004/02/skos/core#definition> "Incorporates Catalogue Line."@en .
+<http://data.europa.eu/a4g/ontology#hasBaseQuantity> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#cat> .
+<http://data.europa.eu/a4g/ontology#PostAwardCatalogue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#hasQualifiedValue> <http://www.w3.org/2004/02/skos/core#historyNote> "WG Approval 28/07/2022"@en .
+<http://data.europa.eu/a4g/ontology#ItemReplacement> <http://www.w3.org/2004/02/skos/core#prefLabel> "Item Replacement"@en .
+<http://data.europa.eu/a4g/ontology#hasMeasure> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Measure"@en .
+<http://data.europa.eu/a4g/ontology#hasPriceSurchargeInformation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#ItemRequirement> <http://www.w3.org/2004/02/skos/core#historyNote> "WG Approval 19/05/2022"@en .
+<http://data.europa.eu/a4g/ontology#specifiesCatalogueProvider> <http://www.w3.org/2004/02/skos/core#definition> "Relation indicating that the instance of the concept involves the Catalogue Provider."@en .
+<http://data.europa.eu/a4g/ontology#hasQualifiedItemRelation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#hasMinimumMeasure> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#hasStandardisedUnitPrice> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Standardised Unit Price"@en .
+<http://data.europa.eu/a4g/ontology#specifiesCatalogueProvider> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#ItemAccessoryRelation> <http://www.w3.org/2004/02/skos/core#prefLabel> "Item Accessory Relation"@en .
+<http://data.europa.eu/a4g/ontology#hasCatalogueLineValidity> <http://www.w3.org/2004/02/skos/core#definition> "The relation indicating until when a Catalogue Line instance is applicable."@en .
+<http://data.europa.eu/a4g/ontology#hasUUID> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#cat> .
+<http://data.europa.eu/a4g/ontology#comprisesCatalogueLine> <http://www.w3.org/2004/02/skos/core#prefLabel> "comprises Catalogue Line"@en .
+<http://data.europa.eu/a4g/ontology#cat> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://joinup.ec.europa.eu/collection/eprocurement/solution/eprocurement-ontology/about> .
+<http://data.europa.eu/a4g/ontology#isSubordinatedToContract> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#cat> .
+<http://data.europa.eu/a4g/ontology#hasOrderableQuantityIncrement> <http://www.w3.org/2004/02/skos/core#definition> "Orderable quantity increment: The increment of Orderable units that can be ordered. (epo-cat:CatalogueLine)"@en .
+<http://data.europa.eu/a4g/ontology#CatalogueResponse> <http://www.w3.org/2004/02/skos/core#definition> "A formal reply from the Catalogue Receiver to the Catalogue Provider stating the Catalogue Receiver's ability to apply the catalogue for placing orders. Additional Information: The Catalogue Response is used to inform on the acceptance or rejection of a Catalogue."@en .
+<http://data.europa.eu/a4g/ontology#DimensionInformation> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 11/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#hasSpecification> <http://www.w3.org/2004/02/skos/core#definition> "Relation indicating that the instance of the concept has a Product Specification."@en .
+<http://data.europa.eu/a4g/ontology#Line> <http://www.w3.org/2004/02/skos/core#prefLabel> "Line"@en .
+<http://data.europa.eu/a4g/ontology#ProductSpecification> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#cat> .
+<http://data.europa.eu/a4g/ontology#hasHazardousClassID> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Hazardous Class ID"@en .
+<http://data.europa.eu/a4g/ontology#isRelatedToItem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#cat> <http://www.w3.org/2002/07/owl#versionIRI> <http://data.europa.eu/a4g/ontology#cat-5.2.0> .
+<http://data.europa.eu/a4g/ontology#foreseesPackage> <http://www.w3.org/2004/02/skos/core#definition> "Relation indicating that an instance of the concept plans to have a Package."@en .
+<http://data.europa.eu/a4g/ontology#refersToCatalogueLine> <http://www.w3.org/2004/02/skos/core#definition> "Reference to a Catalogue Line."@en .
+<http://data.europa.eu/a4g/ontology#hasSpecification> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#InformationHub> <http://www.w3.org/2004/02/skos/core#definition> "Grouping of data that may be associated to various concepts. Additional Information: For example, AllowanceChargeInformation may be associated to the Order or the Catalogue (either at the Line level or at the Document level), amongst others."@en .
+<http://data.europa.eu/a4g/ontology#Brand> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#cat> .
+<http://data.europa.eu/a4g/ontology#Manufacturer> <http://www.w3.org/2004/02/skos/core#definition> "The Producer of goods or provider of services. Additional Information: Also, known as Supplier and Manufacturer. We do not care who provides these service or products we care with whom Business is done. PEPPOL - Invoice: The Supplier is the Legal Person or Organisation who provides a product and/or service. PEPPOL - Order: The supplier is the legal person or organisation who provides a product or service. Examples of supplier roles: seller, despatch party, creditor, economic operator."@en .
+<http://data.europa.eu/a4g/ontology#hasBatchID> <http://www.w3.org/2004/02/skos/core#definition> "The identifier assigned to a specific batch of the produced Item."@en .
+<http://data.europa.eu/a4g/ontology#hasGrossMonetaryValue> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#ItemComplementaryRelation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#cat> .
+<http://data.europa.eu/a4g/ontology#hasFreightCharge> <http://www.w3.org/2004/02/skos/core#definition> "The total cost for moving the goods."@en .
+<http://data.europa.eu/a4g/ontology#hasAssociatedDocument> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Associated Document"@en .
+<http://data.europa.eu/a4g/ontology#foreseesPackage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#hasBrand> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Brand"@en .
+<http://data.europa.eu/a4g/ontology#DimensionInformation> <http://www.w3.org/2004/02/skos/core#prefLabel> "Dimension Information"@en .
+<http://data.europa.eu/a4g/ontology#comprisesCatalogueLine> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#CatalogueResponseLine> <http://www.w3.org/2004/02/skos/core#definition> "Details concerning the Catalogue Receiver’s ability to apply a given Catalogue Line for placing orders. Additional information: The Catalogue Response Line is used to inform on the acceptance or rejection of a Catalogue Line."@en .
+<http://data.europa.eu/a4g/ontology#hasFactor> <http://www.w3.org/2004/02/skos/core#definition> "The number or the fraction of a related item. (epo-cat:ItemRelation)"@en .
+<http://data.europa.eu/a4g/ontology#hasDocumentStatus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#hasAssociatedDocument> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#hasNetQuantity> <http://www.w3.org/2004/02/skos/core#definition> "The net quantity of the item that is contained in each consumable unit, excluding any packaging materials."@en .
+<http://data.europa.eu/a4g/ontology#hasCustomerReference> <http://www.w3.org/2004/02/skos/core#definition> "An identifier assigned by the Buyer used for internal routing purposes."@en .
+<http://data.europa.eu/a4g/ontology#Catalogue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#hasItemStandardID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#hasPriceValidity> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Price Validity"@en .
+<http://data.europa.eu/a4g/ontology#hasWarrantyInformation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#cat> .
+<http://data.europa.eu/a4g/ontology#specifiesChargeInformation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#cat> .
+<http://data.europa.eu/a4g/ontology#concernsTransportEquipment> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#cat> .
+<http://data.europa.eu/a4g/ontology#isContractedItem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://data.europa.eu/a4g/ontology#cat> <http://purl.org/dc/terms/title> "eProcurement Ontology Catalogue - core"@en .
+<http://data.europa.eu/a4g/ontology#hasKeyword> <http://www.w3.org/2004/02/skos/core#definition> "List of words (e.g, synonyms) to make the item searchable. (epo-cat:AbstractItem)"@en .
+<http://data.europa.eu/a4g/ontology#hasCalculationMethod> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://data.europa.eu/a4g/ontology#CatalogueLine> <http://www.w3.org/2004/02/skos/core#definition> "Aggregated information about the Terms and specifications for procuring an Item. Details about an Item, like Prices, packaging, discounts, special promotions, etc. TC 440: Detailed information of an Item, Price and its composition in a Catalogue. Composition: e.g. information referring to its description, how to order it, what it is made of, properties, delivery conditions, etc."@en .
+<http://data.europa.eu/a4g/ontology#ItemComposition> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#cat> .
+<http://data.europa.eu/a4g/ontology#hasComplementaryItem> <http://www.w3.org/2004/02/skos/core#definition> "An item that if used with another item provides mutual enhancements to both of them. Additional information: For example, gin and tonic; or smart-phone and smart-watch."@en .
+<http://data.europa.eu/a4g/ontology#EnvironmentalEmissionInformation> <http://www.w3.org/2004/02/skos/core#prefLabel> "Environmental Emission Information"@en .
+<http://data.europa.eu/a4g/ontology#hasMinimumQuantityGuaranteedForDelivery> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#cat> .
+<http://data.europa.eu/a4g/ontology#hasEnvironmentalEmissionCode> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#cat> .
+<http://data.europa.eu/a4g/ontology#hasSpecificPaymentArrangement> <http://www.w3.org/2004/02/skos/core#definition> "Information about payment conditions applied to all items in the catalogue. Additional information: This property may need to be used together with the payment arrangements provided in the ContractTerms, where such terms exists. (epo-cat:Catalogue)"@en .
+<http://data.europa.eu/a4g/ontology#hasCertification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#hasSerialID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#InformationHub> <http://www.w3.org/2004/02/skos/core#historyNote> "WG Approval 16/05/2023"@en .
+<http://data.europa.eu/a4g/ontology#foreseesPackage> <http://www.w3.org/2004/02/skos/core#prefLabel> "foresees Package"@en .
+<http://data.europa.eu/a4g/ontology#hasItemClassificationIdentifier> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Item Classification Identifier"@en .
+<http://data.europa.eu/a4g/ontology#hasAdditionalInformation> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Additional Information"@en .
+<http://data.europa.eu/a4g/ontology#hasPriceSurchargeInformation> <http://www.w3.org/2004/02/skos/core#definition> "Relation indicating the Charge Information applied on the Price."@en .
+<http://data.europa.eu/a4g/ontology#hasValidityPeriod> <http://www.w3.org/2004/02/skos/core#historyNote> "WG Approval 30/05/2023"@en .
+<http://data.europa.eu/a4g/ontology#Batch> <http://www.w3.org/2004/02/skos/core#definition> "A production lot in which the Item instances were produced."@en .
+<http://data.europa.eu/a4g/ontology#PostAwardCatalogue> <http://www.w3.org/2004/02/skos/core#prefLabel> "Post Award Catalogue"@en .
+<http://data.europa.eu/a4g/ontology#isRelatedToItem> <http://www.w3.org/2004/02/skos/core#definition> "Relation indicating the association with an Item."@en .
+<http://data.europa.eu/a4g/ontology#concernsGoodsItem> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#cat> .
+<http://data.europa.eu/a4g/ontology#hasImportanceCode> <http://www.w3.org/2004/02/skos/core#definition> "The significance of the instance of the concept expressed as a code. (epo-cat:ItemProperty)"@en .
+<http://data.europa.eu/a4g/ontology#hasManufacturerItemID> <http://www.w3.org/2004/02/skos/core#historyNote> "WG Approval 16/05/2023"@en .
+<http://data.europa.eu/a4g/ontology#hasAttributeType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://data.europa.eu/a4g/ontology#hasItemClassificationIdentifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#hasPriceType> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#cat> .
+<http://data.europa.eu/a4g/ontology#ItemReplacement> <http://www.w3.org/2004/02/skos/core#definition> "Supplantment, displacement or suspension of an Item by the described Item."@en .
+<http://data.europa.eu/a4g/ontology#hasDocumentType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#hasDeliveryLocation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#cat> .
+<http://data.europa.eu/a4g/ontology#hasPriceDiscountInformation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#hasAssociatedDocument> <http://www.w3.org/2004/02/skos/core#historyNote> "WG Approval 06/10/2024"@en .
+<http://data.europa.eu/a4g/ontology#hasMaximumValue> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#cat> .
+<http://data.europa.eu/a4g/ontology#hasResponseStatus> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#cat> .
+<http://data.europa.eu/a4g/ontology#hasNetQuantity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#hasSellerItemID> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#cat> .
+<http://data.europa.eu/a4g/ontology#specifiesCatalogueReceiver> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#hasClassificationCode> <http://www.w3.org/2004/02/skos/core#definition> "The categorization of the instance of the concept expressed as a code. (epo-cat:ItemProperty)"@en .
+<http://data.europa.eu/a4g/ontology#ItemModel> <http://www.w3.org/2004/02/skos/core#definition> "A specific design or version of a product or service. Additional information: This class is meant as a reusable reference to the model name rather than as a set of specifications of an Item of this particular model."@en .
+<http://data.europa.eu/a4g/ontology#specifiesChargeInformation> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#hasMinimumValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#cat> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/ns/org#> .
+<http://data.europa.eu/a4g/ontology#hasClassificationScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://data.europa.eu/a4g/ontology#hasResponseDescription> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#cat> .
+<http://data.europa.eu/a4g/ontology#foreseesPackage> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#cat> .
+<http://data.europa.eu/a4g/ontology#hasBuyerItemID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#hasDimensionDescription> <http://www.w3.org/2004/02/skos/core#definition> "Textual description of the item's dimensions. (epo-cat:DimensionInformation)"@en .
+<http://data.europa.eu/a4g/ontology#hasPriceDiscountInformation> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Price Discount Information"@en .
+<http://data.europa.eu/a4g/ontology#hasTransactionConditions> <http://www.w3.org/2004/02/skos/core#definition> "Textual description of the specific transaction conditions (purchasing, sales, payment, delivery) for an item. (epo-cat:CatalogueLine)"@en .
+<http://data.europa.eu/a4g/ontology#PostAwardDocument> <http://www.w3.org/2004/02/skos/core#prefLabel> "Post Award Document"@en .
+<http://data.europa.eu/a4g/ontology#isSubordinatedToContract> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#hasMaximumMeasure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#ItemModel> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#cat> .
+<http://data.europa.eu/a4g/ontology#specifiesSeller> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#EnvironmentalEmissionInformation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#cat> .
+<http://data.europa.eu/a4g/ontology#ItemReplacement> <http://www.w3.org/2004/02/skos/core#historyNote> "WG Approval 30/06/2022"@en .
+<http://data.europa.eu/a4g/ontology#hasManufacturerItemID> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Manufacturer Item ID"@en .
+<http://data.europa.eu/a4g/ontology#hasSpecificPaymentArrangement> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#cat> .
+<http://data.europa.eu/a4g/ontology#hasComplementaryItem> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Complementary Item"@en .
+<http://data.europa.eu/a4g/ontology#hasPriceSurchargeInformation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#cat> .
+<http://data.europa.eu/a4g/ontology#hasTaxInformation> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Tax Information"@en .
+<http://data.europa.eu/a4g/ontology#ItemRequirement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#hasManufactureDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://data.europa.eu/a4g/ontology#hasQualifiedItemRelation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#cat> .
+<http://data.europa.eu/a4g/ontology#isSpecificToInvoiceLine> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#cat> .
+<http://data.europa.eu/a4g/ontology#specifiesCatalogueProvider> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#cat> .
+<http://data.europa.eu/a4g/ontology#DimensionInformation> <http://www.w3.org/2004/02/skos/core#definition> "Information about the physical or measurable attributes of the instance of the concept described."@en .
+<http://data.europa.eu/a4g/ontology#PostAwardCatalogue> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#Catalogue> .
+<http://data.europa.eu/a4g/ontology#hasAssociatedDocument> <http://www.w3.org/2004/02/skos/core#definition> "Is related to a Document."@en .
+<http://data.europa.eu/a4g/ontology#hasBaseQuantity> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Base Quantity"@en .
+<http://data.europa.eu/a4g/ontology#hasQualifiedValue> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#cat> .
+<http://data.europa.eu/a4g/ontology#cat> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://op.europa.eu/en/web/eu-vocabularies/e-procurement> .
+<http://data.europa.eu/a4g/ontology#hasResponseDescription> <http://www.w3.org/2004/02/skos/core#historyNote> "WG Approval 25/03/2025"@en .
+<http://data.europa.eu/a4g/ontology#hasOrderableUnitFactorRate> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#cat> .
+<http://data.europa.eu/a4g/ontology#ProductSpecification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#hasComplementaryItem> <http://www.w3.org/2004/02/skos/core#historyNote> "WG Approval 19/05/2022"@en .
+<http://data.europa.eu/a4g/ontology#hasStandardisedUnitPrice> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#cat> .
+<http://data.europa.eu/a4g/ontology#EnvironmentalEmissionInformation> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 11/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#hasBestBeforeDate> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#cat> .
+<http://data.europa.eu/a4g/ontology#concernsTransportEquipment> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#ItemRequirement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#ItemRelation> .
+<http://data.europa.eu/a4g/ontology#hasSerialID> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Serial ID"@en .
+<http://data.europa.eu/a4g/ontology#ItemProperty> <http://www.w3.org/2004/02/skos/core#historyNote> "WG Approval 26/07/2022"@en .
+<http://data.europa.eu/a4g/ontology#Manufacturer> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#cat> .
+<http://data.europa.eu/a4g/ontology#hasImportanceCode> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Importance Code"@en .
+<http://data.europa.eu/a4g/ontology#Item> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#hasDocumentStatus> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#cat> .
+<http://data.europa.eu/a4g/ontology#hasOrderableQuantityIncrement> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#cat> .
+<http://data.europa.eu/a4g/ontology#specifiesChargeInformation> <http://www.w3.org/2004/02/skos/core#definition> "Relation indicating the Charge Information."@en .
+<http://data.europa.eu/a4g/ontology#hasItemStandardID> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#cat> .
+<http://data.europa.eu/a4g/ontology#hasDeliveryLocation> <http://www.w3.org/2004/02/skos/core#definition> "Location delivery area where the Item can be ordered to the given price."@en .
+<http://data.europa.eu/a4g/ontology#hasSpecificPaymentArrangement> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Specific Payment Arrangement"@en .
+<http://data.europa.eu/a4g/ontology#ItemComposition> <http://www.w3.org/2004/02/skos/core#historyNote> "WG Approval 19/05/2022"@en .
+<http://data.europa.eu/a4g/ontology#hasBuyerItemID> <http://www.w3.org/2004/02/skos/core#definition> "The general identifier assigned to the concept as defined by the Buyer.​"@en .
+<http://data.europa.eu/a4g/ontology#hasQualifiedValue> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Qualified Value"@en .
+<http://data.europa.eu/a4g/ontology#hasSpecificPaymentArrangement> <http://www.w3.org/2004/02/skos/core#historyNote> "WG Approval 30/06/2022"@en .
+<http://data.europa.eu/a4g/ontology#hasManufacturerID> <http://www.w3.org/2004/02/skos/core#definition> "The manufacturer's identifier for the item."@en .
+<http://data.europa.eu/a4g/ontology#ItemComposition> <http://www.w3.org/2004/02/skos/core#prefLabel> "Item Composition"@en .
+<http://data.europa.eu/a4g/ontology#specifiesCatalogueResponseInformation> <http://www.w3.org/2004/02/skos/core#definition> "Relation indicating the Catalogue Response Information."@en .
+<http://data.europa.eu/a4g/ontology#Price> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 26/07/2022"@en .
+<http://data.europa.eu/a4g/ontology#hasSpecification> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Specification"@en .
+<http://data.europa.eu/a4g/ontology#specifiesCatalogueReceiver> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#cat> .
+<http://data.europa.eu/a4g/ontology#PostAwardDocument> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#concernsItem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#hasMeasuredAttributeCode> <http://www.w3.org/2004/02/skos/core#definition> "Relation indicating the Measured Attribute Code."@en .
+<http://data.europa.eu/a4g/ontology#hasTaxCategory> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Tax Category"@en .
+<http://data.europa.eu/a4g/ontology#hasMaximumValue> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Maximum Value"@en .
+<http://data.europa.eu/a4g/ontology#hasExpectedDeliveryTime> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Expected Delivery Time"@en .
+<http://data.europa.eu/a4g/ontology#cat> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/ns/locn> .
+<http://data.europa.eu/a4g/ontology#hasBatchID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#hasHazardousClassID> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#cat> .
+<http://data.europa.eu/a4g/ontology#hasQualifiedItemRelation> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#specifiesCatalogueProvider> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#hasBuyerItemID> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#cat> .
+<http://data.europa.eu/a4g/ontology#isSpecificToInvoiceLine> <http://www.w3.org/2004/02/skos/core#definition> "Information that is particular to an Invoice Line."@en .
+<http://data.europa.eu/a4g/ontology#isSpecificToLine> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#cat> .
+<http://data.europa.eu/a4g/ontology#cat> <http://purl.org/dc/terms/description> "The eProcurement Ontology Catalogue core describes the concepts and properties representing the European Public Procurement Catalogue domain. The provision of these semantics offers the basis for a common understanding of the domain for all stakeholders ensuring the quality of data exchange and transparency. The ontology restrictions are published in a separate artefact."@en .
+<http://data.europa.eu/a4g/ontology#isSpecificToLine> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#hasOrderabableUnitFactorRate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#hasMaximumOrderQuantity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .

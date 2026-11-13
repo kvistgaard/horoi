@@ -1,0 +1,106 @@
+<http://data.europa.eu/a4g/ontology#hasDestinationCountryCode> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#req> .
+<http://data.europa.eu/a4g/ontology#specifiesOriginator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#req> <http://www.w3.org/2002/07/owl#imports> <http://data.europa.eu/a4g/ontology#cat> .
+<http://data.europa.eu/a4g/ontology#isOptional> <http://www.w3.org/2004/02/skos/core#definition> "Indicates whether the instance of the concept is not required. (epo-req:RequestForOfferLine)"@en .
+<http://data.europa.eu/a4g/ontology#refersToCatalogue> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#req> .
+<http://data.europa.eu/a4g/ontology#specifiesBuyer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#refersToContract> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#req> <http://purl.org/dc/terms/issued> "2025-10-10"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://data.europa.eu/a4g/ontology#isSpecificToRequestForOfferLine> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#req> .
+<http://data.europa.eu/a4g/ontology#RequestForOffer> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#req> .
+<http://data.europa.eu/a4g/ontology#isSpecificToRequestForOfferLine> <http://www.w3.org/2004/02/skos/core#definition> "Information that is particular to a Request For Offer Line."@en .
+<http://data.europa.eu/a4g/ontology#req> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/ns/locn> .
+<http://data.europa.eu/a4g/ontology#specifiesOfferCurrency> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#specifiesContractor> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#req> .
+<http://data.europa.eu/a4g/ontology#specifiesDeliveryInformation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#hasSubmissionDueDate> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 09/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#req> <http://www.w3.org/2002/07/owl#versionIRI> <http://data.europa.eu/a4g/ontology#req-5.2.0> .
+<http://data.europa.eu/a4g/ontology#req> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://data.europa.eu/a4g/ontology#" .
+<http://data.europa.eu/a4g/ontology#req> <http://www.w3.org/2002/07/owl#imports> <http://data.europa.eu/a4g/ontology#ful> .
+<http://data.europa.eu/a4g/ontology#refersToCatalogue> <http://www.w3.org/2004/02/skos/core#prefLabel> "refers To Catalogue"@en .
+<http://data.europa.eu/a4g/ontology#specifiesBuyer> <http://www.w3.org/2004/02/skos/core#definition> "Relation indicating that the instance of the concept involves the Buyer."@en .
+<http://data.europa.eu/a4g/ontology#specifiesContractor> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#specifiesOfferValidityPeriod> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#isSpecificToRequestForOfferLine> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#specifiesDeliveryInformation> <http://www.w3.org/2004/02/skos/core#prefLabel> "specifies Delivery Information"@en .
+<http://data.europa.eu/a4g/ontology#req> <http://www.w3.org/2002/07/owl#imports> <http://data.europa.eu/a4g/ontology#ord> .
+<http://data.europa.eu/a4g/ontology#specifiesOriginator> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#req> .
+<http://data.europa.eu/a4g/ontology#comprisesRequestForOfferLine> <http://www.w3.org/2004/02/skos/core#definition> "Incorporates Request For Offer Line."@en .
+<http://data.europa.eu/a4g/ontology#RequestForOffer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#specifiesOfferCurrency> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#req> <http://purl.org/dc/terms/title> "eProcurement Ontology Request - core"@en .
+<http://data.europa.eu/a4g/ontology#req> <http://www.w3.org/2002/07/owl#versionInfo> "5.2.0" .
+<http://data.europa.eu/a4g/ontology#req> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/ns/org#> .
+<http://data.europa.eu/a4g/ontology#RequestForOfferLine> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#hasDestinationCountryCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#req> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://joinup.ec.europa.eu/collection/eprocurement/solution/eprocurement-ontology/about> .
+<http://data.europa.eu/a4g/ontology#comprisesRequestForOfferLine> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#req> .
+<http://data.europa.eu/a4g/ontology#specifiesContractor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#refersToCatalogue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#specifiesOfferCurrency> <http://www.w3.org/2004/02/skos/core#definition> "Relation indicating the Currency for the Offer."@en .
+<http://data.europa.eu/a4g/ontology#hasDestinationCountryCode> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Destination Country Code"@en .
+<http://data.europa.eu/a4g/ontology#isOptional> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://data.europa.eu/a4g/ontology#isSpecificToRequestForOfferLine> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#RequestForOffer> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 16/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#specifiesBuyer> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#req> .
+<http://data.europa.eu/a4g/ontology#req> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/ns/person> .
+<http://data.europa.eu/a4g/ontology#req> <http://purl.org/dc/terms/description> "The eProcurement Ontology Request core describes the concepts and properties representing the European Public Procurement Request domain. The provision of these semantics offers the basis for a common understanding of the domain for all stakeholders ensuring the quality of data exchange and transparency. The ontology restrictions are published in a separate artefact."@en .
+<http://data.europa.eu/a4g/ontology#isOptional> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 09/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#req> <http://www.w3.org/2000/01/rdf-schema#label> "eProcurement Ontology Request - core"@en .
+<http://data.europa.eu/a4g/ontology#specifiesBuyer> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#req> <http://purl.org/dc/terms/created> "2021-06-01"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://data.europa.eu/a4g/ontology#specifiesOfferCurrency> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#req> .
+<http://data.europa.eu/a4g/ontology#RequestForOffer> <http://www.w3.org/2004/02/skos/core#definition> "A Document sent by the Buyer to the Economic Operator, requesting the submission of a commercial proposal to supply goods, services, or works under specified conditions."@en .
+<http://data.europa.eu/a4g/ontology#req> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/2006/time> .
+<http://data.europa.eu/a4g/ontology#specifiesDeliveryInformation> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#specifiesContractor> <http://www.w3.org/2004/02/skos/core#definition> "Relation indicating that the instance of the concept involves the Contractor."@en .
+<http://data.europa.eu/a4g/ontology#hasSubmissionDueDate> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Submission Due Date"@en .
+<http://data.europa.eu/a4g/ontology#specifiesOfferValidityPeriod> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#req> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/2004/02/skos/core#> .
+<http://data.europa.eu/a4g/ontology#RequestForOfferLine> <http://www.w3.org/2004/02/skos/core#definition> "Details concerning a given unit of goods, services or works mentioned in the Request For Offer."@en .
+<http://data.europa.eu/a4g/ontology#specifiesOriginator> <http://www.w3.org/2004/02/skos/core#historyNote> "WG Approval 25/06/2024"@en .
+<http://data.europa.eu/a4g/ontology#isOptional> <http://www.w3.org/2004/02/skos/core#prefLabel> "is Optional"@en .
+<http://data.europa.eu/a4g/ontology#req> <http://www.w3.org/2002/07/owl#imports> <http://data.europa.eu/a4g/ontology#core> .
+<http://data.europa.eu/a4g/ontology#hasSubmissionDueDate> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#req> .
+<http://data.europa.eu/a4g/ontology#specifiesBuyer> <http://www.w3.org/2004/02/skos/core#prefLabel> "specifies Buyer"@en .
+<http://data.europa.eu/a4g/ontology#req> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://op.europa.eu/en/web/eu-vocabularies/e-procurement> .
+<http://data.europa.eu/a4g/ontology#hasSubmissionDueDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://data.europa.eu/a4g/ontology#req> <http://www.w3.org/2000/01/rdf-schema#comment> "This version is automatically generated from eRequest.xml on 2025-10-10" .
+<http://data.europa.eu/a4g/ontology#isSpecificToRequestForOfferLine> <http://www.w3.org/2004/02/skos/core#prefLabel> "is Specific To Request For Offer Line"@en .
+<http://data.europa.eu/a4g/ontology#req> <http://purl.org/dc/terms/publisher> "http://publications.europa.eu/resource/authority/corporate-body/PUBL" .
+<http://data.europa.eu/a4g/ontology#req> <http://purl.org/vocab/vann/preferredNamespacePrefix> "epo" .
+<http://data.europa.eu/a4g/ontology#req> <http://purl.org/dc/terms/license> "© European Union, 2014. Unless otherwise noted, the reuse of the Ontology is authorised under the European Union Public Licence v1.2 (https://eupl.eu/)." .
+<http://data.europa.eu/a4g/ontology#req> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://github.com/OP-TED/ePO/releases> .
+<http://data.europa.eu/a4g/ontology#req> <http://www.w3.org/2002/07/owl#priorVersion> "http://data.europa.eu/a4g/ontology#req-5.1.0" .
+<http://data.europa.eu/a4g/ontology#req> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/ns/adms> .
+<http://data.europa.eu/a4g/ontology#req> <http://www.w3.org/2002/07/owl#incompatibleWith> "4.2.0" .
+<http://data.europa.eu/a4g/ontology#RequestForOfferLine> <http://www.w3.org/2004/02/skos/core#prefLabel> "Request For Offer Line"@en .
+<http://data.europa.eu/a4g/ontology#req> <http://www.w3.org/2002/07/owl#imports> <http://purl.org/dc/terms/> .
+<http://data.europa.eu/a4g/ontology#refersToContract> <http://www.w3.org/2004/02/skos/core#prefLabel> "refers To Contract"@en .
+<http://data.europa.eu/a4g/ontology#hasSubmissionDueDate> <http://www.w3.org/2004/02/skos/core#definition> "Final date until the Submission is allowed. (epo-req:RequestForOffer)"@en .
+<http://data.europa.eu/a4g/ontology#RequestForOfferLine> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#Line> .
+<http://data.europa.eu/a4g/ontology#specifiesOfferCurrency> <http://www.w3.org/2004/02/skos/core#prefLabel> "specifies Offer Currency"@en .
+<http://data.europa.eu/a4g/ontology#refersToContract> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#req> .
+<http://data.europa.eu/a4g/ontology#specifiesOfferValidityPeriod> <http://www.w3.org/2004/02/skos/core#prefLabel> "specifies Offer Validity Period"@en .
+<http://data.europa.eu/a4g/ontology#specifiesContractor> <http://www.w3.org/2004/02/skos/core#prefLabel> "specifies Contractor"@en .
+<http://data.europa.eu/a4g/ontology#req> <http://www.w3.org/2002/07/owl#imports> <http://data.europa.eu/m8g/> .
+<http://data.europa.eu/a4g/ontology#specifiesOfferValidityPeriod> <http://www.w3.org/2004/02/skos/core#definition> "Relation indicating the time range in which an Offer is valid."@en .
+<http://data.europa.eu/a4g/ontology#RequestForOffer> <http://www.w3.org/2004/02/skos/core#prefLabel> "Request For Offer"@en .
+<http://data.europa.eu/a4g/ontology#specifiesDeliveryInformation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#req> .
+<http://data.europa.eu/a4g/ontology#specifiesOriginator> <http://www.w3.org/2004/02/skos/core#definition> "Relation indicating that the instance of the concept involves the Originator."@en .
+<http://data.europa.eu/a4g/ontology#hasDestinationCountryCode> <http://www.w3.org/2004/02/skos/core#definition> "Relation indicating the Country code of the destination."@en .
+<http://data.europa.eu/a4g/ontology#comprisesRequestForOfferLine> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#req> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://data.europa.eu/a4g/ontology#refersToContract> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#isOptional> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#req> .
+<http://data.europa.eu/a4g/ontology#refersToContract> <http://www.w3.org/2004/02/skos/core#definition> "Reference to a Contract."@en .
+<http://data.europa.eu/a4g/ontology#specifiesOfferValidityPeriod> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#req> .
+<http://data.europa.eu/a4g/ontology#RequestForOffer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#Document> .
+<http://data.europa.eu/a4g/ontology#RequestForOfferLine> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 16/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#specifiesDeliveryInformation> <http://www.w3.org/2004/02/skos/core#definition> "Relation indicating the Delivery Information."@en .
+<http://data.europa.eu/a4g/ontology#specifiesOriginator> <http://www.w3.org/2004/02/skos/core#prefLabel> "specifies Originator"@en .
+<http://data.europa.eu/a4g/ontology#req> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://docs.ted.europa.eu/home/index.html> .
+<http://data.europa.eu/a4g/ontology#RequestForOfferLine> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#req> .
+<http://data.europa.eu/a4g/ontology#comprisesRequestForOfferLine> <http://www.w3.org/2004/02/skos/core#prefLabel> "comprises Request For Offer Line"@en .
+<http://data.europa.eu/a4g/ontology#req> <http://www.w3.org/2002/07/owl#imports> <http://data.europa.eu/eli/ontology#> .
+<http://data.europa.eu/a4g/ontology#comprisesRequestForOfferLine> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .

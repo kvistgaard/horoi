@@ -1,0 +1,569 @@
+<http://data.europa.eu/a4g/ontology#Invoicee> <http://www.w3.org/2004/02/skos/core#definition> "The Role of an Agent who receives and processes the Invoices."@en .
+<http://data.europa.eu/a4g/ontology#refersToCatalogue> <http://www.w3.org/2004/02/skos/core#definition> "Additional information: If an order refers to multiple catalogues then all these catalogues ideally are subordinated to the same contract. Some countries however may allow multiple contracts per order (i.e Italy)."@en .
+<http://data.europa.eu/a4g/ontology#specifiesBuyer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#refersToOrderLine> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ord> .
+<http://data.europa.eu/a4g/ontology#isSpecificToRequestForOfferLine> <http://www.w3.org/2004/02/skos/core#definition> "Information that is particular to a Request For Offer Line."@en .
+<http://data.europa.eu/a4g/ontology#ord> <http://www.w3.org/2002/07/owl#imports> <http://data.europa.eu/a4g/ontology#ful> .
+<http://data.europa.eu/a4g/ontology#hasTotalAllowanceAmount> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#respondsToOrderCancellation> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#hasPrepaidAmount> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ord> .
+<http://data.europa.eu/a4g/ontology#hasShippingMark> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ord> .
+<http://data.europa.eu/a4g/ontology#hasTaxCategory> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#specifiesBuyer> <http://www.w3.org/2004/02/skos/core#definition> "Relation indicating that the instance of the concept involves the Buyer."@en .
+<http://data.europa.eu/a4g/ontology#OrderAgreementLine> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 16/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#specifiesDeliveryInformation> <http://www.w3.org/2004/02/skos/core#prefLabel> "specifies Delivery Information"@en .
+<http://data.europa.eu/a4g/ontology#hasTotalTaxExclusiveAmount> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Total Tax Exclusive Amount"@en .
+<http://data.europa.eu/a4g/ontology#AllowanceChargeInformation> <http://www.w3.org/2004/02/skos/core#historyNote> "WG Approval 16/05/2023"@en .
+<http://data.europa.eu/a4g/ontology#isSpecificToOrderLine> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#specifiesOrderResponseInformation> <http://www.w3.org/2004/02/skos/core#prefLabel> "specifies Order Response Information"@en .
+<http://data.europa.eu/a4g/ontology#OrderResponseInformation> <http://www.w3.org/2004/02/skos/core#definition> "Information about an Order Response."@en .
+<http://data.europa.eu/a4g/ontology#concernsConsignee> <http://www.w3.org/2004/02/skos/core#definition> "Relates to Consignee."@en .
+<http://data.europa.eu/a4g/ontology#refersToProject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#agreedBySeller> <http://www.w3.org/2004/02/skos/core#prefLabel> "agreed By Seller"@en .
+<http://data.europa.eu/a4g/ontology#hasPrepaidAmount> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Prepaid Amount"@en .
+<http://data.europa.eu/a4g/ontology#hasSellerOrderID> <http://www.w3.org/2004/02/skos/core#definition> "The identifier of the Order given by the Seller. Additional Information: This identifier is different than the identifier of the Order given by the Buyer and it is useful for internal purposes."@en .
+<http://data.europa.eu/a4g/ontology#isSpecificToRequestForOfferLine> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ord> .
+<http://data.europa.eu/a4g/ontology#hasAmount> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#specifiesOriginatorInformation> <http://www.w3.org/2004/02/skos/core#prefLabel> "specifies Originator Information"@en .
+<http://data.europa.eu/a4g/ontology#hasValidityPeriod> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#ord> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://joinup.ec.europa.eu/collection/eprocurement/solution/eprocurement-ontology/about> .
+<http://data.europa.eu/a4g/ontology#OrderResponseLine> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ord> .
+<http://data.europa.eu/a4g/ontology#specifiesSeller> <http://www.w3.org/2004/02/skos/core#prefLabel> "specifies Seller"@en .
+<http://data.europa.eu/a4g/ontology#hasRoundingAmount> <http://www.w3.org/2004/02/skos/core#definition> "Relation indicating the adjustment Monetary Value applied to bring calculated total to a convenient value."@en .
+<http://data.europa.eu/a4g/ontology#OrderResponseInformation> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 16/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#OrderAgreement> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 16/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#hasAccessURL> <http://www.w3.org/2004/02/skos/core#definition> "Location where the resource can be accessed. (epo-ord:DeliveryInformation)"@en .
+<http://data.europa.eu/a4g/ontology#hasSellerOrderID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#ord> <http://www.w3.org/2002/07/owl#imports> <http://data.europa.eu/a4g/ontology#cat> .
+<http://data.europa.eu/a4g/ontology#OrderResponseLine> <http://www.w3.org/2004/02/skos/core#definition> "Details concerning the Seller's ability to fulfil a given Order Line. Additional Information: The Order Response Line is used to inform on the acceptance or rejection of an Order Line or to make a counter-offer."@en .
+<http://data.europa.eu/a4g/ontology#concernsContract> <http://www.w3.org/2004/02/skos/core#definition> "Relates to Contractor."@en .
+<http://data.europa.eu/a4g/ontology#concernsContract> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#OrderChangeLine> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#respondsToOrderChange> <http://www.w3.org/2004/02/skos/core#prefLabel> "responds To Order Change"@en .
+<http://data.europa.eu/a4g/ontology#hasResponseDescription> <http://www.w3.org/2004/02/skos/core#definition> "Explanation of the response. (epo-ord:OrderResponse)"@en .
+<http://data.europa.eu/a4g/ontology#isSpecificToOrderResponseLine> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ord> .
+<http://data.europa.eu/a4g/ontology#OrderChangeConfirmation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ord> .
+<http://data.europa.eu/a4g/ontology#hasAccountingCost> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Accounting Cost"@en .
+<http://data.europa.eu/a4g/ontology#hasDeliveryDeadline> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2026"@en .
+<http://data.europa.eu/a4g/ontology#ord> <http://www.w3.org/2002/07/owl#imports> <http://data.europa.eu/a4g/ontology#core> .
+<http://data.europa.eu/a4g/ontology#hasPaymentTerm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://data.europa.eu/a4g/ontology#OrderAgreementLine> <http://www.w3.org/2004/02/skos/core#definition> "Details concerning a given unit of goods, services or works mentioned in the Order Agreement."@en .
+<http://data.europa.eu/a4g/ontology#Originator> <http://www.w3.org/2004/02/skos/core#prefLabel> "Originator"@en .
+<http://data.europa.eu/a4g/ontology#isSpecificToRequestForOfferLine> <http://www.w3.org/2004/02/skos/core#prefLabel> "is Specific To Request For Offer Line"@en .
+<http://data.europa.eu/a4g/ontology#specifiesConsignee> <http://www.w3.org/2004/02/skos/core#definition> "Relation indicating that the instance of the concept involves the Consignee."@en .
+<http://data.europa.eu/a4g/ontology#comprisesOrderAgreementLine> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#hasAccountingCost> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://data.europa.eu/a4g/ontology#refersToDeliveryInformation> <http://www.w3.org/2004/02/skos/core#prefLabel> "refers To Delivery Information"@en .
+<http://data.europa.eu/a4g/ontology#specifiesInvoicee> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#specifiesConsignee> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ord> .
+<http://data.europa.eu/a4g/ontology#hasPrice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#hasResponseStatus> <http://www.w3.org/2004/02/skos/core#definition> "Relation indicating the response status."@en .
+<http://data.europa.eu/a4g/ontology#hasRequestedShippingPriority> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://data.europa.eu/a4g/ontology#isSubmittedForOrderLine> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#specifiesOriginator> <http://www.w3.org/2004/02/skos/core#definition> "Relation indicating that the instance of the concept involves the Originator."@en .
+<http://data.europa.eu/a4g/ontology#hasVATExemptionReasonDescription> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2026"@en .
+<http://data.europa.eu/a4g/ontology#hasVATExemptionReasonDescription> <http://www.w3.org/2004/02/skos/core#prefLabel> "has VAT Exemption Reason Description"@en .
+<http://data.europa.eu/a4g/ontology#hasActualDeliveryDate> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Actual Delivery Date"@en .
+<http://data.europa.eu/a4g/ontology#OrderCancellation> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 16/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#hasTotalAllowanceAmount> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Total Allowance Amount"@en .
+<http://data.europa.eu/a4g/ontology#hasDownloadURL> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Download URL"@en .
+<http://data.europa.eu/a4g/ontology#specifiesOriginatorInformation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#refersToOrder> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#agreedBySeller> <http://www.w3.org/2004/02/skos/core#historyNote> "WG Approval 10/06/2024"@en .
+<http://data.europa.eu/a4g/ontology#concernsContract> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ord> .
+<http://data.europa.eu/a4g/ontology#OrderResponse> <http://www.w3.org/2004/02/skos/core#definition> "A formal reply from the Seller to the Buyer stating the Seller's ability to fulfil the order. Additional Information: The Order Response is used to inform on the acceptance or rejection of an Order or to make a counter-offer."@en .
+<http://data.europa.eu/a4g/ontology#OriginatorInformation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ord> .
+<http://data.europa.eu/a4g/ontology#hasResponseDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://data.europa.eu/a4g/ontology#hasTotalChargeAmount> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#ord> <http://purl.org/dc/terms/license> "© European Union, 2014. Unless otherwise noted, the reuse of the Ontology is authorised under the European Union Public Licence v1.2 (https://eupl.eu/)." .
+<http://data.europa.eu/a4g/ontology#hasQuantity> <http://www.w3.org/2004/02/skos/core#definition> "Relation indicating that the instance of the concept has a Quantity."@en .
+<http://data.europa.eu/a4g/ontology#isSpecificToOrderLine> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ord> .
+<http://data.europa.eu/a4g/ontology#isSpecificToRequestForOfferLine> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#isSpecificToOrderLine> <http://www.w3.org/2004/02/skos/core#definition> "Information that is particular to one or multiple Order Lines."@en .
+<http://data.europa.eu/a4g/ontology#comprisesOrderAgreementLine> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ord> .
+<http://data.europa.eu/a4g/ontology#hasTrackingID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#hasTaxCategory> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ord> .
+<http://data.europa.eu/a4g/ontology#hasAmount> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ord> .
+<http://data.europa.eu/a4g/ontology#respondsToOrderChange> <http://www.w3.org/2004/02/skos/core#definition> "Takes action in reaction to an Order Change."@en .
+<http://data.europa.eu/a4g/ontology#hasBackorderQuantity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#hasValidityPeriod> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ord> .
+<http://data.europa.eu/a4g/ontology#specifiesOrderResponseInformation> <http://www.w3.org/2004/02/skos/core#definition> "Relation indicating the Order Response Information."@en .
+<http://data.europa.eu/a4g/ontology#hasDownloadURL> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ord> .
+<http://data.europa.eu/a4g/ontology#TaxInformation> <http://www.w3.org/2004/02/skos/core#prefLabel> "Tax Information"@en .
+<http://data.europa.eu/a4g/ontology#specifiesDeliveryAgreement> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#hasQuantity> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Quantity"@en .
+<http://data.europa.eu/a4g/ontology#hasRequestedDeliveryPeriod> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#isSubmittedForOrderLine> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ord> .
+<http://data.europa.eu/a4g/ontology#DeliveryInformation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#hasVATExemptionReason> <http://www.w3.org/2004/02/skos/core#prefLabel> "has VAT Exemption Reason"@en .
+<http://data.europa.eu/a4g/ontology#concernsContract> <http://www.w3.org/2004/02/skos/core#prefLabel> "concerns Contract"@en .
+<http://data.europa.eu/a4g/ontology#specifiesDeliveryAgreementLocation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#OrderLine> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ord> .
+<http://data.europa.eu/a4g/ontology#hasAllowanceChargeReasonDescription> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2026"@en .
+<http://data.europa.eu/a4g/ontology#OrderChange> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ord> .
+<http://data.europa.eu/a4g/ontology#hasRequestedShippingPriority> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ord> .
+<http://data.europa.eu/a4g/ontology#hasVATExemptionReasonDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://data.europa.eu/a4g/ontology#specifiesDeliveryInformation> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#Originator> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ord> .
+<http://data.europa.eu/a4g/ontology#specifiesOriginatorInformation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ord> .
+<http://data.europa.eu/a4g/ontology#hasRoundingAmount> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#specifiesSeller> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#refersToProject> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#specifiesBuyer> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ord> .
+<http://data.europa.eu/a4g/ontology#Consignee> <http://www.w3.org/2004/02/skos/core#definition> "A Role of an Agent that receives the Shipment of the Procurement (service, goods or works) and who is taking possession. Additional information: The Role is carried out by the Customer or on behalf of the Customer. The possession of the goods does not necessary imply ownership. The Consignee may be the end-user or the beneficiary. (Consignee) Definition from PEPPOL Despatch: The Consignee is the person or Organisation to which the products will be shipped and who is taking possession. The Role is carried out by the Customer or on behalf of the Customer."@en .
+<http://data.europa.eu/a4g/ontology#hasAllowanceChargeReasonDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://data.europa.eu/a4g/ontology#ord> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://op.europa.eu/en/web/eu-vocabularies/e-procurement> .
+<http://data.europa.eu/a4g/ontology#hasTotalTaxInclusiveAmount> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#hasRequestedDeliveryPeriod> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Requested Delivery Period"@en .
+<http://data.europa.eu/a4g/ontology#comprisesOrderAgreementLine> <http://www.w3.org/2004/02/skos/core#prefLabel> "comprises Order Agreement Line"@en .
+<http://data.europa.eu/a4g/ontology#ord> <http://www.w3.org/2002/07/owl#imports> <http://purl.org/dc/terms/> .
+<http://data.europa.eu/a4g/ontology#OrderCancellationRejection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#hasPrice> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ord> .
+<http://data.europa.eu/a4g/ontology#hasPrepaidAmount> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#hasTrackingID> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ord> .
+<http://data.europa.eu/a4g/ontology#TaxInformation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#ord> <http://purl.org/dc/terms/publisher> "http://publications.europa.eu/resource/authority/corporate-body/PUBL" .
+<http://data.europa.eu/a4g/ontology#specifiesSeller> <http://www.w3.org/2004/02/skos/core#definition> "Relation indicating that the instance of the concept involves the Seller."@en .
+<http://data.europa.eu/a4g/ontology#refersToOrderLine> <http://www.w3.org/2004/02/skos/core#prefLabel> "refers To Order Line"@en .
+<http://data.europa.eu/a4g/ontology#ord> <http://purl.org/dc/terms/title> "eProcurement Ontology Ordering - core"@en .
+<http://data.europa.eu/a4g/ontology#ord> <http://www.w3.org/2002/07/owl#imports> <http://data.europa.eu/m8g/> .
+<http://data.europa.eu/a4g/ontology#specifiesPlaceOfDelivery> <http://www.w3.org/2004/02/skos/core#prefLabel> "specifies Place Of Delivery"@en .
+<http://data.europa.eu/a4g/ontology#OrderAgreement> <http://www.w3.org/2004/02/skos/core#definition> "A Document sent from the Seller to Buyer specifying the goods, services or works to be delivered concerning a specific Order."@en .
+<http://data.europa.eu/a4g/ontology#OrderCancellationConfirmation> <http://www.w3.org/2004/02/skos/core#prefLabel> "Order Cancellation Confirmation"@en .
+<http://data.europa.eu/a4g/ontology#hasResponseDescription> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Response Description"@en .
+<http://data.europa.eu/a4g/ontology#hasTotalLineAmount> <http://www.w3.org/2004/02/skos/core#definition> "Relation indicating the overall Monetary Value of the Line."@en .
+<http://data.europa.eu/a4g/ontology#specifiesDeliveryAgreementLocation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ord> .
+<http://data.europa.eu/a4g/ontology#comprisesOrderResponseLine> <http://www.w3.org/2004/02/skos/core#definition> "Incorporates Order Response Line."@en .
+<http://data.europa.eu/a4g/ontology#refersToDeliveryInformation> <http://www.w3.org/2004/02/skos/core#historyNote> "WG Approval 25/06/2024"@en .
+<http://data.europa.eu/a4g/ontology#OrderCancellationRejection> <http://www.w3.org/2004/02/skos/core#prefLabel> "Order Cancellation Rejection"@en .
+<http://data.europa.eu/a4g/ontology#TaxInformation> <http://www.w3.org/2004/02/skos/core#definition> "Information about the imposition of mandatory levies required by law."@en .
+<http://data.europa.eu/a4g/ontology#hasAcceptanceStatus> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ord> .
+<http://data.europa.eu/a4g/ontology#OrderChangeConfirmation> <http://www.w3.org/2004/02/skos/core#definition> "A Document providing information on the acknowledgment of the Order Change."@en .
+<http://data.europa.eu/a4g/ontology#refersToOrder> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ord> .
+<http://data.europa.eu/a4g/ontology#isCalculatedOn> <http://www.w3.org/2004/02/skos/core#definition> "The monetary amount to which the multiplier factor is applied in calculating the amount of this allowance, charge or tax."@en .
+<http://data.europa.eu/a4g/ontology#hasAllowanceChargeReason> <http://www.w3.org/2004/02/skos/core#definition> "The justification for using the Allowance or the Charge."@en .
+<http://data.europa.eu/a4g/ontology#specifiesOriginator> <http://www.w3.org/2004/02/skos/core#prefLabel> "specifies Originator"@en .
+<http://data.europa.eu/a4g/ontology#hasDeliveryEmail> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 03/04/2025"@en .
+<http://data.europa.eu/a4g/ontology#OrderLine> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#Line> .
+<http://data.europa.eu/a4g/ontology#refersToProject> <http://www.w3.org/2004/02/skos/core#prefLabel> "refers To Project"@en .
+<http://data.europa.eu/a4g/ontology#specifiesAllowanceInformation> <http://www.w3.org/2004/02/skos/core#prefLabel> "specifies Allowance Information"@en .
+<http://data.europa.eu/a4g/ontology#specifiesAllowanceInformation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#isSubmittedForOrderLine> <http://www.w3.org/2004/02/skos/core#prefLabel> "is Submitted For Order Line"@en .
+<http://data.europa.eu/a4g/ontology#hasTotalTaxInclusiveAmount> <http://www.w3.org/2004/02/skos/core#definition> "Relation indicating the overall Monetary Value with Tax."@en .
+<http://data.europa.eu/a4g/ontology#OrderAgreementLine> <http://www.w3.org/2004/02/skos/core#prefLabel> "Order Agreement Line"@en .
+<http://data.europa.eu/a4g/ontology#hasTrackingID> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Tracking ID"@en .
+<http://data.europa.eu/a4g/ontology#hasGeneralDeliveryTerm> <http://www.w3.org/2004/02/skos/core#definition> "Terms and conditions related to the delivery of goods. (epo-ord:DeliveryAgreement)"@en .
+<http://data.europa.eu/a4g/ontology#isSpecificToOrderResponseLine> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#OriginatorInformation> <http://www.w3.org/2004/02/skos/core#historyNote> "WG Approval 20/03/2023"@en .
+<http://data.europa.eu/a4g/ontology#OrderLine> <http://www.w3.org/2004/02/skos/core#prefLabel> "Order Line"@en .
+<http://data.europa.eu/a4g/ontology#isSubmittedForOrderLine> <http://www.w3.org/2004/02/skos/core#definition> "Relation indicating that the instance of the concept is sent for a specific Order Line."@en .
+<http://data.europa.eu/a4g/ontology#refersToOrderLine> <http://www.w3.org/2004/02/skos/core#historyNote> "WG Approval 25/06/2024"@en .
+<http://data.europa.eu/a4g/ontology#AllowanceInformation> <http://www.w3.org/2004/02/skos/core#definition> "Information about the discounts imposed."@en .
+<http://data.europa.eu/a4g/ontology#isSpecificToOrderResponseLine> <http://www.w3.org/2004/02/skos/core#prefLabel> "is Specific To Order Response Line"@en .
+<http://data.europa.eu/a4g/ontology#concernsOriginator> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#ord> <http://www.w3.org/2002/07/owl#incompatibleWith> "4.2.0" .
+<http://data.europa.eu/a4g/ontology#DeliveryInformation> <http://www.w3.org/2004/02/skos/core#historyNote> "WG Approval 16/05/2023"@en .
+<http://data.europa.eu/a4g/ontology#comprisesOrderAgreementLine> <http://www.w3.org/2004/02/skos/core#definition> "Incorporates Order Agreement Line."@en .
+<http://data.europa.eu/a4g/ontology#ord> <http://www.w3.org/2002/07/owl#versionIRI> <http://data.europa.eu/a4g/ontology#ord-5.2.0> .
+<http://data.europa.eu/a4g/ontology#hasRequestedDeliveryPeriod> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ord> .
+<http://data.europa.eu/a4g/ontology#specifiesOrderResponseInformation> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#hasDeliveryDeadline> <http://www.w3.org/2004/02/skos/core#definition> "The final accepted date for Delivery. (epo-ord:DeliveryInformation)"@en .
+<http://data.europa.eu/a4g/ontology#hasBackorderQuantity> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ord> .
+<http://data.europa.eu/a4g/ontology#concernsContract> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#OrderChange> <http://www.w3.org/2004/02/skos/core#definition> "A Document providing information on the formal request from the Buyer to the Seller specifying the requested change in goods, services or works to be delivered in respect to a previous Order."@en .
+<http://data.europa.eu/a4g/ontology#OrderResponse> <http://www.w3.org/2004/02/skos/core#historyNote> "WG Approval 20/04/2023"@en .
+<http://data.europa.eu/a4g/ontology#DeliveryInformation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#InformationHub> .
+<http://data.europa.eu/a4g/ontology#hasShippingMark> <http://www.w3.org/2004/02/skos/core#historyNote> "WG Approval 05/06/2024"@en .
+<http://data.europa.eu/a4g/ontology#DeliveryAgreement> <http://www.w3.org/2004/02/skos/core#prefLabel> "Delivery Agreement"@en .
+<http://data.europa.eu/a4g/ontology#hasTotalChargeAmount> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#Order> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#AllowanceInformation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#AllowanceChargeInformation> .
+<http://data.europa.eu/a4g/ontology#agreedBySeller> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#hasTrackingID> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#isPartialDeliveryAllowed> <http://www.w3.org/2004/02/skos/core#historyNote> "WG Approval 03/04/2025"@en .
+<http://data.europa.eu/a4g/ontology#hasGeneralDeliveryTerm> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ord> .
+<http://data.europa.eu/a4g/ontology#OrderCancellationConfirmation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#PostAwardDocument> .
+<http://data.europa.eu/a4g/ontology#specifiesInvoicee> <http://www.w3.org/2004/02/skos/core#prefLabel> "specifies Invoicee"@en .
+<http://data.europa.eu/a4g/ontology#hasDeliveryPeriod> <http://www.w3.org/2004/02/skos/core#definition> "Relation indicating the time range for the delivery."@en .
+<http://data.europa.eu/a4g/ontology#hasQuantity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#OrderChange> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#Order> .
+<http://data.europa.eu/a4g/ontology#OrderAgreementLine> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#hasTaxInformation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ord> .
+<http://data.europa.eu/a4g/ontology#comprisesOrderAgreementLine> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#hasSellerOrderID> <http://www.w3.org/2004/02/skos/core#historyNote> "WG Approval 12/10/2023"@en .
+<http://data.europa.eu/a4g/ontology#hasRoundingAmount> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ord> .
+<http://data.europa.eu/a4g/ontology#hasPrice> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#ord> <http://purl.org/vocab/vann/preferredNamespacePrefix> "epo" .
+<http://data.europa.eu/a4g/ontology#comprisesOrderResponseLine> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#hasPrice> <http://www.w3.org/2004/02/skos/core#definition> "Relation indicating that the instance of the concept has a Price."@en .
+<http://data.europa.eu/a4g/ontology#OrderChangeConfirmation> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 16/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#Order> <http://www.w3.org/2004/02/skos/core#definition> "A formal request of the Buyer to the Seller specifying the goods, services or works to be delivered. Additional Information: A Buyer submits an Order for delivery of goods, services or works to a Seller."@en .
+<http://data.europa.eu/a4g/ontology#OrderAgreement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#hasAllowanceChargeReasonDescription> <http://www.w3.org/2004/02/skos/core#definition> "Explanatory text about the motive of the Allowance Charge. (epo-ord:AllowanceChargeInformation)"@en .
+<http://data.europa.eu/a4g/ontology#specifiesOriginatorInformation> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#specifiesConsignee> <http://www.w3.org/2004/02/skos/core#historyNote> "WG Approval 25/06/2024"@en .
+<http://data.europa.eu/a4g/ontology#ContractInformation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#hasStatus> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ord> .
+<http://data.europa.eu/a4g/ontology#OrderChangeLine> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#OrderLine> .
+<http://data.europa.eu/a4g/ontology#DeliveryAgreement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#hasTotalChargeAmount> <http://www.w3.org/2004/02/skos/core#definition> "Relation indicating the overall Monetary Value of the Charge."@en .
+<http://data.europa.eu/a4g/ontology#specifiesContractInformation> <http://www.w3.org/2004/02/skos/core#prefLabel> "specifies Contract Information"@en .
+<http://data.europa.eu/a4g/ontology#specifiesDeliveryInformation> <http://www.w3.org/2004/02/skos/core#definition> "Relation indicating the Delivery Information."@en .
+<http://data.europa.eu/a4g/ontology#hasBackorderQuantity> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Backorder Quantity"@en .
+<http://data.europa.eu/a4g/ontology#concernsOriginatorRequest> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ord> .
+<http://data.europa.eu/a4g/ontology#hasPercentage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://data.europa.eu/a4g/ontology#comprisesOrderChangeLine> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ord> .
+<http://data.europa.eu/a4g/ontology#ord> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://docs.ted.europa.eu/home/index.html> .
+<http://data.europa.eu/a4g/ontology#hasTotalTaxInclusiveAmount> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Total Tax Inclusive Amount"@en .
+<http://data.europa.eu/a4g/ontology#ord> <http://www.w3.org/2000/01/rdf-schema#comment> "This version is automatically generated from eOrdering.xml on 2025-10-10" .
+<http://data.europa.eu/a4g/ontology#specifiesAllowanceInformation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ord> .
+<http://data.europa.eu/a4g/ontology#hasQuantity> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ord> .
+<http://data.europa.eu/a4g/ontology#AllowanceInformation> <http://www.w3.org/2004/02/skos/core#prefLabel> "Allowance Information"@en .
+<http://data.europa.eu/a4g/ontology#hasBackorderQuantity> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#Order> <http://www.w3.org/2004/02/skos/core#prefLabel> "Order"@en .
+<http://data.europa.eu/a4g/ontology#ord> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://data.europa.eu/a4g/ontology#" .
+<http://data.europa.eu/a4g/ontology#ContractInformation> <http://www.w3.org/2004/02/skos/core#prefLabel> "Contract Information"@en .
+<http://data.europa.eu/a4g/ontology#respondsToOrderCancellation> <http://www.w3.org/2004/02/skos/core#definition> "Takes action in reaction to an Order Cancellation."@en .
+<http://data.europa.eu/a4g/ontology#AllowanceChargeInformation> <http://www.w3.org/2004/02/skos/core#prefLabel> "Allowance Charge Information"@en .
+<http://data.europa.eu/a4g/ontology#hasAccountingCost> <http://www.w3.org/2004/02/skos/core#definition> "The accounting reference used by the Buyer to specify the account to which the order and the corresponding invoice are booked. (epo-ord:Order) The accounting reference used by the Buyer to specify the account to which the order and the corresponding invoice are booked. (epo-ord:OrderLine)"@en .
+<http://data.europa.eu/a4g/ontology#hasTaxScheme> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ord> .
+<http://data.europa.eu/a4g/ontology#comprisesOrderResponseLine> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ord> .
+<http://data.europa.eu/a4g/ontology#OrderChange> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 16/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#specifiesDeliveryAgreementLocation> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#AllowanceChargeInformation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ord> .
+<http://data.europa.eu/a4g/ontology#concernsConsignee> <http://www.w3.org/2004/02/skos/core#prefLabel> "concerns Consignee"@en .
+<http://data.europa.eu/a4g/ontology#ord> <http://www.w3.org/2002/07/owl#priorVersion> "http://data.europa.eu/a4g/ontology#ord-5.1.0" .
+<http://data.europa.eu/a4g/ontology#Invoicee> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ord> .
+<http://data.europa.eu/a4g/ontology#OrderResponseInformation> <http://www.w3.org/2004/02/skos/core#prefLabel> "Order Response Information"@en .
+<http://data.europa.eu/a4g/ontology#OrderCancellation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#OrderChange> <http://www.w3.org/2004/02/skos/core#prefLabel> "Order Change"@en .
+<http://data.europa.eu/a4g/ontology#Seller> <http://www.w3.org/2004/02/skos/core#historyNote> "WG Approval 08/09/2022"@en .
+<http://data.europa.eu/a4g/ontology#isSpecificToOrderResponseLine> <http://www.w3.org/2004/02/skos/core#definition> "Information that is particular to an Order Response Line."@en .
+<http://data.europa.eu/a4g/ontology#hasAmountDueForPayment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#TaxInformation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#InformationHub> .
+<http://data.europa.eu/a4g/ontology#hasDeliveryPeriod> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#hasRoundingAmount> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#ContractInformation> <http://www.w3.org/2004/02/skos/core#definition> "Information about the Contract."@en .
+<http://data.europa.eu/a4g/ontology#agreedBySeller> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ord> .
+<http://data.europa.eu/a4g/ontology#hasActualDeliveryDate> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2026"@en .
+<http://data.europa.eu/a4g/ontology#hasPriceDiscountInformation> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#OrderCancellationConfirmation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ord> .
+<http://data.europa.eu/a4g/ontology#hasAccountingCost> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ord> .
+<http://data.europa.eu/a4g/ontology#OrderChangeRejection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#hasAllowanceChargeReason> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#refersToOrderLine> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#hasAcceptanceStatus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#Consignee> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#AcquiringParty> .
+<http://data.europa.eu/a4g/ontology#specifiesBuyer> <http://www.w3.org/2004/02/skos/core#prefLabel> "specifies Buyer"@en .
+<http://data.europa.eu/a4g/ontology#hasAccessURL> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ord> .
+<http://data.europa.eu/a4g/ontology#DeliveryInformation> <http://www.w3.org/2004/02/skos/core#prefLabel> "Delivery Information"@en .
+<http://data.europa.eu/a4g/ontology#specifiesPlaceOfDelivery> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#OrderResponse> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ord> .
+<http://data.europa.eu/a4g/ontology#hasRoundingAmount> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Rounding Amount"@en .
+<http://data.europa.eu/a4g/ontology#specifiesChargeInformation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ord> .
+<http://data.europa.eu/a4g/ontology#hasTotalAllowanceAmount> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#Originator> <http://www.w3.org/2004/02/skos/core#definition> "A Role of an Agent that expresses the needs to trigger the Procurement. Additional Information: The Originator is often the end-user or the Beneficiary."@en .
+<http://data.europa.eu/a4g/ontology#specifiesConsignee> <http://www.w3.org/2004/02/skos/core#prefLabel> "specifies Consignee"@en .
+<http://data.europa.eu/a4g/ontology#hasShippingMark> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Shipping Mark"@en .
+<http://data.europa.eu/a4g/ontology#comprisesOrderLine> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#TaxInformation> <http://www.w3.org/2004/02/skos/core#historyNote> "WG Approval 25/04/2023"@en .
+<http://data.europa.eu/a4g/ontology#hasAllowanceChargeReasonDescription> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Allowance Charge Reason Description"@en .
+<http://data.europa.eu/a4g/ontology#hasPaymentTerm> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ord> .
+<http://data.europa.eu/a4g/ontology#OrderResponseInformation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#InformationHub> .
+<http://data.europa.eu/a4g/ontology#hasPriceDiscountInformation> <http://www.w3.org/2004/02/skos/core#definition> "Relation indicating the Allowance Information applied on the Price."@en .
+<http://data.europa.eu/a4g/ontology#Consignee> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#concernsConsignee> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#hasDeliveryPeriod> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ord> .
+<http://data.europa.eu/a4g/ontology#OrderResponseLine> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#hasAccessURL> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 07/04/2022"@en .
+<http://data.europa.eu/a4g/ontology#hasTaxScheme> <http://www.w3.org/2004/02/skos/core#definition> "Relation indicating the Tax Scheme."@en .
+<http://data.europa.eu/a4g/ontology#isSpecificToInvoiceLine> <http://www.w3.org/2004/02/skos/core#prefLabel> "is Specific To Invoice Line"@en .
+<http://data.europa.eu/a4g/ontology#OrderResponse> <http://www.w3.org/2004/02/skos/core#prefLabel> "Order Response"@en .
+<http://data.europa.eu/a4g/ontology#hasRequestedShippingPriority> <http://www.w3.org/2004/02/skos/core#definition> "The level of importance or sequence assigned to the delivery. (epo-ord:DeliveryAgreement)"@en .
+<http://data.europa.eu/a4g/ontology#hasActualDeliveryDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://data.europa.eu/a4g/ontology#hasPrepaidAmount> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#hasVATExemptionReason> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2026"@en .
+<http://data.europa.eu/a4g/ontology#isSpecificToInvoiceLine> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#DeliveryAgreement> <http://www.w3.org/2004/02/skos/core#definition> "Term applying to the delivery of goods, services and works. Additional Information: Delivery terms identifier can normally be Incoterms accompanied by the description of specific conditions related to the delivery."@en .
+<http://data.europa.eu/a4g/ontology#hasResponseStatus> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Response Status"@en .
+<http://data.europa.eu/a4g/ontology#hasPrice> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Price"@en .
+<http://data.europa.eu/a4g/ontology#refersToOrder> <http://www.w3.org/2004/02/skos/core#historyNote> "WG Approval 25/06/2024"@en .
+<http://data.europa.eu/a4g/ontology#specifiesDespatcher> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#hasDeliveryEmail> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://data.europa.eu/a4g/ontology#OrderCancellationRejection> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#PostAwardDocument> .
+<http://data.europa.eu/a4g/ontology#hasTaxInformation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#concernsOriginatorRequest> <http://www.w3.org/2004/02/skos/core#definition> "Relates to Originator Request."@en .
+<http://data.europa.eu/a4g/ontology#isPartialDeliveryAllowed> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://data.europa.eu/a4g/ontology#hasDownloadURL> <http://www.w3.org/2004/02/skos/core#historyNote> "WG Approval 08/04/2025"@en .
+<http://data.europa.eu/a4g/ontology#concernsOriginator> <http://www.w3.org/2004/02/skos/core#prefLabel> "concerns Originator"@en .
+<http://data.europa.eu/a4g/ontology#Consignee> <http://www.w3.org/2004/02/skos/core#prefLabel> "Consignee"@en .
+<http://data.europa.eu/a4g/ontology#refersToCatalogueLine> <http://www.w3.org/2004/02/skos/core#definition> "Additional Information: The reference to the catalogue line is for information only, to trace the source of the information provided in the order line."@en .
+<http://data.europa.eu/a4g/ontology#isSubmittedForOrder> <http://www.w3.org/2004/02/skos/core#definition> "Relation indicating that the instance of the concept is sent for a specific Order."@en .
+<http://data.europa.eu/a4g/ontology#ord> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/ns/org#> .
+<http://data.europa.eu/a4g/ontology#hasDeliveryDeadline> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://data.europa.eu/a4g/ontology#specifiesContractInformation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#hasAmountDueForPayment> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ord> .
+<http://data.europa.eu/a4g/ontology#hasValidityPeriod> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Validity Period"@en .
+<http://data.europa.eu/a4g/ontology#OrderAgreement> <http://www.w3.org/2004/02/skos/core#prefLabel> "Order Agreement"@en .
+<http://data.europa.eu/a4g/ontology#hasAmountDueForPayment> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Amount Due For Payment"@en .
+<http://data.europa.eu/a4g/ontology#refersToCatalogue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#hasResponseDescription> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ord> .
+<http://data.europa.eu/a4g/ontology#isSubmittedForOrder> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#DeliveryAgreement> <http://www.w3.org/2004/02/skos/core#historyNote> "WG Approval 16/05/2023"@en .
+<http://data.europa.eu/a4g/ontology#hasTaxScheme> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Tax Scheme"@en .
+<http://data.europa.eu/a4g/ontology#hasQuantity> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#OrderChangeRejection> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ord> .
+<http://data.europa.eu/a4g/ontology#hasAllowanceChargeReason> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ord> .
+<http://data.europa.eu/a4g/ontology#hasTaxInformation> <http://www.w3.org/2004/02/skos/core#definition> "Relation indicating the Tax Information."@en .
+<http://data.europa.eu/a4g/ontology#hasPrepaidAmount> <http://www.w3.org/2004/02/skos/core#definition> "Relation indicating the Monetary Value that is paid in advance."@en .
+<http://data.europa.eu/a4g/ontology#hasTrackingID> <http://www.w3.org/2004/02/skos/core#definition> "Relation indicating that thedelivery has an identifier for traceability purposes."@en .
+<http://data.europa.eu/a4g/ontology#isSpecificToOrderResponseLine> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#specifiesBuyer> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#isCalculatedOn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#ord> <http://www.w3.org/2002/07/owl#imports> <http://data.europa.eu/eli/ontology#> .
+<http://data.europa.eu/a4g/ontology#OrderChangeLine> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ord> .
+<http://data.europa.eu/a4g/ontology#specifiesOriginator> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ord> .
+<http://data.europa.eu/a4g/ontology#OrderChangeRejection> <http://www.w3.org/2004/02/skos/core#definition> "A Document providing information on the non-acceptance of the Order Change."@en .
+<http://data.europa.eu/a4g/ontology#hasStatus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#ContractInformation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#InformationHub> .
+<http://data.europa.eu/a4g/ontology#comprisesOrderResponseLine> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#concernsOriginatorRequest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#isSpecificToInvoiceLine> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ord> .
+<http://data.europa.eu/a4g/ontology#comprisesOrderChangeLine> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#OrderCancellationRejection> <http://www.w3.org/2004/02/skos/core#definition> "A Document providing information on the non-acceptance of the Order Cancellation."@en .
+<http://data.europa.eu/a4g/ontology#specifiesPlaceOfDelivery> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ord> .
+<http://data.europa.eu/a4g/ontology#comprisesOrderLine> <http://www.w3.org/2004/02/skos/core#definition> "Incorporates Order Line."@en .
+<http://data.europa.eu/a4g/ontology#specifiesDespatcher> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ord> .
+<http://data.europa.eu/a4g/ontology#hasVATExemptionReason> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://data.europa.eu/a4g/ontology#refersToCatalogueLine> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#hasTotalAllowanceAmount> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ord> .
+<http://data.europa.eu/a4g/ontology#respondsToOrderChange> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#hasTaxScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#specifiesContractInformation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ord> .
+<http://data.europa.eu/a4g/ontology#hasAllowanceChargeReasonDescription> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ord> .
+<http://data.europa.eu/a4g/ontology#specifiesChargeInformation> <http://www.w3.org/2004/02/skos/core#prefLabel> "specifies Charge Information"@en .
+<http://data.europa.eu/a4g/ontology#DeliveryInformation> <http://www.w3.org/2004/02/skos/core#definition> "Information about the timing, the delivery destination, the delivery agreement and the involved parties."@en .
+<http://data.europa.eu/a4g/ontology#hasVATExemptionReasonDescription> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ord> .
+<http://data.europa.eu/a4g/ontology#concernsConsignee> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ord> .
+<http://data.europa.eu/a4g/ontology#hasPaymentTerm> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Payment Term"@en .
+<http://data.europa.eu/a4g/ontology#hasStatus> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Status"@en .
+<http://data.europa.eu/a4g/ontology#OrderAgreementLine> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#OrderLine> .
+<http://data.europa.eu/a4g/ontology#refersToOrder> <http://www.w3.org/2004/02/skos/core#prefLabel> "refers To Order"@en .
+<http://data.europa.eu/a4g/ontology#ord> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/2006/time> .
+<http://data.europa.eu/a4g/ontology#hasTotalLineAmount> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Total Line Amount"@en .
+<http://data.europa.eu/a4g/ontology#hasDeliveryPeriod> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Delivery Period"@en .
+<http://data.europa.eu/a4g/ontology#isCalculatedOn> <http://www.w3.org/2004/02/skos/core#prefLabel> "is Calculated On"@en .
+<http://data.europa.eu/a4g/ontology#hasShippingMark> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://data.europa.eu/a4g/ontology#ord> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/2004/02/skos/core#> .
+<http://data.europa.eu/a4g/ontology#hasShippingMark> <http://www.w3.org/2004/02/skos/core#definition> "A text that the buyer requests to be printed on the packing labels. (epo-ord:DeliveryInformation)"@en .
+<http://data.europa.eu/a4g/ontology#Seller> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#specifiesContractInformation> <http://www.w3.org/2004/02/skos/core#definition> "Relation indicating the Contract Information."@en .
+<http://data.europa.eu/a4g/ontology#ord> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/ns/locn> .
+<http://data.europa.eu/a4g/ontology#OrderChangeConfirmation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#specifiesDeliveryInformation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#Seller> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#OfferingParty> .
+<http://data.europa.eu/a4g/ontology#hasRequestedDeliveryPeriod> <http://www.w3.org/2004/02/skos/core#definition> "Relation indicating the sought time range for the delivery."@en .
+<http://data.europa.eu/a4g/ontology#ContractInformation> <http://www.w3.org/2004/02/skos/core#historyNote> "WG Approval 20/04/2023"@en .
+<http://data.europa.eu/a4g/ontology#refersToCatalogue> <http://www.w3.org/2004/02/skos/core#prefLabel> "refers To Catalogue"@en .
+<http://data.europa.eu/a4g/ontology#hasDeliveryPeriod> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#AllowanceChargeInformation> <http://www.w3.org/2004/02/skos/core#definition> "Information about discounts, taxes, duties and fees imposed."@en .
+<http://data.europa.eu/a4g/ontology#ord> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://github.com/OP-TED/ePO/releases> .
+<http://data.europa.eu/a4g/ontology#isSubmittedForOrderLine> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#OrderLine> <http://www.w3.org/2004/02/skos/core#historyNote> "WG Approval 20/04/2023"@en .
+<http://data.europa.eu/a4g/ontology#AllowanceInformation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#DeliveryInformation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ord> .
+<http://data.europa.eu/a4g/ontology#comprisesOrderResponseLine> <http://www.w3.org/2004/02/skos/core#prefLabel> "comprises Order Response Line"@en .
+<http://data.europa.eu/a4g/ontology#refersToCatalogue> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ord> .
+<http://data.europa.eu/a4g/ontology#isSubmittedForOrder> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ord> .
+<http://data.europa.eu/a4g/ontology#OrderChangeLine> <http://www.w3.org/2004/02/skos/core#prefLabel> "Order Change Line"@en .
+<http://data.europa.eu/a4g/ontology#Originator> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#AcquiringParty> .
+<http://data.europa.eu/a4g/ontology#OrderResponseInformation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#specifiesChargeInformation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#isCalculatedOn> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ord> .
+<http://data.europa.eu/a4g/ontology#hasTotalTaxExclusiveAmount> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#Order> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#PostAwardDocument> .
+<http://data.europa.eu/a4g/ontology#comprisesOrderChangeLine> <http://www.w3.org/2004/02/skos/core#definition> "Incorporates Order Change Line."@en .
+<http://data.europa.eu/a4g/ontology#ord> <http://purl.org/dc/terms/created> "2021-06-01"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://data.europa.eu/a4g/ontology#specifiesOriginatorInformation> <http://www.w3.org/2004/02/skos/core#definition> "Relation indicating the Originator Information."@en .
+<http://data.europa.eu/a4g/ontology#refersToOrderLine> <http://www.w3.org/2004/02/skos/core#definition> "Reference to an Order Line."@en .
+<http://data.europa.eu/a4g/ontology#specifiesDeliveryAgreementLocation> <http://www.w3.org/2004/02/skos/core#prefLabel> "specifies Delivery Agreement Location"@en .
+<http://data.europa.eu/a4g/ontology#hasAllowanceChargeReason> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Allowance Charge Reason"@en .
+<http://data.europa.eu/a4g/ontology#hasTotalTaxExclusiveAmount> <http://www.w3.org/2004/02/skos/core#definition> "Relation indicating the overall Monetary Value without Tax."@en .
+<http://data.europa.eu/a4g/ontology#OrderLine> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#OrderChange> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#refersToCatalogueLine> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ord> .
+<http://data.europa.eu/a4g/ontology#specifiesPlaceOfDelivery> <http://www.w3.org/2004/02/skos/core#definition> "Relation indicating the Location of the despatch."@en .
+<http://data.europa.eu/a4g/ontology#Originator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#hasAcceptanceStatus> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Acceptance Status"@en .
+<http://data.europa.eu/a4g/ontology#OrderCancellationRejection> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ord> .
+<http://data.europa.eu/a4g/ontology#refersToCatalogueLine> <http://www.w3.org/2004/02/skos/core#prefLabel> "refers To Catalogue Line"@en .
+<http://data.europa.eu/a4g/ontology#OrderCancellationConfirmation> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 16/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#OrderCancellation> <http://www.w3.org/2004/02/skos/core#prefLabel> "Order Cancellation"@en .
+<http://data.europa.eu/a4g/ontology#TaxInformation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ord> .
+<http://data.europa.eu/a4g/ontology#respondsToOrderChange> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ord> .
+<http://data.europa.eu/a4g/ontology#specifiesSeller> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ord> .
+<http://data.europa.eu/a4g/ontology#hasActualDeliveryDate> <http://www.w3.org/2004/02/skos/core#definition> "The date when the Delivery occured. (epo-ord:DeliveryInformation)"@en .
+<http://data.europa.eu/a4g/ontology#hasDeliveryEmail> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Delivery Email"@en .
+<http://data.europa.eu/a4g/ontology#hasRequestedShippingPriority> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2026"@en .
+<http://data.europa.eu/a4g/ontology#ord> <http://purl.org/dc/terms/description> "The eProcurement Ontology Ordering core describes the concepts and properties representing the European Public Procurement Ordering domain. The provision of these semantics offers the basis for a common understanding of the domain for all stakeholders ensuring the quality of data exchange and transparency. The ontology restrictions are published in a separate artefact."@en .
+<http://data.europa.eu/a4g/ontology#hasRequestedDeliveryPeriod> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#hasDeliveryDeadline> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Delivery Deadline"@en .
+<http://data.europa.eu/a4g/ontology#specifiesAllowanceInformation> <http://www.w3.org/2004/02/skos/core#definition> "Relation indicating the Allowance Information."@en .
+<http://data.europa.eu/a4g/ontology#specifiesDeliveryAgreement> <http://www.w3.org/2004/02/skos/core#prefLabel> "specifies Delivery Agreement"@en .
+<http://data.europa.eu/a4g/ontology#hasDownloadURL> <http://www.w3.org/2004/02/skos/core#definition> "Location where the resource can be downloaded. (epo-ord:DeliveryInformation)"@en .
+<http://data.europa.eu/a4g/ontology#isSpecificToOrderLine> <http://www.w3.org/2004/02/skos/core#prefLabel> "is Specific To Order Line"@en .
+<http://data.europa.eu/a4g/ontology#hasResponseStatus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#OrderCancellation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#PostAwardDocument> .
+<http://data.europa.eu/a4g/ontology#OrderChangeLine> <http://www.w3.org/2004/02/skos/core#definition> "Details concerning a given unit of goods, services or works requested in the Order Change."@en .
+<http://data.europa.eu/a4g/ontology#concernsOriginator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#hasVATExemptionReason> <http://www.w3.org/2004/02/skos/core#definition> "Explanation on why the instance of the concept is not subject to value-added tax. (epo-ord:AllowanceChargeInformation)"@en .
+<http://data.europa.eu/a4g/ontology#AllowanceChargeInformation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#InformationHub> .
+<http://data.europa.eu/a4g/ontology#isSpecificToInvoiceLine> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#specifiesInvoicee> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ord> .
+<http://data.europa.eu/a4g/ontology#specifiesPlaceOfDelivery> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#hasPaymentTerm> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2026"@en .
+<http://data.europa.eu/a4g/ontology#specifiesAllowanceInformation> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#hasTaxCategory> <http://www.w3.org/2004/02/skos/core#definition> "Relation indicating the Tax Category."@en .
+<http://data.europa.eu/a4g/ontology#hasTaxInformation> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#OrderResponseLine> <http://www.w3.org/2004/02/skos/core#prefLabel> "Order Response Line"@en .
+<http://data.europa.eu/a4g/ontology#specifiesInvoicee> <http://www.w3.org/2004/02/skos/core#definition> "Relation indicating that the instance of the concept involves the Invoicee."@en .
+<http://data.europa.eu/a4g/ontology#hasAccessURL> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Access URL"@en .
+<http://data.europa.eu/a4g/ontology#OrderChangeRejection> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#PostAwardDocument> .
+<http://data.europa.eu/a4g/ontology#specifiesOriginator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#specifiesDeliveryInformation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ord> .
+<http://data.europa.eu/a4g/ontology#hasAmount> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Amount"@en .
+<http://data.europa.eu/a4g/ontology#OrderResponseLine> <http://www.w3.org/2004/02/skos/core#historyNote> "WG Approval 20/04/2023"@en .
+<http://data.europa.eu/a4g/ontology#hasDownloadURL> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://data.europa.eu/a4g/ontology#specifiesContractInformation> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#Order> <http://www.w3.org/2004/02/skos/core#historyNote> "WG Approval 23/04/2023"@en .
+<http://data.europa.eu/a4g/ontology#AllowanceInformation> <http://www.w3.org/2004/02/skos/core#historyNote> "WG Approval 16/05/2023"@en .
+<http://data.europa.eu/a4g/ontology#concernsConsignee> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#hasPercentage> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ord> .
+<http://data.europa.eu/a4g/ontology#hasDeliveryEmail> <http://www.w3.org/2004/02/skos/core#definition> "The electronic address to which the products or services are to be delivered. (epo-ord:DeliveryInformation)"@en .
+<http://data.europa.eu/a4g/ontology#isSubmittedForOrder> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#OrderChangeLine> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 16/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#hasBackorderQuantity> <http://www.w3.org/2004/02/skos/core#definition> "Relation indicating the number of Items that cannot be fulfilled immediately."@en .
+<http://data.europa.eu/a4g/ontology#hasTotalLineAmount> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#OrderResponseLine> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#OrderLine> .
+<http://data.europa.eu/a4g/ontology#hasTotalTaxInclusiveAmount> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ord> .
+<http://data.europa.eu/a4g/ontology#OrderAgreement> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ord> .
+<http://data.europa.eu/a4g/ontology#respondsToOrderCancellation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#hasTotalTaxExclusiveAmount> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ord> .
+<http://data.europa.eu/a4g/ontology#OrderChangeRejection> <http://www.w3.org/2004/02/skos/core#prefLabel> "Order Change Rejection"@en .
+<http://data.europa.eu/a4g/ontology#Order> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ord> .
+<http://data.europa.eu/a4g/ontology#concernsOriginatorRequest> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#Seller> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ord> .
+<http://data.europa.eu/a4g/ontology#comprisesOrderChangeLine> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#refersToDeliveryInformation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#specifiesOrderResponseInformation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ord> .
+<http://data.europa.eu/a4g/ontology#OrderAgreementLine> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ord> .
+<http://data.europa.eu/a4g/ontology#hasAmount> <http://www.w3.org/2004/02/skos/core#historyNote> "WG Approval 26/07/2022"@en .
+<http://data.europa.eu/a4g/ontology#hasPercentage> <http://www.w3.org/2004/02/skos/core#historyNote> "WG Approval 26/07/2022"@en .
+<http://data.europa.eu/a4g/ontology#respondsToOrderCancellation> <http://www.w3.org/2004/02/skos/core#prefLabel> "responds To Order Cancellation"@en .
+<http://data.europa.eu/a4g/ontology#hasPercentage> <http://www.w3.org/2004/02/skos/core#definition> "The factor relative to the price charged in addition. (epo-ord:AllowanceChargeInformation) The factor relative to the price charged in addition. (epo-ord:TaxInformation)"@en .
+<http://data.europa.eu/a4g/ontology#OrderChangeConfirmation> <http://www.w3.org/2004/02/skos/core#prefLabel> "Order Change Confirmation"@en .
+<http://data.europa.eu/a4g/ontology#specifiesOriginator> <http://www.w3.org/2004/02/skos/core#historyNote> "WG Approval 25/06/2024"@en .
+<http://data.europa.eu/a4g/ontology#OrderChangeRejection> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 16/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#hasGeneralDeliveryTerm> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2026"@en .
+<http://data.europa.eu/a4g/ontology#refersToOrder> <http://www.w3.org/2004/02/skos/core#definition> "Reference to an Order."@en .
+<http://data.europa.eu/a4g/ontology#AllowanceInformation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ord> .
+<http://data.europa.eu/a4g/ontology#hasRequestedShippingPriority> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Requested Shipping Priority"@en .
+<http://data.europa.eu/a4g/ontology#OrderResponseInformation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ord> .
+<http://data.europa.eu/a4g/ontology#agreedBySeller> <http://www.w3.org/2004/02/skos/core#definition> "Accepted by Seller."@en .
+<http://data.europa.eu/a4g/ontology#specifiesDeliveryAgreementLocation> <http://www.w3.org/2004/02/skos/core#definition> "Relation indicating the Location from the Delivery Agreement."@en .
+<http://data.europa.eu/a4g/ontology#refersToProject> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ord> .
+<http://data.europa.eu/a4g/ontology#isPartialDeliveryAllowed> <http://www.w3.org/2004/02/skos/core#definition> "An indicator to state if partial delivery is allowed or not. (epo-ord:DeliveryAgreement)"@en .
+<http://data.europa.eu/a4g/ontology#isPartialDeliveryAllowed> <http://www.w3.org/2004/02/skos/core#prefLabel> "is Partial Delivery Allowed"@en .
+<http://data.europa.eu/a4g/ontology#hasActualDeliveryDate> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ord> .
+<http://data.europa.eu/a4g/ontology#OrderCancellationRejection> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 16/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#OrderCancellation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ord> .
+<http://data.europa.eu/a4g/ontology#hasResponseStatus> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ord> .
+<http://data.europa.eu/a4g/ontology#concernsOriginator> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ord> .
+<http://data.europa.eu/a4g/ontology#hasStatus> <http://www.w3.org/2004/02/skos/core#definition> "Relation indicating the status."@en .
+<http://data.europa.eu/a4g/ontology#AllowanceChargeInformation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#ContractInformation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ord> .
+<http://data.europa.eu/a4g/ontology#DeliveryAgreement> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ord> .
+<http://data.europa.eu/a4g/ontology#hasTotalChargeAmount> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Total Charge Amount"@en .
+<http://data.europa.eu/a4g/ontology#OriginatorInformation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#InformationHub> .
+<http://data.europa.eu/a4g/ontology#concernsOriginatorRequest> <http://www.w3.org/2004/02/skos/core#prefLabel> "concerns Originator Request"@en .
+<http://data.europa.eu/a4g/ontology#hasSellerOrderID> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ord> .
+<http://data.europa.eu/a4g/ontology#Invoicee> <http://www.w3.org/2004/02/skos/core#historyNote> "WG Approval 03/04/2025"@en .
+<http://data.europa.eu/a4g/ontology#OriginatorInformation> <http://www.w3.org/2004/02/skos/core#definition> "Information about the Originator of the Order."@en .
+<http://data.europa.eu/a4g/ontology#hasGeneralDeliveryTerm> <http://www.w3.org/2004/02/skos/core#prefLabel> "has General Delivery Term"@en .
+<http://data.europa.eu/a4g/ontology#OrderCancellation> <http://www.w3.org/2004/02/skos/core#definition> "A Document providing information on the formal response from the Buyer to the Seller to cancel a previous Order or Order Change."@en .
+<http://data.europa.eu/a4g/ontology#Invoicee> <http://www.w3.org/2004/02/skos/core#prefLabel> "Invoicee"@en .
+<http://data.europa.eu/a4g/ontology#respondsToOrderChange> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#hasPaymentTerm> <http://www.w3.org/2004/02/skos/core#definition> "Condition and stipulation of the Payment. (epo-ord:Order)"@en .
+<http://data.europa.eu/a4g/ontology#hasPriceDiscountInformation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#ord> <http://www.w3.org/2000/01/rdf-schema#label> "eProcurement Ontology Ordering - core"@en .
+<http://data.europa.eu/a4g/ontology#Originator> <http://www.w3.org/2004/02/skos/core#historyNote> "WG Approval 20/10/2022"@en .
+<http://data.europa.eu/a4g/ontology#refersToProject> <http://www.w3.org/2004/02/skos/core#definition> "Reference to a Project."@en .
+<http://data.europa.eu/a4g/ontology#ord> <http://purl.org/dc/terms/issued> "2025-10-10"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://data.europa.eu/a4g/ontology#Invoicee> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#AcquiringParty> .
+<http://data.europa.eu/a4g/ontology#isSubmittedForOrder> <http://www.w3.org/2004/02/skos/core#prefLabel> "is Submitted For Order"@en .
+<http://data.europa.eu/a4g/ontology#ord> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/ns/adms> .
+<http://data.europa.eu/a4g/ontology#specifiesDespatcher> <http://www.w3.org/2004/02/skos/core#historyNote> "WG Approval 25/06/2024"@en .
+<http://data.europa.eu/a4g/ontology#refersToOrderLine> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#hasTotalLineAmount> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ord> .
+<http://data.europa.eu/a4g/ontology#specifiesChargeInformation> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#hasPercentage> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Percentage"@en .
+<http://data.europa.eu/a4g/ontology#hasGeneralDeliveryTerm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://data.europa.eu/a4g/ontology#hasPriceDiscountInformation> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Price Discount Information"@en .
+<http://data.europa.eu/a4g/ontology#hasSellerOrderID> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Seller Order ID"@en .
+<http://data.europa.eu/a4g/ontology#hasTotalTaxExclusiveAmount> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#OrderResponse> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#Order> .
+<http://data.europa.eu/a4g/ontology#respondsToOrderCancellation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ord> .
+<http://data.europa.eu/a4g/ontology#specifiesSeller> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#hasDeliveryEmail> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ord> .
+<http://data.europa.eu/a4g/ontology#hasTaxInformation> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Tax Information"@en .
+<http://data.europa.eu/a4g/ontology#isSpecificToRequestForOfferLine> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#OriginatorInformation> <http://www.w3.org/2004/02/skos/core#prefLabel> "Originator Information"@en .
+<http://data.europa.eu/a4g/ontology#refersToDeliveryInformation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ord> .
+<http://data.europa.eu/a4g/ontology#Invoicee> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#comprisesOrderLine> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#concernsOriginator> <http://www.w3.org/2004/02/skos/core#definition> "Relates to Originator."@en .
+<http://data.europa.eu/a4g/ontology#OrderCancellationConfirmation> <http://www.w3.org/2004/02/skos/core#definition> "A Document providing information on the acknowledgment of the Order Cancellation."@en .
+<http://data.europa.eu/a4g/ontology#specifiesDespatcher> <http://www.w3.org/2004/02/skos/core#definition> "Relation indicating that the instance of the concept involves the Despatcher."@en .
+<http://data.europa.eu/a4g/ontology#hasDeliveryDeadline> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ord> .
+<http://data.europa.eu/a4g/ontology#specifiesInvoicee> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#hasAcceptanceStatus> <http://www.w3.org/2004/02/skos/core#definition> "Relation indicating the acceptance status."@en .
+<http://data.europa.eu/a4g/ontology#hasResponseDescription> <http://www.w3.org/2004/02/skos/core#historyNote> "WG Approval 25/03/2025"@en .
+<http://data.europa.eu/a4g/ontology#hasTotalLineAmount> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#specifiesDeliveryAgreement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#OrderCancellationConfirmation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#hasAccountingCost> <http://www.w3.org/2004/02/skos/core#historyNote> "WG Approval 26/01/2023"@en .
+<http://data.europa.eu/a4g/ontology#hasTotalChargeAmount> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ord> .
+<http://data.europa.eu/a4g/ontology#comprisesOrderLine> <http://www.w3.org/2004/02/skos/core#prefLabel> "comprises Order Line"@en .
+<http://data.europa.eu/a4g/ontology#hasVATExemptionReasonDescription> <http://www.w3.org/2004/02/skos/core#definition> "Explanatory text about the VAT Exemption Reason. (epo-ord:AllowanceChargeInformation)"@en .
+<http://data.europa.eu/a4g/ontology#OrderChangeConfirmation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#PostAwardDocument> .
+<http://data.europa.eu/a4g/ontology#Consignee> <http://www.w3.org/2004/02/skos/core#historyNote> "WG Approval 21/02/2023"@en .
+<http://data.europa.eu/a4g/ontology#specifiesChargeInformation> <http://www.w3.org/2004/02/skos/core#definition> "Relation indicating the Charge Information."@en .
+<http://data.europa.eu/a4g/ontology#hasAmountDueForPayment> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#OrderResponse> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#hasAmount> <http://www.w3.org/2004/02/skos/core#definition> "The predetermined monetary value charged in addition to the price."@en .
+<http://data.europa.eu/a4g/ontology#hasTotalAllowanceAmount> <http://www.w3.org/2004/02/skos/core#definition> "Relation indicating the overall Monetary Value of the Allowance."@en .
+<http://data.europa.eu/a4g/ontology#Seller> <http://www.w3.org/2004/02/skos/core#definition> "A Role of an Agent who transfers the ownership of the Procurement results (goods, services or works) to the Buyer. Additional information: A Role of an Agent that sells a Procurement Result (goods, services or work) to a Buyer. The Seller is bound by a Contract i.e. it has legal responsibility. The Seller may or may not be the same as the Supplier. The Seller may or may not issue the Invoice. The Seller may or may not be the owner of the credit owed by the Buyer."@en .
+<http://data.europa.eu/a4g/ontology#Consignee> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ord> .
+<http://data.europa.eu/a4g/ontology#ord> <http://www.w3.org/2002/07/owl#versionInfo> "5.2.0" .
+<http://data.europa.eu/a4g/ontology#OriginatorInformation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#OrderAgreement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#Order> .
+<http://data.europa.eu/a4g/ontology#hasAmountDueForPayment> <http://www.w3.org/2004/02/skos/core#definition> "Relation indicating the Monetary Value that has to be paid."@en .
+<http://data.europa.eu/a4g/ontology#hasVATExemptionReason> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ord> .
+<http://data.europa.eu/a4g/ontology#hasTotalTaxInclusiveAmount> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#specifiesConsignee> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#specifiesDespatcher> <http://www.w3.org/2004/02/skos/core#prefLabel> "specifies Despatcher"@en .
+<http://data.europa.eu/a4g/ontology#ord> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/ns/person> .
+<http://data.europa.eu/a4g/ontology#ord> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://data.europa.eu/a4g/ontology#hasAccessURL> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://data.europa.eu/a4g/ontology#comprisesOrderLine> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ord> .
+<http://data.europa.eu/a4g/ontology#OrderLine> <http://www.w3.org/2004/02/skos/core#definition> "Details concerning a given unit of goods, services or works requested in the Order. Additional information: In general, an Order Line contains the Quantity and Price of the goods, services and goods requested in the Order. However, in certain cases, the Price may not be known, as the Price may fluctuate from one day to the other."@en .
+<http://data.europa.eu/a4g/ontology#isPartialDeliveryAllowed> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ord> .
+<http://data.europa.eu/a4g/ontology#hasTaxCategory> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Tax Category"@en .
+<http://data.europa.eu/a4g/ontology#refersToDeliveryInformation> <http://www.w3.org/2004/02/skos/core#definition> "Reference to a Delivery Information."@en .
+<http://data.europa.eu/a4g/ontology#Seller> <http://www.w3.org/2004/02/skos/core#prefLabel> "Seller"@en .
+<http://data.europa.eu/a4g/ontology#specifiesDeliveryAgreement> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ord> .
+<http://data.europa.eu/a4g/ontology#hasPriceDiscountInformation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ord> .
+<http://data.europa.eu/a4g/ontology#isSpecificToInvoiceLine> <http://www.w3.org/2004/02/skos/core#definition> "Information that is particular to an Invoice Line."@en .
+<http://data.europa.eu/a4g/ontology#specifiesDeliveryAgreement> <http://www.w3.org/2004/02/skos/core#definition> "Relation indicating the Delivery Agreement."@en .
+<http://data.europa.eu/a4g/ontology#specifiesOrderResponseInformation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#comprisesOrderChangeLine> <http://www.w3.org/2004/02/skos/core#prefLabel> "comprises Order Change Line"@en .

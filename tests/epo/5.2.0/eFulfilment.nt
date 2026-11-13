@@ -1,0 +1,635 @@
+<http://data.europa.eu/a4g/ontology#hasShippingMark> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ful> .
+<http://data.europa.eu/a4g/ontology#ShipmentInformation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#InformationHub> .
+<http://data.europa.eu/a4g/ontology#isSubmittedForDespatchAdvice> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ful> .
+<http://data.europa.eu/a4g/ontology#isRefrigerated> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://data.europa.eu/a4g/ontology#specifiesBuyer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#isRefrigerated> <http://www.w3.org/2004/02/skos/core#historyNote> "WG Approval 05/06/2024"@en .
+<http://data.europa.eu/a4g/ontology#hasConsigneeConsignmentID> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ful> .
+<http://data.europa.eu/a4g/ontology#hasHandlingInstruction> <http://www.w3.org/2004/02/skos/core#definition> "Instruction on how to handle the Goods Items during transportation. (epo-ful:Consignment) Instruction on how to handle the Goods Items during transportation. (epo-ful:TransportHandlingUnit)"@en .
+<http://data.europa.eu/a4g/ontology#hasRejectReasonDescription> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Reject Reason Description"@en .
+<http://data.europa.eu/a4g/ontology#hasOutstandingQuantity> <http://www.w3.org/2004/02/skos/core#definition> "The Quantity of non-despatched Goods Items."@en .
+<http://data.europa.eu/a4g/ontology#DespatchAdvice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#hasSizeType> <http://www.w3.org/2004/02/skos/core#definition> "An extension classification specifying the measurement of the Transport Equipment. Additional Information: This codelist should be used only in the case of a container."@en .
+<http://data.europa.eu/a4g/ontology#playedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#specifiesBuyer> <http://www.w3.org/2004/02/skos/core#definition> "Relation indicating that the instance of the concept involves the Buyer."@en .
+<http://data.europa.eu/a4g/ontology#comprisesReceiptAdviceLine> <http://www.w3.org/2004/02/skos/core#definition> "Incorporates Receipt Advice Line."@en .
+<http://data.europa.eu/a4g/ontology#hasTraceID> <http://www.w3.org/2004/02/skos/core#historyNote> "WG Approval 21/09/2023"@en .
+<http://data.europa.eu/a4g/ontology#Despatcher> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#foreseesPackage> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#hasOversupplyQuantity> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#hasPackagingType> <http://www.w3.org/2004/02/skos/core#definition> "The kind of Package."@en .
+<http://data.europa.eu/a4g/ontology#ReceiptAdviceInformation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#InformationHub> .
+<http://data.europa.eu/a4g/ontology#refersToConsignment> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ful> .
+<http://data.europa.eu/a4g/ontology#isSubmittedForDespatchLine> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#DespatchLine> <http://www.w3.org/2004/02/skos/core#historyNote> "WG Approval 21/05/2024"@en .
+<http://data.europa.eu/a4g/ontology#isSubmittedForDespatchLine> <http://www.w3.org/2004/02/skos/core#definition> "Relation indicating that the instance of the concept is sent for a specific Despatch Line."@en .
+<http://data.europa.eu/a4g/ontology#agreedBySeller> <http://www.w3.org/2004/02/skos/core#prefLabel> "agreed By Seller"@en .
+<http://data.europa.eu/a4g/ontology#comprisesReceiptAdviceLine> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#hasDespatcherConsignmentID> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Despatcher Consignment ID"@en .
+<http://data.europa.eu/a4g/ontology#hasDespatchDate> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Despatch Date"@en .
+<http://data.europa.eu/a4g/ontology#hasTransportEquipmentSeal> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Transport Equipment Seal"@en .
+<http://data.europa.eu/a4g/ontology#specifiesSeller> <http://www.w3.org/2004/02/skos/core#prefLabel> "specifies Seller"@en .
+<http://data.europa.eu/a4g/ontology#Package> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#specifiesFreightForwarder> <http://www.w3.org/2004/02/skos/core#prefLabel> "specifies Freight Forwarder"@en .
+<http://data.europa.eu/a4g/ontology#hasDepartureShipmentInformation> <http://www.w3.org/2004/02/skos/core#definition> "Shipment Information about the place the Consignment is leaving from in a given Shipment Stage."@en .
+<http://data.europa.eu/a4g/ontology#TransportEquipmentSeal> <http://www.w3.org/2004/02/skos/core#definition> "Means used to ensure that the Transport Equipment is not tampered during transportation."@en .
+<http://data.europa.eu/a4g/ontology#ShipmentStage> <http://www.w3.org/2004/02/skos/core#historyNote> "WG Approval 21/05/2024"@en .
+<http://data.europa.eu/a4g/ontology#containsGoodsItem> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ful> .
+<http://data.europa.eu/a4g/ontology#GoodsItem> <http://www.w3.org/2004/02/skos/core#definition> "An Item including its initial packaging during transportation. Additional information: For example, the Item being bought is the computer. The weight of the computer is X. The weight of the Goods Item is the weight of the computer plus the weight of the initial packaging. During transportation you have for example trace ID which is applied to the GoodsItem, rather than on the Item itself. The declared statistical value can only apply once you have a GoodsItem."@en .
+<http://data.europa.eu/a4g/ontology#concernsPackage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#hasNetVolume> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ful> .
+<http://data.europa.eu/a4g/ontology#hasDeclaredStatisticalValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#hasReceivedQuantity> <http://www.w3.org/2004/02/skos/core#definition> "Relation indicating the delivered Quantity."@en .
+<http://data.europa.eu/a4g/ontology#FreightForwarder> <http://www.w3.org/2004/02/skos/core#historyNote> "WG Approval 21/05/2024"@en .
+<http://data.europa.eu/a4g/ontology#Consignment> <http://www.w3.org/2004/02/skos/core#prefLabel> "Consignment"@en .
+<http://data.europa.eu/a4g/ontology#ReceiptAdvice> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 16/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#isRefrigerated> <http://www.w3.org/2004/02/skos/core#prefLabel> "is Refrigerated"@en .
+<http://data.europa.eu/a4g/ontology#TransportMeansOperator> <http://www.w3.org/2004/02/skos/core#prefLabel> "Transport Means Operator"@en .
+<http://data.europa.eu/a4g/ontology#containsGoodsItem> <http://www.w3.org/2004/02/skos/core#prefLabel> "contains Goods Item"@en .
+<http://data.europa.eu/a4g/ontology#usesTransportMeans> <http://www.w3.org/2004/02/skos/core#historyNote> "WG Approval 02/07/2024"@en .
+<http://data.europa.eu/a4g/ontology#hasHandlingInstruction> <http://www.w3.org/2004/02/skos/core#historyNote> "WG Approval 05/06/2024"@en .
+<http://data.europa.eu/a4g/ontology#isReturnableMaterial> <http://www.w3.org/2004/02/skos/core#definition> "Indicates whether the container or part of the container is to be sent back. (epo-ful:AbstractContainer)"@en .
+<http://data.europa.eu/a4g/ontology#specifiesReceiptAdviceInformation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#specifiesConsignee> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ful> .
+<http://data.europa.eu/a4g/ontology#refersToShipmentAgreement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#TransportHandlingUnit> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ful> .
+<http://data.europa.eu/a4g/ontology#specifiesConsignee> <http://www.w3.org/2004/02/skos/core#definition> "Relation indicating that the instance of the concept involves the Consignee."@en .
+<http://data.europa.eu/a4g/ontology#hasTemperatureSpecification> <http://www.w3.org/2004/02/skos/core#definition> "Relation indicating the Temperature Specification for the instance of the concept."@en .
+<http://data.europa.eu/a4g/ontology#hasRejectedQuantity> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#hasRequestedPickUpInformation> <http://www.w3.org/2004/02/skos/core#definition> "Information about the requested despatch of the Goods Items."@en .
+<http://data.europa.eu/a4g/ontology#refersToDeliveryInformation> <http://www.w3.org/2004/02/skos/core#prefLabel> "refers To Delivery Information"@en .
+<http://data.europa.eu/a4g/ontology#refersToDespatchAdvice> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ful> .
+<http://data.europa.eu/a4g/ontology#isSpecificToDespatchLine> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#hasTraceID> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Trace ID"@en .
+<http://data.europa.eu/a4g/ontology#ful> <http://www.w3.org/2000/01/rdf-schema#label> "eProcurement Ontology Fulfilment - core"@en .
+<http://data.europa.eu/a4g/ontology#hasOutstandingQuantity> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ful> .
+<http://data.europa.eu/a4g/ontology#isSubmittedForDespatchAdvice> <http://www.w3.org/2004/02/skos/core#definition> "Relation indicating that the instance of the concept is sent for a specific Despatch Advice."@en .
+<http://data.europa.eu/a4g/ontology#ful> <http://www.w3.org/2002/07/owl#priorVersion> "http://data.europa.eu/a4g/ontology#ful-5.1.0" .
+<http://data.europa.eu/a4g/ontology#hasHeight> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Height"@en .
+<http://data.europa.eu/a4g/ontology#hasEstimatedDeliveryPeriod> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#hasLoadingMeter> <http://www.w3.org/2004/02/skos/core#historyNote> "WG Approval 18/06/2024"@en .
+<http://data.europa.eu/a4g/ontology#specifiesOriginator> <http://www.w3.org/2004/02/skos/core#definition> "Relation indicating that the instance of the concept involves the Originator."@en .
+<http://data.europa.eu/a4g/ontology#refersToReceiptAdvice> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#agreedByBuyer> <http://www.w3.org/2004/02/skos/core#historyNote> "WG Approval 10/06/2024"@en .
+<http://data.europa.eu/a4g/ontology#hasSpecialServiceInstruction> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ful> .
+<http://data.europa.eu/a4g/ontology#isSpecificToReceiptAdviceLine> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#ful> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/ns/org#> .
+<http://data.europa.eu/a4g/ontology#refersToShipmentAgreement> <http://www.w3.org/2004/02/skos/core#prefLabel> "refers To Shipment Agreement"@en .
+<http://data.europa.eu/a4g/ontology#NotificationReceiver> <http://www.w3.org/2004/02/skos/core#definition> "The Role of an Agent that is informed about the arrival of a Shipment at a destination. Additional information: This could be for example customs and excise."@en .
+<http://data.europa.eu/a4g/ontology#ShipmentInformation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#ful> <http://www.w3.org/2002/07/owl#imports> <http://data.europa.eu/m8g/> .
+<http://data.europa.eu/a4g/ontology#playedBy> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ful> .
+<http://data.europa.eu/a4g/ontology#hasShortQuantity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#refersToOrder> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#hasDeclaredStatisticalValue> <http://www.w3.org/2004/02/skos/core#definition> "The Monetary Value declared for statistical purposes."@en .
+<http://data.europa.eu/a4g/ontology#hasOutstandingQuantityReason> <http://www.w3.org/2004/02/skos/core#historyNote> "WG Approval 05/06/2024"@en .
+<http://data.europa.eu/a4g/ontology#specifiesFreightForwarder> <http://www.w3.org/2004/02/skos/core#historyNote> "WG Approval 25/06/2024"@en .
+<http://data.europa.eu/a4g/ontology#agreedBySeller> <http://www.w3.org/2004/02/skos/core#historyNote> "WG Approval 10/06/2024"@en .
+<http://data.europa.eu/a4g/ontology#TransportEquipment> <http://www.w3.org/2004/02/skos/core#definition> "Description of the apparatus used during transportation. Additional information: The equipment may be a container, a trailer, means of assistance to load or unload the Goods Items."@en .
+<http://data.europa.eu/a4g/ontology#specifiesReceiptAdviceInformation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ful> .
+<http://data.europa.eu/a4g/ontology#Carrier> <http://www.w3.org/2004/02/skos/core#prefLabel> "Carrier"@en .
+<http://data.europa.eu/a4g/ontology#isReturnableMaterial> <http://www.w3.org/2004/02/skos/core#prefLabel> "is Returnable Material"@en .
+<http://data.europa.eu/a4g/ontology#hasGrossWeight> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Gross Weight"@en .
+<http://data.europa.eu/a4g/ontology#hasGrossWeight> <http://www.w3.org/2004/02/skos/core#definition> "The total mass of goods including the packaging."@en .
+<http://data.europa.eu/a4g/ontology#hasLength> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Length"@en .
+<http://data.europa.eu/a4g/ontology#concernsTransportMeans> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#Despatcher> <http://www.w3.org/2004/02/skos/core#prefLabel> "Despatcher"@en .
+<http://data.europa.eu/a4g/ontology#hasRejectAction> <http://www.w3.org/2004/02/skos/core#definition> "Relation indicating the Action Code for non-acceptance."@en .
+<http://data.europa.eu/a4g/ontology#TransportMeans> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#refersToShipmentAgreement> <http://www.w3.org/2004/02/skos/core#historyNote> "WG Approval 25/06/2024"@en .
+<http://data.europa.eu/a4g/ontology#hasFreightCharge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#hasDespatchedQuantity> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ful> .
+<http://data.europa.eu/a4g/ontology#hasTotalGoodsItemQuantity> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Total Goods Item Quantity"@en .
+<http://data.europa.eu/a4g/ontology#refersToDespatchAdvice> <http://www.w3.org/2004/02/skos/core#definition> "Reference to a Despatch Advice."@en .
+<http://data.europa.eu/a4g/ontology#hasPackagingTypeDescription> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Packaging Type Description"@en .
+<http://data.europa.eu/a4g/ontology#hasTransportMode> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Transport Mode"@en .
+<http://data.europa.eu/a4g/ontology#hasTemperatureSpecification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#ful> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://op.europa.eu/en/web/eu-vocabularies/e-procurement> .
+<http://data.europa.eu/a4g/ontology#hasDocumentStatus> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Document Status"@en .
+<http://data.europa.eu/a4g/ontology#hasVehicleID> <http://www.w3.org/2004/02/skos/core#historyNote> "WG Approval 25/06/2024"@en .
+<http://data.europa.eu/a4g/ontology#isSpecificToDespatchLine> <http://www.w3.org/2004/02/skos/core#historyNote> "WG Approval 25/06/2024"@en .
+<http://data.europa.eu/a4g/ontology#concernsPackage> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ful> .
+<http://data.europa.eu/a4g/ontology#hasTransportMeansType> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Transport Means Type"@en .
+<http://data.europa.eu/a4g/ontology#hasDeclaredStatisticalValue> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ful> .
+<http://data.europa.eu/a4g/ontology#hasDespatcherConsignmentID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#AbstractContainer> <http://www.w3.org/2004/02/skos/core#definition> "Gathering class for Packages and Transport Handling Units."@en .
+<http://data.europa.eu/a4g/ontology#hasCarriageShipmentStage> <http://www.w3.org/2004/02/skos/core#historyNote> "WG Approval 20/03/2025"@en .
+<http://data.europa.eu/a4g/ontology#hasShortageAction> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Shortage Action"@en .
+<http://data.europa.eu/a4g/ontology#hasShortQuantity> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Short Quantity"@en .
+<http://data.europa.eu/a4g/ontology#refersToDespatchAdvice> <http://www.w3.org/2004/02/skos/core#prefLabel> "refers To Despatch Advice"@en .
+<http://data.europa.eu/a4g/ontology#ReceiptAdviceLine> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ful> .
+<http://data.europa.eu/a4g/ontology#specifiesCarrier> <http://www.w3.org/2004/02/skos/core#definition> "Relation indicating that the instance of the concept involves the Carrier."@en .
+<http://data.europa.eu/a4g/ontology#DespatchAdvice> <http://www.w3.org/2004/02/skos/core#prefLabel> "Despatch Advice"@en .
+<http://data.europa.eu/a4g/ontology#Consignment> <http://www.w3.org/2004/02/skos/core#definition> "A batch of goods destined for or delivered to someone. Additional information: Consignment is a Transport Agreement between the Despatcher and the Consignee as to who and how the goods are despatched and received."@en .
+<http://data.europa.eu/a4g/ontology#specifiesBuyer> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ful> .
+<http://data.europa.eu/a4g/ontology#NotificationReceiver> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#AuxiliaryParty> .
+<http://data.europa.eu/a4g/ontology#hasTotalGoodsItemQuantity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#concernsPackage> <http://www.w3.org/2004/02/skos/core#prefLabel> "concerns Package"@en .
+<http://data.europa.eu/a4g/ontology#specifiesSeller> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#TemperatureSpecification> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ful> .
+<http://data.europa.eu/a4g/ontology#hasPackagingStatus> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ful> .
+<http://data.europa.eu/a4g/ontology#TransportEquipment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#hasDespatchDate> <http://www.w3.org/2004/02/skos/core#historyNote> "WG Approval 05/06/2024"@en .
+<http://data.europa.eu/a4g/ontology#hasCarriageShipmentStage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#hasRejectReasonDescription> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2026"@en .
+<http://data.europa.eu/a4g/ontology#hasOversupplyQuantity> <http://www.w3.org/2004/02/skos/core#definition> "Relation indicating the Quantity surplus."@en .
+<http://data.europa.eu/a4g/ontology#ReceiptAdviceInformation> <http://www.w3.org/2004/02/skos/core#prefLabel> "Receipt Advice Information"@en .
+<http://data.europa.eu/a4g/ontology#Consignment> <http://www.w3.org/2004/02/skos/core#historyNote> "WG Approval 14/05/2024"@en .
+<http://data.europa.eu/a4g/ontology#FreightForwarder> <http://www.w3.org/2004/02/skos/core#prefLabel> "Freight Forwarder"@en .
+<http://data.europa.eu/a4g/ontology#hasDepartureShipmentInformation> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Departure Shipment Information"@en .
+<http://data.europa.eu/a4g/ontology#hasGrossVolume> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#hasEstimatedDeliveryPeriod> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ful> .
+<http://data.europa.eu/a4g/ontology#hasTransportHandlingUnitQuantity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#hasMinimumTemperature> <http://www.w3.org/2004/02/skos/core#definition> "The lowest tolerated temperature."@en .
+<http://data.europa.eu/a4g/ontology#ful> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/ns/locn> .
+<http://data.europa.eu/a4g/ontology#hasVehicleSegmentID> <http://www.w3.org/2004/02/skos/core#historyNote> "WG Approval 25/06/2024"@en .
+<http://data.europa.eu/a4g/ontology#specifiesSeller> <http://www.w3.org/2004/02/skos/core#definition> "Relation indicating that the instance of the concept involves the Seller."@en .
+<http://data.europa.eu/a4g/ontology#hasTemperatureSpecification> <http://www.w3.org/2004/02/skos/core#historyNote> "WG Approval 25/06/2024"@en .
+<http://data.europa.eu/a4g/ontology#refersToOrderLine> <http://www.w3.org/2004/02/skos/core#prefLabel> "refers To Order Line"@en .
+<http://data.europa.eu/a4g/ontology#hasHandlingInstructionCode> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Handling Instruction Code"@en .
+<http://data.europa.eu/a4g/ontology#agreedByBuyer> <http://www.w3.org/2004/02/skos/core#prefLabel> "agreed By Buyer"@en .
+<http://data.europa.eu/a4g/ontology#hasTraceID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#hasAcceptanceStatus> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ful> .
+<http://data.europa.eu/a4g/ontology#hasShortQuantity> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ful> .
+<http://data.europa.eu/a4g/ontology#refersToOrder> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ful> .
+<http://data.europa.eu/a4g/ontology#ful> <http://www.w3.org/2002/07/owl#incompatibleWith> "4.2.0" .
+<http://data.europa.eu/a4g/ontology#hasMaximumTemperature> <http://www.w3.org/2004/02/skos/core#definition> "The highest tolerated temperature."@en .
+<http://data.europa.eu/a4g/ontology#TransportEquipment> <http://www.w3.org/2004/02/skos/core#prefLabel> "Transport Equipment"@en .
+<http://data.europa.eu/a4g/ontology#refersToDeliveryInformation> <http://www.w3.org/2004/02/skos/core#historyNote> "WG Approval 25/06/2024"@en .
+<http://data.europa.eu/a4g/ontology#hasEstimatedDeliveryPeriod> <http://www.w3.org/2004/02/skos/core#definition> "The forecasted time period given by the Despatcher to provide the goods and services."@en .
+<http://data.europa.eu/a4g/ontology#hasLoadingMeter> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Loading Meter"@en .
+<http://data.europa.eu/a4g/ontology#comprisesDespatchLine> <http://www.w3.org/2004/02/skos/core#historyNote> "WG Approval 10/06/2024"@en .
+<http://data.europa.eu/a4g/ontology#hasTransportMode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#refersToReceiptAdvice> <http://www.w3.org/2004/02/skos/core#definition> "Reference to a Receipt Advice."@en .
+<http://data.europa.eu/a4g/ontology#concernsTransportMeans> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ful> .
+<http://data.europa.eu/a4g/ontology#FreightForwarder> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#AuxiliaryParty> .
+<http://data.europa.eu/a4g/ontology#hasAllowanceChargeReason> <http://www.w3.org/2004/02/skos/core#definition> "The justification for using the Allowance or the Charge."@en .
+<http://data.europa.eu/a4g/ontology#isSpecificToDespatchLine> <http://www.w3.org/2004/02/skos/core#prefLabel> "is Specific To Despatch Line"@en .
+<http://data.europa.eu/a4g/ontology#containsTransportHandlingUnit> <http://www.w3.org/2004/02/skos/core#historyNote> "WG Approval 10/06/2024"@en .
+<http://data.europa.eu/a4g/ontology#refersToConsignment> <http://www.w3.org/2004/02/skos/core#definition> "Reference to a Consignment."@en .
+<http://data.europa.eu/a4g/ontology#specifiesOriginator> <http://www.w3.org/2004/02/skos/core#prefLabel> "specifies Originator"@en .
+<http://data.europa.eu/a4g/ontology#concernsGoodsItem> <http://www.w3.org/2004/02/skos/core#definition> "Relates to Goods Item."@en .
+<http://data.europa.eu/a4g/ontology#hasEstimatedDeliveryPeriod> <http://www.w3.org/2004/02/skos/core#historyNote> "WG Approval 18/06/2024"@en .
+<http://data.europa.eu/a4g/ontology#NotificationReceiver> <http://www.w3.org/2004/02/skos/core#historyNote> "WG Approval 21/05/2024"@en .
+<http://data.europa.eu/a4g/ontology#hasGrossVolume> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ful> .
+<http://data.europa.eu/a4g/ontology#ReceiptAdviceLine> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#Line> .
+<http://data.europa.eu/a4g/ontology#TransportHandlingUnit> <http://www.w3.org/2004/02/skos/core#prefLabel> "Transport Handling Unit"@en .
+<http://data.europa.eu/a4g/ontology#hasPackingMaterialDescription> <http://www.w3.org/2004/02/skos/core#historNote> "WG approval 25/09/2026"@en .
+<http://data.europa.eu/a4g/ontology#hasRequestedPickUpInformation> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Requested Pick Up Information"@en .
+<http://data.europa.eu/a4g/ontology#hasWidth> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ful> .
+<http://data.europa.eu/a4g/ontology#hasOutstandingQuantity> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Outstanding Quantity"@en .
+<http://data.europa.eu/a4g/ontology#hasVehicleSegmentID> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Vehicle Segment ID"@en .
+<http://data.europa.eu/a4g/ontology#hasDespatcherConsignmentID> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ful> .
+<http://data.europa.eu/a4g/ontology#refersToOrderLine> <http://www.w3.org/2004/02/skos/core#historyNote> "WG Approval 25/06/2024"@en .
+<http://data.europa.eu/a4g/ontology#concernsGoodsItem> <http://www.w3.org/2004/02/skos/core#prefLabel> "concerns Goods Item"@en .
+<http://data.europa.eu/a4g/ontology#hasRejectReasonDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://data.europa.eu/a4g/ontology#containsGoodsItem> <http://www.w3.org/2004/02/skos/core#definition> "Includes Goods Item."@en .
+<http://data.europa.eu/a4g/ontology#ful> <http://www.w3.org/2000/01/rdf-schema#comment> "This version is automatically generated from eFulfilment.xml on 2025-10-10" .
+<http://data.europa.eu/a4g/ontology#ShipmentInformation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ful> .
+<http://data.europa.eu/a4g/ontology#ful> <http://purl.org/vocab/vann/preferredNamespacePrefix> "epo" .
+<http://data.europa.eu/a4g/ontology#hasTransportHandlingUnitQuantity> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Transport Handling Unit Quantity"@en .
+<http://data.europa.eu/a4g/ontology#ful> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://github.com/OP-TED/ePO/releases> .
+<http://data.europa.eu/a4g/ontology#hasTotalGoodsItemQuantity> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ful> .
+<http://data.europa.eu/a4g/ontology#hasDespatchedQuantity> <http://www.w3.org/2004/02/skos/core#definition> "The Quantity that has been sent."@en .
+<http://data.europa.eu/a4g/ontology#isPowerIndicated> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://data.europa.eu/a4g/ontology#ReceiptAdviceInformation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ful> .
+<http://data.europa.eu/a4g/ontology#hasPackagingTypeDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://data.europa.eu/a4g/ontology#hasDriverPerson> <http://www.w3.org/2004/02/skos/core#definition> "Relation indicating the operator of the Transport Means."@en .
+<http://data.europa.eu/a4g/ontology#hasCarriageShipmentStage> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ful> .
+<http://data.europa.eu/a4g/ontology#refersToConsignment> <http://www.w3.org/2004/02/skos/core#historyNote> "WG Approval 25/06/2024"@en .
+<http://data.europa.eu/a4g/ontology#TransportMeans> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ful> .
+<http://data.europa.eu/a4g/ontology#hasEstimatedDeliveryPeriod> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Estimated Delivery Period"@en .
+<http://data.europa.eu/a4g/ontology#hasShippingMark> <http://www.w3.org/2004/02/skos/core#historyNote> "WG Approval 05/06/2024"@en .
+<http://data.europa.eu/a4g/ontology#refersToDespatchAdvice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#specifiesReceiptAdviceInformation> <http://www.w3.org/2004/02/skos/core#definition> "Relation indicating the Receipt Advice Information."@en .
+<http://data.europa.eu/a4g/ontology#Package> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#AbstractContainer> .
+<http://data.europa.eu/a4g/ontology#agreedBySeller> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#AbstractContainer> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ful> .
+<http://data.europa.eu/a4g/ontology#specifiesPlaceOfDespatch> <http://www.w3.org/2004/02/skos/core#historyNote> "WG Approval 25/06/2024"@en .
+<http://data.europa.eu/a4g/ontology#hasTransportHandlingUnitQuantity> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ful> .
+<http://data.europa.eu/a4g/ontology#Despatcher> <http://www.w3.org/2004/02/skos/core#definition> "The Role of an Agent who sends the goods or notifies of the service or works execution. Additional Information: The Role is carried out by the Supplier or on behalf of the Supplier. This Role is often referred to as the Despatch Party, Consignor or Deliverer."@en .
+<http://data.europa.eu/a4g/ontology#hasTransportEquipmentType> <http://www.w3.org/2004/02/skos/core#definition> "The kind of Transport Equipment."@en .
+<http://data.europa.eu/a4g/ontology#concernsTransportMeans> <http://www.w3.org/2004/02/skos/core#definition> "Relates to Transport Means."@en .
+<http://data.europa.eu/a4g/ontology#hasDespatchDate> <http://www.w3.org/2004/02/skos/core#definition> "The date of sending of goods or the execution of works or services. (epo-ful:ShipmentInformation)"@en .
+<http://data.europa.eu/a4g/ontology#hasFreightCharge> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ful> .
+<http://data.europa.eu/a4g/ontology#ful> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://docs.ted.europa.eu/home/index.html> .
+<http://data.europa.eu/a4g/ontology#hasTemperatureSpecification> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ful> .
+<http://data.europa.eu/a4g/ontology#hasTraceID> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ful> .
+<http://data.europa.eu/a4g/ontology#hasNetVolume> <http://www.w3.org/2004/02/skos/core#definition> "The amount of space that is required without the packaging."@en .
+<http://data.europa.eu/a4g/ontology#specifiesCarrier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#hasConsigneeConsignmentID> <http://www.w3.org/2004/02/skos/core#historyNote> "WG Approval 10/06/2024"@en .
+<http://data.europa.eu/a4g/ontology#hasHandlingInstruction> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Handling Instruction"@en .
+<http://data.europa.eu/a4g/ontology#hasHandlingInstructionCode> <http://www.w3.org/2004/02/skos/core#definition> "Instruction on how to handle the Goods Items during transportation, expressed as a code."@en .
+<http://data.europa.eu/a4g/ontology#TransportEquipmentSeal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#ful> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://data.europa.eu/a4g/ontology#" .
+<http://data.europa.eu/a4g/ontology#hasTransportMode> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ful> .
+<http://data.europa.eu/a4g/ontology#hasPackagingStatusDescription> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Packaging Status Description"@en .
+<http://data.europa.eu/a4g/ontology#GoodsItem> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ful> .
+<http://data.europa.eu/a4g/ontology#containsPackage> <http://www.w3.org/2004/02/skos/core#prefLabel> "contains Package"@en .
+<http://data.europa.eu/a4g/ontology#hasMaximumTemperature> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Maximum Temperature"@en .
+<http://data.europa.eu/a4g/ontology#hasVehicleSegmentID> <http://www.w3.org/2004/02/skos/core#definition> "The identifier of a part of the Transport Means."@en .
+<http://data.europa.eu/a4g/ontology#Carrier> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ful> .
+<http://data.europa.eu/a4g/ontology#specifiesConsignee> <http://www.w3.org/2004/02/skos/core#historyNote> "WG Approval 25/06/2024"@en .
+<http://data.europa.eu/a4g/ontology#isReturnableMaterial> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ful> .
+<http://data.europa.eu/a4g/ontology#hasWidth> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Width"@en .
+<http://data.europa.eu/a4g/ontology#hasDespatchedQuantity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#specifiesNotificationReceiver> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#hasGrossVolume> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Gross Volume"@en .
+<http://data.europa.eu/a4g/ontology#agreedByBuyer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#concernsTransportEquipment> <http://www.w3.org/2004/02/skos/core#definition> "Relates to Transport Equipment."@en .
+<http://data.europa.eu/a4g/ontology#usesTransportEquipment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#hasFreightCharge> <http://www.w3.org/2004/02/skos/core#historyNote> "WG Approval 18/06/2024"@en .
+<http://data.europa.eu/a4g/ontology#isPowerIndicated> <http://www.w3.org/2004/02/skos/core#prefLabel> "is Power Indicated"@en .
+<http://data.europa.eu/a4g/ontology#ShipmentAgreement> <http://www.w3.org/2004/02/skos/core#historyNote> "WG Approval 21/05/2024"@en .
+<http://data.europa.eu/a4g/ontology#hasWidth> <http://www.w3.org/2004/02/skos/core#definition> "The measurement of the depth. Additional Information: The width is the shorter side between the length and the width."@en .
+<http://data.europa.eu/a4g/ontology#DespatchAdvice> <http://www.w3.org/2004/02/skos/core#definition> "A document notifying the sending of goods or the execution of works or services."@en .
+<http://data.europa.eu/a4g/ontology#playedBy> <http://www.w3.org/2004/02/skos/core#prefLabel> "played By"@en .
+<http://data.europa.eu/a4g/ontology#hasPackagingStatusDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://data.europa.eu/a4g/ontology#hasNetWeight> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ful> .
+<http://data.europa.eu/a4g/ontology#specifiesPlaceOfDespatch> <http://www.w3.org/2004/02/skos/core#definition> "Relation indicating the Location of the Despatch of the Goods Items to be delivered."@en .
+<http://data.europa.eu/a4g/ontology#ReceiptAdvice> <http://www.w3.org/2004/02/skos/core#definition> "A formal reply from the Buyer to the Seller acknowledging the physical or electronic receipt of goods or services delivered under a Procurement Contract."@en .
+<http://data.europa.eu/a4g/ontology#DespatchLine> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#hasHandlingInstruction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://data.europa.eu/a4g/ontology#DespatchAdvice> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#PostAwardDocument> .
+<http://data.europa.eu/a4g/ontology#TransportMeansOperator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#Consignment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#hasOutstandingQuantity> <http://www.w3.org/2004/02/skos/core#historyNote> "WG Approval 05/06/2024"@en .
+<http://data.europa.eu/a4g/ontology#hasPackagingStatus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#ReceiptAdviceLine> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 16/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#isSubmittedForDespatchLine> <http://www.w3.org/2004/02/skos/core#prefLabel> "is Submitted For Despatch Line"@en .
+<http://data.europa.eu/a4g/ontology#hasTransportEquipmentType> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ful> .
+<http://data.europa.eu/a4g/ontology#usesTransportMeans> <http://www.w3.org/2004/02/skos/core#prefLabel> "uses Transport Means"@en .
+<http://data.europa.eu/a4g/ontology#hasShortQuantity> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#agreedBySeller> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ful> .
+<http://data.europa.eu/a4g/ontology#FreightForwarder> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#hasRejectAction> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Reject Action"@en .
+<http://data.europa.eu/a4g/ontology#isSubmittedForShipment> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#hasConsigneeConsignmentID> <http://www.w3.org/2004/02/skos/core#definition> "The identifier of the the Consignment given by the Consignee."@en .
+<http://data.europa.eu/a4g/ontology#agreedByBuyer> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ful> .
+<http://data.europa.eu/a4g/ontology#comprisesDespatchLine> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#Despatcher> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#OfferingParty> .
+<http://data.europa.eu/a4g/ontology#hasReceivedQuantity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#concernsTransportMeans> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#GoodsItem> <http://www.w3.org/2004/02/skos/core#historyNote> "WG Approval 30/03/2023"@en .
+<http://data.europa.eu/a4g/ontology#hasPackingMaterialDescription> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ful> .
+<http://data.europa.eu/a4g/ontology#hasTemperatureSpecification> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Temperature Specification"@en .
+<http://data.europa.eu/a4g/ontology#hasGrossVolume> <http://www.w3.org/2004/02/skos/core#historyNote> "WG Approval 18/06/2024"@en .
+<http://data.europa.eu/a4g/ontology#hasAllowanceChargeReason> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#TransportMeans> <http://www.w3.org/2004/02/skos/core#definition> "Description of a particular vehicle or vessel used for the conveyance of goods or persons."@en .
+<http://data.europa.eu/a4g/ontology#specifiesCarrier> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ful> .
+<http://data.europa.eu/a4g/ontology#hasHeight> <http://www.w3.org/2004/02/skos/core#definition> "The vertical measurement."@en .
+<http://data.europa.eu/a4g/ontology#hasAcceptanceStatus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#hasOutstandingQuantityReason> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://data.europa.eu/a4g/ontology#concernsGoodsItem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#Carrier> <http://www.w3.org/2004/02/skos/core#definition> "The Role of an Agent who handles the physical Delivery/Transportation of the (Despatched) Shipment. Additional Information: This Role is often referred to as the deliverer."@en .
+<http://data.europa.eu/a4g/ontology#isSubmittedForDespatchAdvice> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#specifiesBuyer> <http://www.w3.org/2004/02/skos/core#prefLabel> "specifies Buyer"@en .
+<http://data.europa.eu/a4g/ontology#ShipmentStage> <http://www.w3.org/2004/02/skos/core#prefLabel> "Shipment Stage"@en .
+<http://data.europa.eu/a4g/ontology#ful> <http://www.w3.org/2002/07/owl#imports> <http://data.europa.eu/eli/ontology#> .
+<http://data.europa.eu/a4g/ontology#concernsTransportEquipment> <http://www.w3.org/2004/02/skos/core#prefLabel> "concerns Transport Equipment"@en .
+<http://data.europa.eu/a4g/ontology#ShipmentStage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#hasTransportMeansType> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ful> .
+<http://data.europa.eu/a4g/ontology#hasDespatchedQuantity> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Despatched Quantity"@en .
+<http://data.europa.eu/a4g/ontology#hasPackingMaterialDescription> <http://www.w3.org/2004/02/skos/core#definition> "Explanatory text about the physical substance that a Package is made of. (epo-ful:AbstractContainer)"@en .
+<http://data.europa.eu/a4g/ontology#specifiesConsignee> <http://www.w3.org/2004/02/skos/core#prefLabel> "specifies Consignee"@en .
+<http://data.europa.eu/a4g/ontology#specifiesNotificationReceiver> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ful> .
+<http://data.europa.eu/a4g/ontology#hasShippingMark> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Shipping Mark"@en .
+<http://data.europa.eu/a4g/ontology#TransportHandlingUnit> <http://www.w3.org/2004/02/skos/core#historyNote> "WG Approval 14/05/2024"@en .
+<http://data.europa.eu/a4g/ontology#usesTransportEquipment> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ful> .
+<http://data.europa.eu/a4g/ontology#hasWidth> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#hasShippingMark> <http://www.w3.org/2004/02/skos/core#definition> "A text that the buyer requests to be printed on the packing labels. (epo-ful:TransportHandlingUnit)"@en .
+<http://data.europa.eu/a4g/ontology#specifiesPlaceOfDespatch> <http://www.w3.org/2004/02/skos/core#prefLabel> "specifies Place Of Despatch"@en .
+<http://data.europa.eu/a4g/ontology#hasOversupplyQuantity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#hasTransportMode> <http://www.w3.org/2004/02/skos/core#definition> "The type of the transport used."@en .
+<http://data.europa.eu/a4g/ontology#containsPackage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#hasLoadingMeter> <http://www.w3.org/2004/02/skos/core#definition> "The area of the Consignment in meters divided by the width of the truck, which is considered to be 2.4 meters."@en .
+<http://data.europa.eu/a4g/ontology#comprisesDespatchLine> <http://www.w3.org/2004/02/skos/core#definition> "Incorporates Despatch Line."@en .
+<http://data.europa.eu/a4g/ontology#hasSpecialServiceInstruction> <http://www.w3.org/2004/02/skos/core#historyNote> "WG Approval 21/05/2024"@en .
+<http://data.europa.eu/a4g/ontology#hasTransportEquipmentSeal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#hasDriverPerson> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#hasNetVolume> <http://www.w3.org/2004/02/skos/core#historyNote> "WG Approval 18/06/2024"@en .
+<http://data.europa.eu/a4g/ontology#concernsGoodsItem> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ful> .
+<http://data.europa.eu/a4g/ontology#hasVehicleID> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Vehicle ID"@en .
+<http://data.europa.eu/a4g/ontology#Despatcher> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ful> .
+<http://data.europa.eu/a4g/ontology#hasShortageAction> <http://www.w3.org/2004/02/skos/core#definition> "Relation indicating the Action code for Quantity deficiency."@en .
+<http://data.europa.eu/a4g/ontology#hasConsigneeConsignmentID> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Consignee Consignment ID"@en .
+<http://data.europa.eu/a4g/ontology#hasSpecialServiceInstruction> <http://www.w3.org/2004/02/skos/core#definition> "Description about special services needed for loading or unloading the Goods Items. (epo-ful:Consignment)"@en .
+<http://data.europa.eu/a4g/ontology#hasTraceID> <http://www.w3.org/2004/02/skos/core#definition> "The identifier used for tracking the Goods Item. Additional information: An example is the EPC number used in RFID."@en .
+<http://data.europa.eu/a4g/ontology#refersToOrder> <http://www.w3.org/2004/02/skos/core#historyNote> "WG Approval 25/06/2024"@en .
+<http://data.europa.eu/a4g/ontology#specifiesDespatcher> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#AbstractContainer> <http://www.w3.org/2004/02/skos/core#prefLabel> "Abstract Container"@en .
+<http://data.europa.eu/a4g/ontology#agreedByBuyer> <http://www.w3.org/2004/02/skos/core#definition> "Accepted by Buyer."@en .
+<http://data.europa.eu/a4g/ontology#hasDespatchDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://data.europa.eu/a4g/ontology#ful> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/2006/time> .
+<http://data.europa.eu/a4g/ontology#hasRejectReason> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Reject Reason"@en .
+<http://data.europa.eu/a4g/ontology#Package> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ful> .
+<http://data.europa.eu/a4g/ontology#hasRejectReason> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#isHazardousRisk> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ful> .
+<http://data.europa.eu/a4g/ontology#ful> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/2004/02/skos/core#> .
+<http://data.europa.eu/a4g/ontology#comprisesDespatchLine> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ful> .
+<http://data.europa.eu/a4g/ontology#hasReceivedQuantity> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ful> .
+<http://data.europa.eu/a4g/ontology#containsTransportHandlingUnit> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ful> .
+<http://data.europa.eu/a4g/ontology#hasAllowanceChargeReason> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ful> .
+<http://data.europa.eu/a4g/ontology#playedBy> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 09/10/2025"@en .
+<http://data.europa.eu/a4g/ontology#comprisesReceiptAdviceLine> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ful> .
+<http://data.europa.eu/a4g/ontology#hasPackagingStatus> <http://www.w3.org/2004/02/skos/core#definition> "Relation indicating the Packaging Status."@en .
+<http://data.europa.eu/a4g/ontology#specifiesOriginator> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ful> .
+<http://data.europa.eu/a4g/ontology#hasVehicleID> <http://www.w3.org/2004/02/skos/core#definition> "The identifier of the Transport Means."@en .
+<http://data.europa.eu/a4g/ontology#specifiesBuyer> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#TemperatureSpecification> <http://www.w3.org/2004/02/skos/core#prefLabel> "Temperature Specification"@en .
+<http://data.europa.eu/a4g/ontology#specifiesDespatcher> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ful> .
+<http://data.europa.eu/a4g/ontology#hasTotalGoodsItemQuantity> <http://www.w3.org/2004/02/skos/core#historyNote> "WG Approval 25/06/2024"@en .
+<http://data.europa.eu/a4g/ontology#hasDespatchPeriod> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#DespatchAdvice> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ful> .
+<http://data.europa.eu/a4g/ontology#concernsTransportMeans> <http://www.w3.org/2004/02/skos/core#prefLabel> "concerns Transport Means"@en .
+<http://data.europa.eu/a4g/ontology#ful> <http://purl.org/dc/terms/description> "The eProcurement Ontology Fulfilment core describes the concepts and properties representing the European Public Procurement Fulfilment domain. The provision of these semantics offers the basis for a common understanding of the domain for all stakeholders ensuring the quality of data exchange and transparency. The ontology restrictions are published in a separate artefact."@en .
+<http://data.europa.eu/a4g/ontology#concernsPackage> <http://www.w3.org/2004/02/skos/core#definition> "Relates to Package."@en .
+<http://data.europa.eu/a4g/ontology#hasMinimumTemperature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#hasRejectReason> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ful> .
+<http://data.europa.eu/a4g/ontology#specifiesFreightForwarder> <http://www.w3.org/2004/02/skos/core#definition> "Relation indicating that the instance of the concept involves the Freight Forwarder."@en .
+<http://data.europa.eu/a4g/ontology#hasArrivalShipmentInformation> <http://www.w3.org/2004/02/skos/core#definition> "Shipment Information about the destination of the Consignment for a given Shipment Stage."@en .
+<http://data.europa.eu/a4g/ontology#hasDespatchedQuantity> <http://www.w3.org/2004/02/skos/core#historyNote> "WG Approval 18/06/2024"@en .
+<http://data.europa.eu/a4g/ontology#ReceiptAdviceInformation> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 16/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#containsPackage> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ful> .
+<http://data.europa.eu/a4g/ontology#hasOversupplyQuantity> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ful> .
+<http://data.europa.eu/a4g/ontology#hasRequestedPickUpInformation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#hasTransportEquipmentSeal> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ful> .
+<http://data.europa.eu/a4g/ontology#Package> <http://www.w3.org/2004/02/skos/core#prefLabel> "Package"@en .
+<http://data.europa.eu/a4g/ontology#ShipmentInformation> <http://www.w3.org/2004/02/skos/core#prefLabel> "Shipment Information"@en .
+<http://data.europa.eu/a4g/ontology#hasNetWeight> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#refersToDespatchAdvice> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#isSpecificToReceiptAdviceLine> <http://www.w3.org/2004/02/skos/core#prefLabel> "is Specific To Receipt Advice Line"@en .
+<http://data.europa.eu/a4g/ontology#hasTransportHandlingUnitQuantity> <http://www.w3.org/2004/02/skos/core#historyNote> "WG Approval 25/06/2024"@en .
+<http://data.europa.eu/a4g/ontology#hasDocumentStatus> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ful> .
+<http://data.europa.eu/a4g/ontology#specifiesNotificationReceiver> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#concernsPackage> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#isSpecificToDespatchLine> <http://www.w3.org/2004/02/skos/core#definition> "Information that is particular to a Despatch Line."@en .
+<http://data.europa.eu/a4g/ontology#hasRejectReasonDescription> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ful> .
+<http://data.europa.eu/a4g/ontology#hasDepartureShipmentInformation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#ful> <http://www.w3.org/2002/07/owl#imports> <http://data.europa.eu/a4g/ontology#ord> .
+<http://data.europa.eu/a4g/ontology#TransportHandlingUnit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#hasDespatchPeriod> <http://www.w3.org/2004/02/skos/core#definition> "The time period when the Despatcher picks-up the Goods Items to be delivered."@en .
+<http://data.europa.eu/a4g/ontology#refersToOrder> <http://www.w3.org/2004/02/skos/core#prefLabel> "refers To Order"@en .
+<http://data.europa.eu/a4g/ontology#refersToReceiptAdvice> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ful> .
+<http://data.europa.eu/a4g/ontology#hasShippingMark> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://data.europa.eu/a4g/ontology#hasTransportEquipmentType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#ReceiptAdvice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#hasArrivalShipmentInformation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#specifiesReceiptAdviceInformation> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#TransportHandlingUnit> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#Package> .
+<http://data.europa.eu/a4g/ontology#TemperatureSpecification> <http://www.w3.org/2004/02/skos/core#historyNote> "WG Approval 21/05/2024"@en .
+<http://data.europa.eu/a4g/ontology#AbstractContainer> <http://www.w3.org/2004/02/skos/core#historyNote> "WG Approval 14/05/2024"@en .
+<http://data.europa.eu/a4g/ontology#hasSizeType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#ful> <http://purl.org/dc/terms/created> "2021-06-01"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://data.europa.eu/a4g/ontology#usesTransportEquipment> <http://www.w3.org/2004/02/skos/core#historyNote> "WG Approval 02/07/2024"@en .
+<http://data.europa.eu/a4g/ontology#isSubmittedForShipment> <http://www.w3.org/2004/02/skos/core#prefLabel> "is Submitted For Shipment"@en .
+<http://data.europa.eu/a4g/ontology#hasRejectedQuantity> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Rejected Quantity"@en .
+<http://data.europa.eu/a4g/ontology#containsPackage> <http://www.w3.org/2004/02/skos/core#definition> "Includes Package."@en .
+<http://data.europa.eu/a4g/ontology#isHazardousRisk> <http://www.w3.org/2004/02/skos/core#historyNote> "WG Approval 21/05/2024"@en .
+<http://data.europa.eu/a4g/ontology#GoodsItem> <http://www.w3.org/2004/02/skos/core#prefLabel> "Goods Item"@en .
+<http://data.europa.eu/a4g/ontology#hasRejectedQuantity> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ful> .
+<http://data.europa.eu/a4g/ontology#hasShortageAction> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ful> .
+<http://data.europa.eu/a4g/ontology#hasRejectAction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#isHazardousRisk> <http://www.w3.org/2004/02/skos/core#definition> "Indicates whether some of the contained Goods Items are hazardous. (epo-ful:AbstractContainer) Indicates whether some of the contained Goods Items are hazardous. (epo-ful:Consignment)"@en .
+<http://data.europa.eu/a4g/ontology#ful> <http://www.w3.org/2002/07/owl#imports> <http://data.europa.eu/a4g/ontology#core> .
+<http://data.europa.eu/a4g/ontology#isRefrigerated> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ful> .
+<http://data.europa.eu/a4g/ontology#hasSpecialServiceInstruction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://data.europa.eu/a4g/ontology#hasCarriageShipmentStage> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Carriage Shipment Stage"@en .
+<http://data.europa.eu/a4g/ontology#usesTransportEquipment> <http://www.w3.org/2004/02/skos/core#definition> "Relation indicating that a Transport Handling Unit utilises a Transport Equipment."@en .
+<http://data.europa.eu/a4g/ontology#hasDespatchAdviceType> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Despatch Advice Type"@en .
+<http://data.europa.eu/a4g/ontology#hasDriverPerson> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ful> .
+<http://data.europa.eu/a4g/ontology#NotificationReceiver> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#hasDespatcherConsignmentID> <http://www.w3.org/2004/02/skos/core#historyNote> "WG Approval 10/06/2024"@en .
+<http://data.europa.eu/a4g/ontology#TransportEquipment> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ful> .
+<http://data.europa.eu/a4g/ontology#hasDespatchPeriod> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ful> .
+<http://data.europa.eu/a4g/ontology#hasCarriageShipmentStage> <http://www.w3.org/2004/02/skos/core#definition> "The Shipment Stage for the last mile covered in a transport chain."@en .
+<http://data.europa.eu/a4g/ontology#concernsGoodsItem> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#hasTransportMeansType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#isSpecificToReceiptAdviceLine> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ful> .
+<http://data.europa.eu/a4g/ontology#hasMinimumTemperature> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ful> .
+<http://data.europa.eu/a4g/ontology#hasSizeType> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ful> .
+<http://data.europa.eu/a4g/ontology#isPowerIndicated> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ful> .
+<http://data.europa.eu/a4g/ontology#refersToOrderLine> <http://www.w3.org/2004/02/skos/core#definition> "Reference to an Order Line."@en .
+<http://data.europa.eu/a4g/ontology#hasPackagingTypeDescription> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ful> .
+<http://data.europa.eu/a4g/ontology#hasLength> <http://www.w3.org/2004/02/skos/core#definition> "The horizontal measurement. Additional Information: The length is the longer side between the length and the width."@en .
+<http://data.europa.eu/a4g/ontology#hasAllowanceChargeReason> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Allowance Charge Reason"@en .
+<http://data.europa.eu/a4g/ontology#hasRequestedPickUpInformation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ful> .
+<http://data.europa.eu/a4g/ontology#hasMaximumTemperature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#Carrier> <http://www.w3.org/2004/02/skos/core#historyNote> "WG Approval 14/05/2024"@en .
+<http://data.europa.eu/a4g/ontology#hasDriverPerson> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Driver Person"@en .
+<http://data.europa.eu/a4g/ontology#specifiesSeller> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ful> .
+<http://data.europa.eu/a4g/ontology#ShipmentAgreement> <http://www.w3.org/2004/02/skos/core#prefLabel> "Shipment Agreement"@en .
+<http://data.europa.eu/a4g/ontology#hasWidth> <http://www.w3.org/2004/02/skos/core#historyNote> "WG Approval 18/06/2024"@en .
+<http://data.europa.eu/a4g/ontology#refersToDespatchLine> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#specifiesReceiptAdviceInformation> <http://www.w3.org/2004/02/skos/core#prefLabel> "specifies Receipt Advice Information"@en .
+<http://data.europa.eu/a4g/ontology#hasAcceptanceStatus> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Acceptance Status"@en .
+<http://data.europa.eu/a4g/ontology#ReceiptAdviceLine> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#ful> <http://purl.org/dc/terms/title> "eProcurement Ontology Fulfilment - core"@en .
+<http://data.europa.eu/a4g/ontology#hasTransportEquipmentSeal> <http://www.w3.org/2004/02/skos/core#definition> "Relation indicating that the instance of the concept has a Transport Equipment Seal."@en .
+<http://data.europa.eu/a4g/ontology#TransportMeansOperator> <http://www.w3.org/2004/02/skos/core#definition> "The Role of an Agent who is responsible for controlling the Transport Means."@en .
+<http://data.europa.eu/a4g/ontology#hasDespatchAdviceType> <http://www.w3.org/2004/02/skos/core#definition> "Classification of a Despatch Advice."@en .
+<http://data.europa.eu/a4g/ontology#hasDocumentStatus> <http://www.w3.org/2004/02/skos/core#definition> "https://test-docs.peppol.eu/logistics/transport-execution/codelist/DocumentStatusCode/"@en .
+<http://data.europa.eu/a4g/ontology#hasLength> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#ReceiptAdviceLine> <http://www.w3.org/2004/02/skos/core#definition> "Details concerning the Fulfilment of a Despatch Line."@en .
+<http://data.europa.eu/a4g/ontology#TransportHandlingUnit> <http://www.w3.org/2004/02/skos/core#definition> "The outermost Package that the Carrier is handling."@en .
+<http://data.europa.eu/a4g/ontology#hasOutstandingQuantityReason> <http://www.w3.org/2004/02/skos/core#definition> "Explanation of the outstanding quantity still to be despatched. (epo-ful:DespatchLine)"@en .
+<http://data.europa.eu/a4g/ontology#hasDepartureShipmentInformation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ful> .
+<http://data.europa.eu/a4g/ontology#hasDespatchAdviceType> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ful> .
+<http://data.europa.eu/a4g/ontology#ShipmentInformation> <http://www.w3.org/2004/02/skos/core#historyNote> "WG Approval 21/05/2024"@en .
+<http://data.europa.eu/a4g/ontology#hasRejectReason> <http://www.w3.org/2004/02/skos/core#definition> "Relation indicating the reason for non-acceptance."@en .
+<http://data.europa.eu/a4g/ontology#Despatcher> <http://www.w3.org/2004/02/skos/core#historyNote> "WG Approval 02/07/2024"@en .
+<http://data.europa.eu/a4g/ontology#specifiesCarrier> <http://www.w3.org/2004/02/skos/core#historyNote> "WG Approval 25/06/2024"@en .
+<http://data.europa.eu/a4g/ontology#concernsTransportEquipment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#hasFreightCharge> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Freight Charge"@en .
+<http://data.europa.eu/a4g/ontology#TemperatureSpecification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#Carrier> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#AuxiliaryParty> .
+<http://data.europa.eu/a4g/ontology#TransportEquipment> <http://www.w3.org/2004/02/skos/core#historyNote> "WG Approval 21/05/2024"@en .
+<http://data.europa.eu/a4g/ontology#hasPackagingStatus> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Packaging Status"@en .
+<http://data.europa.eu/a4g/ontology#hasMinimumTemperature> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Minimum Temperature"@en .
+<http://data.europa.eu/a4g/ontology#hasVehicleID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#specifiesNotificationReceiver> <http://www.w3.org/2004/02/skos/core#prefLabel> "specifies Notification Receiver"@en .
+<http://data.europa.eu/a4g/ontology#hasDeclaredStatisticalValue> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Declared Statistical Value"@en .
+<http://data.europa.eu/a4g/ontology#isRefrigerated> <http://www.w3.org/2004/02/skos/core#definition> "Indicates whether the instance of the concept includes refrigeration. Additional Information: The instance of the concept can be, for example, Transport Equipment. (epo-ful:TransportEquipment)"@en .
+<http://data.europa.eu/a4g/ontology#TransportMeans> <http://www.w3.org/2004/02/skos/core#historyNote> "WG Approval 21/05/2024"@en .
+<http://data.europa.eu/a4g/ontology#refersToReceiptAdvice> <http://www.w3.org/2004/02/skos/core#prefLabel> "refers To Receipt Advice"@en .
+<http://data.europa.eu/a4g/ontology#isSubmittedForDespatchLine> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#specifiesFreightForwarder> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#hasDespatchPeriod> <http://www.w3.org/2004/02/skos/core#historyNote> "WG Approval 16/07/2024"@en .
+<http://data.europa.eu/a4g/ontology#hasTransportHandlingUnitQuantity> <http://www.w3.org/2004/02/skos/core#definition> "Relation indicating the number of the Transport Handling Unit."@en .
+<http://data.europa.eu/a4g/ontology#containsTransportHandlingUnit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#refersToDespatchLine> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ful> .
+<http://data.europa.eu/a4g/ontology#hasHeight> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#containsTransportHandlingUnit> <http://www.w3.org/2004/02/skos/core#prefLabel> "contains Transport Handling Unit"@en .
+<http://data.europa.eu/a4g/ontology#hasHandlingInstructionCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#hasRejectAction> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ful> .
+<http://data.europa.eu/a4g/ontology#comprisesReceiptAdviceLine> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#hasDriverPerson> <http://www.w3.org/2004/02/skos/core#historyNote> "WG Approval 02/07/2024"@en .
+<http://data.europa.eu/a4g/ontology#specifiesOriginator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#hasDepartureShipmentInformation> <http://www.w3.org/2004/02/skos/core#historyNote> "WG Approval 18/06/2024"@en .
+<http://data.europa.eu/a4g/ontology#ReceiptAdviceLine> <http://www.w3.org/2004/02/skos/core#prefLabel> "Receipt Advice Line"@en .
+<http://data.europa.eu/a4g/ontology#hasPackagingStatusDescription> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ful> .
+<http://data.europa.eu/a4g/ontology#refersToDespatchLine> <http://www.w3.org/2004/02/skos/core#historyNote> "WG Approval 25/06/2024"@en .
+<http://data.europa.eu/a4g/ontology#comprisesDespatchLine> <http://www.w3.org/2004/02/skos/core#prefLabel> "comprises Despatch Line"@en .
+<http://data.europa.eu/a4g/ontology#containsTransportHandlingUnit> <http://www.w3.org/2004/02/skos/core#definition> "Includes Transport Handling Unit."@en .
+<http://data.europa.eu/a4g/ontology#concernsTransportEquipment> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ful> .
+<http://data.europa.eu/a4g/ontology#containsGoodsItem> <http://www.w3.org/2004/02/skos/core#historyNote> "WG Approval 10/06/2024"@en .
+<http://data.europa.eu/a4g/ontology#comprisesReceiptAdviceLine> <http://www.w3.org/2004/02/skos/core#prefLabel> "comprises Receipt Advice Line"@en .
+<http://data.europa.eu/a4g/ontology#hasGrossWeight> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#hasHandlingInstruction> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ful> .
+<http://data.europa.eu/a4g/ontology#hasMinimumTemperature> <http://www.w3.org/2004/02/skos/core#historyNote> "WG Approval 18/06/2024"@en .
+<http://data.europa.eu/a4g/ontology#ShipmentAgreement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#ReceiptAdvice> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ful> .
+<http://data.europa.eu/a4g/ontology#TransportEquipmentSeal> <http://www.w3.org/2004/02/skos/core#historyNote> "WG Approval 21/05/2023"@en .
+<http://data.europa.eu/a4g/ontology#hasArrivalShipmentInformation> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Arrival Shipment Information"@en .
+<http://data.europa.eu/a4g/ontology#hasPackingMaterialDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://data.europa.eu/a4g/ontology#foreseesPackage> <http://www.w3.org/2004/02/skos/core#definition> "Relation indicating that an instance of the concept plans to have a Package."@en .
+<http://data.europa.eu/a4g/ontology#ful> <http://purl.org/dc/terms/license> "© European Union, 2014. Unless otherwise noted, the reuse of the Ontology is authorised under the European Union Public Licence v1.2 (https://eupl.eu/)." .
+<http://data.europa.eu/a4g/ontology#TransportEquipmentSeal> <http://www.w3.org/2004/02/skos/core#prefLabel> "Transport Equipment Seal"@en .
+<http://data.europa.eu/a4g/ontology#ful> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/ns/adms> .
+<http://data.europa.eu/a4g/ontology#hasPackagingTypeDescription> <http://www.w3.org/2004/02/skos/core#definition> "Explanatory text about how the Goods Item is packed. (epo-ful:Package)"@en .
+<http://data.europa.eu/a4g/ontology#usesTransportMeans> <http://www.w3.org/2004/02/skos/core#definition> "Relation indicating that a Shipment Stage utilises a Transport Means."@en .
+<http://data.europa.eu/a4g/ontology#hasFreightCharge> <http://www.w3.org/2004/02/skos/core#definition> "The total cost for moving the goods."@en .
+<http://data.europa.eu/a4g/ontology#hasTransportMeansType> <http://www.w3.org/2004/02/skos/core#definition> "The kind of Transport Means."@en .
+<http://data.europa.eu/a4g/ontology#ShipmentStage> <http://www.w3.org/2004/02/skos/core#definition> "Part of the itinerary of a shipment. Additional information: In the context of fulfilment only the last part of the itinerary is taken into consideration."@en .
+<http://data.europa.eu/a4g/ontology#hasMaximumTemperature> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ful> .
+<http://data.europa.eu/a4g/ontology#foreseesPackage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#isReturnableMaterial> <http://www.w3.org/2004/02/skos/core#historyNote> "WG Approval 21/05/2024"@en .
+<http://data.europa.eu/a4g/ontology#specifiesFreightForwarder> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ful> .
+<http://data.europa.eu/a4g/ontology#specifiesNotificationReceiver> <http://www.w3.org/2004/02/skos/core#definition> "Relation indicating that the instance of the concept involves the Notification Receiver."@en .
+<http://data.europa.eu/a4g/ontology#ful> <http://www.w3.org/2002/07/owl#imports> <http://purl.org/dc/terms/> .
+<http://data.europa.eu/a4g/ontology#hasArrivalShipmentInformation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ful> .
+<http://data.europa.eu/a4g/ontology#isPowerIndicated> <http://www.w3.org/2004/02/skos/core#definition> "Indicates whether the instance of the concept can supply electrical energy. Additional Information: The instance of the concept can be, for example, Transport Equipment. (epo-ful:TransportEquipment)"@en .
+<http://data.europa.eu/a4g/ontology#hasHeight> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ful> .
+<http://data.europa.eu/a4g/ontology#isHazardousRisk> <http://www.w3.org/2004/02/skos/core#prefLabel> "is Hazardous Risk"@en .
+<http://data.europa.eu/a4g/ontology#refersToDeliveryInformation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#DespatchLine> <http://www.w3.org/2004/02/skos/core#definition> "Details concerning the fulfilment of an Order Line."@en .
+<http://data.europa.eu/a4g/ontology#hasDocumentStatus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#FreightForwarder> <http://www.w3.org/2004/02/skos/core#definition> "The Role of an Agent who organise the logistic operations need for a fulfilment."@en .
+<http://data.europa.eu/a4g/ontology#usesTransportMeans> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#specifiesCarrier> <http://www.w3.org/2004/02/skos/core#prefLabel> "specifies Carrier"@en .
+<http://data.europa.eu/a4g/ontology#refersToDespatchLine> <http://www.w3.org/2004/02/skos/core#definition> "Reference to a Despatch Line."@en .
+<http://data.europa.eu/a4g/ontology#hasNetWeight> <http://www.w3.org/2004/02/skos/core#historyNote> "WG Approval 18/06/2024"@en .
+<http://data.europa.eu/a4g/ontology#TransportEquipmentSeal> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ful> .
+<http://data.europa.eu/a4g/ontology#Consignment> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ful> .
+<http://data.europa.eu/a4g/ontology#AbstractContainer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#hasGrossWeight> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ful> .
+<http://data.europa.eu/a4g/ontology#specifiesOriginator> <http://www.w3.org/2004/02/skos/core#historyNote> "WG Approval 25/06/2024"@en .
+<http://data.europa.eu/a4g/ontology#isHazardousRisk> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://data.europa.eu/a4g/ontology#NotificationReceiver> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ful> .
+<http://data.europa.eu/a4g/ontology#refersToOrder> <http://www.w3.org/2004/02/skos/core#definition> "Reference to an Order."@en .
+<http://data.europa.eu/a4g/ontology#refersToReceiptAdvice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#hasOutstandingQuantityReason> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ful> .
+<http://data.europa.eu/a4g/ontology#hasVehicleID> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ful> .
+<http://data.europa.eu/a4g/ontology#refersToDespatchLine> <http://www.w3.org/2004/02/skos/core#prefLabel> "refers To Despatch Line"@en .
+<http://data.europa.eu/a4g/ontology#hasNetWeight> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Net Weight"@en .
+<http://data.europa.eu/a4g/ontology#hasPackagingStatusDescription> <http://www.w3.org/2004/02/skos/core#definition> "Explanatory text about the condition of a Package. (epo-ful:Package)"@en .
+<http://data.europa.eu/a4g/ontology#agreedBySeller> <http://www.w3.org/2004/02/skos/core#definition> "Accepted by Seller."@en .
+<http://data.europa.eu/a4g/ontology#hasConsigneeConsignmentID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#hasVehicleSegmentID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#ful> <http://purl.org/dc/terms/issued> "2025-10-10"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://data.europa.eu/a4g/ontology#ReceiptAdvice> <http://www.w3.org/2004/02/skos/core#prefLabel> "Receipt Advice"@en .
+<http://data.europa.eu/a4g/ontology#hasTotalGoodsItemQuantity> <http://www.w3.org/2004/02/skos/core#definition> "Relation indicating the number of the Goods Items."@en .
+<http://data.europa.eu/a4g/ontology#foreseesPackage> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ful> .
+<http://data.europa.eu/a4g/ontology#hasArrivalShipmentInformation> <http://www.w3.org/2004/02/skos/core#historyNote> "WG Approval 18/06/2024"@en .
+<http://data.europa.eu/a4g/ontology#isSubmittedForDespatchLine> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ful> .
+<http://data.europa.eu/a4g/ontology#hasShortQuantity> <http://www.w3.org/2004/02/skos/core#definition> "Relation indicating the Quantity deficit."@en .
+<http://data.europa.eu/a4g/ontology#foreseesPackage> <http://www.w3.org/2004/02/skos/core#prefLabel> "foresees Package"@en .
+<http://data.europa.eu/a4g/ontology#usesTransportEquipment> <http://www.w3.org/2004/02/skos/core#prefLabel> "uses Transport Equipment"@en .
+<http://data.europa.eu/a4g/ontology#Package> <http://www.w3.org/2004/02/skos/core#historyNote> "WG Approval 14/05/2024"@en .
+<http://data.europa.eu/a4g/ontology#hasShortageAction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#hasRejectedQuantity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#hasHandlingInstructionCode> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ful> .
+<http://data.europa.eu/a4g/ontology#hasPackingMaterialDescription> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Packing Material Description"@en .
+<http://data.europa.eu/a4g/ontology#ful> <http://purl.org/dc/terms/publisher> "http://publications.europa.eu/resource/authority/corporate-body/PUBL" .
+<http://data.europa.eu/a4g/ontology#hasDespatchPeriod> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Despatch Period"@en .
+<http://data.europa.eu/a4g/ontology#DespatchLine> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ful> .
+<http://data.europa.eu/a4g/ontology#isSpecificToReceiptAdviceLine> <http://www.w3.org/2004/02/skos/core#definition> "Information that is particular to a Receipt Advice Line."@en .
+<http://data.europa.eu/a4g/ontology#hasTransportEquipmentSeal> <http://www.w3.org/2004/02/skos/core#historyNote> "WG Approval 25/06/2024"@en .
+<http://data.europa.eu/a4g/ontology#ful> <http://www.w3.org/2002/07/owl#versionInfo> "5.2.0" .
+<http://data.europa.eu/a4g/ontology#hasReceivedQuantity> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Received Quantity"@en .
+<http://data.europa.eu/a4g/ontology#hasPackagingType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#isSubmittedForShipment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#refersToShipmentAgreement> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ful> .
+<http://data.europa.eu/a4g/ontology#TransportMeansOperator> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ful> .
+<http://data.europa.eu/a4g/ontology#refersToConsignment> <http://www.w3.org/2004/02/skos/core#prefLabel> "refers To Consignment"@en .
+<http://data.europa.eu/a4g/ontology#ful> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/ns/person> .
+<http://data.europa.eu/a4g/ontology#ReceiptAdviceInformation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#hasDeclaredStatisticalValue> <http://www.w3.org/2004/02/skos/core#historyNote> "WG Approval 10/06/2024"@en .
+<http://data.europa.eu/a4g/ontology#ful> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://data.europa.eu/a4g/ontology#hasLength> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ful> .
+<http://data.europa.eu/a4g/ontology#ShipmentStage> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ful> .
+<http://data.europa.eu/a4g/ontology#hasLoadingMeter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#Carrier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#hasSpecialServiceInstruction> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Special Service Instruction"@en .
+<http://data.europa.eu/a4g/ontology#isSpecificToDespatchLine> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ful> .
+<http://data.europa.eu/a4g/ontology#Package> <http://www.w3.org/2004/02/skos/core#definition> "Container used for transportation."@en .
+<http://data.europa.eu/a4g/ontology#DespatchAdvice> <http://www.w3.org/2004/02/skos/core#historyNote> "WG Approval 14/05/2024"@en .
+<http://data.europa.eu/a4g/ontology#isSpecificToReceiptAdviceLine> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#playedBy> <http://www.w3.org/2004/02/skos/core#definition> "Relation indicating the Agent that fulfills the function of the instance of the concept."@en .
+<http://data.europa.eu/a4g/ontology#FreightForwarder> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ful> .
+<http://data.europa.eu/a4g/ontology#hasPackagingType> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Packaging Type"@en .
+<http://data.europa.eu/a4g/ontology#specifiesDespatcher> <http://www.w3.org/2004/02/skos/core#historyNote> "WG Approval 25/06/2024"@en .
+<http://data.europa.eu/a4g/ontology#ShipmentInformation> <http://www.w3.org/2004/02/skos/core#definition> "Information about the transportation of an identifiable collection of Goods Items from the Despatcher to the Consignee."@en .
+<http://data.europa.eu/a4g/ontology#refersToOrderLine> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#hasRejectedQuantity> <http://www.w3.org/2004/02/skos/core#definition> "Relation indicating the non-accepted Quantity."@en .
+<http://data.europa.eu/a4g/ontology#hasDespatchDate> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ful> .
+<http://data.europa.eu/a4g/ontology#isSubmittedForDespatchAdvice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#specifiesSeller> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#hasDespatcherConsignmentID> <http://www.w3.org/2004/02/skos/core#definition> "The identifier of the the Consignment given by the Despatcher."@en .
+<http://data.europa.eu/a4g/ontology#refersToDeliveryInformation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ful> .
+<http://data.europa.eu/a4g/ontology#hasNetVolume> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Net Volume"@en .
+<http://data.europa.eu/a4g/ontology#refersToShipmentAgreement> <http://www.w3.org/2004/02/skos/core#definition> "Reference to a Shipment Agreement."@en .
+<http://data.europa.eu/a4g/ontology#usesTransportMeans> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ful> .
+<http://data.europa.eu/a4g/ontology#hasMaximumTemperature> <http://www.w3.org/2004/02/skos/core#historyNote> "WG Approval 18/06/2024"@en .
+<http://data.europa.eu/a4g/ontology#TransportMeansOperator> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#AuxiliaryParty> .
+<http://data.europa.eu/a4g/ontology#hasPackagingStatusDescription> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2026"@en .
+<http://data.europa.eu/a4g/ontology#TransportMeans> <http://www.w3.org/2004/02/skos/core#prefLabel> "Transport Means"@en .
+<http://data.europa.eu/a4g/ontology#isSubmittedForDespatchAdvice> <http://www.w3.org/2004/02/skos/core#prefLabel> "is Submitted For Despatch Advice"@en .
+<http://data.europa.eu/a4g/ontology#hasOutstandingQuantityReason> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Outstanding Quantity Reason"@en .
+<http://data.europa.eu/a4g/ontology#hasGrossWeight> <http://www.w3.org/2004/02/skos/core#historyNote> "WG Approval 18/06/2024"@en .
+<http://data.europa.eu/a4g/ontology#refersToConsignment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#isSubmittedForShipment> <http://www.w3.org/2004/02/skos/core#definition> "Relation indicating that the instance of the concept is sent for a specific Shipment."@en .
+<http://data.europa.eu/a4g/ontology#hasDespatchAdviceType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#hasLength> <http://www.w3.org/2004/02/skos/core#historyNote> "WG Approval 18/06/2024"@en .
+<http://data.europa.eu/a4g/ontology#specifiesDespatcher> <http://www.w3.org/2004/02/skos/core#definition> "Relation indicating that the instance of the concept involves the Despatcher."@en .
+<http://data.europa.eu/a4g/ontology#TemperatureSpecification> <http://www.w3.org/2004/02/skos/core#definition> "Description of the temperature requirements during shipment."@en .
+<http://data.europa.eu/a4g/ontology#GoodsItem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#hasAcceptanceStatus> <http://www.w3.org/2004/02/skos/core#definition> "Relation indicating the acceptance status."@en .
+<http://data.europa.eu/a4g/ontology#NotificationReceiver> <http://www.w3.org/2004/02/skos/core#prefLabel> "Notification Receiver"@en .
+<http://data.europa.eu/a4g/ontology#specifiesPlaceOfDespatch> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#hasOversupplyQuantity> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Oversupply Quantity"@en .
+<http://data.europa.eu/a4g/ontology#ShipmentAgreement> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ful> .
+<http://data.europa.eu/a4g/ontology#hasVehicleSegmentID> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ful> .
+<http://data.europa.eu/a4g/ontology#DespatchLine> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#Line> .
+<http://data.europa.eu/a4g/ontology#hasRejectReasonDescription> <http://www.w3.org/2004/02/skos/core#definition> "Explanatory text about the motive of the refusal. (epo-ful:ReceiptAdviceInformation)"@en .
+<http://data.europa.eu/a4g/ontology#ful> <http://www.w3.org/2002/07/owl#versionIRI> <http://data.europa.eu/a4g/ontology#ful-5.2.0> .
+<http://data.europa.eu/a4g/ontology#hasSizeType> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Size Type"@en .
+<http://data.europa.eu/a4g/ontology#concernsTransportEquipment> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#containsGoodsItem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#hasNetVolume> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#hasNetWeight> <http://www.w3.org/2004/02/skos/core#definition> "The total mass of goods without the packaging."@en .
+<http://data.europa.eu/a4g/ontology#hasTransportEquipmentType> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Transport Equipment Type"@en .
+<http://data.europa.eu/a4g/ontology#ful> <http://www.w3.org/2002/07/owl#imports> <http://data.europa.eu/a4g/ontology#cat> .
+<http://data.europa.eu/a4g/ontology#hasRequestedPickUpInformation> <http://www.w3.org/2004/02/skos/core#historyNote> "WG Approval 25/06/2024"@en .
+<http://data.europa.eu/a4g/ontology#hasPackagingType> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ful> .
+<http://data.europa.eu/a4g/ontology#hasHeight> <http://www.w3.org/2004/02/skos/core#historyNote> "WG Approval 18/06/2024"@en .
+<http://data.europa.eu/a4g/ontology#hasReceivedQuantity> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#isReturnableMaterial> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://data.europa.eu/a4g/ontology#isSubmittedForShipment> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ful> .
+<http://data.europa.eu/a4g/ontology#specifiesConsignee> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#specifiesDespatcher> <http://www.w3.org/2004/02/skos/core#prefLabel> "specifies Despatcher"@en .
+<http://data.europa.eu/a4g/ontology#DespatchLine> <http://www.w3.org/2004/02/skos/core#prefLabel> "Despatch Line"@en .
+<http://data.europa.eu/a4g/ontology#hasGrossVolume> <http://www.w3.org/2004/02/skos/core#definition> "The amount of space that is required including the packaging."@en .
+<http://data.europa.eu/a4g/ontology#isPowerIndicated> <http://www.w3.org/2004/02/skos/core#historyNote> "WG Approval 05/06/2024"@en .
+<http://data.europa.eu/a4g/ontology#containsPackage> <http://www.w3.org/2004/02/skos/core#historyNote> "WG Approval 10/06/2024"@en .
+<http://data.europa.eu/a4g/ontology#specifiesPlaceOfDespatch> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ful> .
+<http://data.europa.eu/a4g/ontology#hasLoadingMeter> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ful> .
+<http://data.europa.eu/a4g/ontology#hasPackagingTypeDescription> <http://www.w3.org/2004/02/skos/core#historyNote> "WG Approval 05/06/2024"@en .
+<http://data.europa.eu/a4g/ontology#ReceiptAdviceInformation> <http://www.w3.org/2004/02/skos/core#definition> "Information about the Receipt Advice."@en .
+<http://data.europa.eu/a4g/ontology#ShipmentAgreement> <http://www.w3.org/2004/02/skos/core#definition> "The commercial agreement between the Buyer and the Seller. Additional Information: The Shipment Agreement describes the items being shipped."@en .
+<http://data.europa.eu/a4g/ontology#TransportMeansOperator> <http://www.w3.org/2004/02/skos/core#historyNote> "WG Approval 21/05/2024"@en .
+<http://data.europa.eu/a4g/ontology#refersToDeliveryInformation> <http://www.w3.org/2004/02/skos/core#definition> "Reference to a Delivery Information."@en .
+<http://data.europa.eu/a4g/ontology#ReceiptAdvice> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#PostAwardDocument> .
+<http://data.europa.eu/a4g/ontology#hasOutstandingQuantity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#ful> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://joinup.ec.europa.eu/collection/eprocurement/solution/eprocurement-ontology/about> .
+<http://data.europa.eu/a4g/ontology#refersToOrderLine> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ful> .

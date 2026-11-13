@@ -14,6 +14,7 @@ from unittest import mock
 
 from rdflib import Graph, URIRef
 
+from horoi import uml
 from horoi.build import build
 from horoi.cli import main
 from horoi.diagram import Undrawable, draw
@@ -32,6 +33,22 @@ ex:Pet a owl:Class ; rdfs:label "Pet" ; rdfs:comment "An animal kept for company
 ex:Owner a owl:Class ; rdfs:label "Owner" ; rdfs:comment "Whoever keeps a pet." .
 ex:keptBy a owl:ObjectProperty ; rdfs:label "kept by" ; rdfs:domain ex:Pet ; rdfs:comment "Relates a pet to its keeper." .
 ex:name a owl:DatatypeProperty ; rdfs:label "name" ; rdfs:domain ex:Pet ; rdfs:comment "Relates a pet to what it is called." .
+"""
+# A third, in the style of gist: its terms in a namespace that is not the ontology's
+# IRI, its version only in the version IRI, SKOS annotations, and a union as a domain.
+SKOSSY = """@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix z: <https://example.org/ns/zoo/> .
+<https://example.org/ontology/zooCore> a owl:Ontology ;
+    owl:versionIRI <https://example.org/ontology/zooCore2.3.1> ;
+    skos:prefLabel "Zoo" ; skos:definition "Animals and their keepers." .
+z:Animal a owl:Class ; skos:prefLabel "Animal" ; skos:definition "A living thing kept in a zoo." ;
+    rdfs:subClassOf [ a owl:Restriction ; owl:onProperty z:keptBy ; owl:someValuesFrom z:Keeper ] .
+z:Keeper a owl:Class ; skos:prefLabel "Keeper" ; skos:definition "Whoever looks after animals." .
+z:keptBy a owl:ObjectProperty ; skos:prefLabel "kept by" ; rdfs:domain z:Animal ; rdfs:range z:Keeper .
+z:name a owl:DatatypeProperty ; skos:prefLabel "name" ;
+    rdfs:domain [ a owl:Class ; owl:unionOf ( z:Animal z:Keeper ) ] .
 """
 ODD = SMALL + "ex:Toy a owl:Class ; rdfs:subClassOf ex:Owner .\n"     # a shape the diagram has no slot for
 
@@ -70,6 +87,51 @@ class Build(unittest.TestCase):
         self.assertIn('<span class="mark">pets</span>', html)
         self.assertIn(">pets:Owner<", html.replace("</a>", "<"))
         self.assertNotIn("do:", html)
+
+    def test_an_ontology_in_the_style_of_gist_is_published(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            src = Path(tmp) / "zoo.ttl"
+            src.write_text(SKOSSY, encoding="utf-8")
+            with contextlib.redirect_stderr(io.StringIO()):
+                latest, _ = build(src, Path(tmp) / "dist")
+            html = (Path(tmp) / "dist" / "index.html").read_text(encoding="utf-8")
+        self.assertEqual(latest, "2.3.1")                           # from the version IRI
+        self.assertIn("<title>Zoo 2.3.1</title>", html)
+        self.assertIn("https://example.org/ns/zoo/", html)         # the namespace its terms share
+        self.assertIn('id="Animal"', html)
+        self.assertIn("label “Animal”", html)                       # skos:prefLabel
+        self.assertIn("A living thing kept in a zoo.", html)        # skos:definition
+        self.assertIn('<a class="chip" href="#Animal">zoo:Animal</a> or <a class="chip" href="#Keeper">zoo:Keeper</a>', html)
+        self.assertIsNone(re.search(r'class="chip[^"]*">n[0-9a-f]{16,}', html))   # no blank node's id
+
+    def test_restrictions_are_written_on_the_card_and_each_class_has_its_diagram(self):
+        html = Page(graph(SKOSSY)).render(None, "zoo")
+        animal = html.split('id="Animal"')[1].split("</article>")[0]
+        self.assertIn('<a class="chip" href="#keptBy">zoo:keptBy</a> some <a class="chip" href="#Keeper">zoo:Keeper</a>', animal)
+        self.assertIn('<div class="diagram own">', animal)
+        self.assertIn(">kept by (some)<", animal)                   # the restriction, as an arrow
+        self.assertIn("<title>zoo:keptBy some zoo:Keeper</title>", animal)
+        self.assertIn(">name<", html.split('id="Keeper"')[1].split("</article>")[0])    # through the union
+        self.assertEqual(html.count('<marker id="m-obj"'), 1)       # the arrowheads, once for the page
+
+    def test_an_ontology_drawn_whole_has_no_diagram_per_class(self):
+        g = graph(path=EXAMPLE)
+        self.assertNotIn('class="diagram own"', Page(g).render(draw(g), "example"))
+
+    def test_a_definition_in_skos_comes_before_a_comment(self):
+        both = SMALL + ('@prefix skos: <http://www.w3.org/2004/02/skos/core#> .\n'
+                        'ex:Pet skos:definition "A companion animal." .\n')
+        html = Page(graph(both)).render(None, "pets")
+        self.assertIn("A companion animal.", html)
+        self.assertNotIn("An animal kept for company.", html)
+
+    def test_an_ontology_with_no_version_stops_before_writing(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            src = Path(tmp) / "pets.ttl"
+            src.write_text(SMALL.replace(' owl:versionInfo "1.0.0" ;', ""), encoding="utf-8")
+            with self.assertRaises(SystemExit):
+                build(src, Path(tmp) / "dist")
+            self.assertFalse((Path(tmp) / "dist").exists())
 
     def test_an_undrawable_ontology_is_published_without_a_diagram(self):
         said = io.StringIO()
@@ -288,6 +350,264 @@ class Diagram(unittest.TestCase):
                  'ex:soldBy a owl:ObjectProperty ; rdfs:domain ex:Pet ; rdfs:range ex:Breeder .\n')
         with self.assertRaises(Undrawable):         # Pet, then Kitten, then any resource
             draw(graph(SMALL + extra))
+
+
+# An ontology kept in two files, in the style of ePO: a module's terms, and its
+# restrictions in a second file with an ontology of its own that imports the
+# first. Both share one namespace with other modules, such as core's Document.
+TERMS = """@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix m: <https://example.org/proc#> .
+m:awa a owl:Ontology ; dcterms:title "Awarding"@en ; owl:versionInfo "2.0.0" ;
+    dcterms:license "Reuse is authorised under the EUPL v1.2." ;
+    vann:preferredNamespaceUri "https://example.org/proc#" ; vann:preferredNamespacePrefix "m" .
+m:Notification a owl:Class ; rdfs:isDefinedBy m:awa ; skos:prefLabel "Notification"@en ;
+    rdfs:subClassOf m:Document .
+m:concerns a owl:ObjectProperty ; rdfs:isDefinedBy m:awa ; skos:prefLabel "concerns"@en .
+"""
+RESTRICTIONS = """@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix m: <https://example.org/proc#> .
+m:awa-restriction a owl:Ontology ; dcterms:title "Awarding restrictions"@en ;
+    owl:versionInfo "2.0.0" ; owl:imports m:awa .
+m:concerns rdfs:domain m:Notification ; rdfs:range m:Procedure .
+m:Notification rdfs:subClassOf [ a owl:Restriction ; owl:onProperty m:concerns ; owl:cardinality 1 ] .
+"""
+
+
+class SeveralFiles(unittest.TestCase):
+    def files(self, tmp):
+        terms, restrictions = Path(tmp) / "awa.ttl", Path(tmp) / "awa_restrictions.ttl"
+        terms.write_text(TERMS, encoding="utf-8")
+        restrictions.write_text(RESTRICTIONS, encoding="utf-8")
+        return [terms, restrictions]
+
+    def test_one_page_documents_the_first_files_ontology_with_the_axioms_of_both(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            build(self.files(tmp), Path(tmp) / "dist")
+            html = (Path(tmp) / "dist" / "index.html").read_text(encoding="utf-8")
+            svg = (Path(tmp) / "dist" / "awa.svg").read_text(encoding="utf-8")
+        self.assertIn("<title>Awarding 2.0.0</title>", html)
+        self.assertNotIn("Awarding restrictions", html)
+        self.assertIn("exactly", html)                          # the restriction, from the second file
+        self.assertIn("concerns", svg)
+        self.assertIn('drawn from <a href="awa.ttl">awa.ttl</a> and <a href="awa_restrictions.ttl">awa_restrictions.ttl</a>', html)
+
+    def test_each_file_is_published_as_itself(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            build(self.files(tmp), Path(tmp) / "dist")
+            dist = Path(tmp) / "dist"
+            for stem in ("awa", "awa_restrictions"):
+                for ext in (".ttl", ".rdf", ".jsonld", ".nt"):
+                    self.assertTrue((dist / f"{stem}{ext}").exists(), f"{stem}{ext}")
+            terms = graph(path=dist / "awa.nt")
+            html = (dist / "index.html").read_text(encoding="utf-8")
+        self.assertIsNone(terms.value(URIRef("https://example.org/proc#concerns"),
+                                      URIRef("http://www.w3.org/2000/01/rdf-schema#domain")))
+        self.assertIn('href="awa_restrictions.nt"', html)
+
+    def test_a_term_with_no_card_on_the_page_is_not_a_link(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            build(self.files(tmp), Path(tmp) / "dist")
+            html = (Path(tmp) / "dist" / "index.html").read_text(encoding="utf-8")
+        self.assertIn('<span class="chip ext" title="https://example.org/proc#Document">m:Document</span>', html)
+        self.assertNotIn('href="#Document"', html)
+        self.assertNotIn('href="#Procedure"', html)
+        self.assertIn('href="#Notification"', html)
+
+    def test_a_licence_in_words_is_text(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            build(self.files(tmp), Path(tmp) / "dist")
+            html = (Path(tmp) / "dist" / "index.html").read_text(encoding="utf-8")
+        self.assertIn("<dt>Licence</dt><dd>Reuse is authorised under the EUPL v1.2.</dd>", html)
+
+    def test_the_diagram_command_takes_several_files(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            files = self.files(tmp)
+            with contextlib.redirect_stdout(io.StringIO()):
+                main(["diagram", *map(str, files)])
+            self.assertIn("concerns", (Path(tmp) / "awa.svg").read_text(encoding="utf-8"))
+
+    def test_a_release_without_one_of_the_files_is_left_out(self):
+        said = io.StringIO()
+        with tempfile.TemporaryDirectory() as tmp:
+            repo = Path(tmp)
+            terms, restrictions = self.files(tmp)
+
+            def git(*args):
+                subprocess.run(["git", "-c", "user.name=t", "-c", "user.email=t@example.org", *args],
+                               cwd=repo, check=True, capture_output=True)
+            git("init", "-q")
+            git("add", "awa.ttl")
+            git("commit", "-q", "-m", "1.0.0, before the restrictions had a file")
+            git("tag", "v1.0.0")
+            with mock.patch.dict(os.environ, {"GITHUB_ACTIONS": ""}), contextlib.redirect_stderr(said):
+                latest, built = build([terms, restrictions], repo / "dist", all_tags=True)
+        self.assertEqual((latest, built), ("2.0.0", []))
+        self.assertIn("release v1.0.0 is left out, because it has no awa_restrictions.ttl", said.getvalue())
+
+
+# Modules, in the style of ePO: the core lists them with dcterms:hasPart, and a term
+# that two modules declare, with differing definitions, is defined by both.
+CORE = TERMS.replace('dcterms:title "Awarding"@en', 'dcterms:title "Procurement core"@en').replace("m:awa", "m:core") + \
+    "m:core dcterms:hasPart m:sub .\nm:Document a owl:Class ; rdfs:isDefinedBy m:core ; skos:definition \"A record.\"@en .\n"
+SUB = """@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix m: <https://example.org/proc#> .
+m:sub a owl:Ontology ; dcterms:title "Submission"@en ; owl:versionInfo "2.0.0" .
+m:Tender a owl:Class ; rdfs:isDefinedBy m:sub ; rdfs:subClassOf m:Document .
+m:Document a owl:Class ; rdfs:isDefinedBy m:sub ; skos:definition "A written record."@en .
+"""
+
+
+class Modules(unittest.TestCase):
+    def build(self, tmp, *texts):
+        files = []
+        for name, text in texts:
+            files.append(Path(tmp) / name)
+            files[-1].write_text(text, encoding="utf-8")
+        build(files, Path(tmp) / "dist")
+        return (Path(tmp) / "dist" / "index.html").read_text(encoding="utf-8")
+
+    def test_one_page_has_a_heading_per_module_with_its_cards(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            html = self.build(tmp, ("core.ttl", CORE), ("sub.ttl", SUB))
+        self.assertIn('<section id="modules">', html)
+        core, sub = html.index('id="module-core"'), html.index('id="module-sub"')
+        self.assertLess(core, html.index('id="Document"'))
+        self.assertLess(html.index('id="Document"'), sub)          # the first module that declares it
+        self.assertLess(sub, html.index('id="Tender"'))
+        self.assertEqual(html.count('<article class="term" id="Document"'), 1)
+        self.assertIn('<dt>Also in</dt><dd><a class="chip" href="#module-sub">Submission</a></dd>', html)
+        self.assertIn('<p class="def">A record.</p><p class="def">A written record.</p>', html)
+        self.assertIn('href="#Document"', html[sub:])               # a link across modules
+
+    def test_a_part_with_no_file_stops_the_build(self):
+        with tempfile.TemporaryDirectory() as tmp, self.assertRaises(SystemExit) as e:
+            self.build(tmp, ("core.ttl", CORE))
+        self.assertIn("none of the files declares it", str(e.exception.code))
+
+    def test_a_module_not_listed_as_a_part_stops_the_build(self):
+        with tempfile.TemporaryDirectory() as tmp, self.assertRaises(SystemExit) as e:
+            self.build(tmp, ("core.ttl", CORE.replace("m:core dcterms:hasPart m:sub .\n", "")), ("sub.ttl", SUB))
+        self.assertIn("does not list it as a part", str(e.exception.code))
+
+
+def many(n):
+    """An ontology of n classes: a root, its subclasses, and one class with a property to the root."""
+    kinds = "".join(f'ex:Kind{i} a owl:Class ; rdfs:label "Kind {i}" ; rdfs:subClassOf ex:Pet .\n' for i in range(n - 2))
+    return SMALL + kinds + "ex:keptBy rdfs:range ex:Owner .\n"
+
+
+class UmlStyle(unittest.TestCase):
+    def test_a_class_lists_its_properties_under_a_line_and_only_subclasses_have_arrows(self):
+        svg = uml.draw(graph(path=EXAMPLE))
+        self.assertEqual(svg.count('<path class="sep"'), 3)         # Communication's object properties, and Decision's two kinds
+        self.assertEqual(svg.count('marker-end="url(#m-sub)"'), 2)
+        self.assertNotIn("m-obj", svg)
+        self.assertIn('<title>do:revises</title><text class="ur obj"', svg)
+        self.assertIn('<text class="ur data"', svg)                 # has argument, a datatype property
+
+    def test_a_range_is_written_only_where_one_is_declared(self):
+        svg = uml.draw(graph(path=EXAMPLE))
+        self.assertIn('>revises<tspan class="ty"> : </tspan><tspan class="ty">Decision</tspan></text>', svg)
+        self.assertIn('>attributed to<tspan class="ty"> : </tspan><tspan class="ty">foaf:Agent</tspan></text>', svg)
+        self.assertIn(">has premise</text>", svg)                   # no range declared
+        self.assertIn(">has argument</text>", svg)                  # nor for this datatype property
+        self.assertNotIn("literal", svg)
+
+    def test_a_datatype_is_written_as_a_range(self):
+        svg = uml.draw(graph(SMALL + "ex:name rdfs:range <http://www.w3.org/2001/XMLSchema#string> .\n"))
+        self.assertIn('>name<tspan class="ty"> : </tspan><tspan class="ty">xsd:string</tspan>', svg)
+
+    def test_properties_with_no_domain_are_the_rows_of_any_resource(self):
+        svg = uml.draw(graph(SMALL + 'ex:seenAt a owl:ObjectProperty ; rdfs:label "seen at" .\n'))
+        box = svg.split(">any resource</text>")[1].split("</g>\n")[0]
+        self.assertIn(">seen at</text>", box)
+        self.assertIn('<rect class="a"', svg)
+
+    def test_a_shape_the_graph_refuses_is_drawn(self):
+        g = graph(ODD + "ex:Bed a owl:Class ; rdfs:subClassOf ex:Owner, ex:Pet .\n")
+        with self.assertRaises(Undrawable):
+            draw(g)
+        svg = uml.draw(g)
+        self.assertEqual(svg.count('class="e sub tree"'), 1)        # Owner's two subclasses share its arrowhead
+        self.assertEqual(svg.count('class="e sub also"'), 1)        # Bed's other superclass
+
+    def test_a_restriction_and_a_union_are_rows(self):
+        svg = uml.draw(graph(SKOSSY))
+        self.assertIn(">kept by (some)<tspan", svg)
+        self.assertIn("<title>zoo:keptBy some zoo:Keeper</title>", svg)
+        self.assertEqual(svg.count(">name</text>"), 2)              # in Animal and in Keeper, through the union
+
+    def test_a_large_ontology_shows_names_alone_and_holds_a_box_per_class(self):
+        g = graph(many(uml.FULL + 1))
+        svg = uml.draw(g)
+        tree, details = svg.split('<g class="details">')
+        self.assertNotIn('class="ur', tree)
+        self.assertEqual(tree.count('<g class="n" data-c='), uml.FULL + 1)
+        self.assertEqual(details.count('display="none"'), uml.FULL + 1)
+        owner = details.split('aria-label')[0].split('>Owner</text>')[1].split("</g>\n")[0]
+        self.assertIn("kept by", owner)                             # a property that reaches the class
+        self.assertIn(' ← </tspan><tspan class="ty go" data-c="', owner)
+        self.assertIn('<a href="#Owner">', details)                 # the name leads to the card
+        self.assertNotIn('class="details"', uml.draw(g, page=False))
+        self.assertNotIn('class="details"', uml.draw(graph(many(uml.FULL))))
+        self.assertIn('class="ur', uml.draw(graph(many(uml.FULL))))
+
+    def test_subclasses_with_none_of_their_own_hang_in_columns(self):
+        svg = uml.draw(graph(many(9)), page=False)                  # seven subclasses: columns of four and three
+        xs = sorted({re.search(r'x="(-?\d+)"', box).group(1) for box in re.findall(r'<rect class="c"[^>]*/>(?=<g class="t"><title>pets:Kind)', svg)})
+        self.assertEqual(len(xs), 2)
+
+    def test_the_page_of_a_large_ontology_has_the_viewer_and_no_diagram_per_class(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            src = Path(tmp) / "pets.ttl"
+            src.write_text(many(uml.FULL + 1), encoding="utf-8")
+            build(src, Path(tmp) / "out", diagram="uml")
+            html = (Path(tmp) / "out" / "index.html").read_text(encoding="utf-8")
+            file = (Path(tmp) / "out" / "pets.svg").read_text(encoding="utf-8")
+        self.assertIn('<div class="diagram view"><div class="tools">', html)
+        self.assertIn('<ul class="hint" id="hint" hidden>', html)      # what the ? button shows
+        for action in ("help", "in", "out", "fit", "full"):
+            self.assertIn(f'data-do="{action}"', html)
+        self.assertIn("requestFullscreen", html)
+        self.assertIn("Click a class to see its properties.", html)
+        self.assertNotIn('class="diagram own"', html)
+        self.assertNotIn('class="details"', file)
+
+    def test_the_page_of_a_small_ontology_has_no_viewer(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            build(EXAMPLE, Path(tmp) / "out", diagram="uml")
+            html = (Path(tmp) / "out" / "index.html").read_text(encoding="utf-8")
+        self.assertIn('<div class="diagram whole"><svg', html)
+        self.assertNotIn("requestFullscreen", html)
+        self.assertNotIn('class="tools"', html)
+
+    def test_the_graph_style_stays_the_default_and_carries_nothing_of_the_viewer(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            build(EXAMPLE, Path(tmp) / "a")
+            build(EXAMPLE, Path(tmp) / "b", diagram="graph")
+            a, b = ((Path(tmp) / d / "index.html").read_text(encoding="utf-8") for d in "ab")
+        self.assertEqual(a, b)
+        for word in ("requestFullscreen", "diagram view", "diagram whole", 'class="tools"', "hr-diagram uml"):
+            self.assertNotIn(word, a)
+
+    def test_the_commands_take_the_style(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            src = Path(tmp) / "pets.ttl"
+            src.write_text(ODD, encoding="utf-8")
+            with contextlib.redirect_stdout(io.StringIO()):
+                self.assertEqual(main(["diagram", str(src), "--diagram", "uml"]), 0)
+                self.assertEqual(main(["build", str(src), "--out", str(Path(tmp) / "out"), "--diagram", "uml"]), 0)
+            self.assertIn('class="hr-diagram uml"', (Path(tmp) / "pets.svg").read_text(encoding="utf-8"))
+            self.assertIn('class="hr-diagram uml"', (Path(tmp) / "out" / "index.html").read_text(encoding="utf-8"))
 
 
 if __name__ == "__main__":

@@ -1,0 +1,54 @@
+<http://data.europa.eu/a4g/ontology#specifiesTenderer> <http://www.w3.org/2004/02/skos/core#definition> "Relation indicating that the instance of the concept involves the Tenderer."@en .
+<http://data.europa.eu/a4g/ontology#AwardDecisionNotification> <http://www.w3.org/2004/02/skos/core#definition> "A formal communication sent by the Buyer to inform Tenderers of the Award Decision."@en .
+<http://data.europa.eu/a4g/ontology#awa> <http://purl.org/dc/terms/title> "eProcurement Ontology Awarding - core"@en .
+<http://data.europa.eu/a4g/ontology#awa> <http://www.w3.org/2002/07/owl#priorVersion> "http://data.europa.eu/a4g/ontology#awa-5.1.0" .
+<http://data.europa.eu/a4g/ontology#specifiesTenderer> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#hasStandstillPeriodEndDate> <http://www.w3.org/2004/02/skos/core#definition> "The end date for the mandatory minimum time frame between the communication of a contract award decision and the formal conclusion of the contract, during which unsuccessful Tenderers have the opportunity to challenge the award before it becomes legally binding. (epo-awa:AwardDecisionNotification)"@en .
+<http://data.europa.eu/a4g/ontology#awa> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/ns/org#> .
+<http://data.europa.eu/a4g/ontology#awa> <http://www.w3.org/2002/07/owl#versionInfo> "5.2.0" .
+<http://data.europa.eu/a4g/ontology#concernsAwardOutcome> <http://www.w3.org/2004/02/skos/core#prefLabel> "concerns Award Outcome"@en .
+<http://data.europa.eu/a4g/ontology#awa> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://data.europa.eu/a4g/ontology#AwardDecisionNotification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#awa> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://joinup.ec.europa.eu/collection/eprocurement/solution/eprocurement-ontology/about> .
+<http://data.europa.eu/a4g/ontology#hasStandstillPeriodEndDate> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#awa> .
+<http://data.europa.eu/a4g/ontology#awa> <http://www.w3.org/2002/07/owl#versionIRI> <http://data.europa.eu/a4g/ontology#awa-5.2.0> .
+<http://data.europa.eu/a4g/ontology#hasStandstillPeriodEndDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://data.europa.eu/a4g/ontology#AwardDecisionNotification> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 11/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#awa> <http://www.w3.org/2002/07/owl#imports> <http://data.europa.eu/m8g/> .
+<http://data.europa.eu/a4g/ontology#concernsProcedure> <http://www.w3.org/2004/02/skos/core#prefLabel> "concerns Procedure"@en .
+<http://data.europa.eu/a4g/ontology#hasStandstillPeriodEndDate> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Standstill Period End Date"@en .
+<http://data.europa.eu/a4g/ontology#awa> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/ns/person> .
+<http://data.europa.eu/a4g/ontology#concernsProcedure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#concernsAwardOutcome> <http://www.w3.org/2004/02/skos/core#definition> "Relates to Award Outcome."@en .
+<http://data.europa.eu/a4g/ontology#awa> <http://purl.org/dc/terms/created> "2021-06-01"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://data.europa.eu/a4g/ontology#specifiesTenderer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#hasStandstillPeriodEndDate> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#awa> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/2006/time> .
+<http://data.europa.eu/a4g/ontology#AwardDecisionNotification> <http://www.w3.org/2004/02/skos/core#prefLabel> "Award Decision Notification"@en .
+<http://data.europa.eu/a4g/ontology#awa> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://docs.ted.europa.eu/home/index.html> .
+<http://data.europa.eu/a4g/ontology#AwardDecisionNotification> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#awa> .
+<http://data.europa.eu/a4g/ontology#concernsAwardOutcome> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#awa> .
+<http://data.europa.eu/a4g/ontology#specifiesTenderer> <http://www.w3.org/2004/02/skos/core#prefLabel> "specifies Tenderer"@en .
+<http://data.europa.eu/a4g/ontology#AwardDecisionNotification> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#Document> .
+<http://data.europa.eu/a4g/ontology#awa> <http://www.w3.org/2000/01/rdf-schema#label> "eProcurement Ontology Awarding - core"@en .
+<http://data.europa.eu/a4g/ontology#awa> <http://www.w3.org/2002/07/owl#imports> <http://data.europa.eu/eli/ontology#> .
+<http://data.europa.eu/a4g/ontology#concernsAwardOutcome> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#awa> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/2004/02/skos/core#> .
+<http://data.europa.eu/a4g/ontology#awa> <http://purl.org/dc/terms/issued> "2025-10-10"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://data.europa.eu/a4g/ontology#awa> <http://www.w3.org/2000/01/rdf-schema#comment> "This version is automatically generated from eAwarding.xml on 2025-10-10" .
+<http://data.europa.eu/a4g/ontology#awa> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/ns/locn> .
+<http://data.europa.eu/a4g/ontology#awa> <http://www.w3.org/2002/07/owl#imports> <http://data.europa.eu/a4g/ontology#core> .
+<http://data.europa.eu/a4g/ontology#concernsProcedure> <http://www.w3.org/2004/02/skos/core#definition> "Relates to Procedure."@en .
+<http://data.europa.eu/a4g/ontology#concernsProcedure> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#awa> .
+<http://data.europa.eu/a4g/ontology#awa> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://op.europa.eu/en/web/eu-vocabularies/e-procurement> .
+<http://data.europa.eu/a4g/ontology#awa> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://data.europa.eu/a4g/ontology#" .
+<http://data.europa.eu/a4g/ontology#awa> <http://purl.org/dc/terms/publisher> "http://publications.europa.eu/resource/authority/corporate-body/PUBL" .
+<http://data.europa.eu/a4g/ontology#awa> <http://purl.org/dc/terms/description> "The eProcurement Ontology Awarding core describes the concepts and properties representing the European Public Procurement Awarding domain. The provision of these semantics offers the basis for a common understanding of the domain for all stakeholders ensuring the quality of data exchange and transparency. The ontology restrictions are published in a separate artefact."@en .
+<http://data.europa.eu/a4g/ontology#awa> <http://purl.org/dc/terms/license> "© European Union, 2014. Unless otherwise noted, the reuse of the Ontology is authorised under the European Union Public Licence v1.2 (https://eupl.eu/)." .
+<http://data.europa.eu/a4g/ontology#specifiesTenderer> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#awa> .
+<http://data.europa.eu/a4g/ontology#awa> <http://purl.org/vocab/vann/preferredNamespacePrefix> "epo" .
+<http://data.europa.eu/a4g/ontology#awa> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://github.com/OP-TED/ePO/releases> .
+<http://data.europa.eu/a4g/ontology#awa> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/ns/adms> .
+<http://data.europa.eu/a4g/ontology#concernsAwardOutcome> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#awa> <http://www.w3.org/2002/07/owl#incompatibleWith> "4.2.0" .
+<http://data.europa.eu/a4g/ontology#awa> <http://www.w3.org/2002/07/owl#imports> <http://purl.org/dc/terms/> .

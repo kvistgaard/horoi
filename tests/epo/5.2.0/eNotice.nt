@@ -1,0 +1,902 @@
+<http://data.europa.eu/a4g/ontology#hasNoticeType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#Notice36> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#eFormsNotice> .
+<http://data.europa.eu/a4g/ontology#Notice26> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 16/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#Notice40> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 16/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#CNDefence-D81> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 16/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#Notice3> <http://www.w3.org/2004/02/skos/core#definition> "Notice of the publication of a prior information notice on a buyer profile - defence directive"@en .
+<http://data.europa.eu/a4g/ontology#Notice5> <http://www.w3.org/2004/02/skos/core#definition> "Periodic indicative notice used only for information - sectoral directive"@en .
+<http://data.europa.eu/a4g/ontology#Notice7> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#eFormsNotice> .
+<http://data.europa.eu/a4g/ontology#PINProfile-D25> <http://www.w3.org/2004/02/skos/core#definition> "Prior Information Notice Profile under Directive 25."@en .
+<http://data.europa.eu/a4g/ontology#PINProfile-D81> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#PINProfileNotice> .
+<http://data.europa.eu/a4g/ontology#preparesForPotentialProcurementObject> <http://www.w3.org/2004/02/skos/core#prefLabel> "prepares For Potential Procurement Object"@en .
+<http://data.europa.eu/a4g/ontology#DesignContestResultNotice> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#ResultNotice> .
+<http://data.europa.eu/a4g/ontology#CNSocialNotice-D25> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#Notice35> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 16/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#CANDefence-D81> <http://www.w3.org/2004/02/skos/core#definition> "Contract Award Notice Defence under Directive 81."@en .
+<http://data.europa.eu/a4g/ontology#DesignContest-D24> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 16/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#DesignContestResultNotice> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#not> .
+<http://data.europa.eu/a4g/ontology#not> <http://purl.org/dc/terms/license> "© European Union, 2014. Unless otherwise noted, the reuse of the Ontology is authorised under the European Union Public Licence v1.2 (https://eupl.eu/)." .
+<http://data.europa.eu/a4g/ontology#hasImplementingRegulation> <http://www.w3.org/2004/02/skos/core#definition> "Indicates under which Implementing Regulation a Notice is created. Additional information: This concept is same as epo:isBasedOnImplementingRegulation and will be deprecated in a future version. It is recommended to use epo:isBasedOnImplementingRegulation."@en .
+<http://data.europa.eu/a4g/ontology#VEAT-D23> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#ResultNotice> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#Notice> .
+<http://data.europa.eu/a4g/ontology#CANStandardNotice> <http://www.w3.org/2004/02/skos/core#prefLabel> "CAN Standard Notice"@en .
+<http://data.europa.eu/a4g/ontology#Notice32> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#concernsProcedure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#Notice25> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#not> .
+<http://data.europa.eu/a4g/ontology#not> <http://www.w3.org/2002/07/owl#imports> <http://purl.org/dc/terms/> .
+<http://data.europa.eu/a4g/ontology#announcesPlannedProcurementPart> <http://www.w3.org/2004/02/skos/core#definition> "Relation indicating the formal communication of a Planned Procurement Part."@en .
+<http://data.europa.eu/a4g/ontology#NoticeT01> <http://www.w3.org/2004/02/skos/core#definition> "Planning notice for public passenger transport services by rail and by road."@en .
+<http://data.europa.eu/a4g/ontology#PIN-CFCSocialNotice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#ContractModificationNotice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#Notice7> <http://www.w3.org/2004/02/skos/core#prefLabel> "Notice7"@en .
+<http://data.europa.eu/a4g/ontology#preparesForPotentialProcurementObject> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 09/10/2025"@en .
+<http://data.europa.eu/a4g/ontology#Notice30> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#CANStandardNotice> .
+<http://data.europa.eu/a4g/ontology#Notice13> <http://www.w3.org/2004/02/skos/core#prefLabel> "Notice13"@en .
+<http://data.europa.eu/a4g/ontology#Notice1> <http://www.w3.org/2004/02/skos/core#definition> "Notice of the publication of a prior information notice on a buyer profile - general directive"@en .
+<http://data.europa.eu/a4g/ontology#Notice17> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#eFormsNotice> .
+<http://data.europa.eu/a4g/ontology#Notice5> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#Notice14> <http://www.w3.org/2004/02/skos/core#prefLabel> "Notice14"@en .
+<http://data.europa.eu/a4g/ontology#Notice29> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#concernsLot> <http://www.w3.org/2004/02/skos/core#definition> "Relates to Lot."@en .
+<http://data.europa.eu/a4g/ontology#PINOnly-D25> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#announcesCompletionOfContract> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#not> <http://www.w3.org/2002/07/owl#imports> <http://data.europa.eu/m8g/> .
+<http://data.europa.eu/a4g/ontology#VEAT-D24> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#not> .
+<http://data.europa.eu/a4g/ontology#eFormsNotice> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#not> .
+<http://data.europa.eu/a4g/ontology#Notice31> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#CANStandardNotice> .
+<http://data.europa.eu/a4g/ontology#StandardFormsNotice> <http://www.w3.org/2004/02/skos/core#prefLabel> "Standard Forms Notice"@en .
+<http://data.europa.eu/a4g/ontology#PINProfile-D24> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#not> .
+<http://data.europa.eu/a4g/ontology#Notice21> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#eFormsNotice> .
+<http://data.europa.eu/a4g/ontology#announcesAwardDecision> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#announcesLotGroupAwardInformation> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#VoluntaryEx-AnteTransparencyNotice> <http://www.w3.org/2004/02/skos/core#prefLabel> "Voluntary Ex- Ante Transparency Notice"@en .
+<http://data.europa.eu/a4g/ontology#PlanningNotice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#PIN-CFCStandard-D24> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#PIN-CFCStandardNotice> .
+<http://data.europa.eu/a4g/ontology#announcesAwardDecision> <http://www.w3.org/2004/02/skos/core#prefLabel> "announces Award Decision"@en .
+<http://data.europa.eu/a4g/ontology#CompetitionNotice> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#Notice> .
+<http://data.europa.eu/a4g/ontology#Notice24> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#DesignContestNotice> .
+<http://data.europa.eu/a4g/ontology#Notice9> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#ContractModificationNotice> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#Notice> .
+<http://data.europa.eu/a4g/ontology#CANStandardNotice> <http://www.w3.org/2004/02/skos/core#definition> "Announcement of the results of a call for competition concerning contracts or concessions."@en .
+<http://data.europa.eu/a4g/ontology#NoticeE2> <http://www.w3.org/2004/02/skos/core#definition> "Voluntary Prior Information Notice for purchases below the Public Procurement Directive threshold."@en .
+<http://data.europa.eu/a4g/ontology#NoticeT01> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#eFormsNotice> .
+<http://data.europa.eu/a4g/ontology#Notice37> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#not> .
+<http://data.europa.eu/a4g/ontology#PINProfile-D81> <http://www.w3.org/2004/02/skos/core#prefLabel> "PIN Profile- D81"@en .
+<http://data.europa.eu/a4g/ontology#PIN-CFCStandardNotice> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 09/10/2025"@en .
+<http://data.europa.eu/a4g/ontology#NoticeE6> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#eFormsNotice> .
+<http://data.europa.eu/a4g/ontology#Notice22> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#not> .
+<http://data.europa.eu/a4g/ontology#Notice32> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#CANStandardNotice> .
+<http://data.europa.eu/a4g/ontology#not> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://op.europa.eu/en/web/eu-vocabularies/e-procurement> .
+<http://data.europa.eu/a4g/ontology#CNStandard-D24> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#not> .
+<http://data.europa.eu/a4g/ontology#DesignContestResult-D24> <http://www.w3.org/2004/02/skos/core#prefLabel> "Design Contest Result- D24"@en .
+<http://data.europa.eu/a4g/ontology#Notice19> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 16/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#refersToReviewRequest> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#PINOnlyNotice> <http://www.w3.org/2004/02/skos/core#definition> "Announcement of intentions of planned procurements for information purposes."@en .
+<http://data.europa.eu/a4g/ontology#PINTimeLimitNotice> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#not> .
+<http://data.europa.eu/a4g/ontology#Notice13> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#not> .
+<http://data.europa.eu/a4g/ontology#NoticeE4> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 09/10/2025"@en .
+<http://data.europa.eu/a4g/ontology#refersToContractToBeModified> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#Notice1> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#not> .
+<http://data.europa.eu/a4g/ontology#announcesCompletionOfContract> <http://www.w3.org/2004/02/skos/core#definition> "Relation indicating the formal communication of the Completion of a Contract."@en .
+<http://data.europa.eu/a4g/ontology#PINProfile-D81> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#not> <http://purl.org/dc/terms/publisher> "http://publications.europa.eu/resource/authority/corporate-body/PUBL" .
+<http://data.europa.eu/a4g/ontology#Notice4> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#PINOnlyNotice> .
+<http://data.europa.eu/a4g/ontology#VEAT-D24> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 16/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#refersToNoticeAwardInformation> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#ConcessionNotice-D23> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 16/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#Notice24> <http://www.w3.org/2004/02/skos/core#prefLabel> "Notice24"@en .
+<http://data.europa.eu/a4g/ontology#NoticeE2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#Notice33> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#not> .
+<http://data.europa.eu/a4g/ontology#CANStandardNotice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#PIN-CFCSocialNotice-D25> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#not> .
+<http://data.europa.eu/a4g/ontology#announcesLot> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#PINOnlyNotice> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#not> .
+<http://data.europa.eu/a4g/ontology#Modification-D25> <http://www.w3.org/2004/02/skos/core#prefLabel> "Modification- D25"@en .
+<http://data.europa.eu/a4g/ontology#Notice27> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#not> .
+<http://data.europa.eu/a4g/ontology#PINOnlyNotice> <http://www.w3.org/2004/02/skos/core#prefLabel> "PIN Only Notice"@en .
+<http://data.europa.eu/a4g/ontology#SocialAndOtherSpecificServices-D24> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#CNSocial-D25> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 16/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#SubcontractNotice> <http://www.w3.org/2004/02/skos/core#definition> "Announcement of a call for competition by successful tenderers which are not contracting authorities/entities concerning contracts for social and other specific services."@en .
+<http://data.europa.eu/a4g/ontology#not> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/ns/person> .
+<http://data.europa.eu/a4g/ontology#CNDefence-D81> <http://www.w3.org/2004/02/skos/core#prefLabel> "CN Defence- D81"@en .
+<http://data.europa.eu/a4g/ontology#Modification-D23> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#PINTimeLimitNotice> <http://www.w3.org/2004/02/skos/core#prefLabel> "PIN Time Limit Notice"@en .
+<http://data.europa.eu/a4g/ontology#announcesContractAmendment> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#CANTransportationNotice> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 09/10/2025"@en .
+<http://data.europa.eu/a4g/ontology#CNStandardNotice> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#not> .
+<http://data.europa.eu/a4g/ontology#NoticeCEI> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 09/10/2025"@en .
+<http://data.europa.eu/a4g/ontology#Modification-D24> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#not> .
+<http://data.europa.eu/a4g/ontology#Notice33> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#CANSocialNotice> .
+<http://data.europa.eu/a4g/ontology#concernsLot> <http://www.w3.org/2004/02/skos/core#prefLabel> "concerns Lot"@en .
+<http://data.europa.eu/a4g/ontology#CANSocialNotice> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#not> .
+<http://data.europa.eu/a4g/ontology#announcesReviewRequest> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#not> .
+<http://data.europa.eu/a4g/ontology#Notice37> <http://www.w3.org/2004/02/skos/core#definition> "Design contest result notice - sectoral directive, design"@en .
+<http://data.europa.eu/a4g/ontology#Notice36> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#not> .
+<http://data.europa.eu/a4g/ontology#PINOnly-D24> <http://www.w3.org/2004/02/skos/core#prefLabel> "PIN Only- D24"@en .
+<http://data.europa.eu/a4g/ontology#PINDefence-D81> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#PlanningNotice> .
+<http://data.europa.eu/a4g/ontology#SocialAndOtherSpecificServices-D24> <http://www.w3.org/2004/02/skos/core#definition> "Social And Other Specific Services under Directive 24."@en .
+<http://data.europa.eu/a4g/ontology#CNSocialNotice> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#not> .
+<http://data.europa.eu/a4g/ontology#Notice33> <http://www.w3.org/2004/02/skos/core#definition> "Contract award notice - general directive, light regime"@en .
+<http://data.europa.eu/a4g/ontology#Notice5> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#eFormsNotice> .
+<http://data.europa.eu/a4g/ontology#PIN-CFCSocialNotice-D25> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#StandardFormsNotice> .
+<http://data.europa.eu/a4g/ontology#NoticeT02> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#CANTransportationNotice> .
+<http://data.europa.eu/a4g/ontology#Notice26> <http://www.w3.org/2004/02/skos/core#prefLabel> "Notice26"@en .
+<http://data.europa.eu/a4g/ontology#PINProfileNotice> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 09/10/2025"@en .
+<http://data.europa.eu/a4g/ontology#hasFormType> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Form Type"@en .
+<http://data.europa.eu/a4g/ontology#VEAT-D25> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#DesignContestResult-D24> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#not> .
+<http://data.europa.eu/a4g/ontology#DesignContest-D24> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#DesignContestNotice> .
+<http://data.europa.eu/a4g/ontology#QS-D25> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#not> .
+<http://data.europa.eu/a4g/ontology#Notice6> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#PINOnlyNotice> .
+<http://data.europa.eu/a4g/ontology#VEAT-D81> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 16/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#Modification-D24> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#ContractModificationNotice> .
+<http://data.europa.eu/a4g/ontology#not> <http://www.w3.org/2002/07/owl#incompatibleWith> "4.2.0" .
+<http://data.europa.eu/a4g/ontology#Notice17> <http://www.w3.org/2004/02/skos/core#prefLabel> "Notice17"@en .
+<http://data.europa.eu/a4g/ontology#Notice31> <http://www.w3.org/2004/02/skos/core#definition> "Contract award notice - defence directive, standard regime"@en .
+<http://data.europa.eu/a4g/ontology#Notice14> <http://www.w3.org/2004/02/skos/core#definition> "Prior information notice used as a call for competition - concessions directive, light regime"@en .
+<http://data.europa.eu/a4g/ontology#DesignContestNotice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#Notice3> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#not> .
+<http://data.europa.eu/a4g/ontology#Notice6> <http://www.w3.org/2004/02/skos/core#definition> "Prior information notice used only for information - defence directive"@en .
+<http://data.europa.eu/a4g/ontology#PreMarketConsultationNotice> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#not> .
+<http://data.europa.eu/a4g/ontology#Notice4> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#not> .
+<http://data.europa.eu/a4g/ontology#PIN-RTL-D25> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#CNSocial-D25> <http://www.w3.org/2004/02/skos/core#definition> "Competition Notice using the light regime under Directive 25."@en .
+<http://data.europa.eu/a4g/ontology#refersToNoticeAwardInformation> <http://www.w3.org/2004/02/skos/core#prefLabel> "refers To Notice Award Information"@en .
+<http://data.europa.eu/a4g/ontology#PIN-RTL-D24> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#not> <http://www.w3.org/2002/07/owl#versionInfo> "5.2.0" .
+<http://data.europa.eu/a4g/ontology#CANSocialNotice-D25> <http://www.w3.org/2004/02/skos/core#prefLabel> "CAN Social Notice- D25"@en .
+<http://data.europa.eu/a4g/ontology#PIN-CFCStandardNotice> <http://www.w3.org/2004/02/skos/core#prefLabel> "PI N- CFC Standard Notice"@en .
+<http://data.europa.eu/a4g/ontology#ResultNotice> <http://www.w3.org/2004/02/skos/core#historyNote> "WG Approval 27/03/2019"@en .
+<http://data.europa.eu/a4g/ontology#Notice15> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#QSNotice> .
+<http://data.europa.eu/a4g/ontology#PINProfile-D24> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 16/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#DesignContestResult-D24> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#StandardFormsNotice> .
+<http://data.europa.eu/a4g/ontology#PIN-CFCStandard-D24> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#StandardFormsNotice> .
+<http://data.europa.eu/a4g/ontology#announcesLot> <http://www.w3.org/2004/02/skos/core#definition> "Relation indicating the formal communication of a Lot."@en .
+<http://data.europa.eu/a4g/ontology#Notice1> <http://www.w3.org/2004/02/skos/core#prefLabel> "Notice1"@en .
+<http://data.europa.eu/a4g/ontology#Notice27> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#VoluntaryEx-AnteTransparencyNotice> .
+<http://data.europa.eu/a4g/ontology#announcesRole> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#PIN-CFCStandardNotice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#Notice16> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#NoticeCEI> <http://www.w3.org/2004/02/skos/core#definition> "Call for Expression of Interest for purchases below the Public Procurement Directive’s threshold as defined in the Financial Regulation applicable to the general budget of the Union."@en .
+<http://data.europa.eu/a4g/ontology#NoticeT02> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#eFormsNotice> .
+<http://data.europa.eu/a4g/ontology#QS-D25> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#StandardFormsNotice> .
+<http://data.europa.eu/a4g/ontology#QSNotice-D25> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#StandardFormsNotice> .
+<http://data.europa.eu/a4g/ontology#DesignContest-D25> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#StandardFormsNotice> .
+<http://data.europa.eu/a4g/ontology#announcesLotGroup> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#not> .
+<http://data.europa.eu/a4g/ontology#Notice32> <http://www.w3.org/2004/02/skos/core#prefLabel> "Notice32"@en .
+<http://data.europa.eu/a4g/ontology#CANSocialNotice> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#ResultNotice> .
+<http://data.europa.eu/a4g/ontology#StandardFormsNotice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#NoticeE3> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 09/10/2025"@en .
+<http://data.europa.eu/a4g/ontology#announcesPlannedProcurement> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#ResultNotice> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#not> .
+<http://data.europa.eu/a4g/ontology#DesignContest-D24> <http://www.w3.org/2004/02/skos/core#definition> "Design Contest Notice Directive 24."@en .
+<http://data.europa.eu/a4g/ontology#Notice38> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#ContractModificationNotice> .
+<http://data.europa.eu/a4g/ontology#CompletionNotice> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#not> .
+<http://data.europa.eu/a4g/ontology#VEAT-D25> <http://www.w3.org/2004/02/skos/core#prefLabel> "VEA T- D25"@en .
+<http://data.europa.eu/a4g/ontology#Notice15> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#hasLegalBasis> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#CNStandard-D24> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 16/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#NoticeE4> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#announcesNoticeAwardInformation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#not> .
+<http://data.europa.eu/a4g/ontology#PINProfile-D25> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#PINProfileNotice> .
+<http://data.europa.eu/a4g/ontology#hasImplementingRegulation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#Notice30> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#not> .
+<http://data.europa.eu/a4g/ontology#Notice25> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 16/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#Notice39> <http://www.w3.org/2004/02/skos/core#definition> "Contract modification notice - sectoral directive"@en .
+<http://data.europa.eu/a4g/ontology#Notice3> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 16/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#refersToLotGroupAwardInformation> <http://www.w3.org/2004/02/skos/core#definition> "Reference to a Lot Group Award Information."@en .
+<http://data.europa.eu/a4g/ontology#announcesReviewRequest> <http://www.w3.org/2004/02/skos/core#definition> "Relation indicating the formal communication of a Review Request."@en .
+<http://data.europa.eu/a4g/ontology#PINTransportationNotice> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 09/10/2025"@en .
+<http://data.europa.eu/a4g/ontology#Notice17> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#not> .
+<http://data.europa.eu/a4g/ontology#PIN-CFCStandard-D24> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#not> .
+<http://data.europa.eu/a4g/ontology#Notice16> <http://www.w3.org/2004/02/skos/core#hisotryNote> "WG approval 16/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#VEAT-D25> <http://www.w3.org/2004/02/skos/core#definition> "Voluntary ex-ante transparency notice under Directive 25."@en .
+<http://data.europa.eu/a4g/ontology#Notice2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#describesDirectAwardPrenotificationNotice> <http://www.w3.org/2004/02/skos/core#prefLabel> "describes Direct Award Prenotification Notice"@en .
+<http://data.europa.eu/a4g/ontology#ConcessionAwardNotice-D23> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#StandardFormsNotice> .
+<http://data.europa.eu/a4g/ontology#Notice6> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#not> .
+<http://data.europa.eu/a4g/ontology#PIN-RTL-D24> <http://www.w3.org/2004/02/skos/core#definition> "Prior information notice - Reduced Time Limit under Directive 24."@en .
+<http://data.europa.eu/a4g/ontology#PIN-CFCSocialNotice-D25> <http://www.w3.org/2004/02/skos/core#definition> "Additional information: Social and other specific services – utilities"@en .
+<http://data.europa.eu/a4g/ontology#PIN-RTL-D24> <http://www.w3.org/2004/02/skos/core#prefLabel> "PI N- RT L- D24"@en .
+<http://data.europa.eu/a4g/ontology#refersToAwardDecision> <http://www.w3.org/2004/02/skos/core#definition> "Reference to an Award Decision."@en .
+<http://data.europa.eu/a4g/ontology#refersToAwardDecision> <http://www.w3.org/2004/02/skos/core#prefLabel> "refers To Award Decision"@en .
+<http://data.europa.eu/a4g/ontology#Notice13> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#eFormsNotice> .
+<http://data.europa.eu/a4g/ontology#ConcessionAwardNotice-D23> <http://www.w3.org/2004/02/skos/core#definition> "Concession Award Notice under Directive 23."@en .
+<http://data.europa.eu/a4g/ontology#Notice21> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#not> .
+<http://data.europa.eu/a4g/ontology#announcesContract> <http://www.w3.org/2004/02/skos/core#definition> "Relation indicating the formal communication of a Contract."@en .
+<http://data.europa.eu/a4g/ontology#not> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://joinup.ec.europa.eu/collection/eprocurement/solution/eprocurement-ontology/about> .
+<http://data.europa.eu/a4g/ontology#Notice14> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#eFormsNotice> .
+<http://data.europa.eu/a4g/ontology#SocialAndOtherSpecificServices-D23> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#not> .
+<http://data.europa.eu/a4g/ontology#Notice1> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#eFormsNotice> .
+<http://data.europa.eu/a4g/ontology#Notice24> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#Notice5> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#PINOnlyNotice> .
+<http://data.europa.eu/a4g/ontology#DesignContestResult-D25> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#not> .
+<http://data.europa.eu/a4g/ontology#Notice11> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#Notice40> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#ContractModificationNotice> .
+<http://data.europa.eu/a4g/ontology#NoticeE5> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#CompletionNotice> .
+<http://data.europa.eu/a4g/ontology#Notice34> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#Notice33> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#eFormsNotice> .
+<http://data.europa.eu/a4g/ontology#Notice9> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#PINTimeLimitNotice> .
+<http://data.europa.eu/a4g/ontology#VEAT-D23> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#not> .
+<http://data.europa.eu/a4g/ontology#SocialAndOtherSpecificServices-D23> <http://www.w3.org/2004/02/skos/core#prefLabel> "Social And Other Specific Services- D23"@en .
+<http://data.europa.eu/a4g/ontology#describesDirectAwardPrenotificationNotice> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#not> .
+<http://data.europa.eu/a4g/ontology#Notice31> <http://www.w3.org/2004/02/skos/core#prefLabel> "Notice31"@en .
+<http://data.europa.eu/a4g/ontology#Modification-D24> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 16/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#concernsProcedure> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#not> .
+<http://data.europa.eu/a4g/ontology#QSNotice> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#not> .
+<http://data.europa.eu/a4g/ontology#Notice37> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 16/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#PIN-CFCSocial-D25> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#StandardFormsNotice> .
+<http://data.europa.eu/a4g/ontology#VoluntaryEx-AnteTransparencyNotice> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 09/10/2025"@en .
+<http://data.europa.eu/a4g/ontology#Notice38> <http://www.w3.org/2004/02/skos/core#prefLabel> "Notice38"@en .
+<http://data.europa.eu/a4g/ontology#NoticeE6> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#not> .
+<http://data.europa.eu/a4g/ontology#PIN-CFCSocialNotice> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#not> .
+<http://data.europa.eu/a4g/ontology#Notice27> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#eFormsNotice> .
+<http://data.europa.eu/a4g/ontology#Notice22> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 16/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#DesignContestResultNotice> <http://www.w3.org/2004/02/skos/core#prefLabel> "Design Contest Result Notice"@en .
+<http://data.europa.eu/a4g/ontology#PINProfileNotice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#CNDefence-D81> <http://www.w3.org/2004/02/skos/core#definition> "Competition Notice Defence under Directive 81."@en .
+<http://data.europa.eu/a4g/ontology#Subcontract-D81> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 16/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#CANDefence-D81> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#announcesLotGroupAwardInformation> <http://www.w3.org/2004/02/skos/core#prefLabel> "announces Lot Group Award Information"@en .
+<http://data.europa.eu/a4g/ontology#Notice28> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#CallForExpressionOfInterest> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#not> .
+<http://data.europa.eu/a4g/ontology#PIN-CFCSocial-D25> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#PINOnly-D24> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#StandardFormsNotice> .
+<http://data.europa.eu/a4g/ontology#DesignContestResultNotice> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 09/10/2025"@en .
+<http://data.europa.eu/a4g/ontology#CNSocialNotice-D25> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#StandardFormsNotice> .
+<http://data.europa.eu/a4g/ontology#refersToLotGroupAwardInformation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#not> .
+<http://data.europa.eu/a4g/ontology#Notice31> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#Notice27> <http://www.w3.org/2004/02/skos/core#definition> "Voluntary ex-ante transparency notice - defence directive"@en .
+<http://data.europa.eu/a4g/ontology#Notice1> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 16/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#VEAT-D24> <http://www.w3.org/2004/02/skos/core#prefLabel> "VEA T- D24"@en .
+<http://data.europa.eu/a4g/ontology#Modification-D25> <http://www.w3.org/2004/02/skos/core#definition> "Modification Notice under Directive 25."@en .
+<http://data.europa.eu/a4g/ontology#CANSocial-D25> <http://www.w3.org/2004/02/skos/core#prefLabel> "CAN Social- D25"@en .
+<http://data.europa.eu/a4g/ontology#Notice23> <http://www.w3.org/2004/02/skos/core#prefLabel> "Notice23"@en .
+<http://data.europa.eu/a4g/ontology#Notice10> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#PIN-RTL-D24> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#PINTimeLimitNotice> .
+<http://data.europa.eu/a4g/ontology#PINOnly-D25> <http://www.w3.org/2004/02/skos/core#prefLabel> "PIN Only- D25"@en .
+<http://data.europa.eu/a4g/ontology#NoticeE6> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#ContractModificationNotice> .
+<http://data.europa.eu/a4g/ontology#VEAT-D23> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#StandardFormsNotice> .
+<http://data.europa.eu/a4g/ontology#NoticeE6> <http://www.w3.org/2004/02/skos/core#definition> "Voluntary Contract Modification Notice for purchases below the Public Procurement Directive threshold."@en .
+<http://data.europa.eu/a4g/ontology#CANStandard-D24> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 16/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#PINProfile-D25> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#DesignContestResult-D24> <http://www.w3.org/2004/02/skos/core#definition> "Design Contest Result Notice under Directive 24."@en .
+<http://data.europa.eu/a4g/ontology#Notice28> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#VoluntaryEx-AnteTransparencyNotice> .
+<http://data.europa.eu/a4g/ontology#announcesNoticeAwardInformation> <http://www.w3.org/2004/02/skos/core#definition> "Relation indicating the formal communication of a Notice Award Information."@en .
+<http://data.europa.eu/a4g/ontology#CANSocial-D25> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#Notice38> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 16/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#PINProfile-D24> <http://www.w3.org/2004/02/skos/core#definition> "Prior Information Notice Profile under Directive 24."@en .
+<http://data.europa.eu/a4g/ontology#announcesLotGroup> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#Notice20> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#Notice39> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#Notice23> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#eFormsNotice> .
+<http://data.europa.eu/a4g/ontology#Notice8> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#CNSocialNotice-D25> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#not> .
+<http://data.europa.eu/a4g/ontology#Notice14> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#PIN-CFCSocialNotice> .
+<http://data.europa.eu/a4g/ontology#refersToAwardDecision> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#announcesProcedure> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#DesignContestResult-D25> <http://www.w3.org/2004/02/skos/core#definition> "Design Contest Result Notice under Directive 25."@en .
+<http://data.europa.eu/a4g/ontology#hasNoticeType> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#not> .
+<http://data.europa.eu/a4g/ontology#CompetitionNotice> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#not> .
+<http://data.europa.eu/a4g/ontology#NoticeE3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#announcesNoticeAwardInformation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#ContractModificationNotice> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#not> .
+<http://data.europa.eu/a4g/ontology#NoticeE4> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#CANStandardNotice> .
+<http://data.europa.eu/a4g/ontology#Notice12> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#eFormsNotice> .
+<http://data.europa.eu/a4g/ontology#CANTransportationNotice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#refersToRole> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#Notice21> <http://www.w3.org/2004/02/skos/core#prefLabel> "Notice21"@en .
+<http://data.europa.eu/a4g/ontology#describesResultNotice> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#not> .
+<http://data.europa.eu/a4g/ontology#Notice26> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#Notice5> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#not> .
+<http://data.europa.eu/a4g/ontology#Notice29> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#not> .
+<http://data.europa.eu/a4g/ontology#CNSocialNotice-D25> <http://www.w3.org/2004/02/skos/core#prefLabel> "CN Social Notice- D25"@en .
+<http://data.europa.eu/a4g/ontology#Notice37> <http://www.w3.org/2004/02/skos/core#prefLabel> "Notice37"@en .
+<http://data.europa.eu/a4g/ontology#Notice7> <http://www.w3.org/2004/02/skos/core#definition> "Prior information notice used to shorten time limits for receipt of tenders - general directive"@en .
+<http://data.europa.eu/a4g/ontology#PINOnly-D25> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#not> .
+<http://data.europa.eu/a4g/ontology#announcesLot> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#not> .
+<http://data.europa.eu/a4g/ontology#CallForExpressionOfInterest> <http://www.w3.org/2004/02/skos/core#definition> "Invitation for economic operators to be included in a list of pre-selected candidates or vendors, ensuring transparency and competition."@en .
+<http://data.europa.eu/a4g/ontology#DesignContestResult-D24> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 16/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#Notice32> <http://www.w3.org/2004/02/skos/core#definition> "Concession award notice - concession directive, standard regime"@en .
+<http://data.europa.eu/a4g/ontology#not> <http://www.w3.org/2002/07/owl#imports> <http://data.europa.eu/a4g/ontology#con> .
+<http://data.europa.eu/a4g/ontology#DesignContest-D24> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#VoluntaryEx-AnteTransparencyNotice> <http://www.w3.org/2004/02/skos/core#definition> "Announcement of the intention to award of a contract without prior publication of a contract notice."@en .
+<http://data.europa.eu/a4g/ontology#SocialAndOtherSpecificServices-D24> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#not> .
+<http://data.europa.eu/a4g/ontology#refersToContractToBeModified> <http://www.w3.org/2004/02/skos/core#prefLabel> "refers To Contract To Be Modified"@en .
+<http://data.europa.eu/a4g/ontology#Notice30> <http://www.w3.org/2004/02/skos/core#prefLabel> "Notice30"@en .
+<http://data.europa.eu/a4g/ontology#DirectAwardPrenotificationNotice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#hasLegalBasis> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Legal Basis"@en .
+<http://data.europa.eu/a4g/ontology#Modification-D25> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#ContractModificationNotice> .
+<http://data.europa.eu/a4g/ontology#announcesLot> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#SubcontractNotice> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#CompetitionNotice> .
+<http://data.europa.eu/a4g/ontology#eFormsNotice> <http://www.w3.org/2004/02/skos/core#definition> "eForms Notice"@en .
+<http://data.europa.eu/a4g/ontology#Notice18> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#CNStandardNotice> .
+<http://data.europa.eu/a4g/ontology#CANSocialNotice> <http://www.w3.org/2004/02/skos/core#prefLabel> "CAN Social Notice"@en .
+<http://data.europa.eu/a4g/ontology#describesDirectAwardPrenotificationNotice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#Notice15> <http://www.w3.org/2004/02/skos/core#definition> "Notice on the existence of a qualification system - sectoral directive"@en .
+<http://data.europa.eu/a4g/ontology#Notice4> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 16/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#CANTransportationNotice> <http://www.w3.org/2004/02/skos/core#definition> "Announcement that a public service contract for public passenger transport services has been directly awarded."@en .
+<http://data.europa.eu/a4g/ontology#refersToReviewRequest> <http://www.w3.org/2004/02/skos/core#definition> "Reference to a Review Request."@en .
+<http://data.europa.eu/a4g/ontology#PIN-RTL-D25> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#PINTimeLimitNotice> .
+<http://data.europa.eu/a4g/ontology#NoticeE1> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 09/10/2025"@en .
+<http://data.europa.eu/a4g/ontology#QSNotice-D25> <http://www.w3.org/2004/02/skos/core#definition> "Additional information: Social and other specific services – utilities"@en .
+<http://data.europa.eu/a4g/ontology#Notice30> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#eFormsNotice> .
+<http://data.europa.eu/a4g/ontology#NoticeE5> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#NoticeE3> <http://www.w3.org/2004/02/skos/core#definition> "Voluntary Contract Notice for purchases below the Public Procurement Directive threshold."@en .
+<http://data.europa.eu/a4g/ontology#Notice19> <http://www.w3.org/2004/02/skos/core#prefLabel> "Notice19"@en .
+<http://data.europa.eu/a4g/ontology#PINOnly-D25> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#StandardFormsNotice> .
+<http://data.europa.eu/a4g/ontology#refersToNoticeAwardInformation> <http://www.w3.org/2004/02/skos/core#definition> "Reference to a Notice Award Information."@en .
+<http://data.europa.eu/a4g/ontology#PINOnly-D24> <http://www.w3.org/2004/02/skos/core#definition> "Prior Information Notice Only under Directive 24."@en .
+<http://data.europa.eu/a4g/ontology#not> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/ns/org#> .
+<http://data.europa.eu/a4g/ontology#SocialAndOtherSpecificServices-D23> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 16/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#CNStandardNotice> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#CompetitionNotice> .
+<http://data.europa.eu/a4g/ontology#DesignContestResult-D25> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 16/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#NoticeT02> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#not> .
+<http://data.europa.eu/a4g/ontology#VoluntaryEx-AnteTransparencyNotice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#Notice18> <http://www.w3.org/2004/02/skos/core#prefLabel> "Notice18"@en .
+<http://data.europa.eu/a4g/ontology#Notice12> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#PIN-CFCSocialNotice> .
+<http://data.europa.eu/a4g/ontology#Notice31> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#eFormsNotice> .
+<http://data.europa.eu/a4g/ontology#Notice6> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#eFormsNotice> .
+<http://data.europa.eu/a4g/ontology#CANStandardNotice> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#not> .
+<http://data.europa.eu/a4g/ontology#CNSocialNotice> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#CompetitionNotice> .
+<http://data.europa.eu/a4g/ontology#Notice10> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#eFormsNotice> .
+<http://data.europa.eu/a4g/ontology#QSNotice-D25> <http://www.w3.org/2004/02/skos/core#prefLabel> "QS Notice- D25"@en .
+<http://data.europa.eu/a4g/ontology#NoticeE3> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#CNStandardNotice> .
+<http://data.europa.eu/a4g/ontology#Notice22> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#SubcontractNotice> .
+<http://data.europa.eu/a4g/ontology#Notice12> <http://www.w3.org/2004/02/skos/core#definition> "Prior information notice used as a call for competition - general directive, light regime"@en .
+<http://data.europa.eu/a4g/ontology#PINTransportationNotice> <http://www.w3.org/2004/02/skos/core#prefLabel> "PIN Transportation Notice"@en .
+<http://data.europa.eu/a4g/ontology#Notice24> <http://www.w3.org/2004/02/skos/core#definition> "Design contest notice - sectoral directive, design"@en .
+<http://data.europa.eu/a4g/ontology#PINDefence-D81> <http://www.w3.org/2004/02/skos/core#prefLabel> "PIN Defence- D81"@en .
+<http://data.europa.eu/a4g/ontology#Notice5> <http://www.w3.org/2004/02/skos/core#prefLabel> "Notice5"@en .
+<http://data.europa.eu/a4g/ontology#Notice20> <http://www.w3.org/2004/02/skos/core#prefLabel> "Notice20"@en .
+<http://data.europa.eu/a4g/ontology#ConcessionAwardNotice-D23> <http://www.w3.org/2004/02/skos/core#prefLabel> "Concession Award Notice- D23"@en .
+<http://data.europa.eu/a4g/ontology#Notice17> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 16/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#PINTimeLimitNotice> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 09/10/2025"@en .
+<http://data.europa.eu/a4g/ontology#VEAT-D24> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#PINTransportationNotice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#PINProfileNotice> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#PlanningNotice> .
+<http://data.europa.eu/a4g/ontology#PINProfile-D24> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#PINProfileNotice> .
+<http://data.europa.eu/a4g/ontology#DesignContestResult-D25> <http://www.w3.org/2004/02/skos/core#prefLabel> "Design Contest Result- D25"@en .
+<http://data.europa.eu/a4g/ontology#PINProfile-D81> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#StandardFormsNotice> .
+<http://data.europa.eu/a4g/ontology#NoticeE1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#concernsProcedure> <http://www.w3.org/2004/02/skos/core#prefLabel> "concerns Procedure"@en .
+<http://data.europa.eu/a4g/ontology#CANSocialNotice-D25> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#StandardFormsNotice> .
+<http://data.europa.eu/a4g/ontology#Notice2> <http://www.w3.org/2004/02/skos/core#prefLabel> "Notice2"@en .
+<http://data.europa.eu/a4g/ontology#Notice21> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 16/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#PIN-CFCSocial-D25> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#PIN-CFCSocialNotice> .
+<http://data.europa.eu/a4g/ontology#Notice14> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#not> .
+<http://data.europa.eu/a4g/ontology#Notice8> <http://www.w3.org/2004/02/skos/core#prefLabel> "Notice8"@en .
+<http://data.europa.eu/a4g/ontology#CNSocial-D25> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#PIN-RTL-D24> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#StandardFormsNotice> .
+<http://data.europa.eu/a4g/ontology#describesResultNotice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#QSNotice> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#CompetitionNotice> .
+<http://data.europa.eu/a4g/ontology#NoticeE1> <http://www.w3.org/2004/02/skos/core#prefLabel> "Notice E1"@en .
+<http://data.europa.eu/a4g/ontology#PIN-CFCSocialNotice> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#CompetitionNotice> .
+<http://data.europa.eu/a4g/ontology#hasLegalBasis> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#not> .
+<http://data.europa.eu/a4g/ontology#CANSocialNotice-D25> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#SubcontractNotice> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#not> .
+<http://data.europa.eu/a4g/ontology#VEAT-D23> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 16/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#hasFormType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#CNSocialNotice-D25> <http://www.w3.org/2004/02/skos/core#definition> "Additional information: Social and other specific services – utilities"@en .
+<http://data.europa.eu/a4g/ontology#hasImplementingRegulation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#not> .
+<http://data.europa.eu/a4g/ontology#refersToLotGroupAwardInformation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#Modification-D25> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 16/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#PINTimeLimitNotice> <http://www.w3.org/2004/02/skos/core#definition> "Announcement of intentions of planned procurements in view of shortening time limits for reception of tenders. Additional information: Where contracting authorities have published a prior information notice which was not itself used as a means of calling for competition, the minimum time limit for the receipt of tenders may be shortened."@en .
+<http://data.europa.eu/a4g/ontology#Modification-D23> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#StandardFormsNotice> .
+<http://data.europa.eu/a4g/ontology#DesignContest-D25> <http://www.w3.org/2004/02/skos/core#definition> "Design Contest Notice under Directive 25."@en .
+<http://data.europa.eu/a4g/ontology#Notice30> <http://www.w3.org/2004/02/skos/core#definition> "Contract award notice - sectoral directive, standard regime"@en .
+<http://data.europa.eu/a4g/ontology#PIN-CFCStandardNotice> <http://www.w3.org/2004/02/skos/core#definition> "Announcement of intentions of planned procurements used as a call for competition. Additional information: For restricted procedures and competitive procedures with negotiation, sub-central contracting authorities may use a prior information notice as a call for competition pursuant to the relevant article of the Directive."@en .
+<http://data.europa.eu/a4g/ontology#Notice11> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#PIN-CFCStandardNotice> .
+<http://data.europa.eu/a4g/ontology#DesignContestNotice> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#not> .
+<http://data.europa.eu/a4g/ontology#Notice3> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#PINProfileNotice> .
+<http://data.europa.eu/a4g/ontology#PlanningNotice> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#Notice> .
+<http://data.europa.eu/a4g/ontology#Notice1> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#PINProfileNotice> .
+<http://data.europa.eu/a4g/ontology#CANSocialNotice> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 09/10/2025"@en .
+<http://data.europa.eu/a4g/ontology#Subcontract-D81> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#SubcontractNotice> .
+<http://data.europa.eu/a4g/ontology#CANStandardNotice> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#ResultNotice> .
+<http://data.europa.eu/a4g/ontology#not> <http://purl.org/dc/terms/title> "eProcurement Ontology Notice - core"@en .
+<http://data.europa.eu/a4g/ontology#DesignContestResultNotice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#Notice18> <http://www.w3.org/2004/02/skos/core#definition> "Contract notice - defence directive, standard regime"@en .
+<http://data.europa.eu/a4g/ontology#PIN-RTL-D24> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#not> .
+<http://data.europa.eu/a4g/ontology#VEAT-D81> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#VEAT-D25> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#StandardFormsNotice> .
+<http://data.europa.eu/a4g/ontology#VEAT-D81> <http://www.w3.org/2004/02/skos/core#definition> "Voluntary ex-ante transparency notice under Directive 81."@en .
+<http://data.europa.eu/a4g/ontology#concernsLotGroup> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#QSNotice> <http://www.w3.org/2004/02/skos/core#definition> "Announcement of a system of qualification of economic operators on the basis of exclusion and selection criteria. Additional information: The announcement can be used as a call for competition. When a call for competition is made by means of a notice on the existence of a qualification system, specific contracts for the works, supplies or services covered by the qualification system shall be awarded by restricted procedures or negotiated procedures, in which all tenderers and participants are selected among the candidates already qualified in accordance with such a system."@en .
+<http://data.europa.eu/a4g/ontology#not> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/ns/locn> .
+<http://data.europa.eu/a4g/ontology#Notice29> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#eFormsNotice> .
+<http://data.europa.eu/a4g/ontology#Notice16> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#not> .
+<http://data.europa.eu/a4g/ontology#announcesRole> <http://www.w3.org/2004/02/skos/core#prefLabel> "announces Role"@en .
+<http://data.europa.eu/a4g/ontology#ContractModificationNotice> <http://www.w3.org/2004/02/skos/core#definition> "An announcement of the Modification of a Contract/Concession during its term by a Procuring Entity."@en .
+<http://data.europa.eu/a4g/ontology#VoluntaryEx-AnteTransparencyNotice> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#DirectAwardPrenotificationNotice> .
+<http://data.europa.eu/a4g/ontology#NoticeE2> <http://www.w3.org/2004/02/skos/core#prefLabel> "Notice E2"@en .
+<http://data.europa.eu/a4g/ontology#NoticeE4> <http://www.w3.org/2004/02/skos/core#definition> "Voluntary Award Notice for purchases below the Public Procurement Directive threshold."@en .
+<http://data.europa.eu/a4g/ontology#Notice27> <http://www.w3.org/2004/02/skos/core#prefLabel> "Notice27"@en .
+<http://data.europa.eu/a4g/ontology#Notice10> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#PIN-CFCStandardNotice> .
+<http://data.europa.eu/a4g/ontology#PINOnly-D24> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#PINOnlyNotice> .
+<http://data.europa.eu/a4g/ontology#announcesPlannedProcurementPart> <http://www.w3.org/2004/02/skos/core#prefLabel> "announces Planned Procurement Part"@en .
+<http://data.europa.eu/a4g/ontology#Notice23> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#not> .
+<http://data.europa.eu/a4g/ontology#Notice8> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#PINTimeLimitNotice> .
+<http://data.europa.eu/a4g/ontology#PINOnlyNotice> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 09/10/2025"@en .
+<http://data.europa.eu/a4g/ontology#Notice36> <http://www.w3.org/2004/02/skos/core#prefLabel> "Notice36"@en .
+<http://data.europa.eu/a4g/ontology#PINTransportationNotice> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#PlanningNotice> .
+<http://data.europa.eu/a4g/ontology#Notice28> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#not> .
+<http://data.europa.eu/a4g/ontology#not> <http://purl.org/vocab/vann/preferredNamespacePrefix> "epo" .
+<http://data.europa.eu/a4g/ontology#QSNotice> <http://www.w3.org/2004/02/skos/core#prefLabel> "QS Notice"@en .
+<http://data.europa.eu/a4g/ontology#announcesContract> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#not> .
+<http://data.europa.eu/a4g/ontology#PINProfile-D24> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#VEAT-D81> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#VoluntaryEx-AnteTransparencyNotice> .
+<http://data.europa.eu/a4g/ontology#VEAT-D81> <http://www.w3.org/2004/02/skos/core#prefLabel> "VEA T- D81"@en .
+<http://data.europa.eu/a4g/ontology#PIN-RTL-D25> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#StandardFormsNotice> .
+<http://data.europa.eu/a4g/ontology#QSNotice> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 09/10/2025"@en .
+<http://data.europa.eu/a4g/ontology#Notice12> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#not> .
+<http://data.europa.eu/a4g/ontology#Notice9> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#eFormsNotice> .
+<http://data.europa.eu/a4g/ontology#NoticeCEI> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#CallForExpressionOfInterest> .
+<http://data.europa.eu/a4g/ontology#CNStandardNotice> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 09/10/2025"@en .
+<http://data.europa.eu/a4g/ontology#Notice2> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#not> .
+<http://data.europa.eu/a4g/ontology#VEAT-D25> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#VoluntaryEx-AnteTransparencyNotice> .
+<http://data.europa.eu/a4g/ontology#Notice10> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#not> .
+<http://data.europa.eu/a4g/ontology#CallForExpressionOfInterest> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#CompetitionNotice> .
+<http://data.europa.eu/a4g/ontology#CNSocialNotice> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 09/10/2025"@en .
+<http://data.europa.eu/a4g/ontology#CNStandard-D24> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#CANSocial-D25> <http://www.w3.org/2004/02/skos/core#definition> "Contract Award Notice using the light regime under Directive 25."@en .
+<http://data.europa.eu/a4g/ontology#SocialAndOtherSpecificServices-D24> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 16/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#ConcessionAwardNotice-D23> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#not> .
+<http://data.europa.eu/a4g/ontology#describesDirectAwardPrenotificationNotice> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#Notice19> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#CNStandardNotice> .
+<http://data.europa.eu/a4g/ontology#PINTimeLimitNotice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#PIN-CFCSocialNotice> <http://www.w3.org/2004/02/skos/core#prefLabel> "PI N- CFC Social Notice"@en .
+<http://data.europa.eu/a4g/ontology#refersToAwardDecision> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#not> .
+<http://data.europa.eu/a4g/ontology#Notice3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#CANSocialNotice> <http://www.w3.org/2004/02/skos/core#definition> "Announcement of the results of a call for competition concerning contracts or concessions for social and other specific services."@en .
+<http://data.europa.eu/a4g/ontology#Notice11> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#not> .
+<http://data.europa.eu/a4g/ontology#NoticeE2> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#eFormsNotice> .
+<http://data.europa.eu/a4g/ontology#announcesReviewRequest> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#Notice20> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#CNSocialNotice> .
+<http://data.europa.eu/a4g/ontology#not> <http://www.w3.org/2000/01/rdf-schema#comment> "This version is automatically generated from eNotice.xml on 2025-10-10" .
+<http://data.europa.eu/a4g/ontology#announcesLotGroup> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#PINProfileNotice> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#not> .
+<http://data.europa.eu/a4g/ontology#preparesForPotentialProcurementObject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#CANDefence-D81> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#not> .
+<http://data.europa.eu/a4g/ontology#describesResultNotice> <http://www.w3.org/2004/02/skos/core#prefLabel> "describes Result Notice"@en .
+<http://data.europa.eu/a4g/ontology#refersToRole> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#not> .
+<http://data.europa.eu/a4g/ontology#PIN-CFCSocial-D25> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#not> .
+<http://data.europa.eu/a4g/ontology#Notice13> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 16/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#not> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://github.com/OP-TED/ePO/releases> .
+<http://data.europa.eu/a4g/ontology#Notice14> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 16/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#announcesReviewRequest> <http://www.w3.org/2004/02/skos/core#prefLabel> "announces Review Request"@en .
+<http://data.europa.eu/a4g/ontology#not> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://data.europa.eu/a4g/ontology#" .
+<http://data.europa.eu/a4g/ontology#Notice18> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#hasImplementingRegulation> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Implementing Regulation"@en .
+<http://data.europa.eu/a4g/ontology#Notice33> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 16/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#Notice31> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#not> .
+<http://data.europa.eu/a4g/ontology#PINOnly-D24> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#not> .
+<http://data.europa.eu/a4g/ontology#QSNotice-D25> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#not> .
+<http://data.europa.eu/a4g/ontology#Notice34> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#CANSocialNotice> .
+<http://data.europa.eu/a4g/ontology#announcesContractAmendment> <http://www.w3.org/2004/02/skos/core#definition> "Relation indicating the formal communication of a Contract Amendment."@en .
+<http://data.europa.eu/a4g/ontology#announcesNoticeAwardInformation> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#DesignContest-D25> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#not> .
+<http://data.europa.eu/a4g/ontology#refersToReviewRequest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#CompletionNotice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#Modification-D24> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#CompletionNotice> <http://www.w3.org/2004/02/skos/core#prefLabel> "Completion Notice"@en .
+<http://data.europa.eu/a4g/ontology#announcesCompletionOfContract> <http://www.w3.org/2004/02/skos/core#prefLabel> "announces Completion Of Contract"@en .
+<http://data.europa.eu/a4g/ontology#Notice37> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#CANSocialNotice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#Notice27> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 16/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#QS-D25> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#QSNotice> .
+<http://data.europa.eu/a4g/ontology#QSNotice-D25> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#QSNotice> .
+<http://data.europa.eu/a4g/ontology#Notice22> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#PINProfile-D81> <http://www.w3.org/2004/02/skos/core#definition> "Prior Information Notice Profile under Directive 81."@en .
+<http://data.europa.eu/a4g/ontology#Subcontract-D81> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#announcesContractAmendment> <http://www.w3.org/2004/02/skos/core#prefLabel> "announces Contract Amendment"@en .
+<http://data.europa.eu/a4g/ontology#NoticeT01> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 09/10/2025"@en .
+<http://data.europa.eu/a4g/ontology#refersToNoticeAwardInformation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#describesResultNotice> <http://www.w3.org/2004/02/skos/core#definition> "Characterises Result Notice."@en .
+<http://data.europa.eu/a4g/ontology#NoticeCEI> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#Notice15> <http://www.w3.org/2004/02/skos/core#prefLabel> "Notice15"@en .
+<http://data.europa.eu/a4g/ontology#PreMarketConsultationNotice> <http://www.w3.org/2004/02/skos/core#historyNote> "WG Approval 02/05/2024"@en .
+<http://data.europa.eu/a4g/ontology#PINOnly-D25> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#PINOnlyNotice> .
+<http://data.europa.eu/a4g/ontology#announcesLotGroupAwardInformation> <http://www.w3.org/2004/02/skos/core#definition> "Relation indicating the formal communication of a Lot Group Award Information."@en .
+<http://data.europa.eu/a4g/ontology#Notice39> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#not> .
+<http://data.europa.eu/a4g/ontology#Notice8> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#not> .
+<http://data.europa.eu/a4g/ontology#CANDefence-D81> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#StandardFormsNotice> .
+<http://data.europa.eu/a4g/ontology#Notice1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#not> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://docs.ted.europa.eu/home/index.html> .
+<http://data.europa.eu/a4g/ontology#describesDirectAwardPrenotificationNotice> <http://www.w3.org/2004/02/skos/core#definition> "Characterises Direct Award Prenotification Notice."@en .
+<http://data.europa.eu/a4g/ontology#Notice25> <http://www.w3.org/2004/02/skos/core#prefLabel> "Notice25"@en .
+<http://data.europa.eu/a4g/ontology#Notice28> <http://www.w3.org/2004/02/skos/core#definition> "Voluntary ex-ante transparency notice - concession directive"@en .
+<http://data.europa.eu/a4g/ontology#CNDefence-D81> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#NoticeE1> <http://www.w3.org/2004/02/skos/core#definition> "Voluntary Pre-market Consultation Notice for purchases below the Public Procurement Directive threshold."@en .
+<http://data.europa.eu/a4g/ontology#PINDefence-D81> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#not> .
+<http://data.europa.eu/a4g/ontology#SubcontractNotice> <http://www.w3.org/2004/02/skos/core#prefLabel> "Subcontract Notice"@en .
+<http://data.europa.eu/a4g/ontology#CANStandard-D24> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#PINOnlyNotice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#PIN-CFCStandard-D24> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 16/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#Notice26> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#not> .
+<http://data.europa.eu/a4g/ontology#PreMarketConsultationNotice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#Notice38> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#CNSocial-D25> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#CNSocialNotice> .
+<http://data.europa.eu/a4g/ontology#Notice23> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 16/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#QS-D25> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 16/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#preparesForPotentialProcurementObject> <http://www.w3.org/2004/02/skos/core#definition> "Gathers information for a possible Procurement Object."@en .
+<http://data.europa.eu/a4g/ontology#DesignContest-D25> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 16/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#NoticeE6> <http://www.w3.org/2004/02/skos/core#prefLabel> "Notice E6"@en .
+<http://data.europa.eu/a4g/ontology#DesignContest-D24> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#not> .
+<http://data.europa.eu/a4g/ontology#DesignContest-D25> <http://www.w3.org/2004/02/skos/core#prefLabel> "Design Contest- D25"@en .
+<http://data.europa.eu/a4g/ontology#PINProfile-D25> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#StandardFormsNotice> .
+<http://data.europa.eu/a4g/ontology#CANSocial-D25> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#StandardFormsNotice> .
+<http://data.europa.eu/a4g/ontology#refersToRole> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#PlanningNotice> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#not> .
+<http://data.europa.eu/a4g/ontology#VEAT-D24> <http://www.w3.org/2004/02/skos/core#definition> "Voluntary ex-ante transparency notice under Directive 24."@en .
+<http://data.europa.eu/a4g/ontology#Notice16> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#eFormsNotice> .
+<http://data.europa.eu/a4g/ontology#Notice35> <http://www.w3.org/2004/02/skos/core#prefLabel> "Notice35"@en .
+<http://data.europa.eu/a4g/ontology#Notice12> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 16/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#announcesProcedure> <http://www.w3.org/2004/02/skos/core#definition> "Relation indicating the formal communication of a Procedure."@en .
+<http://data.europa.eu/a4g/ontology#announcesPlannedProcurementPart> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#not> .
+<http://data.europa.eu/a4g/ontology#Notice7> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#Notice21> <http://www.w3.org/2004/02/skos/core#definition> "Contract notice - sectoral directive, light regime"@en .
+<http://data.europa.eu/a4g/ontology#NoticeE6> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 09/10/2025"@en .
+<http://data.europa.eu/a4g/ontology#ResultNotice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#Notice15> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#eFormsNotice> .
+<http://data.europa.eu/a4g/ontology#DesignContestResult-D24> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#NoticeE2> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#PINOnlyNotice> .
+<http://data.europa.eu/a4g/ontology#announcesAwardDecision> <http://www.w3.org/2004/02/skos/core#definition> "Relation indicating the formal communication of an Award Decision."@en .
+<http://data.europa.eu/a4g/ontology#NoticeE4> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#eFormsNotice> .
+<http://data.europa.eu/a4g/ontology#Notice37> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#DesignContestResultNotice> .
+<http://data.europa.eu/a4g/ontology#Notice22> <http://www.w3.org/2004/02/skos/core#definition> "Subcontract notice - defence directive"@en .
+<http://data.europa.eu/a4g/ontology#NoticeE5> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#not> .
+<http://data.europa.eu/a4g/ontology#CNStandard-D24> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#CNStandardNotice> .
+<http://data.europa.eu/a4g/ontology#CNStandard-D24> <http://www.w3.org/2004/02/skos/core#definition> "Competition Notice using the standard regime under Directive 24."@en .
+<http://data.europa.eu/a4g/ontology#ConcessionAwardNotice-D23> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 16/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#QS-D25> <http://www.w3.org/2004/02/skos/core#prefLabel> "Q S- D25"@en .
+<http://data.europa.eu/a4g/ontology#Notice36> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 16/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#CNSocial-D25> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#not> .
+<http://data.europa.eu/a4g/ontology#DesignContest-D24> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#StandardFormsNotice> .
+<http://data.europa.eu/a4g/ontology#Notice18> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#eFormsNotice> .
+<http://data.europa.eu/a4g/ontology#Notice40> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#announcesContract> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#Notice2> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#eFormsNotice> .
+<http://data.europa.eu/a4g/ontology#Notice20> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#not> .
+<http://data.europa.eu/a4g/ontology#Notice39> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#eFormsNotice> .
+<http://data.europa.eu/a4g/ontology#Notice32> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#not> .
+<http://data.europa.eu/a4g/ontology#PIN-CFCStandard-D24> <http://www.w3.org/2004/02/skos/core#definition> "Prior information notice used as a Call For Competition using the standard regime under Directive 24. Additional information: The standard regime refers to the core rules for public procurement, which mandates that public authorities award contracts in compliance with EU principles of equal treatment and transparency."@en .
+<http://data.europa.eu/a4g/ontology#Notice35> <http://www.w3.org/2004/02/skos/core#definition> "Concession award notice - concessions directive, light regime"@en .
+<http://data.europa.eu/a4g/ontology#Notice35> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#NoticeT01> <http://www.w3.org/2004/02/skos/core#prefLabel> "Notice T01"@en .
+<http://data.europa.eu/a4g/ontology#Notice25> <http://www.w3.org/2004/02/skos/core#definition> "Voluntary ex-ante transparency notice - general directive"@en .
+<http://data.europa.eu/a4g/ontology#announcesProcedure> <http://www.w3.org/2004/02/skos/core#prefLabel> "announces Procedure"@en .
+<http://data.europa.eu/a4g/ontology#Notice30> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 16/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#describesResultNotice> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#ConcessionNotice-D23> <http://www.w3.org/2004/02/skos/core#prefLabel> "Concession Notice- D23"@en .
+<http://data.europa.eu/a4g/ontology#Modification-D23> <http://www.w3.org/2004/02/skos/core#prefLabel> "Modification- D23"@en .
+<http://data.europa.eu/a4g/ontology#Notice9> <http://www.w3.org/2004/02/skos/core#prefLabel> "Notice9"@en .
+<http://data.europa.eu/a4g/ontology#PIN-CFCSocial-D25> <http://www.w3.org/2004/02/skos/core#definition> "Prior information notice used as a Call For Competition using the light regime under Directive 25. Additional information: The light regime is generally used for procurement of social and other specific services. The light regime may enable reserving Contracts for social enterprises and sheltered workshops."@en .
+<http://data.europa.eu/a4g/ontology#PIN-CFCSocial-D25> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 16/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#announcesPlannedProcurement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#PINTimeLimitNotice> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#PlanningNotice> .
+<http://data.europa.eu/a4g/ontology#NoticeCEI> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#eFormsNotice> .
+<http://data.europa.eu/a4g/ontology#ContractModificationNotice> <http://www.w3.org/2004/02/skos/core#prefLabel> "Contract Modification Notice"@en .
+<http://data.europa.eu/a4g/ontology#Notice24> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#eFormsNotice> .
+<http://data.europa.eu/a4g/ontology#refersToLotGroupAwardInformation> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#Modification-D24> <http://www.w3.org/2004/02/skos/core#definition> "Modification Notice under Directive 24."@en .
+<http://data.europa.eu/a4g/ontology#Notice11> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#eFormsNotice> .
+<http://data.europa.eu/a4g/ontology#concernsLotGroup> <http://www.w3.org/2004/02/skos/core#prefLabel> "concerns Lot Group"@en .
+<http://data.europa.eu/a4g/ontology#Notice34> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#eFormsNotice> .
+<http://data.europa.eu/a4g/ontology#Notice9> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#not> .
+<http://data.europa.eu/a4g/ontology#VEAT-D23> <http://www.w3.org/2004/02/skos/core#prefLabel> "VEA T- D23"@en .
+<http://data.europa.eu/a4g/ontology#DesignContestResult-D25> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#Notice26> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#VoluntaryEx-AnteTransparencyNotice> .
+<http://data.europa.eu/a4g/ontology#NoticeE3> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#eFormsNotice> .
+<http://data.europa.eu/a4g/ontology#NoticeT01> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#Notice10> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 16/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#NoticeE4> <http://www.w3.org/2004/02/skos/core#prefLabel> "Notice E4"@en .
+<http://data.europa.eu/a4g/ontology#CNSocial-D25> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#StandardFormsNotice> .
+<http://data.europa.eu/a4g/ontology#DesignContestNotice> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#CompetitionNotice> .
+<http://data.europa.eu/a4g/ontology#NoticeE6> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#refersToRole> <http://www.w3.org/2004/02/skos/core#definition> "Reference to a Role."@en .
+<http://data.europa.eu/a4g/ontology#concernsLotGroup> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#not> .
+<http://data.europa.eu/a4g/ontology#Notice28> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#eFormsNotice> .
+<http://data.europa.eu/a4g/ontology#CNSocialNotice> <http://www.w3.org/2004/02/skos/core#prefLabel> "CN Social Notice"@en .
+<http://data.europa.eu/a4g/ontology#SocialAndOtherSpecificServices-D23> <http://www.w3.org/2004/02/skos/core#definition> "Social And Other Specific Services under Directive 23."@en .
+<http://data.europa.eu/a4g/ontology#CANStandardNotice> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 09/10/2025"@en .
+<http://data.europa.eu/a4g/ontology#Notice29> <http://www.w3.org/2004/02/skos/core#definition> "Contract award notice - general directive, standard regime"@en .
+<http://data.europa.eu/a4g/ontology#announcesLotGroupAwardInformation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#not> .
+<http://data.europa.eu/a4g/ontology#Notice13> <http://www.w3.org/2004/02/skos/core#definition> "Periodic indicative notice used as a call for competition - sectoral directive, light regime"@en .
+<http://data.europa.eu/a4g/ontology#CANStandard-D24> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#CANStandardNotice> .
+<http://data.europa.eu/a4g/ontology#PINProfile-D81> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#not> .
+<http://data.europa.eu/a4g/ontology#preparesForPotentialProcurementObject> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#not> .
+<http://data.europa.eu/a4g/ontology#CANSocialNotice-D25> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#not> .
+<http://data.europa.eu/a4g/ontology#CANStandard-D24> <http://www.w3.org/2004/02/skos/core#definition> "Contract Award Notice using the standard regime under Directive 24."@en .
+<http://data.europa.eu/a4g/ontology#Notice40> <http://www.w3.org/2004/02/skos/core#definition> "Contract modification notice - concessions directive"@en .
+<http://data.europa.eu/a4g/ontology#DesignContestResult-D24> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#DesignContestResultNotice> .
+<http://data.europa.eu/a4g/ontology#ConcessionNotice-D23> <http://www.w3.org/2004/02/skos/core#definition> "Concession Notice under Directive 23."@en .
+<http://data.europa.eu/a4g/ontology#Notice17> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#NoticeE2> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#not> .
+<http://data.europa.eu/a4g/ontology#QS-D25> <http://www.w3.org/2004/02/skos/core#definition> "Qualification System under Directive 25."@en .
+<http://data.europa.eu/a4g/ontology#concernsProcedure> <http://www.w3.org/2004/02/skos/core#definition> "Relates to Procedure."@en .
+<http://data.europa.eu/a4g/ontology#PlanningNotice> <http://www.w3.org/2004/02/skos/core#prefLabel> "Planning Notice"@en .
+<http://data.europa.eu/a4g/ontology#announcesPlannedProcurement> <http://www.w3.org/2004/02/skos/core#definition> "Relation indicating the formal communication of a Planned Procurement."@en .
+<http://data.europa.eu/a4g/ontology#Notice11> <http://www.w3.org/2004/02/skos/core#definition> "Periodic indicative notice used as a call for competition - sectoral directive, standard regime"@en .
+<http://data.europa.eu/a4g/ontology#Notice16> <http://www.w3.org/2004/02/skos/core#prefLabel> "Notice16"@en .
+<http://data.europa.eu/a4g/ontology#Notice19> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#PINDefence-D81> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 16/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#DirectAwardPrenotificationNotice> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#Notice> .
+<http://data.europa.eu/a4g/ontology#not> <http://www.w3.org/2002/07/owl#imports> <http://data.europa.eu/eli/ontology#> .
+<http://data.europa.eu/a4g/ontology#PIN-RTL-D25> <http://www.w3.org/2004/02/skos/core#prefLabel> "PI N- RT L- D25"@en .
+<http://data.europa.eu/a4g/ontology#VEAT-D24> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#StandardFormsNotice> .
+<http://data.europa.eu/a4g/ontology#Notice20> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#eFormsNotice> .
+<http://data.europa.eu/a4g/ontology#Modification-D23> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#not> .
+<http://data.europa.eu/a4g/ontology#Notice23> <http://www.w3.org/2004/02/skos/core#definition> "Design contest notice - general directive, design"@en .
+<http://data.europa.eu/a4g/ontology#Notice21> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#Notice32> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#eFormsNotice> .
+<http://data.europa.eu/a4g/ontology#Notice8> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#eFormsNotice> .
+<http://data.europa.eu/a4g/ontology#announcesPlannedProcurementPart> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#hasFormType> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#not> .
+<http://data.europa.eu/a4g/ontology#NoticeT01> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#PINTransportationNotice> .
+<http://data.europa.eu/a4g/ontology#Notice23> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#DesignContestNotice> .
+<http://data.europa.eu/a4g/ontology#refersToContractToBeModified> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#not> .
+<http://data.europa.eu/a4g/ontology#not> <http://purl.org/dc/terms/description> "The eProcurement Ontology Notice core describes the concepts and properties representing the European Public Procurement Notice domain. The provision of these semantics offers the basis for a common understanding of the domain for all stakeholders ensuring the quality of data exchange and transparency. The ontology restrictions are published in a separate artefact."@en .
+<http://data.europa.eu/a4g/ontology#CANSocialNotice-D25> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#CANSocialNotice> .
+<http://data.europa.eu/a4g/ontology#ConcessionNotice-D23> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#Modification-D25> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#StandardFormsNotice> .
+<http://data.europa.eu/a4g/ontology#DesignContest-D25> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#DesignContestNotice> .
+<http://data.europa.eu/a4g/ontology#Notice31> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 16/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#PINOnly-D24> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 16/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#CANTransportationNotice> <http://www.w3.org/2004/02/skos/core#prefLabel> "CAN Transportation Notice"@en .
+<http://data.europa.eu/a4g/ontology#not> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/ns/adms> .
+<http://data.europa.eu/a4g/ontology#announcesCompletionOfContract> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#not> .
+<http://data.europa.eu/a4g/ontology#VEAT-D81> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#not> .
+<http://data.europa.eu/a4g/ontology#NoticeT02> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 09/10/2025"@en .
+<http://data.europa.eu/a4g/ontology#Modification-D25> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#concernsLotGroup> <http://www.w3.org/2004/02/skos/core#definition> "Relates to Lot Group."@en .
+<http://data.europa.eu/a4g/ontology#SubcontractNotice> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 09/10/2025"@en .
+<http://data.europa.eu/a4g/ontology#Notice26> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#eFormsNotice> .
+<http://data.europa.eu/a4g/ontology#Notice40> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#eFormsNotice> .
+<http://data.europa.eu/a4g/ontology#ResultNotice> <http://www.w3.org/2004/02/skos/core#definition> "An announcement of the award or non-award of a Contract by a Buyer."@en .
+<http://data.europa.eu/a4g/ontology#refersToRole> <http://www.w3.org/2004/02/skos/core#prefLabel> "refers To Role"@en .
+<http://data.europa.eu/a4g/ontology#announcesAwardDecision> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#not> .
+<http://data.europa.eu/a4g/ontology#Notice36> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#DesignContestResultNotice> .
+<http://data.europa.eu/a4g/ontology#Modification-D23> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#ContractModificationNotice> .
+<http://data.europa.eu/a4g/ontology#Notice35> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#eFormsNotice> .
+<http://data.europa.eu/a4g/ontology#PINProfile-D25> <http://www.w3.org/2004/02/skos/core#prefLabel> "PIN Profile- D25"@en .
+<http://data.europa.eu/a4g/ontology#announcesNoticeAwardInformation> <http://www.w3.org/2004/02/skos/core#prefLabel> "announces Notice Award Information"@en .
+<http://data.europa.eu/a4g/ontology#DesignContestNotice> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 09/10/2025"@en .
+<http://data.europa.eu/a4g/ontology#Notice32> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 16/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#refersToLotGroupAwardInformation> <http://www.w3.org/2004/02/skos/core#prefLabel> "refers To Lot Group Award Information"@en .
+<http://data.europa.eu/a4g/ontology#NoticeE1> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#PreMarketConsultationNotice> .
+<http://data.europa.eu/a4g/ontology#VEAT-D24> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#VoluntaryEx-AnteTransparencyNotice> .
+<http://data.europa.eu/a4g/ontology#announcesProcedure> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://data.europa.eu/a4g/ontology#concernsProcedure> .
+<http://data.europa.eu/a4g/ontology#concernsLot> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#not> .
+<http://data.europa.eu/a4g/ontology#Notice29> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 16/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#ResultNotice> <http://www.w3.org/2004/02/skos/core#prefLabel> "Result Notice"@en .
+<http://data.europa.eu/a4g/ontology#PINOnly-D25> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 16/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#announcesLot> <http://www.w3.org/2004/02/skos/core#prefLabel> "announces Lot"@en .
+<http://data.europa.eu/a4g/ontology#refersToReviewRequest> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#not> .
+<http://data.europa.eu/a4g/ontology#Notice28> <http://www.w3.org/2004/02/skos/core#prefLabel> "Notice28"@en .
+<http://data.europa.eu/a4g/ontology#announcesProcedure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#not> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/2006/time> .
+<http://data.europa.eu/a4g/ontology#Notice17> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#CNStandardNotice> .
+<http://data.europa.eu/a4g/ontology#VEAT-D81> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#StandardFormsNotice> .
+<http://data.europa.eu/a4g/ontology#NoticeE3> <http://www.w3.org/2004/02/skos/core#prefLabel> "Notice E3"@en .
+<http://data.europa.eu/a4g/ontology#Notice34> <http://www.w3.org/2004/02/skos/core#definition> "Contract award notice - sectoral directive, light regime"@en .
+<http://data.europa.eu/a4g/ontology#NoticeE5> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#eFormsNotice> .
+<http://data.europa.eu/a4g/ontology#not> <http://purl.org/dc/terms/issued> "2025-10-10"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://data.europa.eu/a4g/ontology#not> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/2004/02/skos/core#> .
+<http://data.europa.eu/a4g/ontology#refersToNoticeAwardInformation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#not> .
+<http://data.europa.eu/a4g/ontology#PIN-CFCStandardNotice> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#not> .
+<http://data.europa.eu/a4g/ontology#Notice12> <http://www.w3.org/2004/02/skos/core#prefLabel> "Notice12"@en .
+<http://data.europa.eu/a4g/ontology#DesignContestNotice> <http://www.w3.org/2004/02/skos/core#definition> "Announcement of a call for competition concerning the acquisition, mainly in the fields of town and country planning, architecture and engineering or data processing, of a plan or design selected by a jury."@en .
+<http://data.europa.eu/a4g/ontology#refersToContractToBeModified> <http://www.w3.org/2004/02/skos/core#definition> "Reference to a Contract which is altered."@en .
+<http://data.europa.eu/a4g/ontology#not> <http://www.w3.org/2002/07/owl#priorVersion> "http://data.europa.eu/a4g/ontology#not-5.1.0" .
+<http://data.europa.eu/a4g/ontology#Notice40> <http://www.w3.org/2004/02/skos/core#prefLabel> "Notice40"@en .
+<http://data.europa.eu/a4g/ontology#NoticeT02> <http://www.w3.org/2004/02/skos/core#definition> "Result notice for public passenger transport services by rail and by road."@en .
+<http://data.europa.eu/a4g/ontology#announcesLotGroup> <http://www.w3.org/2004/02/skos/core#definition> "Relation indicating the formal communication of a Lot Group."@en .
+<http://data.europa.eu/a4g/ontology#Notice25> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#VoluntaryEx-AnteTransparencyNotice> .
+<http://data.europa.eu/a4g/ontology#PINOnly-D25> <http://www.w3.org/2004/02/skos/core#definition> "Prior Information Notice Only under Directive 25."@en .
+<http://data.europa.eu/a4g/ontology#announcesLotGroupAwardInformation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#StandardFormsNotice> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#not> .
+<http://data.europa.eu/a4g/ontology#Notice7> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#PINTimeLimitNotice> .
+<http://data.europa.eu/a4g/ontology#hasNoticeType> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Notice Type"@en .
+<http://data.europa.eu/a4g/ontology#DesignContestResult-D25> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#DesignContestResultNotice> .
+<http://data.europa.eu/a4g/ontology#PINProfile-D24> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#StandardFormsNotice> .
+<http://data.europa.eu/a4g/ontology#Notice15> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#not> .
+<http://data.europa.eu/a4g/ontology#eFormsNotice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#Notice19> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#eFormsNotice> .
+<http://data.europa.eu/a4g/ontology#announcesContractAmendment> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#not> .
+<http://data.europa.eu/a4g/ontology#CNStandardNotice> <http://www.w3.org/2004/02/skos/core#definition> "Announcement of a call for competition concerning contracts or concessions. Additional information: Contract notices shall be used as a means of calling for competition in respect of all procedures, without prejudice to the relevant articles of the Directive."@en .
+<http://data.europa.eu/a4g/ontology#DesignContestResultNotice> <http://www.w3.org/2004/02/skos/core#definition> "Announcement of the results of a call for competition concerning the acquisition, mainly in the fields of town and country planning, architecture and engineering or data processing, of a plan or design selected by a jury."@en .
+<http://data.europa.eu/a4g/ontology#DirectAwardPrenotificationNotice> <http://www.w3.org/2004/02/skos/core#definition> "Notice which sets out the Buyer's purchasing intention to award a Contract without prior notification of Competition."@en .
+<http://data.europa.eu/a4g/ontology#Modification-D23> <http://www.w3.org/2004/02/skos/core#definition> "Modification Notice under Directive 23."@en .
+<http://data.europa.eu/a4g/ontology#VEAT-D25> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#not> .
+<http://data.europa.eu/a4g/ontology#announcesRole> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#not> .
+<http://data.europa.eu/a4g/ontology#Notice18> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#not> .
+<http://data.europa.eu/a4g/ontology#PINProfileNotice> <http://www.w3.org/2004/02/skos/core#prefLabel> "PIN Profile Notice"@en .
+<http://data.europa.eu/a4g/ontology#CNStandard-D24> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#StandardFormsNotice> .
+<http://data.europa.eu/a4g/ontology#not> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://data.europa.eu/a4g/ontology#PIN-RTL-D24> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 16/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#announcesPlannedProcurement> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#not> .
+<http://data.europa.eu/a4g/ontology#CANSocialNotice-D25> <http://www.w3.org/2004/02/skos/core#definition> "Additional information: Social and other specific services – utilities"@en .
+<http://data.europa.eu/a4g/ontology#PINProfile-D24> <http://www.w3.org/2004/02/skos/core#prefLabel> "PIN Profile- D24"@en .
+<http://data.europa.eu/a4g/ontology#PINProfile-D25> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#not> .
+<http://data.europa.eu/a4g/ontology#Notice29> <http://www.w3.org/2004/02/skos/core#prefLabel> "Notice29"@en .
+<http://data.europa.eu/a4g/ontology#NoticeE1> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#eFormsNotice> .
+<http://data.europa.eu/a4g/ontology#announcesCompletionOfContract> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#Notice25> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#Notice36> <http://www.w3.org/2004/02/skos/core#definition> "Design contest result notice - general directive, design"@en .
+<http://data.europa.eu/a4g/ontology#Subcontract-D81> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#not> .
+<http://data.europa.eu/a4g/ontology#Notice10> <http://www.w3.org/2004/02/skos/core#definition> "Prior information notice used as a call for competition - general directive, standard regime"@en .
+<http://data.europa.eu/a4g/ontology#Notice9> <http://www.w3.org/2004/02/skos/core#definition> "Prior information notice used to shorten time limits for receipt of tenders - defence directive"@en .
+<http://data.europa.eu/a4g/ontology#announcesLotGroup> <http://www.w3.org/2004/02/skos/core#prefLabel> "announces Lot Group"@en .
+<http://data.europa.eu/a4g/ontology#Notice39> <http://www.w3.org/2004/02/skos/core#prefLabel> "Notice39"@en .
+<http://data.europa.eu/a4g/ontology#Modification-D23> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 16/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#Notice13> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#Notice2> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#PINProfileNotice> .
+<http://data.europa.eu/a4g/ontology#NoticeCEI> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#not> .
+<http://data.europa.eu/a4g/ontology#Notice24> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#not> .
+<http://data.europa.eu/a4g/ontology#Notice14> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#Notice34> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#not> .
+<http://data.europa.eu/a4g/ontology#Subcontract-D81> <http://www.w3.org/2004/02/skos/core#definition> "Subcontract Notice under Directive 81."@en .
+<http://data.europa.eu/a4g/ontology#PIN-RTL-D25> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#not> .
+<http://data.europa.eu/a4g/ontology#NoticeT02> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#announcesAwardDecision> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#SubcontractNotice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#Notice33> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#Notice10> <http://www.w3.org/2004/02/skos/core#prefLabel> "Notice10"@en .
+<http://data.europa.eu/a4g/ontology#Notice16> <http://www.w3.org/2004/02/skos/core#definition> "Contract notice - general directive, standard regime"@en .
+<http://data.europa.eu/a4g/ontology#Notice29> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#CANStandardNotice> .
+<http://data.europa.eu/a4g/ontology#Notice39> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#ContractModificationNotice> .
+<http://data.europa.eu/a4g/ontology#not> <http://www.w3.org/2000/01/rdf-schema#label> "eProcurement Ontology Notice - core"@en .
+<http://data.europa.eu/a4g/ontology#NoticeE3> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#not> .
+<http://data.europa.eu/a4g/ontology#CompletionNotice> <http://www.w3.org/2004/02/skos/core#definition> "An announcement of the end of a Procurement by a Buyer."@en .
+<http://data.europa.eu/a4g/ontology#eFormsNotice> <http://www.w3.org/2004/02/skos/core#prefLabel> "e Forms Notice"@en .
+<http://data.europa.eu/a4g/ontology#CANStandard-D24> <http://www.w3.org/2004/02/skos/core#prefLabel> "CAN Standard- D24"@en .
+<http://data.europa.eu/a4g/ontology#refersToAwardDecision> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#Notice22> <http://www.w3.org/2004/02/skos/core#prefLabel> "Notice22"@en .
+<http://data.europa.eu/a4g/ontology#Notice27> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#Notice25> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#eFormsNotice> .
+<http://data.europa.eu/a4g/ontology#CANDefence-D81> <http://www.w3.org/2004/02/skos/core#prefLabel> "CAN Defence- D81"@en .
+<http://data.europa.eu/a4g/ontology#CNDefence-D81> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#not> .
+<http://data.europa.eu/a4g/ontology#concernsLot> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#CANStandard-D24> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#not> .
+<http://data.europa.eu/a4g/ontology#VEAT-D25> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 16/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#Modification-D24> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#StandardFormsNotice> .
+<http://data.europa.eu/a4g/ontology#NoticeE5> <http://www.w3.org/2004/02/skos/core#definition> "Voluntary Completion Notice for purchases below the Public Procurement Directive threshold."@en .
+<http://data.europa.eu/a4g/ontology#Notice38> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#not> .
+<http://data.europa.eu/a4g/ontology#Modification-D24> <http://www.w3.org/2004/02/skos/core#prefLabel> "Modification- D24"@en .
+<http://data.europa.eu/a4g/ontology#Notice19> <http://www.w3.org/2004/02/skos/core#definition> "Concession notice - concessions directive, standard regime"@en .
+<http://data.europa.eu/a4g/ontology#PINProfile-D81> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 16/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#Subcontract-D81> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#StandardFormsNotice> .
+<http://data.europa.eu/a4g/ontology#CNStandardNotice> <http://www.w3.org/2004/02/skos/core#prefLabel> "CN Standard Notice"@en .
+<http://data.europa.eu/a4g/ontology#CNStandardNotice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#Notice20> <http://www.w3.org/2004/02/skos/core#definition> "Contract notice - general directive, light regime"@en .
+<http://data.europa.eu/a4g/ontology#NoticeE4> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#not> .
+<http://data.europa.eu/a4g/ontology#announcesContract> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#PIN-CFCSocialNotice-D25> <http://www.w3.org/2004/02/skos/core#prefLabel> "PI N- CFC Social Notice- D25"@en .
+<http://data.europa.eu/a4g/ontology#refersToContractToBeModified> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#CNSocialNotice-D25> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#CNSocialNotice> .
+<http://data.europa.eu/a4g/ontology#CNSocialNotice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#Notice4> <http://www.w3.org/2004/02/skos/core#definition> "Prior information notice used only for information - general directive"@en .
+<http://data.europa.eu/a4g/ontology#PINTransportationNotice> <http://www.w3.org/2004/02/skos/core#definition> "Announcement of the intention to award a public service contract for public passenger transport services."@en .
+<http://data.europa.eu/a4g/ontology#CANSocial-D25> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#not> .
+<http://data.europa.eu/a4g/ontology#not> <http://purl.org/dc/terms/created> "2021-06-01"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://data.europa.eu/a4g/ontology#Notice7> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#not> .
+<http://data.europa.eu/a4g/ontology#CallForExpressionOfInterest> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 09/10/2025"@en .
+<http://data.europa.eu/a4g/ontology#CompetitionNotice> <http://www.w3.org/2004/02/skos/core#prefLabel> "Competition Notice"@en .
+<http://data.europa.eu/a4g/ontology#CNSocialNotice> <http://www.w3.org/2004/02/skos/core#definition> "Announcement of a call for competition concerning contracts for social and other specific services."@en .
+<http://data.europa.eu/a4g/ontology#PIN-RTL-D25> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 16/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#CNStandard-D24> <http://www.w3.org/2004/02/skos/core#prefLabel> "CN Standard- D24"@en .
+<http://data.europa.eu/a4g/ontology#Notice21> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#CNSocialNotice> .
+<http://data.europa.eu/a4g/ontology#Notice23> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#QS-D25> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#CNDefence-D81> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#StandardFormsNotice> .
+<http://data.europa.eu/a4g/ontology#DesignContest-D25> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#CANTransportationNotice> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#ResultNotice> .
+<http://data.europa.eu/a4g/ontology#CANStandard-D24> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#StandardFormsNotice> .
+<http://data.europa.eu/a4g/ontology#PIN-CFCSocialNotice-D25> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#CallForExpressionOfInterest> <http://www.w3.org/2004/02/skos/core#prefLabel> "Call For Expression Of Interest"@en .
+<http://data.europa.eu/a4g/ontology#VoluntaryEx-AnteTransparencyNotice> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#not> .
+<http://data.europa.eu/a4g/ontology#announcesContractAmendment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#Notice8> <http://www.w3.org/2004/02/skos/core#definition> "Periodic indicative notice used to shorten time limits for receipt of tenders - sectoral directive"@en .
+<http://data.europa.eu/a4g/ontology#CANTransportationNotice> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#not> .
+<http://data.europa.eu/a4g/ontology#not> <http://www.w3.org/2002/07/owl#imports> <http://data.europa.eu/a4g/ontology#core> .
+<http://data.europa.eu/a4g/ontology#Notice12> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#Notice40> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#not> .
+<http://data.europa.eu/a4g/ontology#CANSocial-D25> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#CANSocialNotice> .
+<http://data.europa.eu/a4g/ontology#Notice4> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#Notice37> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#eFormsNotice> .
+<http://data.europa.eu/a4g/ontology#announcesRole> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#CANDefence-D81> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#ResultNotice> .
+<http://data.europa.eu/a4g/ontology#CNSocial-D25> <http://www.w3.org/2004/02/skos/core#prefLabel> "CN Social- D25"@en .
+<http://data.europa.eu/a4g/ontology#Notice22> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#eFormsNotice> .
+<http://data.europa.eu/a4g/ontology#Notice35> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#not> .
+<http://data.europa.eu/a4g/ontology#Notice19> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#not> .
+<http://data.europa.eu/a4g/ontology#not> <http://www.w3.org/2002/07/owl#versionIRI> <http://data.europa.eu/a4g/ontology#not-5.2.0> .
+<http://data.europa.eu/a4g/ontology#announcesProcedure> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#not> .
+<http://data.europa.eu/a4g/ontology#NoticeE5> <http://www.w3.org/2004/02/skos/core#prefLabel> "Notice E5"@en .
+<http://data.europa.eu/a4g/ontology#ConcessionAwardNotice-D23> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#Notice38> <http://www.w3.org/2004/02/skos/core#definition> "Contract modification notice - general directive"@en .
+<http://data.europa.eu/a4g/ontology#Notice36> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#Notice18> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 16/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#Notice3> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#eFormsNotice> .
+<http://data.europa.eu/a4g/ontology#Notice2> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 16/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#Notice39> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 16/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#ConcessionNotice-D23> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#not> .
+<http://data.europa.eu/a4g/ontology#Notice17> <http://www.w3.org/2004/02/skos/core#definition> "Contract notice - sectoral directive, standard regime"@en .
+<http://data.europa.eu/a4g/ontology#PreMarketConsultationNotice> <http://www.w3.org/2004/02/skos/core#definition> "Announcement of a pre-market consultation. Additional information: A pre-market consultation is not a call for competition and no procurement documents are available at the time of consultation. A consultation may or may not be followed by a future competition."@en .
+<http://data.europa.eu/a4g/ontology#PINDefence-D81> <http://www.w3.org/2004/02/skos/core#definition> "Prior Information Notice Defence under Directive 81."@en .
+<http://data.europa.eu/a4g/ontology#Notice35> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#CANSocialNotice> .
+<http://data.europa.eu/a4g/ontology#NoticeT01> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#not> .
+<http://data.europa.eu/a4g/ontology#DirectAwardPrenotificationNotice> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#not> .
+<http://data.europa.eu/a4g/ontology#PreMarketConsultationNotice> <http://www.w3.org/2004/02/skos/core#prefLabel> "Pre Market Consultation Notice"@en .
+<http://data.europa.eu/a4g/ontology#announcesPlannedProcurementPart> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#Notice30> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#SocialAndOtherSpecificServices-D24> <http://www.w3.org/2004/02/skos/core#prefLabel> "Social And Other Specific Services- D24"@en .
+<http://data.europa.eu/a4g/ontology#Notice33> <http://www.w3.org/2004/02/skos/core#prefLabel> "Notice33"@en .
+<http://data.europa.eu/a4g/ontology#Notice3> <http://www.w3.org/2004/02/skos/core#prefLabel> "Notice3"@en .
+<http://data.europa.eu/a4g/ontology#DesignContestNotice> <http://www.w3.org/2004/02/skos/core#prefLabel> "Design Contest Notice"@en .
+<http://data.europa.eu/a4g/ontology#NoticeT02> <http://www.w3.org/2004/02/skos/core#prefLabel> "Notice T02"@en .
+<http://data.europa.eu/a4g/ontology#Notice24> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 16/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#announcesRole> <http://www.w3.org/2004/02/skos/core#definition> "Relation indicating the formal communication of a Role."@en .
+<http://data.europa.eu/a4g/ontology#Notice11> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 16/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#Notice34> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 16/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#PIN-CFCStandard-D24> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#refersToReviewRequest> <http://www.w3.org/2004/02/skos/core#prefLabel> "refers To Review Request"@en .
+<http://data.europa.eu/a4g/ontology#QSNotice-D25> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#Notice6> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#PIN-CFCSocialNotice> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 09/10/2025"@en .
+<http://data.europa.eu/a4g/ontology#Notice15> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 16/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#SocialAndOtherSpecificServices-D23> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#StandardFormsNotice> .
+<http://data.europa.eu/a4g/ontology#CANDefence-D81> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 16/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#CompletionNotice> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#Notice> .
+<http://data.europa.eu/a4g/ontology#Notice28> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 16/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#CompetitionNotice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#DesignContestResult-D25> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#StandardFormsNotice> .
+<http://data.europa.eu/a4g/ontology#ConcessionNotice-D23> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#StandardFormsNotice> .
+<http://data.europa.eu/a4g/ontology#PIN-CFCSocial-D25> <http://www.w3.org/2004/02/skos/core#prefLabel> "PI N- CFC Social- D25"@en .
+<http://data.europa.eu/a4g/ontology#DesignContest-D24> <http://www.w3.org/2004/02/skos/core#prefLabel> "Design Contest- D24"@en .
+<http://data.europa.eu/a4g/ontology#SocialAndOtherSpecificServices-D23> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#NoticeCEI> <http://www.w3.org/2004/02/skos/core#prefLabel> "Notice CEI"@en .
+<http://data.europa.eu/a4g/ontology#announcesReviewRequest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#Subcontract-D81> <http://www.w3.org/2004/02/skos/core#prefLabel> "Subcontract- D81"@en .
+<http://data.europa.eu/a4g/ontology#PINProfileNotice> <http://www.w3.org/2004/02/skos/core#definition> "Announcement of intentions of planned procurements."@en .
+<http://data.europa.eu/a4g/ontology#Notice13> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#PIN-CFCSocialNotice> .
+<http://data.europa.eu/a4g/ontology#SocialAndOtherSpecificServices-D24> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#StandardFormsNotice> .
+<http://data.europa.eu/a4g/ontology#NoticeE5> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 09/10/2025"@en .
+<http://data.europa.eu/a4g/ontology#QSNotice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#PINTransportationNotice> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#not> .
+<http://data.europa.eu/a4g/ontology#Notice4> <http://www.w3.org/2004/02/skos/core#prefLabel> "Notice4"@en .
+<http://data.europa.eu/a4g/ontology#Notice26> <http://www.w3.org/2004/02/skos/core#definition> "Voluntary ex-ante transparency notice - sectoral directive"@en .
+<http://data.europa.eu/a4g/ontology#PIN-CFCSocialNotice> <http://www.w3.org/2004/02/skos/core#definition> "Announcement of intentions of planned procurements used as a call for competition concerning contracts for social and other specific services."@en .
+<http://data.europa.eu/a4g/ontology#PIN-CFCSocialNotice-D25> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#PIN-CFCSocialNotice> .
+<http://data.europa.eu/a4g/ontology#PIN-CFCStandard-D24> <http://www.w3.org/2004/02/skos/core#prefLabel> "PI N- CFC Standard- D24"@en .
+<http://data.europa.eu/a4g/ontology#PINOnlyNotice> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#PlanningNotice> .
+<http://data.europa.eu/a4g/ontology#CallForExpressionOfInterest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#PlanningNotice> <http://www.w3.org/2004/02/skos/core#definition> "Notice which sets out the Contracting Authority's purchasing intentions. It is used by Contracting Authorities to provide Suppliers with information about a Procurement Process."@en .
+<http://data.europa.eu/a4g/ontology#Modification-D25> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#not> .
+<http://data.europa.eu/a4g/ontology#NoticeE1> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#not> .
+<http://data.europa.eu/a4g/ontology#NoticeE2> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 09/10/2025"@en .
+<http://data.europa.eu/a4g/ontology#PINProfile-D25> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 16/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#PINDefence-D81> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#CANSocial-D25> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 16/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#PIN-RTL-D25> <http://www.w3.org/2004/02/skos/core#definition> "Prior information notice - Reduced Time Limit under Directive 25."@en .
+<http://data.europa.eu/a4g/ontology#Notice38> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#eFormsNotice> .
+<http://data.europa.eu/a4g/ontology#Notice16> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#CNStandardNotice> .
+<http://data.europa.eu/a4g/ontology#Notice20> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 16/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#Notice4> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#eFormsNotice> .
+<http://data.europa.eu/a4g/ontology#announcesContract> <http://www.w3.org/2004/02/skos/core#prefLabel> "announces Contract"@en .
+<http://data.europa.eu/a4g/ontology#DirectAwardPrenotificationNotice> <http://www.w3.org/2004/02/skos/core#prefLabel> "Direct Award Prenotification Notice"@en .
+<http://data.europa.eu/a4g/ontology#concernsLotGroup> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#CompetitionNotice> <http://www.w3.org/2004/02/skos/core#definition> "An announcement of the launch of a Procurement Procedure by a Procuring Entity."@en .
+<http://data.europa.eu/a4g/ontology#PreMarketConsultationNotice> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#Notice> .
+<http://data.europa.eu/a4g/ontology#VEAT-D23> <http://www.w3.org/2004/02/skos/core#definition> "Voluntary ex-ante transparency notice under Directive 23."@en .
+<http://data.europa.eu/a4g/ontology#VEAT-D23> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#VoluntaryEx-AnteTransparencyNotice> .
+<http://data.europa.eu/a4g/ontology#StandardFormsNotice> <http://www.w3.org/2004/02/skos/core#definition> "Standard Forms Notice"@en .
+<http://data.europa.eu/a4g/ontology#Notice11> <http://www.w3.org/2004/02/skos/core#prefLabel> "Notice11"@en .
+<http://data.europa.eu/a4g/ontology#Notice6> <http://www.w3.org/2004/02/skos/core#prefLabel> "Notice6"@en .
+<http://data.europa.eu/a4g/ontology#PINOnly-D24> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#PIN-CFCStandardNotice> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#CompetitionNotice> .
+<http://data.europa.eu/a4g/ontology#Notice34> <http://www.w3.org/2004/02/skos/core#prefLabel> "Notice34"@en .
+<http://data.europa.eu/a4g/ontology#announcesPlannedProcurement> <http://www.w3.org/2004/02/skos/core#prefLabel> "announces Planned Procurement"@en .
+<http://data.europa.eu/a4g/ontology#CompetitionNotice> <http://www.w3.org/2004/02/skos/core#historyNote> "WG Approval 18/05/2018"@en .
+<http://data.europa.eu/a4g/ontology#Notice2> <http://www.w3.org/2004/02/skos/core#definition> "Notice of the publication of a periodic indicative notice on a buyer profile - sectoral directive"@en .

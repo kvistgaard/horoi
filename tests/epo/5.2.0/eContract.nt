@@ -1,0 +1,104 @@
+<http://data.europa.eu/a4g/ontology#con> <http://www.w3.org/2002/07/owl#versionIRI> <http://data.europa.eu/a4g/ontology#con-5.2.0> .
+<http://data.europa.eu/a4g/ontology#concernsContractAmendment> <http://www.w3.org/2004/02/skos/core#definition> "Relates to Contract Amendment."@en .
+<http://data.europa.eu/a4g/ontology#Deliverable> <http://www.w3.org/2004/02/skos/core#prefLabel> "Deliverable"@en .
+<http://data.europa.eu/a4g/ontology#con> <http://www.w3.org/2002/07/owl#priorVersion> "http://data.europa.eu/a4g/ontology#con-5.1.0" .
+<http://data.europa.eu/a4g/ontology#con> <http://www.w3.org/2002/07/owl#imports> <http://data.europa.eu/a4g/ontology#cat> .
+<http://data.europa.eu/a4g/ontology#announcesContractAmendment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#con> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/ns/locn> .
+<http://data.europa.eu/a4g/ontology#concernsContractAmendment> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#ContractAmendment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#Contract> .
+<http://data.europa.eu/a4g/ontology#hasTotalValue> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#con> .
+<http://data.europa.eu/a4g/ontology#updatesContractValue> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#con> .
+<http://data.europa.eu/a4g/ontology#hasModificationJustification> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Modification Justification"@en .
+<http://data.europa.eu/a4g/ontology#hasQuantity> <http://www.w3.org/2004/02/skos/core#definition> "Relation indicating that the instance of the concept has a Quantity."@en .
+<http://data.europa.eu/a4g/ontology#con> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://op.europa.eu/en/web/eu-vocabularies/e-procurement> .
+<http://data.europa.eu/a4g/ontology#ContractAmendment> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#con> .
+<http://data.europa.eu/a4g/ontology#ContractModificationInformation> <http://www.w3.org/2004/02/skos/core#prefLabel> "Contract Modification Information"@en .
+<http://data.europa.eu/a4g/ontology#relatesToEFormSectionIdentifier> <http://www.w3.org/2004/02/skos/core#prefLabel> "relates To E Form Section Identifier"@en .
+<http://data.europa.eu/a4g/ontology#relatesToEFormSectionIdentifier> <http://www.w3.org/2004/02/skos/core#definition> "Is about a specific eForms section."@en .
+<http://data.europa.eu/a4g/ontology#announcesContractAmendment> <http://www.w3.org/2004/02/skos/core#definition> "Relation indicating the formal communication of a Contract Amendment."@en .
+<http://data.europa.eu/a4g/ontology#con> <http://purl.org/vocab/vann/preferredNamespacePrefix> "epo" .
+<http://data.europa.eu/a4g/ontology#con> <http://purl.org/dc/terms/license> "© European Union, 2014. Unless otherwise noted, the reuse of the Ontology is authorised under the European Union Public Licence v1.2 (https://eupl.eu/)." .
+<http://data.europa.eu/a4g/ontology#hasModificationJustification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#ContractModificationInformation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#con> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://github.com/OP-TED/ePO/releases> .
+<http://data.europa.eu/a4g/ontology#announcesContractAmendment> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#con> .
+<http://data.europa.eu/a4g/ontology#concernsContractAmendment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#con> <http://purl.org/dc/terms/created> "2021-06-01"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://data.europa.eu/a4g/ontology#hasModificationReasonDescription> <http://www.w3.org/2004/02/skos/core#editorialNote> "Used by eForms BT-201, TEDXML F20 VII.2.2.2, TEDXML F20 VII.2.2.4"@en .
+<http://data.europa.eu/a4g/ontology#ContractModificationInformation> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 11/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#amendsContract> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#con> .
+<http://data.europa.eu/a4g/ontology#con> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/ns/org#> .
+<http://data.europa.eu/a4g/ontology#hasModificationDescription> <http://www.w3.org/2004/02/skos/core#editorialNote> "Used by eForms BT-202, TEDXML F20 VII.2.1"@en .
+<http://data.europa.eu/a4g/ontology#hasModificationDescription> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#con> .
+<http://data.europa.eu/a4g/ontology#announcesContractAmendment> <http://www.w3.org/2004/02/skos/core#prefLabel> "announces Contract Amendment"@en .
+<http://data.europa.eu/a4g/ontology#hasQuantity> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Quantity"@en .
+<http://data.europa.eu/a4g/ontology#hasModificationReasonDescription> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#con> .
+<http://data.europa.eu/a4g/ontology#con> <http://www.w3.org/2002/07/owl#imports> <http://data.europa.eu/m8g/> .
+<http://data.europa.eu/a4g/ontology#hasModificationDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://data.europa.eu/a4g/ontology#hasModificationDescription> <http://www.w3.org/2004/02/skos/core#definition> "An explanatory text about this context. (epo-con:ContractModificationInformation)"@en .
+<http://data.europa.eu/a4g/ontology#hasQuantity> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#hasTotalValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#con> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/ns/person> .
+<http://data.europa.eu/a4g/ontology#relatesToEFormSectionIdentifier> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#updatesContractValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#concernsContractAmendment> <http://www.w3.org/2004/02/skos/core#prefLabel> "concerns Contract Amendment"@en .
+<http://data.europa.eu/a4g/ontology#Deliverable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#con> <http://www.w3.org/2000/01/rdf-schema#label> "eProcurement Ontology Contract - core"@en .
+<http://data.europa.eu/a4g/ontology#ContractAmendment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#con> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/2006/time> .
+<http://data.europa.eu/a4g/ontology#specifiesDeliverable> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#Deliverable> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 11/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#hasModificationJustification> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#con> .
+<http://data.europa.eu/a4g/ontology#hasQuantity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#con> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://docs.ted.europa.eu/home/index.html> .
+<http://data.europa.eu/a4g/ontology#amendsContract> <http://www.w3.org/2004/02/skos/core#definition> "Modifies or changes the terms of an existing Contract."@en .
+<http://data.europa.eu/a4g/ontology#relatesToEFormSectionIdentifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#con> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/2004/02/skos/core#> .
+<http://data.europa.eu/a4g/ontology#specifiesDeliverable> <http://www.w3.org/2004/02/skos/core#definition> "Relation indicating the Deliverable."@en .
+<http://data.europa.eu/a4g/ontology#specifiesDeliverable> <http://www.w3.org/2004/02/skos/core#prefLabel> "specifies Deliverable"@en .
+<http://data.europa.eu/a4g/ontology#amendsContract> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#hasModificationReasonDescription> <http://www.w3.org/2004/02/skos/core#historyNote> "WG Approval 05/11/2019"@en .
+<http://data.europa.eu/a4g/ontology#hasTotalValue> <http://www.w3.org/2004/02/skos/core#definition> "Relation indicating the overall Monetary Value."@en .
+<http://data.europa.eu/a4g/ontology#ContractModificationInformation> <http://www.w3.org/2004/02/skos/core#definition> "Information about a Contract Amendment."@en .
+<http://data.europa.eu/a4g/ontology#con> <http://www.w3.org/2002/07/owl#imports> <http://data.europa.eu/a4g/ontology#core> .
+<http://data.europa.eu/a4g/ontology#updatesContractValue> <http://www.w3.org/2004/02/skos/core#definition> "Changes the Contract Monetary Value."@en .
+<http://data.europa.eu/a4g/ontology#Deliverable> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#AbstractItem> .
+<http://data.europa.eu/a4g/ontology#specifiesDeliverable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#con> <http://purl.org/dc/terms/issued> "2025-10-10"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://data.europa.eu/a4g/ontology#Deliverable> <http://www.w3.org/2004/02/skos/core#definition> "Item that the supplier is obligated to provide under a contract."@en .
+<http://data.europa.eu/a4g/ontology#ContractModificationInformation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#ContextDescription> .
+<http://data.europa.eu/a4g/ontology#hasTotalValue> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#con> <http://purl.org/dc/terms/description> "The eProcurement Ontology Contract core describes the concepts and properties representing the European Public Procurement Contract domain. The provision of these semantics offers the basis for a common understanding of the domain for all stakeholders ensuring the quality of data exchange and transparency. The ontology restrictions are published in a separate artefact."@en .
+<http://data.europa.eu/a4g/ontology#hasModificationDescription> <http://www.w3.org/2004/02/skos/core#historyNote> "WG Approval 5/11/2019"@en .
+<http://data.europa.eu/a4g/ontology#hasModificationReasonDescription> <http://www.w3.org/2004/02/skos/core#definition> "An explanation about the reasons for using the concept. (epo-con:ContractModificationInformation)"@en .
+<http://data.europa.eu/a4g/ontology#con> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://data.europa.eu/a4g/ontology#" .
+<http://data.europa.eu/a4g/ontology#con> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/ns/adms> .
+<http://data.europa.eu/a4g/ontology#Deliverable> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#con> .
+<http://data.europa.eu/a4g/ontology#con> <http://purl.org/dc/terms/title> "eProcurement Ontology Contract - core"@en .
+<http://data.europa.eu/a4g/ontology#con> <http://www.w3.org/2002/07/owl#imports> <http://purl.org/dc/terms/> .
+<http://data.europa.eu/a4g/ontology#updatesContractValue> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#hasTotalValue> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Total Value"@en .
+<http://data.europa.eu/a4g/ontology#con> <http://www.w3.org/2002/07/owl#incompatibleWith> "4.2.0" .
+<http://data.europa.eu/a4g/ontology#con> <http://purl.org/dc/terms/publisher> "http://publications.europa.eu/resource/authority/corporate-body/PUBL" .
+<http://data.europa.eu/a4g/ontology#con> <http://www.w3.org/2002/07/owl#imports> <http://data.europa.eu/a4g/ontology#not> .
+<http://data.europa.eu/a4g/ontology#hasQuantity> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#con> .
+<http://data.europa.eu/a4g/ontology#hasModificationReasonDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://data.europa.eu/a4g/ontology#ContractAmendment> <http://www.w3.org/2004/02/skos/core#definition> "A change to an existing Contract that is agreed by the contracting parties."@en .
+<http://data.europa.eu/a4g/ontology#relatesToEFormSectionIdentifier> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#con> .
+<http://data.europa.eu/a4g/ontology#con> <http://www.w3.org/2002/07/owl#versionInfo> "5.2.0" .
+<http://data.europa.eu/a4g/ontology#con> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://data.europa.eu/a4g/ontology#con> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://joinup.ec.europa.eu/collection/eprocurement/solution/eprocurement-ontology/about> .
+<http://data.europa.eu/a4g/ontology#announcesContractAmendment> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#specifiesDeliverable> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#con> .
+<http://data.europa.eu/a4g/ontology#ContractModificationInformation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#con> .
+<http://data.europa.eu/a4g/ontology#amendsContract> <http://www.w3.org/2004/02/skos/core#prefLabel> "amends Contract"@en .
+<http://data.europa.eu/a4g/ontology#hasModificationDescription> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Modification Description"@en .
+<http://data.europa.eu/a4g/ontology#amendsContract> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#ContractAmendment> <http://www.w3.org/2004/02/skos/core#prefLabel> "Contract Amendment"@en .
+<http://data.europa.eu/a4g/ontology#concernsContractAmendment> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#con> .
+<http://data.europa.eu/a4g/ontology#hasModificationJustification> <http://www.w3.org/2004/02/skos/core#definition> "Explanation of why a contract was modified. The codelist to be used is at-voc:modification-justification which is available at http://publications.europa.eu/resource/dataset/modification-justification"@en .
+<http://data.europa.eu/a4g/ontology#con> <http://www.w3.org/2000/01/rdf-schema#comment> "This version is automatically generated from eContract.xml on 2025-10-10" .
+<http://data.europa.eu/a4g/ontology#hasModificationReasonDescription> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Modification Reason Description"@en .
+<http://data.europa.eu/a4g/ontology#con> <http://www.w3.org/2002/07/owl#imports> <http://data.europa.eu/eli/ontology#> .
+<http://data.europa.eu/a4g/ontology#updatesContractValue> <http://www.w3.org/2004/02/skos/core#prefLabel> "updates Contract Value"@en .

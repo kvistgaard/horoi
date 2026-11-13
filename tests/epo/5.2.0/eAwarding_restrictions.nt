@@ -1,0 +1,56 @@
+_:nd03e6b100acf4db6a16dc60521eacabdb3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://data.europa.eu/a4g/ontology#AwardDecisionNotification> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:nd03e6b100acf4db6a16dc60521eacabdb2 .
+<http://data.europa.eu/a4g/ontology#awa-restriction> <http://purl.org/dc/terms/publisher> "http://publications.europa.eu/resource/authority/corporate-body/PUBL" .
+<http://data.europa.eu/a4g/ontology#awa-restriction> <http://www.w3.org/2002/07/owl#versionIRI> <http://data.europa.eu/a4g/ontology#awa-restriction-5.2.0> .
+<http://data.europa.eu/a4g/ontology#awa-restriction> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/ns/org#> .
+<http://data.europa.eu/a4g/ontology#awa-restriction> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://joinup.ec.europa.eu/collection/eprocurement/solution/eprocurement-ontology/about> .
+<http://data.europa.eu/a4g/ontology#awa-restriction> <http://www.w3.org/2002/07/owl#imports> <http://data.europa.eu/m8g/> .
+<http://data.europa.eu/a4g/ontology#specifiesTenderer> <http://www.w3.org/2000/01/rdf-schema#range> <http://data.europa.eu/a4g/ontology#Tenderer> .
+_:nd03e6b100acf4db6a16dc60521eacabdb4 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:nd03e6b100acf4db6a16dc60521eacabdb4 <http://www.w3.org/2002/07/owl#onProperty> <http://data.europa.eu/a4g/ontology#concernsAwardOutcome> .
+<http://data.europa.eu/a4g/ontology#awa-restriction> <http://www.w3.org/2002/07/owl#versionInfo> "5.2.0" .
+<http://data.europa.eu/a4g/ontology#awa-restriction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://data.europa.eu/a4g/ontology#awa-restriction> <http://purl.org/dc/terms/title> "eProcurement Ontology Awarding - core restrictions"@en .
+<http://data.europa.eu/a4g/ontology#awa-restriction> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/ns/person> .
+<http://data.europa.eu/a4g/ontology#AwardDecisionNotification> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:nd03e6b100acf4db6a16dc60521eacabdb1 .
+_:nd03e6b100acf4db6a16dc60521eacabdb3 <http://www.w3.org/2002/07/owl#onProperty> <http://data.europa.eu/a4g/ontology#hasStandstillPeriodEndDate> .
+_:nd03e6b100acf4db6a16dc60521eacabdb4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://data.europa.eu/a4g/ontology#AwardDecisionNotification> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:nd03e6b100acf4db6a16dc60521eacabdb4 .
+_:nd03e6b100acf4db6a16dc60521eacabdb2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:nd03e6b100acf4db6a16dc60521eacabdb2 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://data.europa.eu/a4g/ontology#awa-restriction> <http://purl.org/dc/terms/created> "2021-06-01"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://data.europa.eu/a4g/ontology#hasStandstillPeriodEndDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#date> .
+_:nd03e6b100acf4db6a16dc60521eacabdb2 <http://www.w3.org/2002/07/owl#onProperty> <http://data.europa.eu/a4g/ontology#concernsProcedure> .
+<http://data.europa.eu/a4g/ontology#awa-restriction> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/2006/time> .
+<http://data.europa.eu/a4g/ontology#awa-restriction> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://docs.ted.europa.eu/home/index.html> .
+_:nd03e6b100acf4db6a16dc60521eacabdb1 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://data.europa.eu/a4g/ontology#awa-restriction> <http://www.w3.org/2002/07/owl#imports> <http://data.europa.eu/a4g/ontology#awa> .
+<http://data.europa.eu/a4g/ontology#awa-restriction> <http://www.w3.org/2002/07/owl#imports> <http://data.europa.eu/eli/ontology#> .
+<http://data.europa.eu/a4g/ontology#concernsProcedure> <http://www.w3.org/2000/01/rdf-schema#domain> <http://data.europa.eu/a4g/ontology#AwardDecisionNotification> .
+<http://data.europa.eu/a4g/ontology#awa-restriction> <http://purl.org/dc/terms/issued> "2025-10-10"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://data.europa.eu/a4g/ontology#specifiesTenderer> <http://www.w3.org/2000/01/rdf-schema#domain> <http://data.europa.eu/a4g/ontology#AwardDecisionNotification> .
+<http://data.europa.eu/a4g/ontology#awa-restriction> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/2004/02/skos/core#> .
+<http://data.europa.eu/a4g/ontology#awa-restriction> <http://www.w3.org/2000/01/rdf-schema#label> "eProcurement Ontology Awarding - core restrictions"@en .
+_:nd03e6b100acf4db6a16dc60521eacabdb1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://data.europa.eu/a4g/ontology#concernsProcedure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://data.europa.eu/a4g/ontology#awa-restriction> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://op.europa.eu/en/web/eu-vocabularies/e-procurement> .
+<http://data.europa.eu/a4g/ontology#awa-restriction> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/ns/locn> .
+<http://data.europa.eu/a4g/ontology#concernsProcedure> <http://www.w3.org/2000/01/rdf-schema#range> <http://data.europa.eu/a4g/ontology#Procedure> .
+<http://data.europa.eu/a4g/ontology#awa-restriction> <http://www.w3.org/2002/07/owl#imports> <http://data.europa.eu/a4g/ontology#core> .
+_:nd03e6b100acf4db6a16dc60521eacabdb1 <http://www.w3.org/2002/07/owl#onProperty> <http://data.europa.eu/a4g/ontology#specifiesTenderer> .
+_:nd03e6b100acf4db6a16dc60521eacabdb3 <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://data.europa.eu/a4g/ontology#awa-restriction> <http://www.w3.org/2000/01/rdf-schema#comment> "This version is automatically generated from eAwarding.xml on \n                2025-10-10" .
+<http://data.europa.eu/a4g/ontology#awa-restriction> <http://www.w3.org/2002/07/owl#priorVersion> "http://data.europa.eu/a4g/ontology#awa-restriction-5.1.0" .
+<http://data.europa.eu/a4g/ontology#specifiesTenderer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://data.europa.eu/a4g/ontology#concernsAwardOutcome> <http://www.w3.org/2000/01/rdf-schema#range> <http://data.europa.eu/a4g/ontology#AwardOutcome> .
+<http://data.europa.eu/a4g/ontology#awa-restriction> <http://purl.org/dc/terms/license> "© European Union, 2014. Unless otherwise noted, the reuse of the Ontology is authorised under the European Union Public Licence v1.2 (https://eupl.eu/)." .
+<http://data.europa.eu/a4g/ontology#awa-restriction> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/ns/adms> .
+<http://data.europa.eu/a4g/ontology#awa-restriction> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://github.com/OP-TED/ePO/releases> .
+<http://data.europa.eu/a4g/ontology#awa-restriction> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://data.europa.eu/a4g/ontology#" .
+<http://data.europa.eu/a4g/ontology#awa-restriction> <http://www.w3.org/2002/07/owl#incompatibleWith> "4.2.0" .
+<http://data.europa.eu/a4g/ontology#AwardDecisionNotification> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:nd03e6b100acf4db6a16dc60521eacabdb3 .
+<http://data.europa.eu/a4g/ontology#awa-restriction> <http://purl.org/dc/terms/description> "The eProcurement Ontology Awarding core restrictions provides the restrictions and the inference-related specifications on the concepts and properties in the eProcurement Ontology Awarding core."@en .
+<http://data.europa.eu/a4g/ontology#awa-restriction> <http://purl.org/vocab/vann/preferredNamespacePrefix> "epo" .
+<http://data.europa.eu/a4g/ontology#awa-restriction> <http://www.w3.org/2002/07/owl#imports> <http://purl.org/dc/terms/> .
+<http://data.europa.eu/a4g/ontology#hasStandstillPeriodEndDate> <http://www.w3.org/2000/01/rdf-schema#domain> <http://data.europa.eu/a4g/ontology#AwardDecisionNotification> .
+<http://data.europa.eu/a4g/ontology#concernsAwardOutcome> <http://www.w3.org/2000/01/rdf-schema#domain> <http://data.europa.eu/a4g/ontology#AwardDecisionNotification> .
