@@ -1,0 +1,118 @@
+<svg xmlns="http://www.w3.org/2000/svg" class="hr-diagram uml" viewBox="-24 -24 2134 1348" width="2134" height="1348" role="img" aria-label="The classes of the ontology">
+<title>The classes of the ontology</title>
+<defs><marker id="m-sub" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="13" markerHeight="13" orient="auto"><path class="ms" d="M1,1 L11,6 L1,11 z"/></marker><style>svg{--hr-ink:#111827;--hr-muted:#6B7280;--hr-class:#EA580C;--hr-obj:#2563EB;--hr-data:#16A34A;--hr-any:#9CA3AF;--hr-fill:#FFFFFF}@media (prefers-color-scheme:dark){svg{--hr-ink:#F3F4F6;--hr-muted:#9CA3AF;--hr-class:#FB923C;--hr-obj:#60A5FA;--hr-data:#4ADE80;--hr-any:#6B7280;--hr-fill:#1C1C1E}}text{font-family:Inter,'Segoe UI',system-ui,-apple-system,'Helvetica Neue',Arial,sans-serif}.c{fill:none;stroke:var(--hr-class);stroke-width:2}.cn{font-size:20px;font-weight:600;fill:var(--hr-ink)}.un{font-size:15px;font-weight:600;fill:var(--hr-ink)}.hit{fill:none;stroke:transparent;stroke-width:12}.l{fill:none;stroke:var(--hr-ink);stroke-width:1.8}.ln{font-size:15px;font-weight:600;fill:var(--hr-ink)}.a{fill:none;stroke:var(--hr-any);stroke-width:1.6;stroke-dasharray:6 5}.an{font-size:15px;font-style:italic;fill:var(--hr-muted)}.e{fill:none;stroke-width:1.7}.e.obj{stroke:var(--hr-obj)}.e.data{stroke:var(--hr-data)}.e.sub{stroke:var(--hr-class)}.pn{font-size:15.5px}.pn.obj{fill:var(--hr-obj)}.pn.data{fill:var(--hr-data)}.mo{fill:var(--hr-obj)}.md{fill:var(--hr-data)}.ms{fill:var(--hr-fill);stroke:var(--hr-class);stroke-width:1.4}.uc{font-size:17px;font-weight:600;fill:var(--hr-ink)}.ur{font-size:14.5px}.ur.obj{fill:var(--hr-obj)}.ur.data{fill:var(--hr-data)}.ty{fill:var(--hr-ink)}.ty.no{fill:var(--hr-muted);font-style:italic}.sep{stroke:var(--hr-class);stroke-width:1}.sep.no{stroke:var(--hr-any)}.f{fill:var(--hr-fill)}.e.tree{stroke-linecap:square}.e.also{stroke-width:1.1;opacity:.4}.n{cursor:pointer}.n rect{pointer-events:all}.n:focus{outline:none}.n:hover rect,.n:focus-visible rect{stroke-width:3.2}.go{cursor:pointer}.go:hover,a:hover .uc{text-decoration:underline}.tree{transition:opacity .24s}.focus .tree{opacity:.2}</style></defs>
+<g class="tree">
+<path class="e sub tree" d="M7,110 H20M7,160 H20M7,210 H20M7,260 H20M7,310 H20M7,310 V68M310,110 H323M310,160 H323M310,210 H323M310,260 H323M310,310 H323M310,310 V68M584,110 H597M584,160 H597M584,210 H597M584,210 V68M7,68 H584M418,68 V42" marker-end="url(#m-sub)"/>
+<path class="e sub tree" d="M1258,180 V158M1438,180 V158M1653,180 V158M1258,158 H1653M1473,158 V132" marker-end="url(#m-sub)"/>
+<path class="e sub tree" d="M926,90 V68M1087,90 V68M1473,90 V68M926,68 H1473M1312,68 V42" marker-end="url(#m-sub)"/>
+<path class="e sub tree" d="M104,554 V532M329,554 V532M104,532 H329M212,532 V506" marker-end="url(#m-sub)"/>
+<path class="e sub tree" d="M212,464 V442M553,464 V442M212,442 H553M329,442 V416" marker-end="url(#m-sub)"/>
+<path class="e sub tree" d="M749,554 V532M749,532 H749M749,532 V506" marker-end="url(#m-sub)"/>
+<path class="e sub tree" d="M749,464 V442M749,442 H749M749,442 V416" marker-end="url(#m-sub)"/>
+<path class="e sub tree" d="M919,464 V442M1095,464 V442M919,442 H1095M1002,442 V416" marker-end="url(#m-sub)"/>
+<path class="e sub tree" d="M1334,554 V532M1334,532 H1334M1334,532 V506" marker-end="url(#m-sub)"/>
+<path class="e sub tree" d="M1334,464 V442M1334,442 H1334M1334,442 V416" marker-end="url(#m-sub)"/>
+<path class="e sub tree" d="M1578,464 V442M1578,442 H1578M1578,442 V416" marker-end="url(#m-sub)"/>
+<path class="e sub tree" d="M1788,464 V442M1788,442 H1788M1788,442 V416" marker-end="url(#m-sub)"/>
+<path class="e sub tree" d="M119,728 V706M119,706 H119M119,706 V680" marker-end="url(#m-sub)"/>
+<path class="e sub tree" d="M353,728 V706M353,706 H353M353,706 V680" marker-end="url(#m-sub)"/>
+<path class="e sub tree" d="M598,728 V706M598,706 H598M598,706 V680" marker-end="url(#m-sub)"/>
+<g><rect class="c" x="0" y="812" width="326" height="40" rx="7"/><g class="t"><title>gist:Account</title><text class="uc" x="163" y="838" text-anchor="middle">Account</text></g></g>
+<g><rect class="c" x="147" y="464" width="130" height="40" rx="7"/><g class="t"><title>gist:Address</title><text class="uc" x="212" y="490" text-anchor="middle">Address</text></g></g>
+<g><rect class="c" x="20" y="90" width="257" height="40" rx="7"/><g class="t"><title>gist:AddressUsageType</title><text class="uc" x="149" y="116" text-anchor="middle">Address Usage Type</text></g></g>
+<g><rect class="c" x="352" y="812" width="326" height="40" rx="7"/><g class="t"><title>gist:Agreement</title><text class="uc" x="515" y="838" text-anchor="middle">Agreement</text></g></g>
+<g><rect class="c" x="704" y="812" width="326" height="40" rx="7"/><g class="t"><title>gist:Aspect</title><text class="uc" x="867" y="838" text-anchor="middle">Aspect</text></g></g>
+<g><rect class="c" x="1056" y="812" width="326" height="40" rx="7"/><g class="t"><title>gist:Assignment</title><text class="uc" x="1219" y="838" text-anchor="middle">Assignment</text></g></g>
+<g><rect class="c" x="20" y="140" width="257" height="40" rx="7"/><g class="t"><title>gist:Behavior</title><text class="uc" x="149" y="166" text-anchor="middle">Behavior</text></g></g>
+<g><rect class="c" x="1269" y="554" width="130" height="40" rx="7"/><g class="t"><title>gist:Building</title><text class="uc" x="1334" y="580" text-anchor="middle">Building</text></g></g>
+<g><rect class="c" x="1408" y="812" width="326" height="40" rx="7"/><g class="t"><title>gist:BundledCatalogItem</title><text class="uc" x="1571" y="838" text-anchor="middle">Bundled Catalog Item</text></g></g>
+<g><rect class="c" x="1183" y="180" width="150" height="40" rx="7"/><g class="t"><title>gist:CatalogItem</title><text class="uc" x="1258" y="206" text-anchor="middle">Catalog Item</text></g></g>
+<g><rect class="c" x="353" y="0" width="130" height="40" rx="7"/><g class="t"><title>gist:Category</title><text class="uc" x="418" y="26" text-anchor="middle">Category</text></g></g>
+<g><rect class="c" x="684" y="464" width="130" height="40" rx="7"/><g class="t"><title>gist:Collection</title><text class="uc" x="749" y="490" text-anchor="middle">Collection</text></g></g>
+<g><rect class="c" x="1760" y="812" width="326" height="40" rx="7"/><g class="t"><title>gist:Commitment</title><text class="uc" x="1923" y="838" text-anchor="middle">Commitment</text></g></g>
+<g><rect class="c" x="1513" y="374" width="130" height="40" rx="7"/><g class="t"><title>gist:Component</title><text class="uc" x="1578" y="400" text-anchor="middle">Component</text></g></g>
+<g><rect class="c" x="684" y="374" width="130" height="40" rx="7"/><g class="t"><title>gist:Composite</title><text class="uc" x="749" y="400" text-anchor="middle">Composite</text></g></g>
+<g><rect class="c" x="0" y="868" width="326" height="40" rx="7"/><g class="t"><title>gist:ContemporaryEvent</title><text class="uc" x="163" y="894" text-anchor="middle">Contemporary Event</text></g></g>
+<g><rect class="c" x="264" y="374" width="130" height="40" rx="7"/><g class="t"><title>gist:Content</title><text class="uc" x="329" y="400" text-anchor="middle">Content</text></g></g>
+<g><rect class="c" x="449" y="464" width="208" height="40" rx="7"/><g class="t"><title>gist:ContentExpression</title><text class="uc" x="553" y="490" text-anchor="middle">Content Expression</text></g></g>
+<g><rect class="c" x="352" y="868" width="326" height="40" rx="7"/><g class="t"><title>gist:ContingentEvent</title><text class="uc" x="515" y="894" text-anchor="middle">Contingent Event</text></g></g>
+<g><rect class="c" x="704" y="868" width="326" height="40" rx="7"/><g class="t"><title>gist:ContingentObligation</title><text class="uc" x="867" y="894" text-anchor="middle">Contingent Obligation</text></g></g>
+<g><rect class="c" x="1056" y="868" width="326" height="40" rx="7"/><g class="t"><title>gist:Contract</title><text class="uc" x="1219" y="894" text-anchor="middle">Contract</text></g></g>
+<g><rect class="c" x="1359" y="180" width="159" height="40" rx="7"/><g class="t"><title>gist:ContractTerm</title><text class="uc" x="1438" y="206" text-anchor="middle">Contract Term</text></g></g>
+<g><rect class="c" x="1408" y="868" width="326" height="40" rx="7"/><g class="t"><title>gist:ControlledVocabulary</title><text class="uc" x="1571" y="894" text-anchor="middle">Controlled Vocabulary</text></g></g>
+<g><rect class="c" x="1760" y="868" width="326" height="40" rx="7"/><g class="t"><title>gist:CountryGeoRegion</title><text class="uc" x="1923" y="894" text-anchor="middle">Country Geographic Region</text></g></g>
+<g><rect class="c" x="0" y="924" width="326" height="40" rx="7"/><g class="t"><title>gist:CountryGovernment</title><text class="uc" x="163" y="950" text-anchor="middle">Country Government</text></g></g>
+<g><rect class="c" x="20" y="190" width="257" height="40" rx="7"/><g class="t"><title>gist:DegreeOfCommitment</title><text class="uc" x="149" y="216" text-anchor="middle">Degree Of Commitment</text></g></g>
+<g><rect class="c" x="840" y="464" width="159" height="40" rx="7"/><g class="t"><title>gist:Determination</title><text class="uc" x="919" y="490" text-anchor="middle">Determination</text></g></g>
+<g><rect class="c" x="20" y="240" width="257" height="40" rx="7"/><g class="t"><title>gist:Discipline</title><text class="uc" x="149" y="266" text-anchor="middle">Discipline</text></g></g>
+<g><rect class="c" x="0" y="554" width="208" height="40" rx="7"/><g class="t"><title>gist:ElectronicAddress</title><text class="uc" x="104" y="580" text-anchor="middle">Electronic Address</text></g></g>
+<g><rect class="c" x="20" y="290" width="257" height="40" rx="7"/><g class="t"><title>gist:ElectronicAddressType</title><text class="uc" x="149" y="316" text-anchor="middle">Electronic Address Type</text></g></g>
+<g><rect class="c" x="352" y="924" width="326" height="40" rx="7"/><g class="t"><title>gist:Equipment</title><text class="uc" x="515" y="950" text-anchor="middle">Equipment</text></g></g>
+<g><rect class="c" x="323" y="90" width="228" height="40" rx="7"/><g class="t"><title>gist:EquipmentType</title><text class="uc" x="437" y="116" text-anchor="middle">Equipment Type</text></g></g>
+<g><rect class="c" x="937" y="374" width="130" height="40" rx="7"/><g class="t"><title>gist:Event</title><text class="uc" x="1002" y="400" text-anchor="middle">Event</text></g></g>
+<g><rect class="c" x="1544" y="180" width="218" height="40" rx="7"/><g class="t"><title>gist:EventSpecification</title><text class="uc" x="1653" y="206" text-anchor="middle">Event Specification</text></g></g>
+<g><rect class="c" x="704" y="924" width="326" height="40" rx="7"/><g class="t"><title>gist:FormattedContent</title><text class="uc" x="867" y="950" text-anchor="middle">Formatted Content</text></g></g>
+<g><rect class="c" x="861" y="90" width="130" height="40" rx="7"/><g class="t"><title>gist:Function</title><text class="uc" x="926" y="116" text-anchor="middle">Function</text></g></g>
+<g><rect class="c" x="323" y="140" width="228" height="40" rx="7"/><g class="t"><title>gist:GeneralMediaType</title><text class="uc" x="437" y="166" text-anchor="middle">General Media Type</text></g></g>
+<g><rect class="c" x="1679" y="374" width="218" height="40" rx="7"/><g class="t"><title>gist:GeoLocation</title><text class="uc" x="1788" y="400" text-anchor="middle">Geographic Location</text></g></g>
+<g><rect class="c" x="1694" y="464" width="189" height="40" rx="7"/><g class="t"><title>gist:GeoPoint</title><text class="uc" x="1788" y="490" text-anchor="middle">Geographic Point</text></g></g>
+<g><rect class="c" x="1056" y="924" width="326" height="40" rx="7"/><g class="t"><title>gist:GeoRegion</title><text class="uc" x="1219" y="950" text-anchor="middle">Geographic Region</text></g></g>
+<g><rect class="c" x="1408" y="924" width="326" height="40" rx="7"/><g class="t"><title>gist:GeoRoute</title><text class="uc" x="1571" y="950" text-anchor="middle">Geographic Route</text></g></g>
+<g><rect class="c" x="1760" y="924" width="326" height="40" rx="7"/><g class="t"><title>gist:GeoVolume</title><text class="uc" x="1923" y="950" text-anchor="middle">Geographic Volume</text></g></g>
+<g><rect class="c" x="0" y="980" width="326" height="40" rx="7"/><g class="t"><title>gist:GovernedGeoRegion</title><text class="uc" x="163" y="1006" text-anchor="middle">Governed Geographic Region</text></g></g>
+<g><rect class="c" x="469" y="728" width="257" height="40" rx="7"/><g class="t"><title>gist:GovernmentOrganization</title><text class="uc" x="598" y="754" text-anchor="middle">Government Organization</text></g></g>
+<g><rect class="c" x="352" y="980" width="326" height="40" rx="7"/><g class="t"><title>gist:HistoricalEvent</title><text class="uc" x="515" y="1006" text-anchor="middle">Historical Event</text></g></g>
+<g><rect class="c" x="704" y="980" width="326" height="40" rx="7"/><g class="t"><title>gist:ID</title><text class="uc" x="867" y="1006" text-anchor="middle">ID</text></g></g>
+<g><rect class="c" x="0" y="638" width="238" height="40" rx="7"/><g class="t"><title>gist:IntellectualProperty</title><text class="uc" x="119" y="664" text-anchor="middle">Intellectual Property</text></g></g>
+<g><rect class="c" x="1247" y="0" width="130" height="40" rx="7"/><g class="t"><title>gist:Intention</title><text class="uc" x="1312" y="26" text-anchor="middle">Intention</text></g></g>
+<g><rect class="c" x="1056" y="980" width="326" height="40" rx="7"/><g class="t"><title>gist:IntergovernmentalOrganization</title><text class="uc" x="1219" y="1006" text-anchor="middle">Intergovernmental Organization</text></g></g>
+<g><rect class="c" x="20" y="728" width="199" height="40" rx="7"/><g class="t"><title>gist:KnowledgeConcept</title><text class="uc" x="119" y="754" text-anchor="middle">Knowledge Concept</text></g></g>
+<g><rect class="c" x="1269" y="464" width="130" height="40" rx="7"/><g class="t"><title>gist:Landmark</title><text class="uc" x="1334" y="490" text-anchor="middle">Landmark</text></g></g>
+<g><rect class="c" x="1408" y="980" width="326" height="40" rx="7"/><g class="t"><title>gist:Language</title><text class="uc" x="1571" y="1006" text-anchor="middle">Language</text></g></g>
+<g><rect class="c" x="1760" y="980" width="326" height="40" rx="7"/><g class="t"><title>gist:LivingThing</title><text class="uc" x="1923" y="1006" text-anchor="middle">Living Thing</text></g></g>
+<g><rect class="c" x="288" y="638" width="130" height="40" rx="7"/><g class="t"><title>gist:Magnitude</title><text class="uc" x="353" y="664" text-anchor="middle">Magnitude</text></g></g>
+<g><rect class="c" x="323" y="190" width="228" height="40" rx="7"/><g class="t"><title>gist:MediaType</title><text class="uc" x="437" y="216" text-anchor="middle">Media Type</text></g></g>
+<g><rect class="c" x="323" y="240" width="228" height="40" rx="7"/><g class="t"><title>gist:Medium</title><text class="uc" x="437" y="266" text-anchor="middle">Medium</text></g></g>
+<g><rect class="c" x="0" y="1036" width="326" height="40" rx="7"/><g class="t"><title>gist:Message</title><text class="uc" x="163" y="1062" text-anchor="middle">Message</text></g></g>
+<g><rect class="c" x="352" y="1036" width="326" height="40" rx="7"/><g class="t"><title>gist:Network</title><text class="uc" x="515" y="1062" text-anchor="middle">Network</text></g></g>
+<g><rect class="c" x="704" y="1036" width="326" height="40" rx="7"/><g class="t"><title>gist:NetworkLink</title><text class="uc" x="867" y="1062" text-anchor="middle">Network Link</text></g></g>
+<g><rect class="c" x="1504" y="464" width="150" height="40" rx="7"/><g class="t"><title>gist:NetworkNode</title><text class="uc" x="1578" y="490" text-anchor="middle">Network Node</text></g></g>
+<g><rect class="c" x="1056" y="1036" width="326" height="40" rx="7"/><g class="t"><title>gist:Offer</title><text class="uc" x="1219" y="1062" text-anchor="middle">Offer</text></g></g>
+<g><rect class="c" x="1408" y="1036" width="326" height="40" rx="7"/><g class="t"><title>gist:OrderedCollection</title><text class="uc" x="1571" y="1062" text-anchor="middle">Ordered Collection</text></g></g>
+<g><rect class="c" x="1760" y="1036" width="326" height="40" rx="7"/><g class="t"><title>gist:OrderedMember</title><text class="uc" x="1923" y="1062" text-anchor="middle">Ordered Member</text></g></g>
+<g><rect class="c" x="523" y="638" width="150" height="40" rx="7"/><g class="t"><title>gist:Organization</title><text class="uc" x="598" y="664" text-anchor="middle">Organization</text></g></g>
+<g><rect class="c" x="0" y="1092" width="326" height="40" rx="7"/><g class="t"><title>gist:Permission</title><text class="uc" x="163" y="1118" text-anchor="middle">Permission</text></g></g>
+<g><rect class="c" x="352" y="1092" width="326" height="40" rx="7"/><g class="t"><title>gist:Person</title><text class="uc" x="515" y="1118" text-anchor="middle">Person</text></g></g>
+<g><rect class="c" x="323" y="290" width="228" height="40" rx="7"/><g class="t"><title>gist:PhysicalActionType</title><text class="uc" x="437" y="316" text-anchor="middle">Physical Action Type</text></g></g>
+<g><rect class="c" x="234" y="554" width="189" height="40" rx="7"/><g class="t"><title>gist:PhysicalAddress</title><text class="uc" x="329" y="580" text-anchor="middle">Physical Address</text></g></g>
+<g><rect class="c" x="597" y="90" width="238" height="40" rx="7"/><g class="t"><title>gist:PhysicalAddressType</title><text class="uc" x="716" y="116" text-anchor="middle">Physical Address Type</text></g></g>
+<g><rect class="c" x="704" y="1092" width="326" height="40" rx="7"/><g class="t"><title>gist:PhysicalEvent</title><text class="uc" x="867" y="1118" text-anchor="middle">Physical Event</text></g></g>
+<g><rect class="c" x="1191" y="374" width="287" height="40" rx="7"/><g class="t"><title>gist:PhysicalIdentifiableItem</title><text class="uc" x="1334" y="400" text-anchor="middle">Physical Identifiable Item</text></g></g>
+<g><rect class="c" x="1056" y="1092" width="326" height="40" rx="7"/><g class="t"><title>gist:PhysicalSubstance</title><text class="uc" x="1219" y="1118" text-anchor="middle">Physical Substance</text></g></g>
+<g><rect class="c" x="597" y="140" width="238" height="40" rx="7"/><g class="t"><title>gist:ProductCategory</title><text class="uc" x="716" y="166" text-anchor="middle">Product Category</text></g></g>
+<g><rect class="c" x="1408" y="1092" width="326" height="40" rx="7"/><g class="t"><title>gist:ProductSpecification</title><text class="uc" x="1571" y="1118" text-anchor="middle">Product Specification</text></g></g>
+<g><rect class="c" x="1760" y="1092" width="326" height="40" rx="7"/><g class="t"><title>gist:Project</title><text class="uc" x="1923" y="1118" text-anchor="middle">Project</text></g></g>
+<g><rect class="c" x="264" y="728" width="179" height="40" rx="7"/><g class="t"><title>gist:ReferenceValue</title><text class="uc" x="353" y="754" text-anchor="middle">Reference Value</text></g></g>
+<g><rect class="c" x="0" y="1148" width="326" height="40" rx="7"/><g class="t"><title>gist:RenderedContent</title><text class="uc" x="163" y="1174" text-anchor="middle">Rendered Content</text></g></g>
+<g><rect class="c" x="1017" y="90" width="140" height="40" rx="7"/><g class="t"><title>gist:Requirement</title><text class="uc" x="1087" y="116" text-anchor="middle">Requirement</text></g></g>
+<g><rect class="c" x="352" y="1148" width="326" height="40" rx="7"/><g class="t"><title>gist:Restriction</title><text class="uc" x="515" y="1174" text-anchor="middle">Restriction</text></g></g>
+<g><rect class="c" x="704" y="1148" width="326" height="40" rx="7"/><g class="t"><title>gist:ScheduledEvent</title><text class="uc" x="867" y="1174" text-anchor="middle">Scheduled Event</text></g></g>
+<g><rect class="c" x="1056" y="1148" width="326" height="40" rx="7"/><g class="t"><title>gist:ScheduledTask</title><text class="uc" x="1219" y="1174" text-anchor="middle">Scheduled Task</text></g></g>
+<g><rect class="c" x="1408" y="1148" width="326" height="40" rx="7"/><g class="t"><title>gist:SchemaMetaData</title><text class="uc" x="1571" y="1174" text-anchor="middle">Schema Meta Data</text></g></g>
+<g><rect class="c" x="1760" y="1148" width="326" height="40" rx="7"/><g class="t"><title>gist:ServiceSpecification</title><text class="uc" x="1923" y="1174" text-anchor="middle">Service Specification</text></g></g>
+<g><rect class="c" x="1393" y="90" width="159" height="40" rx="7"/><g class="t"><title>gist:Specification</title><text class="uc" x="1473" y="116" text-anchor="middle">Specification</text></g></g>
+<g><rect class="c" x="0" y="1204" width="326" height="40" rx="7"/><g class="t"><title>gist:SubCountryGovernment</title><text class="uc" x="163" y="1230" text-anchor="middle">Sub-Country Government</text></g></g>
+<g><rect class="c" x="352" y="1204" width="326" height="40" rx="7"/><g class="t"><title>gist:System</title><text class="uc" x="515" y="1230" text-anchor="middle">System</text></g></g>
+<g><rect class="c" x="597" y="190" width="238" height="40" rx="7"/><g class="t"><title>gist:Tag</title><text class="uc" x="716" y="216" text-anchor="middle">Tag</text></g></g>
+<g><rect class="c" x="704" y="1204" width="326" height="40" rx="7"/><g class="t"><title>gist:Task</title><text class="uc" x="867" y="1230" text-anchor="middle">Task</text></g></g>
+<g><rect class="c" x="1056" y="1204" width="326" height="40" rx="7"/><g class="t"><title>gist:TaskTemplate</title><text class="uc" x="1219" y="1230" text-anchor="middle">Task Template</text></g></g>
+<g><rect class="c" x="1408" y="1204" width="326" height="40" rx="7"/><g class="t"><title>gist:Template</title><text class="uc" x="1571" y="1230" text-anchor="middle">Template</text></g></g>
+<g><rect class="c" x="1760" y="1204" width="326" height="40" rx="7"/><g class="t"><title>gist:TemporalRelation</title><text class="uc" x="1923" y="1230" text-anchor="middle">Temporal Relation</text></g></g>
+<g><rect class="c" x="0" y="1260" width="326" height="40" rx="7"/><g class="t"><title>gist:Text</title><text class="uc" x="163" y="1286" text-anchor="middle">Text</text></g></g>
+<g><rect class="c" x="352" y="1260" width="326" height="40" rx="7"/><g class="t"><title>gist:TimeInterval</title><text class="uc" x="515" y="1286" text-anchor="middle">Time Interval</text></g></g>
+<g><rect class="c" x="1025" y="464" width="140" height="40" rx="7"/><g class="t"><title>gist:Transaction</title><text class="uc" x="1095" y="490" text-anchor="middle">Transaction</text></g></g>
+<g><rect class="c" x="684" y="554" width="130" height="40" rx="7"/><g class="t"><title>gist:UnitGroup</title><text class="uc" x="749" y="580" text-anchor="middle">Unit Group</text></g></g>
+<g><rect class="c" x="704" y="1260" width="326" height="40" rx="7"/><g class="t"><title>gist:UnitOfMeasure</title><text class="uc" x="867" y="1286" text-anchor="middle">Unit of Measure</text></g></g>
+<g><rect class="a" x="1056" y="1260" width="326" height="40" rx="7"/><g class="t"><title>No domain declared.</title><text class="an" x="1219" y="1286" text-anchor="middle">any resource</text></g></g>
+</g>
+</svg>
