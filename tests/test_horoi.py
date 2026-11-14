@@ -189,13 +189,16 @@ class Build(unittest.TestCase):
             build(EXAMPLE, out)
             html = (Path(out) / "index.html").read_text(encoding="utf-8")
         aside = re.search(r"<aside>(.*?)</aside>", html, re.S).group(1)
-        button = re.search(r'<button id="side"[^>]*>', aside).group(0)
+        top = re.search(r'<div class="top">(.*?)</div>', html, re.S).group(1)
+        button = re.search(r'<button id="side"[^>]*>', top).group(0)    # in the top bar, so it stays when the panel folds
+        self.assertTrue(top.startswith(button))                     # at the bar's left edge, before the mark
+        self.assertNotIn('id="side"', aside)
         self.assertIn('aria-expanded="true"', button)
         self.assertIn('aria-keyshortcuts="Control+["', button)
         panel ='id="%s"' % re.search(r'aria-controls="([^"]+)"', button).group(1)
         self.assertIn(panel, aside)
-        self.assertLess(aside.index(button), aside.index(panel))    # the button stays when the panel folds
         self.assertIn('id="q"', aside[aside.index(panel):])
+        self.assertRegex(html, r':root\[data-side="closed"\] \{ --rail:var\(--gutter\); \}')    # folded, the sidebar leaves no column
 
     def test_the_shortcut_on_hover_stays_legible(self):
         with tempfile.TemporaryDirectory() as out:
