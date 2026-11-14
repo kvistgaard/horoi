@@ -184,28 +184,14 @@ class Build(unittest.TestCase):
         self.assertIn('<a href="#keptBy" title="pets:keptBy">kept by</a>', aside)
         self.assertIn('<a href="#Owner" title="pets:Owner">Owner</a>', aside)
 
-    def test_sidebar_folds_and_its_button_stays_out(self):
+    def test_the_sidebar_does_not_fold(self):
         with tempfile.TemporaryDirectory() as out:
             build(EXAMPLE, out)
             html = (Path(out) / "index.html").read_text(encoding="utf-8")
         aside = re.search(r"<aside>(.*?)</aside>", html, re.S).group(1)
-        top = re.search(r'<div class="top">(.*?)</div>', html, re.S).group(1)
-        button = re.search(r'<button id="side"[^>]*>', top).group(0)    # in the top bar, so it stays when the panel folds
-        self.assertTrue(top.startswith(button))                     # at the bar's left edge, before the mark
-        self.assertNotIn('id="side"', aside)
-        self.assertIn('aria-expanded="true"', button)
-        self.assertIn('aria-keyshortcuts="Control+["', button)
-        panel ='id="%s"' % re.search(r'aria-controls="([^"]+)"', button).group(1)
-        self.assertIn(panel, aside)
-        self.assertIn('id="q"', aside[aside.index(panel):])
-        self.assertRegex(html, r':root\[data-side="closed"\] \{ --rail:var\(--gutter\); \}')    # folded, the sidebar leaves no column
-
-    def test_the_shortcut_on_hover_stays_legible(self):
-        with tempfile.TemporaryDirectory() as out:
-            build(EXAMPLE, out)
-            html = (Path(out) / "index.html").read_text(encoding="utf-8")
-        self.assertIn("Ctrl + [", html)
-        self.assertNotIn("[)", html)                    # a closing bracket beside it reads as one symbol
+        self.assertIn('id="q"', aside)
+        for gone in ('id="side"', "data-side", "horoi-sidebar", "Ctrl + ["):
+            self.assertNotIn(gone, html)
 
     def test_section_titles_just_reach_the_contrast_guideline(self):
         def luminance(colour):
@@ -223,12 +209,6 @@ class Build(unittest.TestCase):
         for theme in (html, DARK_CSS):
             self.assertGreaterEqual(ratio(theme), 4.5)
             self.assertLess(ratio(theme), 4.6)          # enough to comply, not more
-
-    def test_a_folded_sidebar_is_restored_before_the_page_paints(self):
-        with tempfile.TemporaryDirectory() as out:
-            build(EXAMPLE, out)
-            html = (Path(out) / "index.html").read_text(encoding="utf-8")
-        self.assertIn("localStorage.getItem('horoi-sidebar')", html[:html.index("</head>")])
 
     def test_header_and_sidebar_share_their_left_edge(self):
         with tempfile.TemporaryDirectory() as out:
@@ -514,6 +494,10 @@ class Metadata(unittest.TestCase):
         self.assertIn('<dt title="ex:mood"><code>ex:mood</code></dt><dd>calm</dd>', section)    # a property with no name in words
         self.assertLess(section.index(">Created<"), section.index("ex:mood"))
         self.assertIn('<a href="#metadata">Metadata</a>', html)
+
+    def test_an_address_given_as_text_is_a_link(self):
+        html = Page(graph(SMALL.replace('rdfs:label "Pets" .', 'rdfs:label "Pets" ; ex:license "https://example.org/licence" .'))).render(None, "pets")
+        self.assertIn('<dd><a href="https://example.org/licence">https://example.org/licence</a></dd>', html)
 
 
 def many(n):

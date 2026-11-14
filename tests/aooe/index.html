@@ -7,7 +7,6 @@
 <meta name="description" content="Terms the AOOE methodology uses to annotate import manifests, Behavioral Concept Specifications and adoption levels. This is a methodology vocabulary, not a domain vocabulary: it never appears in a public projection.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%2032%2032%27%3E%3Crect%20width%3D%2732%27%20height%3D%2732%27%20rx%3D%276%27%20fill%3D%27%23EA580C%27/%3E%3Ctext%20x%3D%2716%27%20y%3D%2722%27%20text-anchor%3D%27middle%27%20font-family%3D%27Segoe%20UI%2CArial%2Csans-serif%27%20font-size%3D%2712%27%20font-weight%3D%27700%27%20fill%3D%27white%27%3Eaooe%3C/text%3E%3C/svg%3E">
 <link rel="alternate" type="text/turtle" href="aooe.ttl">
-<script>try { if (localStorage.getItem('horoi-sidebar') === 'closed') document.documentElement.dataset.side = 'closed'; } catch (e) {}</script>
 <style>
 :root { color-scheme:light dark;
   --bg:#FFFFFF; --panel:#FFFFFF; --ink:#111827; --muted:#4B5563; --faint:#9CA3AF; --section:#6E7788; --line:#E5E7EB;
@@ -16,7 +15,6 @@
   --sans:Inter,"Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif;
   --gutter:28px; --side:230px; --toggle:36px; --rail:calc(var(--gutter) + var(--side) + 40px);
   --fold:240ms; --ease:cubic-bezier(.2,0,.38,.9); }
-:root[data-side="closed"] { --rail:calc(var(--gutter) + var(--toggle) + 16px); }
 @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --bg:#121212; --panel:#1A1A1A; --ink:#ECECEC; --muted:#A3A3A3; --faint:#737373; --section:#7D7D7D; --line:#2E2E2E; --accent:#FB923C; --accent-soft:#2A1D14; --blue:#60A5FA; --blue-soft:#172131; --green:#4ADE80; --green-soft:#15261B; --code:#1F1F1F; } }
 :root[data-theme="dark"] { --bg:#121212; --panel:#1A1A1A; --ink:#ECECEC; --muted:#A3A3A3; --faint:#737373; --section:#7D7D7D; --line:#2E2E2E; --accent:#FB923C; --accent-soft:#2A1D14; --blue:#60A5FA; --blue-soft:#172131; --green:#4ADE80; --green-soft:#15261B; --code:#1F1F1F; }
 :root[data-theme="light"] svg.hr-diagram { --hr-ink:#111827;--hr-muted:#6B7280;--hr-class:#EA580C;--hr-obj:#2563EB;--hr-data:#16A34A;--hr-any:#9CA3AF;--hr-fill:#FFFFFF; }
@@ -36,28 +34,17 @@ code { font-family:var(--mono); font-size:.9em; }
 #theme { border:none; background:transparent; color:var(--muted); border-radius:4px; width:32px; height:28px;
   cursor:pointer; font-size:15px; line-height:1; }
 .wrap { display:grid; grid-template-columns:minmax(var(--rail),1fr) minmax(0,914px) minmax(var(--gutter),1fr);
-  padding:36px 0 80px; transition:grid-template-columns var(--fold) var(--ease); }
+  padding:36px 0 80px; }
 aside { position:sticky; top:95px; align-self:start; width:var(--side); margin-left:var(--gutter); }
-#side { position:absolute; top:0; left:0; z-index:1; display:grid; place-items:center; width:var(--toggle); height:var(--toggle); padding:0;
-  border:1px solid var(--line); border-radius:4px; background:transparent; color:var(--muted); cursor:pointer; }
-#side:hover { background:var(--accent-soft); color:var(--accent); }
-#side svg { display:block; width:18px; height:18px; fill:none; stroke:currentColor; stroke-width:1.5; }
-#side .pane { fill:currentColor; stroke:none; opacity:.35; transform-box:fill-box; transform-origin:left;
-  transition:transform var(--fold) var(--ease); }
-.fold { display:flex; flex-direction:column; max-height:calc(100vh - 115px); clip-path:inset(-4px -10px -4px -10px);
-  transition:clip-path var(--fold) var(--ease), opacity var(--fold) var(--ease), visibility var(--fold); }
-aside input { flex:none; width:calc(100% - var(--toggle) - 8px); height:var(--toggle); margin:0 0 28px calc(var(--toggle) + 8px); padding:0 11px;
+.terms { display:flex; flex-direction:column; max-height:calc(100vh - 115px); }
+aside input { flex:none; width:100%; height:var(--toggle); margin:0 0 28px; padding:0 11px;
   border:1px solid var(--line); border-radius:4px; background:var(--panel); color:var(--ink); font:14.5px var(--sans); }
-.list { flex:1; min-height:0; overflow:auto; margin:0 -10px; padding:0 10px; }
+.list { flex:1; min-height:0; overflow:auto; margin:0 -10px; padding:0 10px; scrollbar-width:none; }
+.list::-webkit-scrollbar { display:none; }
 aside a { display:block; margin-left:-10px; padding:3px 10px; border-radius:4px; color:var(--muted); font:14.5px var(--sans); }
 aside a:hover { background:var(--accent-soft); color:var(--accent); text-decoration:none; }
 .group:not([hidden]) ~ .group { margin-top:24px; }
 .navh { margin:0 0 6px; font:700 13px var(--sans); letter-spacing:1.6px; text-transform:uppercase; color:var(--section); }
-:root[data-side="closed"] aside { pointer-events:none; }
-:root[data-side="closed"] #side { pointer-events:auto; }
-:root[data-side="closed"] #side .pane { transform:scaleX(0); }
-:root[data-side="closed"] .fold { clip-path:inset(-4px 100% -4px 0); opacity:0; visibility:hidden; }
-@media (prefers-reduced-motion:reduce) { .wrap, .fold, #side .pane { transition:none; } }
 main section { margin-bottom:56px; }
 h1 { font-size:44px; line-height:1.1; letter-spacing:-.8px; margin:0 0 14px; font-weight:600; }
 h2 { font-size:13px; letter-spacing:2px; text-transform:uppercase; color:var(--accent); margin:0 0 18px; }
@@ -115,8 +102,8 @@ footer { border-top:1px solid var(--line); padding:24px 28px; color:var(--faint)
 <div class="top"><span class="mark">aooe</span><span class="name">AOOE — Agent-Oriented Ontology Engineering vocabulary</span><span class="v">0.7.0</span>
 <nav><a href="#metadata">Metadata</a><a href="#diagram">Diagram</a><a href="#classes">Classes</a><a href="#properties">Properties</a><a href="#download">Download</a><button id="theme" type="button" title="Switch between light and dark" aria-label="Switch between light and dark">◐</button></nav></div>
 <div class="wrap">
-<aside><button id="side" type="button" title="Hide sidebar" aria-label="Sidebar" aria-expanded="true" aria-controls="terms" aria-keyshortcuts="Control+["><svg viewBox="0 0 18 18" aria-hidden="true"><path class="pane" d="M7 3H4a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h3z"/><rect x="2" y="3" width="14" height="12" rx="2"/><path d="M7 3v12"/></svg></button>
-<div class="fold" id="terms"><input id="q" type="search" placeholder="Find a term" aria-label="Find a term"><div class="list"><div class="group"><p class="navh">Classes</p><a href="#AdoptionLevel" title="aooe:AdoptionLevel">Adoption level</a><a href="#AdoptionRecord" title="aooe:AdoptionRecord">Adoption record</a></div><div class="group"><p class="navh">Properties</p><a href="#adoptedRelease" title="aooe:adoptedRelease">adopted release</a><a href="#adoptedSince" title="aooe:adoptedSince">adopted since</a><a href="#adopter" title="aooe:adopter">adopter</a><a href="#adoptsLevel" title="aooe:adoptsLevel">adopts level</a><a href="#governanceNote" title="aooe:governanceNote">governance note</a><a href="#governs" title="aooe:governs">governs</a><a href="#importedVocabulary" title="aooe:importedVocabulary">imported vocabulary</a><a href="#includesLevel" title="aooe:includesLevel">includes level</a><a href="#pinnedVersion" title="aooe:pinnedVersion">pinned version</a><a href="#providesLevel" title="aooe:providesLevel">provides level</a><a href="#refines" title="aooe:refines">refines</a><a href="#reuseMode" title="aooe:reuseMode">reuse mode</a><a href="#servesACQ" title="aooe:servesACQ">serves agent competency question</a><a href="#useCase" title="aooe:useCase">use case</a></div></div></div></aside>
+<aside>
+<div class="terms" id="terms"><input id="q" type="search" placeholder="Find a term" aria-label="Find a term"><div class="list"><div class="group"><p class="navh">Classes</p><a href="#AdoptionLevel" title="aooe:AdoptionLevel">Adoption level</a><a href="#AdoptionRecord" title="aooe:AdoptionRecord">Adoption record</a></div><div class="group"><p class="navh">Properties</p><a href="#adoptedRelease" title="aooe:adoptedRelease">adopted release</a><a href="#adoptedSince" title="aooe:adoptedSince">adopted since</a><a href="#adopter" title="aooe:adopter">adopter</a><a href="#adoptsLevel" title="aooe:adoptsLevel">adopts level</a><a href="#governanceNote" title="aooe:governanceNote">governance note</a><a href="#governs" title="aooe:governs">governs</a><a href="#importedVocabulary" title="aooe:importedVocabulary">imported vocabulary</a><a href="#includesLevel" title="aooe:includesLevel">includes level</a><a href="#pinnedVersion" title="aooe:pinnedVersion">pinned version</a><a href="#providesLevel" title="aooe:providesLevel">provides level</a><a href="#refines" title="aooe:refines">refines</a><a href="#reuseMode" title="aooe:reuseMode">reuse mode</a><a href="#servesACQ" title="aooe:servesACQ">serves agent competency question</a><a href="#useCase" title="aooe:useCase">use case</a></div></div></div></aside>
 <main>
 <section id="top">
 <h1>AOOE — Agent-Oriented Ontology Engineering vocabulary</h1>
@@ -166,30 +153,6 @@ footer { border-top:1px solid var(--line); padding:24px 28px; color:var(--faint)
     const dark = root.dataset.theme ? root.dataset.theme === 'dark' : matchMedia('(prefers-color-scheme: dark)').matches;
     root.dataset.theme = dark ? 'light' : 'dark';
     try { localStorage.setItem(key, root.dataset.theme); } catch (e) {}
-  });
-})();
-(() => {
-  const root = document.documentElement, side = document.getElementById('side'), fold = document.getElementById('terms');
-  const keys = /Mac|iPhone|iPad/.test(navigator.platform) ? '⌃ [' : 'Ctrl + [';
-  const show = open => {
-    side.setAttribute('aria-expanded', open);
-    side.title = `${open ? 'Hide' : 'Show'} sidebar: ${keys}`;
-  };
-  show(root.dataset.side !== 'closed');
-  side.addEventListener('click', () => {
-    const open = root.dataset.side === 'closed';
-    if (!open && fold.contains(document.activeElement)) side.focus();
-    if (open) delete root.dataset.side; else root.dataset.side = 'closed';
-    show(open);
-    try { localStorage.setItem('horoi-sidebar', open ? 'open' : 'closed'); } catch (e) {}
-  });
-  // AltGr reports as Ctrl+Alt, so typing [ on many layouts must not count. Where this
-  // key types no ASCII character, as on a Cyrillic layout, it counts by its position.
-  document.addEventListener('keydown', e => {
-    const bracket = e.key === '[' || (e.code === 'BracketLeft' && !/^[ -~]$/.test(e.key));
-    if (!bracket || !e.ctrlKey || e.altKey || e.shiftKey || e.metaKey || !side.offsetParent) return;
-    e.preventDefault();
-    if (!e.repeat) side.click();
   });
 })();
 (() => {
