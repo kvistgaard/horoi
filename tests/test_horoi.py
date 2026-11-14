@@ -14,7 +14,7 @@ from unittest import mock
 
 from rdflib import Graph, URIRef
 
-from horoi import uml
+from horoi import folded
 from horoi.build import build
 from horoi.cli import main
 from horoi.diagram import Undrawable, draw
@@ -505,9 +505,9 @@ def many(n):
     return SMALL + kinds + "ex:keptBy rdfs:range ex:Owner .\n"
 
 
-class UmlStyle(unittest.TestCase):
+class FoldedStyle(unittest.TestCase):
     def test_a_class_lists_its_properties_under_a_line_and_only_subclasses_have_arrows(self):
-        svg = uml.draw(graph(path=EXAMPLE))
+        svg = folded.draw(graph(path=EXAMPLE))
         self.assertEqual(svg.count('<path class="sep"'), 3)         # Communication's object properties, and Decision's two kinds
         self.assertEqual(svg.count('marker-end="url(#m-sub)"'), 2)
         self.assertNotIn("m-obj", svg)
@@ -515,7 +515,7 @@ class UmlStyle(unittest.TestCase):
         self.assertIn('<text class="ur data"', svg)                 # has argument, a datatype property
 
     def test_a_range_is_written_only_where_one_is_declared(self):
-        svg = uml.draw(graph(path=EXAMPLE))
+        svg = folded.draw(graph(path=EXAMPLE))
         self.assertIn('>revises<tspan class="ty"> : </tspan><tspan class="ty">Decision</tspan></text>', svg)
         self.assertIn('>attributed to<tspan class="ty"> : </tspan><tspan class="ty">foaf:Agent</tspan></text>', svg)
         self.assertIn(">has premise</text>", svg)                   # no range declared
@@ -523,11 +523,11 @@ class UmlStyle(unittest.TestCase):
         self.assertNotIn("literal", svg)
 
     def test_a_datatype_is_written_as_a_range(self):
-        svg = uml.draw(graph(SMALL + "ex:name rdfs:range <http://www.w3.org/2001/XMLSchema#string> .\n"))
+        svg = folded.draw(graph(SMALL + "ex:name rdfs:range <http://www.w3.org/2001/XMLSchema#string> .\n"))
         self.assertIn('>name<tspan class="ty"> : </tspan><tspan class="ty">xsd:string</tspan>', svg)
 
     def test_properties_with_no_domain_are_the_rows_of_any_resource(self):
-        svg = uml.draw(graph(SMALL + 'ex:seenAt a owl:ObjectProperty ; rdfs:label "seen at" .\n'))
+        svg = folded.draw(graph(SMALL + 'ex:seenAt a owl:ObjectProperty ; rdfs:label "seen at" .\n'))
         box = svg.split(">any resource</text>")[1].split("</g>\n")[0]
         self.assertIn(">seen at</text>", box)
         self.assertIn('<rect class="a"', svg)
@@ -536,41 +536,41 @@ class UmlStyle(unittest.TestCase):
         g = graph(ODD + "ex:Bed a owl:Class ; rdfs:subClassOf ex:Owner, ex:Pet .\n")
         with self.assertRaises(Undrawable):
             draw(g)
-        svg = uml.draw(g)
+        svg = folded.draw(g)
         self.assertEqual(svg.count('class="e sub tree"'), 1)        # Owner's two subclasses share its arrowhead
         self.assertEqual(svg.count('class="e sub also"'), 1)        # Bed's other superclass
 
     def test_a_restriction_and_a_union_are_rows(self):
-        svg = uml.draw(graph(SKOSSY))
+        svg = folded.draw(graph(SKOSSY))
         self.assertIn(">kept by (some)<tspan", svg)
         self.assertIn("<title>zoo:keptBy some zoo:Keeper</title>", svg)
         self.assertEqual(svg.count(">name</text>"), 2)              # in Animal and in Keeper, through the union
 
     def test_a_large_ontology_shows_names_alone_and_holds_a_box_per_class(self):
-        g = graph(many(uml.FULL + 1))
-        svg = uml.draw(g)
+        g = graph(many(folded.FULL + 1))
+        svg = folded.draw(g)
         tree, details = svg.split('<g class="details">')
         self.assertNotIn('class="ur', tree)
-        self.assertEqual(tree.count('<g class="n" data-c='), uml.FULL + 1)
-        self.assertEqual(details.count('display="none"'), uml.FULL + 1)
+        self.assertEqual(tree.count('<g class="n" data-c='), folded.FULL + 1)
+        self.assertEqual(details.count('display="none"'), folded.FULL + 1)
         owner = details.split('aria-label')[0].split('>Owner</text>')[1].split("</g>\n")[0]
         self.assertIn("kept by", owner)                             # a property that reaches the class
         self.assertIn(' ← </tspan><tspan class="ty go" data-c="', owner)
         self.assertIn('<a href="#Owner">', details)                 # the name leads to the card
-        self.assertNotIn('class="details"', uml.draw(g, page=False))
-        self.assertNotIn('class="details"', uml.draw(graph(many(uml.FULL))))
-        self.assertIn('class="ur', uml.draw(graph(many(uml.FULL))))
+        self.assertNotIn('class="details"', folded.draw(g, page=False))
+        self.assertNotIn('class="details"', folded.draw(graph(many(folded.FULL))))
+        self.assertIn('class="ur', folded.draw(graph(many(folded.FULL))))
 
     def test_subclasses_with_none_of_their_own_hang_in_columns(self):
-        svg = uml.draw(graph(many(9)), page=False)                  # seven subclasses: columns of four and three
+        svg = folded.draw(graph(many(9)), page=False)                  # seven subclasses: columns of four and three
         xs = sorted({re.search(r'x="(-?\d+)"', box).group(1) for box in re.findall(r'<rect class="c"[^>]*/>(?=<g class="t"><title>pets:Kind)', svg)})
         self.assertEqual(len(xs), 2)
 
     def test_the_page_of_a_large_ontology_has_the_viewer_and_no_diagram_per_class(self):
         with tempfile.TemporaryDirectory() as tmp:
             src = Path(tmp) / "pets.ttl"
-            src.write_text(many(uml.FULL + 1), encoding="utf-8")
-            build(src, Path(tmp) / "out", diagram="uml")
+            src.write_text(many(folded.FULL + 1), encoding="utf-8")
+            build(src, Path(tmp) / "out", diagram="folded")
             html = (Path(tmp) / "out" / "index.html").read_text(encoding="utf-8")
             file = (Path(tmp) / "out" / "pets.svg").read_text(encoding="utf-8")
         self.assertIn('<div class="diagram view"><div class="tools">', html)
@@ -584,7 +584,7 @@ class UmlStyle(unittest.TestCase):
 
     def test_the_page_of_a_small_ontology_has_no_viewer(self):
         with tempfile.TemporaryDirectory() as tmp:
-            build(EXAMPLE, Path(tmp) / "out", diagram="uml")
+            build(EXAMPLE, Path(tmp) / "out", diagram="folded")
             html = (Path(tmp) / "out" / "index.html").read_text(encoding="utf-8")
         self.assertIn('<div class="diagram whole"><svg', html)
         self.assertNotIn("requestFullscreen", html)
@@ -596,7 +596,7 @@ class UmlStyle(unittest.TestCase):
             build(EXAMPLE, Path(tmp) / "b", diagram="graph")
             a, b = ((Path(tmp) / d / "index.html").read_text(encoding="utf-8") for d in "ab")
         self.assertEqual(a, b)
-        for word in ("requestFullscreen", "diagram view", "diagram whole", 'class="tools"', "hr-diagram uml"):
+        for word in ("requestFullscreen", "diagram view", "diagram whole", 'class="tools"', "hr-diagram folded"):
             self.assertNotIn(word, a)
 
     def test_the_commands_take_the_style(self):
@@ -604,10 +604,10 @@ class UmlStyle(unittest.TestCase):
             src = Path(tmp) / "pets.ttl"
             src.write_text(ODD, encoding="utf-8")
             with contextlib.redirect_stdout(io.StringIO()):
-                self.assertEqual(main(["diagram", str(src), "--diagram", "uml"]), 0)
-                self.assertEqual(main(["build", str(src), "--out", str(Path(tmp) / "out"), "--diagram", "uml"]), 0)
-            self.assertIn('class="hr-diagram uml"', (Path(tmp) / "pets.svg").read_text(encoding="utf-8"))
-            self.assertIn('class="hr-diagram uml"', (Path(tmp) / "out" / "index.html").read_text(encoding="utf-8"))
+                self.assertEqual(main(["diagram", str(src), "--diagram", "folded"]), 0)
+                self.assertEqual(main(["build", str(src), "--out", str(Path(tmp) / "out"), "--diagram", "folded"]), 0)
+            self.assertIn('class="hr-diagram folded"', (Path(tmp) / "pets.svg").read_text(encoding="utf-8"))
+            self.assertIn('class="hr-diagram folded"', (Path(tmp) / "out" / "index.html").read_text(encoding="utf-8"))
 
 
 if __name__ == "__main__":
