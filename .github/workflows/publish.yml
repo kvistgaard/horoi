@@ -11,11 +11,15 @@ on:
   workflow_call:
     inputs:
       ontology:
-        description: The ontology, in Turtle, as a path in the calling repository
+        description: The ontology, in Turtle, as a path in the calling repository; for an ontology in several files, all of them, separated by spaces, the one the page documents first
         type: string
         required: true
       example:
         description: A Turtle file to show as the example
+        type: string
+        default: ""
+      diagram:
+        description: The diagram's style, graph or folded; graph if left out
         type: string
         default: ""
 
@@ -30,10 +34,11 @@ jobs:
         with:
           python-version: "3.12"
       - run: pip install git+https://github.com/kvistgaard/horoi@main
-      - run: horoi build "$ONTOLOGY" ${EXAMPLE:+--example "$EXAMPLE"} --all-tags --out dist
+      - run: horoi build $ONTOLOGY ${EXAMPLE:+--example "$EXAMPLE"} ${DIAGRAM:+--diagram "$DIAGRAM"} --all-tags --out dist   # unquoted: one path or several
         env:
           ONTOLOGY: ${{ inputs.ontology }}
           EXAMPLE: ${{ inputs.example }}
+          DIAGRAM: ${{ inputs.diagram }}
       - uses: actions/upload-pages-artifact@v5
         with:
           path: dist

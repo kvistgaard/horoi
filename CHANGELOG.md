@@ -7,7 +7,34 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- `skos:prefLabel` and `skos:definition` as a term's label and definition
+- The version at the end of `owl:versionIRI`, for an ontology with no `owl:versionInfo`
+- A union as a property's domain or range, shown by its member classes
+- A class's restrictions and equivalent classes on its card
+- A diagram on each class's card, for an ontology too large to draw whole
+- One page for an ontology kept in several files, such as a module and its restrictions
+- Each of an ontology's files in four serialisations
+- Modules, listed with `dcterms:hasPart`, each with a section of the page
+- A folded style for the diagram, with `--diagram folded`
+- A Metadata section with everything the ontology states about itself
+- For a large ontology in the folded style, a diagram to zoom, with a class's properties on click and a full-screen button
+
+### Removed
+
+- The button and the shortcut that hid the sidebar
+
 ### Changed
+
+- The sidebar's term list no longer shows a scrollbar
+- In the Metadata section, an address given as text is now a link
+- With no `vann` header, the namespace is now the one most terms share
+- An ontology with no version now stops the build before any file is written
+- A term with no card on the page is no longer a link
+- A licence given as text now shows as text, not as a link
+- With `--all-tags`, a tag that lacks one of the ontology's files is now left out with a warning
+- The diagram now draws a superclass that is declared in another file
 
 - The diagram now draws properties with no domain, from an *any resource* node under the classes
 - The diagram now draws a class only once when properties from two classes point to it
