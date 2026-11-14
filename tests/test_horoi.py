@@ -499,6 +499,20 @@ class Modules(unittest.TestCase):
         self.assertIn("does not list it as a part", str(e.exception.code))
 
 
+class Metadata(unittest.TestCase):
+    def test_the_page_lists_everything_the_ontology_states_about_itself_folded(self):
+        html = Page(graph(SMALL.replace('rdfs:label "Pets" .', 'rdfs:label "Pets" ; '
+                    '<http://purl.org/dc/terms/created> "2026-01-02" ; ex:mood "calm" ; '
+                    '<http://www.w3.org/2002/07/owl#imports> <https://example.org/other> .'))).render(None, "pets")
+        section = html.split('<section id="metadata">')[1].split("</section>")[0]
+        self.assertTrue(section.startswith("<details><summary><h2>Metadata</h2></summary>"))    # closed until asked
+        self.assertIn('<dt title="dcterms:created">Created</dt><dd>2026-01-02</dd>', section)
+        self.assertIn('<dt title="owl:imports">Imports</dt><dd><a href="https://example.org/other">', section)
+        self.assertIn('<dt title="ex:mood"><code>ex:mood</code></dt><dd>calm</dd>', section)    # a property with no name in words
+        self.assertLess(section.index(">Created<"), section.index("ex:mood"))
+        self.assertIn('<a href="#metadata">Metadata</a>', html)
+
+
 def many(n):
     """An ontology of n classes: a root, its subclasses, and one class with a property to the root."""
     kinds = "".join(f'ex:Kind{i} a owl:Class ; rdfs:label "Kind {i}" ; rdfs:subClassOf ex:Pet .\n' for i in range(n - 2))

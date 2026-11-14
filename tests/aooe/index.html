@@ -70,6 +70,15 @@ h2 { font-size:13px; letter-spacing:2px; text-transform:uppercase; color:var(--a
 .meta { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:12px; margin:0; }
 .meta div { background:var(--panel); border:1px solid var(--line); border-radius:6px; padding:11px 14px; }
 .meta dt { font-size:12px; color:var(--faint); } .meta dd { margin:2px 0 0; font-weight:600; }
+#metadata summary { display:flex; align-items:center; gap:10px; width:fit-content; cursor:pointer; list-style:none; }
+#metadata summary::-webkit-details-marker { display:none; }
+#metadata summary h2 { margin:0; }
+#metadata summary::after { content:""; width:7px; height:7px; margin-top:-3px; border-right:1.5px solid var(--accent); border-bottom:1.5px solid var(--accent);
+  transform:rotate(-45deg); transition:transform var(--fold) var(--ease); }
+#metadata details[open] summary::after { transform:rotate(45deg); }
+.md { display:grid; grid-template-columns:150px minmax(0,1fr); gap:8px 16px; margin:18px 0 0; font-size:14.5px; }
+.md dt { font-size:13px; color:var(--faint); padding-top:2px; } .md dd { margin:0; overflow-wrap:anywhere; white-space:pre-line; }
+.md .lang { color:var(--faint); font-size:12px; }
 .diagram { border:1px solid var(--line); border-radius:6px; padding:16px; overflow:auto; }
 .diagram svg { display:block; width:100%; height:auto; min-width:640px; }
 .diagram.own { margin-top:16px; } .diagram.own svg { width:auto; max-width:100%; min-width:0; }
@@ -99,12 +108,12 @@ pre .k { color:var(--faint); } pre .s { color:var(--green); } pre .t { color:var
 .dl code { color:var(--muted); }
 footer { border-top:1px solid var(--line); padding:24px 28px; color:var(--faint); font-size:13px; text-align:center; }
 @media (max-width:900px) { .wrap { grid-template-columns:minmax(0,1fr); padding:24px 16px 60px; } aside { display:none; }
-  .top nav a { display:none; } h1 { font-size:34px; } .term dl { grid-template-columns:1fr; } }
+  .top nav a { display:none; } h1 { font-size:34px; } .term dl, .md { grid-template-columns:1fr; } }
 </style>
 </head>
 <body>
 <div class="top"><span class="mark">aooe</span><span class="name">AOOE — Agent-Oriented Ontology Engineering vocabulary</span><span class="v">0.7.0</span>
-<nav><a href="#diagram">Diagram</a><a href="#classes">Classes</a><a href="#properties">Properties</a><a href="#download">Download</a><button id="theme" type="button" title="Switch between light and dark" aria-label="Switch between light and dark">◐</button></nav></div>
+<nav><a href="#metadata">Metadata</a><a href="#diagram">Diagram</a><a href="#classes">Classes</a><a href="#properties">Properties</a><a href="#download">Download</a><button id="theme" type="button" title="Switch between light and dark" aria-label="Switch between light and dark">◐</button></nav></div>
 <div class="wrap">
 <aside><button id="side" type="button" title="Hide sidebar" aria-label="Sidebar" aria-expanded="true" aria-controls="terms" aria-keyshortcuts="Control+["><svg viewBox="0 0 18 18" aria-hidden="true"><path class="pane" d="M7 3H4a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h3z"/><rect x="2" y="3" width="14" height="12" rx="2"/><path d="M7 3v12"/></svg></button>
 <div class="fold" id="terms"><input id="q" type="search" placeholder="Find a term" aria-label="Find a term"><div class="list"><div class="group"><p class="navh">Classes</p><a href="#AdoptionLevel" title="aooe:AdoptionLevel">Adoption level</a><a href="#AdoptionRecord" title="aooe:AdoptionRecord">Adoption record</a></div><div class="group"><p class="navh">Properties</p><a href="#adoptedRelease" title="aooe:adoptedRelease">adopted release</a><a href="#adoptedSince" title="aooe:adoptedSince">adopted since</a><a href="#adopter" title="aooe:adopter">adopter</a><a href="#adoptsLevel" title="aooe:adoptsLevel">adopts level</a><a href="#governanceNote" title="aooe:governanceNote">governance note</a><a href="#governs" title="aooe:governs">governs</a><a href="#importedVocabulary" title="aooe:importedVocabulary">imported vocabulary</a><a href="#includesLevel" title="aooe:includesLevel">includes level</a><a href="#pinnedVersion" title="aooe:pinnedVersion">pinned version</a><a href="#providesLevel" title="aooe:providesLevel">provides level</a><a href="#refines" title="aooe:refines">refines</a><a href="#reuseMode" title="aooe:reuseMode">reuse mode</a><a href="#servesACQ" title="aooe:servesACQ">serves agent competency question</a><a href="#useCase" title="aooe:useCase">use case</a></div></div></div></aside>
@@ -115,6 +124,7 @@ footer { border-top:1px solid var(--line); padding:24px 28px; color:var(--faint)
 <div class="ns"><span class="p">aooe:</span><code id="nsiri">https://w3id.org/aooe#</code><button id="copy" type="button">Copy</button></div>
 <dl class="meta"><div><dt>Version</dt><dd>0.7.0</dd></div><div><dt>Licence</dt><dd><a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a></dd></div></dl>
 </section>
+<section id="metadata"><details><summary><h2>Metadata</h2></summary><dl class="md"><dt title="rdfs:label">Label</dt><dd>AOOE — Agent-Oriented Ontology Engineering vocabulary</dd><dt title="dct:description">Description</dt><dd>Terms the AOOE methodology uses to annotate import manifests, Behavioral Concept Specifications and adoption levels. This is a methodology vocabulary, not a domain vocabulary: it never appears in a public projection.</dd><dt title="owl:versionInfo">Version</dt><dd>0.7.0</dd><dt title="dct:created">Created</dt><dd>2026-10-27</dd><dt title="dct:publisher">Publisher</dt><dd><a href="https://wordlift.io/">https://wordlift.io/</a></dd><dt title="dct:license">Licence</dt><dd><a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a></dd><dt title="dct:rights">Rights</dt><dd>Copyright WordLift. This vocabulary is released under the Creative Commons Attribution 4.0 International licence (CC BY 4.0). The AOOE methodology, its tooling and templates are maintained separately and are not covered by this licence.</dd></dl></details></section>
 <section id="diagram"><h2>Diagram</h2><div class="diagram"><svg xmlns="http://www.w3.org/2000/svg" class="hr-diagram" viewBox="-32 0 1198 518" role="img" aria-label="The terms of the ontology and how they connect">
 <title>The terms of the ontology and how they connect</title>
 <defs><marker id="m-obj" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto"><path class="mo" d="M0,0 L10,5 L0,10 z"/></marker><marker id="m-data" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto"><path class="md" d="M0,0 L10,5 L0,10 z"/></marker><marker id="m-sub" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="13" markerHeight="13" orient="auto"><path class="ms" d="M1,1 L11,6 L1,11 z"/></marker><style>svg{--hr-ink:#111827;--hr-muted:#6B7280;--hr-class:#EA580C;--hr-obj:#2563EB;--hr-data:#16A34A;--hr-any:#9CA3AF;--hr-fill:#FFFFFF}@media (prefers-color-scheme:dark){svg{--hr-ink:#F3F4F6;--hr-muted:#9CA3AF;--hr-class:#FB923C;--hr-obj:#60A5FA;--hr-data:#4ADE80;--hr-any:#6B7280;--hr-fill:#1C1C1E}}text{font-family:Inter,'Segoe UI',system-ui,-apple-system,'Helvetica Neue',Arial,sans-serif}.c{fill:none;stroke:var(--hr-class);stroke-width:2}.cn{font-size:20px;font-weight:600;fill:var(--hr-ink)}.un{font-size:15px;font-weight:600;fill:var(--hr-ink)}.hit{fill:none;stroke:transparent;stroke-width:12}.l{fill:none;stroke:var(--hr-ink);stroke-width:1.8}.ln{font-size:15px;font-weight:600;fill:var(--hr-ink)}.a{fill:none;stroke:var(--hr-any);stroke-width:1.6;stroke-dasharray:6 5}.an{font-size:15px;font-style:italic;fill:var(--hr-muted)}.e{fill:none;stroke-width:1.7}.e.obj{stroke:var(--hr-obj)}.e.data{stroke:var(--hr-data)}.e.sub{stroke:var(--hr-class)}.pn{font-size:15.5px}.pn.obj{fill:var(--hr-obj)}.pn.data{fill:var(--hr-data)}.mo{fill:var(--hr-obj)}.md{fill:var(--hr-data)}.ms{fill:var(--hr-fill);stroke:var(--hr-class);stroke-width:1.4}</style></defs>
@@ -181,6 +191,11 @@ footer { border-top:1px solid var(--line); padding:24px 28px; color:var(--faint)
     e.preventDefault();
     if (!e.repeat) side.click();
   });
+})();
+(() => {
+  const d = document.querySelector('#metadata details');
+  const open = () => { if (d && location.hash === '#metadata') d.open = true; };
+  open(); addEventListener('hashchange', open);
 })();
 const q = document.getElementById('q');
 q.addEventListener('input', () => {
