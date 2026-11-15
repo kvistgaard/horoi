@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.3.0] – 2026-11-15
+
 ### Added
 
 - `skos:prefLabel` and `skos:definition` as a term's label and definition
@@ -29,14 +31,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 
 - The sidebar's term list no longer shows a scrollbar
-- In the Metadata section, an address given as text is now a link
 - With no `vann` header, the namespace is now the one most terms share
 - An ontology with no version now stops the build before any file is written
 - A term with no card on the page is no longer a link
 - A licence given as text now shows as text, not as a link
 - With `--all-tags`, a tag that lacks one of the ontology's files is now left out with a warning
 - The diagram now draws a superclass that is declared in another file
-
 - The diagram now draws properties with no domain, from an *any resource* node under the classes
 - The diagram now draws a class only once when properties from two classes point to it
 - The diagram now draws self-loops on a class that is the range of another class's property
@@ -75,6 +75,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 First release.
 
-[Unreleased]: https://github.com/kvistgaard/horoi/compare/v0.2.0...HEAD
+[Unreleased]: https://github.com/kvistgaard/horoi/compare/v0.3.0...HEAD
+[0.3.0]: https://github.com/kvistgaard/horoi/compare/v0.2.0...v0.3.0
 [0.2.0]: https://github.com/kvistgaard/horoi/compare/v0.1.0...v0.2.0
 [0.1.0]: https://github.com/kvistgaard/horoi/releases/tag/v0.1.0
