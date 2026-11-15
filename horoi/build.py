@@ -8,9 +8,9 @@ Layout of the output folder, for an ontology file named <stem>.ttl:
 
 An ontology kept in several files gets one page, from them all, and each file
 in its four serialisations. The page documents the first file's ontology, and
-the diagram is named after that file. If that ontology lists modules with
-dcterms:hasPart, each listed module needs one of the files, and the page has a
-section per module.
+the diagram is named after that file. A file belongs to the ontology only if its
+own ontology is stated to be a part of the first file's. Every part that terms
+are rdfs:isDefinedBy is a module, with a section of the page.
 
 A release is a git tag v<x.y.z>. Its files are built from the ontology as
 committed at that tag, and a tag whose version differs is refused. A tag
@@ -25,7 +25,7 @@ import warnings
 from pathlib import Path
 
 from rdflib import Graph
-from rdflib.namespace import DCTERMS, OWL, RDF, RDFS
+from rdflib.namespace import DCTERMS, OWL, RDF
 
 from .diagram import ontology
 from .page import version_of, warn, write
@@ -41,42 +41,51 @@ def version_or_stop(g, onto=None):
 
 
 def load(sources):
-    """An ontology from its files: the graph of them all, each file's own graph, and
-    the ontology the page documents. That is the first file's, or for one file
-    None, which leaves it to the file."""
+    """An ontology from its files: the graph of them all, each file's own graph, the
+    ontology the page documents, and the files kept. The ontology is the first
+    file's, or for one file None, which leaves it to the file.
+
+    A file is kept if the files themselves say it belongs: its ontology is a part of
+    the first file's, by dcterms:hasPart or dcterms:isPartOf, directly or through
+    another part. So is a file that declares no other ontology. Any other file is
+    left out, with a warning."""
     graphs = []
     for source in sources:
         graphs.append(Graph())
         graphs[-1].parse(source, format="turtle")
-    if len(graphs) == 1:
-        check_modules(graphs[0], ontology(graphs[0]), graphs, sources)
-        return graphs[0], graphs, None
-    if len({Path(s).stem for s in sources}) < len(sources):
+    if len(graphs) > 1 and len({Path(s).stem for s in sources}) < len(sources):
         sys.exit("horoi: two of the ontology's files have the same name")
     onto = next(graphs[0].subjects(RDF.type, OWL.Ontology), None)
     if onto is None:
+        if len(graphs) == 1:
+            return graphs[0], graphs, None, list(sources)
         sys.exit(f"horoi: {Path(sources[0]).name}, the first file, declares no owl:Ontology")
+    links = {(s, o) for own in graphs for s, o in own.subject_objects(DCTERMS.hasPart)}
+    links |= {(o, s) for own in graphs for s, o in own.subject_objects(DCTERMS.isPartOf)}
+    whole = {onto}
+    while True:                          # the parts, and theirs
+        more = {part for of, part in links if of in whole} - whole
+        if not more:
+            break
+        whole |= more
+    kept = []
+    for i, own in enumerate(graphs):
+        declared = set(own.subjects(RDF.type, OWL.Ontology)) - {onto}
+        if i == 0 or not declared or declared & whole:
+            kept.append(i)
+        else:
+            warn(f"{Path(sources[i]).name} is left out, because nothing states that {min(declared, key=str)} is a part of {onto}, "
+                 "with dcterms:hasPart or dcterms:isPartOf")
+    found = {o for i in kept for o in graphs[i].subjects(RDF.type, OWL.Ontology)}
+    for part in sorted(whole - found, key=str):
+        warn(f"{part} is a part of {onto}, but none of the files declares it")
+    sources, graphs = [sources[i] for i in kept], [graphs[i] for i in kept]
+    if len(graphs) == 1:
+        return graphs[0], graphs, None, sources
     g = Graph()
     for source in sources:
         g.parse(source, format="turtle")
-    check_modules(g, onto, graphs, sources)
-    return g, graphs, onto
-
-
-def check_modules(g, onto, graphs, sources):
-    """An ontology's modules are the parts it lists with dcterms:hasPart. Stop if a
-    part has no file, or a file's ontology defines terms without being a part."""
-    if onto is None:
-        return
-    parts = set(g.objects(onto, DCTERMS.hasPart))
-    for part in sorted(parts, key=str):
-        if (part, RDF.type, OWL.Ontology) not in g:
-            sys.exit(f"horoi: {part} is a part of {onto}, by dcterms:hasPart, but none of the files declares it")
-    for source, own in zip(sources, graphs):
-        for other in own.subjects(RDF.type, OWL.Ontology):
-            if other != onto and other not in parts and (None, RDFS.isDefinedBy, other) in g:
-                sys.exit(f"horoi: {Path(source).name} declares {other}, which defines terms, "
-                         f"but {onto} does not list it as a part, with dcterms:hasPart")
+    return g, graphs, onto, sources
 
 
 def distinct(files):
@@ -87,7 +96,7 @@ def distinct(files):
 def build_one(sources, folder, example=None, diagram="graph"):
     """Write the page, the diagram, and the four serialisations of each of the ontology's
     files. The page and the diagram are named after the first file."""
-    g, graphs, onto = load(sources)
+    g, graphs, onto, sources = load(sources)
     version = version_or_stop(g, onto)                          # before anything is written
     folder.mkdir(parents=True, exist_ok=True)
     for source, own in zip(sources, graphs):                   # each file as itself

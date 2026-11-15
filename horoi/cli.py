@@ -36,7 +36,7 @@ def main(argv=None):
         print(f"built {latest} at {args.out}" + (f"; releases: {', '.join(built)}" if built else ""))
         return 0
 
-    g, _, onto = load(distinct(args.ontology))
+    g, _, onto, _ = load(distinct(args.ontology))
     try:
         svg = draw(g, onto) if args.diagram == "graph" else folded.draw(g, onto, page=False)
     except Undrawable as e:

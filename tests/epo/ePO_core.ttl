@@ -4563,9 +4563,9 @@ epo:AcquiringParty a owl:Class ;
     skos:definition "The Role of an Agent that acts on the buying side of a Procurement Process."@en ;
     skos:prefLabel "Acquiring Party"@en .
 
-# Added for Horoi's test page, not in ePO 5.2.0: the modules, by dcterms:hasPart.
-epo:core dcterms:hasPart epo:acc, epo:awa, epo:cat, epo:con, epo:eva, epo:ful, epo:inv,
-        epo:not, epo:ord, epo:pay, epo:qua, epo:req, epo:sub .
+# Added for Horoi's test page, not in ePO 5.2.0: its parts, by dcterms:hasPart.
+epo:core dcterms:hasPart epo:acc, epo:awa, epo:cat, epo:con, epo:eva, epo:ful, epo:inv, epo:not, epo:ord, epo:pay, epo:qua, epo:req, epo:sub,
+        epo:acc-restriction, epo:awa-restriction, epo:cat-restriction, epo:con-restriction, epo:eva-restriction, epo:ful-restriction, epo:inv-restriction, epo:not-restriction, epo:ord-restriction, epo:core-restriction, epo:pay-restriction, epo:qua-restriction, epo:req-restriction, epo:sub-restriction .
 
 epo:core a owl:Ontology ;
     rdfs:label "eProcurement Ontology - core"@en ;

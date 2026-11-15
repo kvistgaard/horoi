@@ -13,6 +13,7 @@ from typing import Callable, NamedTuple
 from urllib.parse import quote
 
 from rdflib import BNode, Literal, Namespace
+from rdflib.collection import Collection
 from rdflib.namespace import DCTERMS, OWL, RDF, RDFS, SKOS
 
 from .axioms import expression, literal, members, union
@@ -39,6 +40,16 @@ METADATA = [(DCTERMS.title, "Title"), (RDFS.label, "Label"), (SKOS.prefLabel, "L
             (DCTERMS.source, "Source"), (VANN.preferredNamespaceUri, "Namespace"),
             (VANN.preferredNamespacePrefix, "Prefix"), (OWL.imports, "Imports"), (DCTERMS.hasPart, "Parts"),
             (SKOS.historyNote, "History note"), (SKOS.scopeNote, "Scope note"), (RDFS.seeAlso, "See also")]
+
+
+# The properties of a term that its card's "More statements" names in words.
+STATEMENTS = dict(METADATA) | {
+    RDF.type: "Type", RDFS.isDefinedBy: "Defined by", SKOS.altLabel: "Alternative label", SKOS.example: "Example",
+    SKOS.note: "Note", SKOS.editorialNote: "Editorial note", SKOS.changeNote: "Change note",
+    OWL.inverseOf: "Inverse of", OWL.disjointWith: "Disjoint with", OWL.propertyDisjointWith: "Disjoint with",
+    OWL.disjointUnionOf: "Disjoint union of", OWL.propertyChainAxiom: "Property chain", OWL.hasKey: "Key",
+    OWL.equivalentProperty: "Equivalent to", OWL.deprecated: "Deprecated"}
+KINDS = {"class": OWL.Class, "object property": OWL.ObjectProperty, "datatype property": OWL.DatatypeProperty}
 
 
 def svg_vars(colours):
@@ -84,9 +95,9 @@ def title_of(g, onto):
 
 
 def modules(g, onto):
-    """An ontology's modules, the ontology itself first and the parts it lists with
-    dcterms:hasPart after it, by title. None if it lists no part."""
-    parts = set(g.objects(onto, DCTERMS.hasPart)) - {onto} if onto is not None else set()
+    """An ontology's modules: the ontology itself first, then, by title, every other
+    ontology among the files that terms are rdfs:isDefinedBy. None if there is no other."""
+    parts = {m for m in g.subjects(RDF.type, OWL.Ontology) if m != onto and (None, RDFS.isDefinedBy, m) in g} if onto is not None else set()
     if not parts:
         return []
     return [onto] + sorted(parts, key=lambda m: ((title_of(g, m) or "").lower(), str(m)))
@@ -244,6 +255,61 @@ class Page:
         return ('<section id="metadata"><details><summary><h2>Metadata</h2></summary>'
                 f'<dl class="md">{"".join(rows)}</dl></details></section>')
 
+    def more(self, t, badge):
+        """What a term states beyond what its card already shows, a row per property,
+        folded under "More statements". Nothing if there is nothing more."""
+        g = self.g
+        # The page is the ontology's, so a term defined by it, or by its version, says nothing more.
+        shown = {(RDF.type, KINDS.get(badge)), (RDFS.isDefinedBy, self.onto), (RDFS.isDefinedBy, g.value(self.onto, OWL.versionIRI))}
+        skip = {RDFS.subClassOf, OWL.equivalentClass} if badge == "class" else {RDFS.domain, RDFS.range, RDFS.subPropertyOf}
+        if self.modules:
+            skip.add(RDFS.isDefinedBy)
+        name = label(g, t)
+        for p in (RDFS.label, SKOS.prefLabel):      # the label the card is headed with
+            used = {(p, o) for o in g.objects(t, p) if isinstance(o, Literal) and o.language in (None, "en") and str(o) == name}
+            if used:
+                shown |= used
+                break
+        for p in (SKOS.definition, RDFS.comment):   # and its definitions
+            used = {(p, o) for o in g.objects(t, p) if isinstance(o, Literal) and o.language in (None, "en")}
+            if used:
+                shown |= used
+                break
+
+        def curie(x):
+            try:
+                pre, _, local_name = g.namespace_manager.compute_qname(str(x), generate=False)
+                return f"{pre}:{local_name}"
+            except (KeyError, ValueError):
+                return str(x)
+
+        def value(o):
+            if isinstance(o, Literal):
+                text = "\n".join(line.strip() for line in str(o).strip().splitlines())
+                if re.fullmatch(r"https?://\S+", text):
+                    return f'<a href="{escape(text)}">{escape(text)}</a>'
+                lang = f' <span class="lang">@{escape(o.language)}</span>' if o.language not in (None, "en") else ""
+                return escape(text) + lang
+            if isinstance(o, BNode):
+                if (o, RDF.first, None) in g:        # a list
+                    return ", ".join(filter(None, (value(m) for m in Collection(g, o))))
+                text = expression(g, o, self.short)
+                return None if text == "a class expression" else text
+            if str(o).startswith(self.ns):
+                return self.ref(o)
+            return f'<a href="{escape(str(o))}">{escape(curie(o))}</a>'
+
+        order = {p: i for i, p in enumerate(STATEMENTS)}
+        rows = []
+        for p in sorted(set(g.predicates(t)) - skip, key=lambda p: (order.get(p, len(order)), curie(p))):
+            values = [v for v in (value(o) for o in sorted(g.objects(t, p), key=str) if (p, o) not in shown) if v]
+            if values:
+                head = escape(STATEMENTS[p]) if p in STATEMENTS else f"<code>{escape(curie(p))}</code>"
+                rows.append(f'<dt title="{escape(curie(p))}">{head}</dt><dd>' + "".join(f'<span class="v">{v}</span>' for v in values) + "</dd>")
+        if not rows:
+            return ""
+        return f'<details class="more"><summary>More statements</summary><dl>{"".join(rows)}</dl></details>'
+
     def turtle_html(self, text):
         out = []
         for line in escape(text).split("\n"):
@@ -309,7 +375,7 @@ class Page:
         return (f'<article class="term" id="{escape(n)}">'
                 f'<header><h3>{escape(n)}</h3><span class="badge {badge.split()[0]}">{badge}</span></header>'
                 f'<p class="iri">{escape(str(t))}<span class="lbl">label “{escape(name)}”</span></p>'
-                f'{defs}<dl>{dl}</dl>{drawing}</article>')
+                f'{defs}<dl>{dl}</dl>{self.more(t, badge)}{drawing}</article>')
 
     def render(self, svg, stem, example=None, version_links="", files=None, per_class=True):
         """files: the names of the ontology's files, without .ttl, the first file's
@@ -637,9 +703,9 @@ h2 {{ font-size:13px; letter-spacing:2px; text-transform:uppercase; color:var(--
 #metadata summary {{ display:flex; align-items:center; gap:10px; width:fit-content; cursor:pointer; list-style:none; }}
 #metadata summary::-webkit-details-marker {{ display:none; }}
 #metadata summary h2 {{ margin:0; }}
-#metadata summary::after {{ content:""; width:7px; height:7px; margin-top:-3px; border-right:1.5px solid var(--accent); border-bottom:1.5px solid var(--accent);
+#metadata summary::after {{ content:""; width:7px; height:7px; border-right:1.5px solid var(--accent); border-bottom:1.5px solid var(--accent);
   transform:rotate(-45deg); transition:transform var(--fold) var(--ease); }}
-#metadata details[open] summary::after {{ transform:rotate(45deg); }}
+#metadata details[open] summary::after {{ transform:translateY(-2px) rotate(45deg); }}
 .md {{ display:grid; grid-template-columns:150px minmax(0,1fr); gap:8px 16px; margin:18px 0 0; font-size:14.5px; }}
 .md dt {{ font-size:13px; color:var(--faint); padding-top:2px; }} .md dd {{ margin:0; overflow-wrap:anywhere; white-space:pre-line; }}
 .md .lang {{ color:var(--faint); font-size:12px; }}
@@ -657,6 +723,14 @@ h2 {{ font-size:13px; letter-spacing:2px; text-transform:uppercase; color:var(--
 .iri {{ margin:6px 0 12px; font:13px var(--mono); color:var(--faint); }} .iri .lbl {{ font-family:var(--sans); margin-left:12px; }}
 .def {{ font-size:17.5px; margin:0 0 6px; }}
 .term dl {{ display:grid; grid-template-columns:150px 1fr; gap:8px 16px; margin:16px 0 0; padding-top:14px; border-top:1px dashed var(--line); }}
+.more {{ margin-top:14px; }}
+.more summary {{ display:flex; align-items:center; gap:8px; width:fit-content; cursor:pointer; list-style:none; font-size:13px; color:var(--faint); }}
+.more summary::-webkit-details-marker {{ display:none; }}
+.more summary::after {{ content:""; width:6px; height:6px; border-right:1.5px solid currentColor; border-bottom:1.5px solid currentColor;
+  transform:rotate(-45deg); transition:transform var(--fold) var(--ease); }}
+.more[open] summary::after {{ transform:translateY(-2px) rotate(45deg); }}
+.term .more dl {{ margin-top:10px; padding-top:0; border-top:none; }}
+.more .v {{ flex-basis:100%; font-size:14.5px; overflow-wrap:anywhere; white-space:pre-line; }} .more .lang {{ color:var(--faint); font-size:12px; }}
 .term dt {{ font-size:13px; color:var(--faint); padding-top:3px; }} .term dd {{ margin:0; display:flex; flex-wrap:wrap; gap:6px; align-items:center; }}
 .chip {{ font:13px var(--mono); padding:2px 8px; border-radius:4px; background:var(--accent-soft); color:var(--accent); }}
 .chip.any {{ background:var(--code); color:var(--muted); font-style:italic; font-family:var(--sans); }}

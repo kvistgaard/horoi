@@ -14,11 +14,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - A union as a property's domain or range, shown by its member classes
 - A class's restrictions and equivalent classes on its card
 - A diagram on each class's card, for an ontology too large to draw whole
-- One page for an ontology kept in several files, such as a module and its restrictions
+- One page for an ontology kept in several files, its parts by `dcterms:hasPart` or `dcterms:isPartOf`
 - Each of an ontology's files in four serialisations
-- Modules, listed with `dcterms:hasPart`, each with a section of the page
+- A section of the page for each module, a part that terms name with `rdfs:isDefinedBy`
 - A folded style for the diagram, with `--diagram folded`
 - A Metadata section with everything the ontology states about itself
+- **More statements** on a card, with everything else the term states
 - For a large ontology in the folded style, a diagram to zoom, with a class's properties on click and a full-screen button
 
 ### Removed

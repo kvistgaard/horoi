@@ -122,8 +122,27 @@ class Build(unittest.TestCase):
         both = SMALL + ('@prefix skos: <http://www.w3.org/2004/02/skos/core#> .\n'
                         'ex:Pet skos:definition "A companion animal." .\n')
         html = Page(graph(both)).render(None, "pets")
-        self.assertIn("A companion animal.", html)
-        self.assertNotIn("An animal kept for company.", html)
+        pet = html.split('id="Pet"')[1].split("</article>")[0]
+        self.assertIn('<p class="def">A companion animal.</p>', pet)
+        self.assertNotIn('<p class="def">An animal kept for company.</p>', pet)
+        self.assertIn('<dt title="rdfs:comment">Comment</dt><dd><span class="v">An animal kept for company.</span></dd>', pet)    # under More statements
+
+    def test_a_card_folds_everything_else_the_term_states_under_more_statements(self):
+        extra = SMALL + ('@prefix skos: <http://www.w3.org/2004/02/skos/core#> .\n'
+                         'ex:Pet skos:example "A cat." ; owl:disjointWith ex:Owner ; ex:legs 4 ; rdfs:label "Haustier"@de .\n'
+                         'ex:keptBy a owl:FunctionalProperty ; owl:propertyChainAxiom ( ex:keptBy ex:name ) .\n')
+        html = Page(graph(extra)).render(None, "pets")
+        pet = html.split('id="Pet"')[1].split("</article>")[0]
+        more = pet.split('<details class="more"><summary>More statements</summary>')[1].split("</details>")[0]
+        self.assertIn('<dt title="skos:example">Example</dt><dd><span class="v">A cat.</span></dd>', more)
+        self.assertIn('<dt title="owl:disjointWith">Disjoint with</dt><dd><span class="v"><a class="chip" href="#Owner">', more)
+        self.assertIn('<dt title="ex:legs"><code>ex:legs</code></dt><dd><span class="v">4</span></dd>', more)    # a property with no name in words
+        self.assertIn('Haustier <span class="lang">@de</span>', more)                                # a label in another language
+        self.assertNotIn(">Pet<", more)                             # the label the card is headed with is not repeated
+        kept = html.split('id="keptBy"')[1].split("</article>")[0]
+        self.assertIn('<dt title="rdf:type">Type</dt><dd><span class="v"><a href="http://www.w3.org/2002/07/owl#FunctionalProperty">owl:FunctionalProperty</a>', kept)
+        self.assertIn('<dt title="owl:propertyChainAxiom">Property chain</dt><dd><span class="v"><a class="chip" href="#keptBy">pets:keptBy</a>, <a class="chip" href="#name">pets:name</a>', kept)
+        self.assertNotIn('class="more"', html.split('id="Owner"')[1].split("</article>")[0])       # nothing more, so no fold
 
     def test_an_ontology_with_no_version_stops_before_writing(self):
         with tempfile.TemporaryDirectory() as tmp:
@@ -356,7 +375,7 @@ RESTRICTIONS = """@prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix m: <https://example.org/proc#> .
 m:awa-restriction a owl:Ontology ; dcterms:title "Awarding restrictions"@en ;
-    owl:versionInfo "2.0.0" ; owl:imports m:awa .
+    owl:versionInfo "2.0.0" ; owl:imports m:awa ; dcterms:isPartOf m:awa .
 m:concerns rdfs:domain m:Notification ; rdfs:range m:Procedure .
 m:Notification rdfs:subClassOf [ a owl:Restriction ; owl:onProperty m:concerns ; owl:cardinality 1 ] .
 """
@@ -471,15 +490,36 @@ class Modules(unittest.TestCase):
         self.assertIn('<p class="def">A record.</p><p class="def">A written record.</p>', html)
         self.assertIn('href="#Document"', html[sub:])               # a link across modules
 
-    def test_a_part_with_no_file_stops_the_build(self):
-        with tempfile.TemporaryDirectory() as tmp, self.assertRaises(SystemExit) as e:
-            self.build(tmp, ("core.ttl", CORE))
-        self.assertIn("none of the files declares it", str(e.exception.code))
+    def test_a_file_that_nothing_states_to_be_a_part_is_left_out(self):
+        with tempfile.TemporaryDirectory() as tmp, contextlib.redirect_stderr(io.StringIO()) as err:
+            html = self.build(tmp, ("core.ttl", CORE.replace("m:core dcterms:hasPart m:sub .\n", "")), ("sub.ttl", SUB))
+            self.assertFalse((Path(tmp) / "dist" / "sub.ttl").exists())
+        self.assertIn("sub.ttl is left out, because nothing states that https://example.org/proc#sub is a part of", err.getvalue())
+        self.assertNotIn('id="Tender"', html)
+        self.assertNotIn('<section id="modules">', html)
 
-    def test_a_module_not_listed_as_a_part_stops_the_build(self):
-        with tempfile.TemporaryDirectory() as tmp, self.assertRaises(SystemExit) as e:
-            self.build(tmp, ("core.ttl", CORE.replace("m:core dcterms:hasPart m:sub .\n", "")), ("sub.ttl", SUB))
-        self.assertIn("does not list it as a part", str(e.exception.code))
+    def test_a_part_may_state_it_itself_or_be_a_part_of_a_part(self):
+        own = SUB.replace('owl:versionInfo "2.0.0" .', 'owl:versionInfo "2.0.0" ; dcterms:isPartOf m:core .')
+        deeper = SUB.replace("m:sub", "m:deep").replace("Submission", "Deep").replace("m:Tender", "m:Bid").replace(
+            'owl:versionInfo "2.0.0" .', 'owl:versionInfo "2.0.0" ; dcterms:isPartOf m:sub .')
+        with tempfile.TemporaryDirectory() as tmp, contextlib.redirect_stderr(io.StringIO()) as err:
+            html = self.build(tmp, ("core.ttl", CORE.replace("m:core dcterms:hasPart m:sub .\n", "")), ("sub.ttl", own), ("deep.ttl", deeper))
+        self.assertNotIn("left out", err.getvalue())
+        self.assertIn('id="module-sub"', html)
+        self.assertIn('id="module-deep"', html)
+
+    def test_a_part_that_defines_no_terms_has_no_section(self):
+        extra = SUB.replace("rdfs:isDefinedBy m:sub ; ", "")
+        with tempfile.TemporaryDirectory() as tmp:
+            html = self.build(tmp, ("core.ttl", CORE), ("sub.ttl", extra))
+        self.assertNotIn('<section id="modules">', html)
+        self.assertIn('id="Tender"', html)                          # its terms are on the page all the same
+
+    def test_a_part_with_no_file_is_a_warning(self):
+        with tempfile.TemporaryDirectory() as tmp, contextlib.redirect_stderr(io.StringIO()) as err:
+            html = self.build(tmp, ("core.ttl", CORE))
+        self.assertIn("https://example.org/proc#sub is a part of https://example.org/proc#core, but none of the files declares it", err.getvalue())
+        self.assertIn('<dt title="dcterms:hasPart">Parts</dt>', html)
 
 
 class Metadata(unittest.TestCase):
