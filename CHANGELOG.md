@@ -27,7 +27,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - A section of the page for each module, a part that terms name with `rdfs:isDefinedBy`
 - A folded style for the diagram, with `--diagram folded`
 - A Metadata section with everything the ontology states about itself
-- **More statements** on a card, with everything else the term states
+- More statements on a card, with everything else the term states
 - For a large ontology in the folded style, a diagram to zoom, with a class's properties on click and a full-screen button
 
 ### Removed
