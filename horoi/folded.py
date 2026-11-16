@@ -26,7 +26,8 @@ from html import escape
 from rdflib import BNode, Literal, URIRef
 from rdflib.namespace import OWL, RDF, RDFS
 
-from .axioms import expression, is_datatype, literal, quantifier, restrictions, union
+from .axioms import (canonical, common, declared, expression, is_datatype, literal, quantifier, restrictions, stated,
+                     union)
 from .diagram import Undrawable, local, name_of, namespace, style, term
 
 FULL = 12            # the most classes drawn with their rows
@@ -65,66 +66,98 @@ def defs():
             f'<style>{style()}{STYLE}</style></defs>')
 
 
-def first(g, s, p):
-    """One value of a property, the same at every build."""
-    return min(g.objects(s, p), key=str, default=None)
-
-
 def read(g, onto=None):
-    """The boxes, by key: a class's IRI, a class expression's node, or ANY. Each has its
+    """The boxes, by key: a class's IRI, a class expression's words, or ANY. Each has its
     name, its hover text, its rows and the rows that reach it. With them, each
-    class's superclasses, and the classes and properties that have a card on the page."""
+    class's superclasses, and the classes and properties that have a card on the page.
+
+    A property with several domains, which OWL reads as their intersection, is a row
+    of each class that every one of them names; if none is named by all, of a box for
+    the intersection. Its row's range is every range it states, and reaches each class
+    that every one of them names."""
     ns, prefix = namespace(g, onto)
     ours = lambda x: str(x).startswith(ns)
     classes = sorted({c for c in g.subjects(RDF.type, OWL.Class) if isinstance(c, URIRef) and ours(c)}, key=str)
     if not classes:
         raise Undrawable("the ontology declares no class of its own")
+    exprs = {}                           # the key of an expression's box -> the expressions it intersects
+
+    def cut(text):
+        return text if len(text) <= LONG else text[:LONG - 1].rstrip() + "…"
 
     def name(x):
         if isinstance(x, Literal):
             return literal(x)
+        if x in exprs:
+            return cut(" and ".join(expression(g, v, name, len(exprs[x]) > 1) for v in exprs[x]))
         if isinstance(x, BNode):
-            text = expression(g, x, name)
-            return text if len(text) <= LONG else text[:LONG - 1].rstrip() + "…"
+            return cut(expression(g, x, name))
         return name_of(g, x, ns, prefix) if ours(x) else term(g, x, ns)
 
     def curie(x):
         if isinstance(x, Literal):
             return literal(x)
+        if x in exprs:
+            return " and ".join(expression(g, v, curie, len(exprs[x]) > 1) for v in exprs[x])
         return f"{prefix}:{local(x, ns)}" if ours(x) else term(g, x, ns)
 
-    def range_of(filler, data):
-        """What a row says after its colon, in parts joined by "or": each with the class it names, if any."""
-        if filler is None:
-            return []
-        if isinstance(filler, BNode):
-            return [(name(m), m) for m in union(g, filler)] or [(name(filler), None)]
-        return [(name(filler), None if data or is_datatype(g, filler) else filler)]
+    def owners(values):
+        """The boxes a row of a property with these domains goes to."""
+        if not values:
+            return [ANY]
+        found = common(g, values)
+        if found:
+            return found
+        # one box for one class expression, whatever the order of a union's members
+        key = ("expression",) + tuple(sorted(("or",) + tuple(sorted(map(str, union(g, v)))) if union(g, v)
+                                             else (canonical(g, v),) for v in values))
+        exprs.setdefault(key, values)
+        return [key]
+
+    def parts_of(v, data):
+        """One range or filler in words, in parts: each with the class it names, if any."""
+        if isinstance(v, BNode):
+            found = union(g, v)
+            if found:
+                return [part for i, m in enumerate(found) for part in ([(" or ", None)] if i else []) + [(name(m), m)]]
+            return [(name(v), None)]
+        return [(name(v), None if data or is_datatype(g, v) else v)]
+
+    def range_of(values, data):
+        """What a row says after its arrow, in parts: each with the class it names, if any."""
+        if len(values) == 1:
+            return parts_of(values[0], data)
+        out = []
+        for i, v in enumerate(values):
+            part = parts_of(v, data)
+            out += ([(" and ", None)] if i else []) + ([("(", None)] + part + [(")", None)] if len(part) > 1 else part)
+        return out
 
     rows = defaultdict(list)
 
-    def add(owner, p, data, filler, label, tip):
+    def add(owner, p, data, values, label, tip):
         """A row: its label is in parts, each with the property it names, if any."""
-        parts = range_of(filler, data)
-        said = " or ".join(t for t, _ in parts)
-        if len(said) > LONG:             # a long union is cut short; the hover text and the card have it whole
+        parts = range_of(values, data)
+        if len(values) == 1:
+            reach = [c for _, c in parts if c is not None]
+        else:
+            reach = [] if data else [c for c in common(g, values) if not is_datatype(g, c)]
+        said = "".join(t for t, _ in parts)
+        if len(said) > LONG:             # a long range is cut short; the hover text and the card have it whole
             parts = [(said[:LONG - 1].rstrip() + "…", None)]
-        rows[owner].append({"name": "".join(t for t, _ in label), "label": label, "data": data, "parts": parts, "type": " or ".join(t for t, _ in parts) or None,
-                            "targets": [c for _, c in parts if c is not None], "tip": tip})
+        rows[owner].append({"name": "".join(t for t, _ in label), "label": label, "data": data, "parts": parts,
+                            "type": "".join(t for t, _ in parts) or None, "targets": reach, "tip": tip})
 
     for kind in (OWL.DatatypeProperty, OWL.ObjectProperty):
         for p in sorted({p for p in g.subjects(RDF.type, kind) if isinstance(p, URIRef)}, key=str):
             data = kind == OWL.DatatypeProperty
             parents = sorted((x for x in g.objects(p, RDFS.subPropertyOf) if isinstance(x, URIRef)), key=str)
-            dom, rng = first(g, p, RDFS.domain), first(g, p, RDFS.range)
-            for x in parents:            # a sub-property takes its parent's domain and range
-                dom = dom if dom is not None else first(g, x, RDFS.domain)
-                rng = rng if rng is not None else first(g, x, RDFS.range)
-            owners = [ANY] if dom is None else union(g, dom) or [dom]
-            if not ours(p) and not any(o in classes for o in owners):
+            mine = owners(declared(g, p, RDFS.domain))
+            if not ours(p) and not any(o in classes for o in mine):
                 continue
+            rng = declared(g, p, RDFS.range)
             under = [x for x in parents if ours(x)]
-            for owner in owners:
+            for owner in mine:
                 add(owner, p, data, rng, [(name(p), p)] + [s for x in under for s in ((" ⊑ ", None), (name(x), x))],
                     curie(p) + "".join(f" ⊑ {curie(x)}" for x in under))
     for c in classes:
@@ -133,20 +166,21 @@ def read(g, onto=None):
             if isinstance(p, BNode) or word in ("value", "Self"):
                 continue                 # an inverse, a single value, or itself: the card has them
             data = (p, RDF.type, OWL.DatatypeProperty) in g
-            if filler is None:           # a bare cardinality reaches the property's range
-                filler = first(g, p, RDFS.range)
-            add(c, p, data or (filler is not None and is_datatype(g, filler)), filler,
+            # a bare cardinality reaches the property's range
+            values = [filler] if filler is not None else stated(g, p, RDFS.range)
+            add(c, p, data or any(is_datatype(g, v) for v in values), values,
                 [(name(p), p), (f" ({word})", None)], expression(g, r, curie))
 
     supers = {c: sorted((d for d in set(g.objects(c, RDFS.subClassOf))
                          if isinstance(d, URIRef) and d not in (c, OWL.Thing)), key=str) for c in classes}
     keys = list(dict.fromkeys(classes + sorted({d for ds in supers.values() for d in ds}, key=str)
-                              + sorted((o for o in rows if o != ANY), key=str) + ([ANY] if ANY in rows else [])))
+                              + sorted((o for o in rows if o != ANY), key=lambda o: (o in exprs, str(o)))
+                              + ([ANY] if ANY in rows else [])))
     boxes = {}
     for k in keys:
         mine = {(r["name"], r["type"], r["tip"]): r for r in rows.get(k, [])}      # stated twice, drawn once
         boxes[k] = {"name": ANY if k == ANY else name(k),
-                    "tip": "No domain declared." if k == ANY else expression(g, k, curie),
+                    "tip": "No domain declared." if k == ANY else curie(k) if k in exprs else expression(g, k, curie),
                     "plain": isinstance(k, URIRef),
                     "out": sorted(mine.values(), key=lambda r: (not r["data"], r["name"].lower(), r["type"] or "")),
                     "in": []}
@@ -312,8 +346,8 @@ def draw(g, onto=None, page=True):
                 tail = (f'<tspan class="ty"> ← </tspan><tspan class="ty go{"" if k != ANY else " no"}" '
                         f'data-c="{at[k]}">{escape(boxes[k]["name"])}</tspan>')
             elif r["type"]:
-                tail = '<tspan class="ty"> → </tspan>' + '<tspan class="ty"> or </tspan>'.join(
-                    f'<tspan class="ty{f""" go" data-c="{at[c]}""" if click and c in at else ""}">{escape(text)}</tspan>'
+                tail = '<tspan class="ty"> → </tspan>' + "".join(
+                    f'<tspan class="ty{f""" go" data-c="{at[c]}""" if click and c is not None and c in at else ""}">{escape(text)}</tspan>'
                     for text, c in r["parts"])
             else:
                 tail = ""

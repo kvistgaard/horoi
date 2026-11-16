@@ -7,18 +7,21 @@ import io
 import os
 import re
 import subprocess
+import sys
 import tempfile
 import unittest
+import warnings
 from pathlib import Path
 from unittest import mock
 
-from rdflib import Graph, URIRef
+from rdflib import BNode, Graph, URIRef
+from rdflib.compare import isomorphic
 
 from horoi import folded
 from horoi.build import build
 from horoi.cli import main
-from horoi.diagram import Undrawable, draw
-from horoi.page import DARK_CSS, Group, Page, warn
+from horoi.diagram import Undrawable, draw, draw_class
+from horoi.page import DARK_CSS, Group, Page, warn, write
 
 HERE = Path(__file__).resolve().parent
 EXAMPLE = HERE / "example.ttl"          # the Decision ontology, do, as a real case
@@ -652,6 +655,147 @@ class FoldedStyle(unittest.TestCase):
                 self.assertEqual(main(["build", str(src), "--out", str(Path(tmp) / "out"), "--diagram", "folded"]), 0)
             self.assertIn('class="hr-diagram folded"', (Path(tmp) / "pets.svg").read_text(encoding="utf-8"))
             self.assertIn('class="hr-diagram folded"', (Path(tmp) / "out" / "index.html").read_text(encoding="utf-8"))
+
+
+# A property with two domains and two ranges, which OWL reads as their intersections;
+# two properties with the same expression as their domain; two restrictions whose rows
+# read the same until they are cut short; and two expressions a class is disjoint with.
+SHOP = """@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ex: <https://example.org/shop#> .
+<https://example.org/shop> a owl:Ontology ; owl:versionInfo "1.0.0" ; rdfs:label "Shop" .
+ex:Order a owl:Class ; rdfs:label "Order" .
+ex:Invoice a owl:Class ; rdfs:label "Invoice" .
+ex:Receipt a owl:Class ; rdfs:label "Receipt" .
+ex:Lot a owl:Class ; rdfs:label "Lot" .
+ex:Batch a owl:Class ; rdfs:label "Batch" .
+ex:Gift a owl:Class ; rdfs:label "Gift" ;
+    owl:disjointWith [ a owl:Class ; owl:unionOf ( ex:Order ex:Invoice ) ], [ a owl:Class ; owl:unionOf ( ex:Lot ex:Batch ) ] .
+ex:One a owl:Class ; rdfs:label "A class with a very long name, the first" .
+ex:Two a owl:Class ; rdfs:label "A class with a very long name, the second" .
+ex:Three a owl:Class ; rdfs:label "A class with a very long name, the third" .
+ex:Basket a owl:Class ; rdfs:label "Basket" ;
+    rdfs:subClassOf [ a owl:Restriction ; owl:onProperty ex:holds ; owl:someValuesFrom [ a owl:Class ; owl:unionOf ( ex:One ex:Two ) ] ],
+                    [ a owl:Restriction ; owl:onProperty ex:holds ; owl:someValuesFrom [ a owl:Class ; owl:unionOf ( ex:One ex:Three ) ] ] .
+ex:holds a owl:ObjectProperty ; rdfs:label "holds" .
+ex:concerns a owl:ObjectProperty ; rdfs:label "concerns" ;
+    rdfs:domain [ a owl:Class ; owl:unionOf ( ex:Order ex:Invoice ) ], [ a owl:Class ; owl:unionOf ( ex:Order ex:Receipt ) ] ;
+    rdfs:range [ a owl:Class ; owl:unionOf ( ex:Lot ex:Batch ) ], ex:Lot .
+ex:wraps a owl:ObjectProperty ; rdfs:label "wraps" ;
+    rdfs:domain [ a owl:Class ; owl:intersectionOf ( ex:Order [ a owl:Restriction ; owl:onProperty ex:concerns ; owl:someValuesFrom ex:Gift ] ) ] .
+ex:tags a owl:ObjectProperty ; rdfs:label "tags" ;
+    rdfs:domain [ a owl:Class ; owl:intersectionOf ( ex:Order [ a owl:Restriction ; owl:onProperty ex:concerns ; owl:someValuesFrom ex:Gift ] ) ] .
+"""
+SHOP_NS = "https://example.org/shop#"
+
+
+def relabelled(g, reverse):
+    """A copy of the graph with its blank nodes renamed, so that their names sort in the
+    order of the original's, or in the reverse order."""
+    nodes = sorted({x for t in g for x in t if isinstance(x, BNode)}, key=str)
+    names = {b: BNode(f"x{i:04d}") for i, b in enumerate(reversed(nodes) if reverse else nodes)}
+    h = Graph()
+    for prefix, uri in g.namespaces():
+        h.bind(prefix, uri, override=True, replace=True)
+    for t in g:
+        h.add(tuple(names.get(x, x) for x in t))
+    return h
+
+
+def card(html, term):
+    return html.split(f'<article class="term" id="{term}">')[1].split("</article>")[0]
+
+
+def row(card_html, name):
+    """The value of a card's row, or None if the card has no such row."""
+    found = re.search(rf"<dt>{name}</dt><dd>(.*?)</dd>", card_html)
+    return found.group(1) if found else None
+
+
+class Faithful(unittest.TestCase):
+    """The page follows from the ontology file, the same at every build, and leaves out
+    nothing it states."""
+
+    def test_the_names_of_blank_nodes_change_nothing(self):
+        g = graph(SHOP)
+        for style in ("graph", "folded"):
+            pages = []
+            for reverse in (False, True):
+                with tempfile.TemporaryDirectory() as tmp, contextlib.redirect_stderr(io.StringIO()):
+                    write(relabelled(g, reverse), Path(tmp), "shop", diagram=style)
+                    pages.append({f.name: f.read_text(encoding="utf-8") for f in Path(tmp).iterdir()})
+            self.assertEqual(pages[0], pages[1], style)
+
+    def test_a_property_card_shows_every_domain_and_range_it_states(self):
+        connects = row(card(Page(graph(SHOP)).render(None, "shop", per_class=False), "concerns"), "Connects")
+        domain, range_ = connects.split('<span class="edge">')
+        for term in ("Order", "Invoice", "Receipt"):
+            self.assertIn(f'href="#{term}"', domain)
+        for term in ("Lot", "Batch"):
+            self.assertIn(f'href="#{term}"', range_)
+
+    def test_a_class_counts_as_a_domain_or_range_only_if_every_statement_names_it(self):
+        g = graph(SHOP)
+        html = Page(g).render(None, "shop", per_class=False)
+        self.assertIn('href="#concerns"', row(card(html, "Order"), "Domain of"))
+        self.assertIn('href="#concerns"', row(card(html, "Lot"), "Range of"))
+        for term, name in (("Invoice", "Domain of"), ("Receipt", "Domain of"), ("Batch", "Range of")):
+            self.assertNotIn("concerns", row(card(html, term), name) or "", term)
+        boxes, _, _ = folded.read(g)
+        out = lambda c: [r["name"] for r in boxes[URIRef(SHOP_NS + c)]["out"]]
+        reach = lambda c: [r["name"] for r in boxes[URIRef(SHOP_NS + c)]["in"]]
+        self.assertIn("concerns", out("Order"))
+        self.assertNotIn("concerns", out("Invoice") + out("Receipt"))
+        self.assertIn("concerns", reach("Lot"))
+        self.assertNotIn("concerns", reach("Batch"))
+        said = next(r["type"] for r in boxes[URIRef(SHOP_NS + "Order")]["out"] if r["name"] == "concerns")
+        self.assertIn("Batch", said)                                # the row's range has both statements
+        self.assertIn("concerns", draw_class(g, URIRef(SHOP_NS + "Order")))
+        self.assertNotIn("concerns", draw_class(g, URIRef(SHOP_NS + "Invoice")) or "")
+        with self.assertRaises(Undrawable):                         # the intersection has no slot in the whole graph
+            draw(g)
+
+    def test_a_term_with_no_declared_prefix_is_named_by_its_iri(self):
+        g = graph(SMALL + "ex:Pet rdfs:subClassOf <https://example.org/other/Animal> .\n"
+                  "ex:keptBy rdfs:range <https://example.org/other/Keeper> .\n")
+        bound = set(g.namespaces())
+        drawings = [draw(g), folded.draw(g), draw_class(g, URIRef("https://example.org/pets#Pet"))]
+        self.assertEqual(set(g.namespaces()), bound)                # drawing binds no prefix of its own
+        for svg in drawings:
+            self.assertIsNone(re.search(r"\bns\d+:", svg))
+        self.assertIn("https://example.org/other/Animal", drawings[1])
+        self.assertIn("https://example.org/other/Keeper", drawings[0])
+        with tempfile.TemporaryDirectory() as tmp:
+            for style in ("graph", "folded"):
+                write(g, Path(tmp), "pets", diagram=style)
+                self.assertIsNone(re.search(r"\bns\d+:", (Path(tmp) / "index.html").read_text(encoding="utf-8")), style)
+
+    def test_every_serialisation_holds_the_files_graph(self):
+        restrictions = HERE / "sources" / "epo" / "eNotice_restrictions.ttl"   # whose lists pretty-xml wrote twice
+        with tempfile.TemporaryDirectory() as tmp:
+            src = Path(tmp) / "shop.ttl"
+            src.write_text(SHOP, encoding="utf-8")
+            for f in (src, restrictions):
+                with contextlib.redirect_stderr(io.StringIO()):
+                    build(f, Path(tmp) / f.stem)
+                for ext, fmt in ((".rdf", "xml"), (".jsonld", "json-ld"), (".nt", "nt")):
+                    with warnings.catch_warnings():         # rdflib's JSON-LD reader warns of its own internals
+                        warnings.simplefilter("ignore", DeprecationWarning)
+                        out = Graph().parse(Path(tmp) / f.stem / f"{f.stem}{ext}", format=fmt)
+                    self.assertTrue(isomorphic(out, graph(path=f)), f"{f.stem}{ext}")
+
+    def test_builds_in_two_runs_are_the_same_byte_for_byte(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            src = Path(tmp) / "shop.ttl"
+            src.write_text(SHOP, encoding="utf-8")
+            for seed in ("1", "2"):                 # Python orders sets by a seed of its own at each run
+                subprocess.run([sys.executable, "-m", "horoi.cli", "build", str(src), "--out", str(Path(tmp) / seed),
+                                "--diagram", "folded"], check=True, capture_output=True, cwd=HERE.parent,
+                               env={**os.environ, "PYTHONHASHSEED": seed})
+            runs = [{f.name: f.read_bytes() for f in (Path(tmp) / seed).iterdir() if f.is_file()} for seed in ("1", "2")]
+        self.assertEqual(sorted(runs[0]), ["index.html", "shop.jsonld", "shop.nt", "shop.rdf", "shop.svg", "shop.ttl"])
+        for name in runs[0]:
+            self.assertEqual(runs[0][name], runs[1][name], name)
 
 
 if __name__ == "__main__":

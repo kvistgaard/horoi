@@ -16,7 +16,7 @@ from rdflib import BNode, Literal, Namespace
 from rdflib.collection import Collection
 from rdflib.namespace import DCTERMS, OWL, RDF, RDFS, SKOS
 
-from .axioms import expression, literal, members, union
+from .axioms import common, declared, expression, in_order, literal, members, stated, union
 from . import folded
 from .diagram import DARK, LIGHT, Undrawable, defs, draw, draw_class, en, label, namespace, ontology
 
@@ -145,6 +145,7 @@ class Page:
         self.onto = ontology(g, onto)
         self.ns, self.prefix = namespace(g, self.onto)
         self.class_diagrams = False     # set when the ontology has no diagram of the whole
+        self.reached = {}               # rdfs:domain or rdfs:range -> each class -> the properties it is one of
         self.cards = {t for group in self.groups() for t in group.terms}
         self.modules = modules(g, self.onto)
 
@@ -183,8 +184,20 @@ class Page:
         return f'<span class="chip ext">{escape(str(iri))}</span>'
 
     def having(self, p, t):
-        """The properties whose domain or range, p, is this class or a union with it."""
-        return sorted({s for s, o in self.g.subject_objects(p) if o == t or t in union(self.g, o)}, key=str)
+        """The properties whose domain or range, p, is this class or a union with it: for
+        a property that states several, which OWL reads as their intersection, each of them."""
+        if p not in self.reached:
+            self.reached[p] = {}
+            for s in set(self.g.subjects(p)):
+                for c in common(self.g, stated(self.g, s, p)):
+                    self.reached[p].setdefault(c, []).append(s)
+        return in_order(self.g, self.reached[p].get(t, []))
+
+    def side(self, values, missing, otherwise=None):
+        """A property's domains or ranges on its card: every one it states, joined by "and"."""
+        if len(values) < 2:
+            return self.ref(values[0] if values else otherwise, missing)
+        return " and ".join(f"({self.ref(v)})" if union(self.g, v) else self.ref(v) for v in values)
 
     def short(self, node):
         """A term inside an axiom: a link to its card, or its CURIE, or a literal's value."""
@@ -302,7 +315,7 @@ class Page:
         order = {p: i for i, p in enumerate(STATEMENTS)}
         rows = []
         for p in sorted(set(g.predicates(t)) - skip, key=lambda p: (order.get(p, len(order)), curie(p))):
-            values = [v for v in (value(o) for o in sorted(g.objects(t, p), key=str) if (p, o) not in shown) if v]
+            values = [v for v in (value(o) for o in in_order(g, g.objects(t, p)) if (p, o) not in shown) if v]
             if values:
                 head = escape(STATEMENTS[p]) if p in STATEMENTS else f"<code>{escape(curie(p))}</code>"
                 rows.append(f'<dt title="{escape(curie(p))}">{head}</dt><dd>' + "".join(f'<span class="v">{v}</span>' for v in values) + "</dd>")
@@ -323,7 +336,7 @@ class Page:
         g, ref = self.g, self.ref
         rows = []
         supers = [o for o in g.objects(t, RDFS.subClassOf) if not isinstance(o, BNode)]
-        subs = sorted(g.subjects(RDFS.subClassOf, t), key=str)
+        subs = in_order(g, g.subjects(RDFS.subClassOf, t))
         dom, rng = self.having(RDFS.domain, t), self.having(RDFS.range, t)
         restricted, same = self.axioms(t, RDFS.subClassOf), self.axioms(t, OWL.equivalentClass)
         if supers or restricted:
@@ -344,16 +357,12 @@ class Page:
         rows = []
         datatype = (t, RDF.type, OWL.DatatypeProperty) in g
         supers = list(g.objects(t, RDFS.subPropertyOf))
-        dom, rng = g.value(t, RDFS.domain), g.value(t, RDFS.range)
-        for s in supers:
-            dom = dom if dom is not None else g.value(s, RDFS.domain)
-            rng = rng if rng is not None else g.value(s, RDFS.range)
-        rng = rng if rng is not None else ("literal" if datatype else None)
-        rows.append(("Connects", f'{ref(dom, "domain")}<span class="edge"><span class="arrow">–</span><code>{escape(n)}</code>'
-                                 f'<span class="arrow">→</span></span>{ref(rng)}'))
+        dom, rng = declared(g, t, RDFS.domain), declared(g, t, RDFS.range)
+        rows.append(("Connects", f'{self.side(dom, "domain")}<span class="edge"><span class="arrow">–</span><code>{escape(n)}</code>'
+                                 f'<span class="arrow">→</span></span>{self.side(rng, "range", "literal" if datatype else None)}'))
         if supers:
             rows.append(("Sub-property of", " ".join(ref(o) for o in supers)))
-        subs = sorted(g.subjects(RDFS.subPropertyOf, t), key=str)
+        subs = in_order(g, g.subjects(RDFS.subPropertyOf, t))
         if subs:
             rows.append(("Sub-properties", " ".join(ref(o) for o in subs)))
         return "datatype property" if datatype else "object property", rows

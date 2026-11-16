@@ -16,6 +16,7 @@ A release is a git tag v<x.y.z>. Its files are built from the ontology as
 committed at that tag, and a tag whose version differs is refused. A tag
 without one of the files is left out, with a warning.
 """
+import json
 import re
 import shutil
 import subprocess
@@ -24,13 +25,45 @@ import tempfile
 import warnings
 from pathlib import Path
 
-from rdflib import Graph
+from rdflib import BNode, Graph
 from rdflib.namespace import DCTERMS, OWL, RDF
 
 from .diagram import ontology
 from .page import version_of, warn, write
 
-FORMATS = {".ttl": "turtle", ".rdf": "pretty-xml", ".jsonld": "json-ld", ".nt": "nt"}
+# RDF/XML in rdflib's plain form: its "pretty-xml" nests blank nodes, and on some builds
+# writes a list twice, so that the file holds another graph.
+FORMATS = {".ttl": "turtle", ".rdf": "xml", ".jsonld": "json-ld", ".nt": "nt"}
+
+
+def steady(source):
+    """A file's graph for its serialisations, which are then the same at every build: in
+    a store that keeps the file's order, with its blank nodes named b0, b1 ... in the
+    order they first appear. rdflib's own store keeps its triples in a set, whose order
+    changes from one run to the next, and names blank nodes at random."""
+    g = Graph(store="SimpleMemory")
+    g.parse(source, format="turtle")
+    out, names = Graph(store="SimpleMemory"), {}
+    for prefix, uri in g.namespaces():
+        out.bind(prefix, uri, override=True, replace=True)
+    for t in g:
+        out.add(tuple(names.setdefault(x, BNode(f"b{len(names)}")) if isinstance(x, BNode) else x for x in t))
+    return out
+
+
+def jsonld(g):
+    """The graph in JSON-LD, its nodes and their values in an order that is the same at
+    every build: rdflib writes them in the order of a set. A node's values are a set
+    too, but for an @list's, which keep their order. The JSON is written as rdflib does."""
+    def tidy(x, key=None):
+        if isinstance(x, dict):
+            return {k: tidy(v, k) for k, v in x.items()}
+        if isinstance(x, list):
+            items = [tidy(v) for v in x]
+            return items if key == "@list" else sorted(items, key=lambda v: json.dumps(v, sort_keys=True, ensure_ascii=False))
+        return x
+    doc = tidy(json.loads(g.serialize(format="json-ld", encoding="utf-8")))
+    return json.dumps(doc, indent=2, separators=(",", ": "), sort_keys=True, ensure_ascii=False).encode("utf-8")
 
 
 def version_or_stop(g, onto=None):
@@ -96,14 +129,16 @@ def distinct(files):
 def build_one(sources, folder, example=None, diagram="graph"):
     """Write the page, the diagram, and the four serialisations of each of the ontology's
     files. The page and the diagram are named after the first file."""
-    g, graphs, onto, sources = load(sources)
+    g, _, onto, sources = load(sources)
     version = version_or_stop(g, onto)                          # before anything is written
     folder.mkdir(parents=True, exist_ok=True)
-    for source, own in zip(sources, graphs):                   # each file as itself
-        stem = Path(source).stem
+    for source in sources:                                      # each file as itself
+        stem, own = Path(source).stem, steady(source)
         for ext, fmt in FORMATS.items():
             if ext == ".ttl":
                 shutil.copyfile(source, folder / f"{stem}.ttl")     # the source as written
+            elif ext == ".jsonld":
+                (folder / f"{stem}{ext}").write_bytes(jsonld(own))
             else:
                 with warnings.catch_warnings():                     # rdflib warns once per list in RDF/XML
                     warnings.simplefilter("ignore", UserWarning)

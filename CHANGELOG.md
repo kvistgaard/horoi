@@ -7,6 +7,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Fixed
+
+- The page, the diagram and the four serialisations are now the same at every build
+- A property's card now shows every domain and range the property states
+- If a property states several domains, a class now counts as its domain only if each of them declares it as such
+- If a property's domains have no class in common, the folded diagram now shows it in a separate box, headed by all its domains
+- A term from a namespace with no declared prefix is now named by its IRI
+
 ## [0.3.2] – 2026-11-16
 
 ### Fixed

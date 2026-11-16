@@ -35,7 +35,7 @@ from html import escape
 from rdflib import BNode, Literal, URIRef
 from rdflib.namespace import OWL, RDF, RDFS, SKOS, Namespace
 
-from .axioms import expression, is_datatype, quantifier, restrictions, union
+from .axioms import common, expression, is_datatype, quantifier, restrictions, stated, union
 
 VANN = Namespace("http://purl.org/vocab/vann/")
 
@@ -117,15 +117,16 @@ def name_of(g, iri, ns, prefix):
 
 def term(g, iri, ns):
     """A class as the layout names it: its local name if it is the ontology's own,
-    its CURIE if another vocabulary's, and None if there is none."""
+    its CURIE if another vocabulary's, by a prefix the graph has, and its IRI if the
+    graph has no prefix for it. None if there is none."""
     if iri is None:
         return None
     if str(iri).startswith(ns):
         return local(iri, ns)
-    try:
-        pre, _, name = g.namespace_manager.compute_qname(str(iri))
+    try:                                 # never a prefix of Horoi's own making, such as ns1
+        pre, _, name = g.namespace_manager.compute_qname(str(iri), generate=False)
         return f"{pre}:{name}"
-    except ValueError:
+    except (KeyError, ValueError):
         return str(iri)
 
 
@@ -138,7 +139,10 @@ def read(g, onto=None):
         for p in g.subjects(RDF.type, kind):
             if not ours(p):
                 continue
-            dom, rng = g.value(p, RDFS.domain), g.value(p, RDFS.range)
+            doms, rngs = stated(g, p, RDFS.domain), stated(g, p, RDFS.range)
+            if len(doms) > 1 or len(rngs) > 1:
+                raise Undrawable(f"no slot for {local(p, ns)}, which states several domains or ranges")
+            dom, rng = (doms or [None])[0], (rngs or [None])[0]
             if isinstance(dom, BNode) or isinstance(rng, BNode):
                 raise Undrawable(f"no slot for {local(p, ns)}, whose domain or range is a class expression")
             supers = sorted((x for x in g.objects(p, RDFS.subPropertyOf) if ours(x)), key=str)
@@ -504,12 +508,15 @@ def draw_class(g, cls, bare=True, onto=None):
         labels[key] = name_of(g, iri, ns, prefix) if str(iri).startswith(ns) else key
         return key
 
-    def target(prop, filler, data):
-        if filler is None:
+    def target(prop, values, data):
+        """Where an arrow to these ranges or this filler goes. Several ranges, which OWL
+        reads as their intersection, are a class expression."""
+        if not values:
             return "literal" if data else None
-        if data or is_datatype(g, filler):
+        if data or any(is_datatype(g, v) for v in values):
             return "literal"
-        if isinstance(filler, BNode) and not union(g, filler):
+        filler = values[0]
+        if len(values) > 1 or isinstance(filler, BNode) and not union(g, filler):
             return "expression"
         return box(filler)
 
@@ -517,20 +524,20 @@ def draw_class(g, cls, bare=True, onto=None):
         key, found = box(c), []
         for kind in (OWL.ObjectProperty, OWL.DatatypeProperty):
             for p in g.subjects(RDF.type, kind):
-                dom, data = g.value(p, RDFS.domain), kind == OWL.DatatypeProperty
-                if dom == c or c in union(g, dom):
+                data = kind == OWL.DatatypeProperty
+                if c in common(g, stated(g, p, RDFS.domain)):
                     found.append({"name": local(p, ns), "text": name_of(g, p, ns, prefix), "curie": short(p), "data": data,
-                                  "domain": key, "range": target(p, g.value(p, RDFS.range), data), "super": []})
+                                  "domain": key, "range": target(p, stated(g, p, RDFS.range), data), "super": []})
         for r in restrictions(g, c):
             p, (word, filler) = g.value(r, OWL.onProperty), quantifier(g, r)
             if isinstance(p, BNode) or word in ("value", "Self"):
                 continue                 # an inverse, a single value, or itself: the card has them
             data = (p, RDF.type, OWL.DatatypeProperty) in g
-            if filler is None:           # a bare cardinality reaches the property's range
-                filler = g.value(p, RDFS.range)
+            # a bare cardinality reaches the property's range
+            values = [filler] if filler is not None else stated(g, p, RDFS.range)
             found.append({"name": local(p, ns), "text": f"{name_of(g, p, ns, prefix)} ({word})",
-                          "curie": expression(g, r, short), "data": data or (filler is not None and is_datatype(g, filler)),
-                          "domain": key, "range": target(p, filler, data), "super": []})
+                          "curie": expression(g, r, short), "data": data or any(is_datatype(g, v) for v in values),
+                          "domain": key, "range": target(p, values, data), "super": []})
         found = list({(e["name"], e["text"], str(e["range"]), e["curie"]): e for e in found}.values())    # stated twice, drawn once
         return sorted(found, key=lambda e: (e["name"], e["text"], str(e["range"])))
 
