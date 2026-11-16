@@ -557,15 +557,15 @@ class FoldedStyle(unittest.TestCase):
 
     def test_a_range_is_written_only_where_one_is_declared(self):
         svg = folded.draw(graph(path=EXAMPLE))
-        self.assertIn('>revises<tspan class="ty"> : </tspan><tspan class="ty">Decision</tspan></text>', svg)
-        self.assertIn('>attributed to<tspan class="ty"> : </tspan><tspan class="ty">foaf:Agent</tspan></text>', svg)
+        self.assertIn('>revises<tspan class="ty"> → </tspan><tspan class="ty">Decision</tspan></text>', svg)
+        self.assertIn('>attributed to<tspan class="ty"> → </tspan><tspan class="ty">foaf:Agent</tspan></text>', svg)
         self.assertIn(">has premise</text>", svg)                   # no range declared
         self.assertIn(">has argument</text>", svg)                  # nor for this datatype property
         self.assertNotIn("literal", svg)
 
     def test_a_datatype_is_written_as_a_range(self):
         svg = folded.draw(graph(SMALL + "ex:name rdfs:range <http://www.w3.org/2001/XMLSchema#string> .\n"))
-        self.assertIn('>name<tspan class="ty"> : </tspan><tspan class="ty">xsd:string</tspan>', svg)
+        self.assertIn('>name<tspan class="ty"> → </tspan><tspan class="ty">xsd:string</tspan>', svg)
 
     def test_properties_with_no_domain_are_the_rows_of_any_resource(self):
         svg = folded.draw(graph(SMALL + 'ex:seenAt a owl:ObjectProperty ; rdfs:label "seen at" .\n'))

@@ -2,7 +2,7 @@
 
 A class is a box with its name and a row per property whose domain it is, its
 restrictions among them: the datatype properties under a thin line, then the
-object properties under another. A row ends with ": Range" only where the ontology
+object properties under another. A row ends with "→ Range" only where the ontology
 declares a range. The properties with no domain are the rows of an "any
 resource" box. The only arrows are those of the class hierarchy.
 
@@ -195,7 +195,7 @@ def draw(g, onto=None, page=True):
     full = sum(b["plain"] for b in boxes.values()) <= FULL
     for b in boxes.values():
         for r in b["out"]:
-            r["text"] = r["name"] + (f" : {r['type']}" if r["type"] else "")
+            r["text"] = r["name"] + (f" → {r['type']}" if r["type"] else "")
         for r in b["in"]:
             r["text"] = f"{r['name']} ← {boxes[r['from']]['name']}"
     sizes = {k: size(b, full, False) for k, b in boxes.items()}
@@ -308,7 +308,7 @@ def draw(g, onto=None, page=True):
                 tail = (f'<tspan class="ty"> ← </tspan><tspan class="ty go{"" if k != ANY else " no"}" '
                         f'data-c="{at[k]}">{escape(boxes[k]["name"])}</tspan>')
             elif r["type"]:
-                tail = '<tspan class="ty"> : </tspan>' + '<tspan class="ty"> or </tspan>'.join(
+                tail = '<tspan class="ty"> → </tspan>' + '<tspan class="ty"> or </tspan>'.join(
                     f'<tspan class="ty{f""" go" data-c="{at[c]}""" if click and c in at else ""}">{escape(text)}</tspan>'
                     for text, c in r["parts"])
             else:
