@@ -16,7 +16,8 @@ fainter arrow runs to each of the others.
 An ontology of more than FULL classes is drawn with the names alone. Its
 drawing for the page also holds a box per class, hidden, with the class's
 rows and, under a line of their own, the properties that reach it. The page shows
-that box when the class is clicked.
+that box when the class is clicked. In it, the names of the class and its
+properties lead to their cards.
 """
 import math
 from collections import defaultdict
@@ -54,7 +55,7 @@ STYLE = (".uc{font-size:17px;font-weight:600;fill:var(--hr-ink)}"
          ".f{fill:var(--hr-fill)}.e.tree{stroke-linecap:square}.e.also{stroke-width:1.1;opacity:.4}"
          ".n{cursor:pointer}.n rect{pointer-events:all}.n:focus{outline:none}"
          ".n:hover rect,.n:focus-visible rect{stroke-width:3.2}"
-         ".go{cursor:pointer}.go:hover,a:hover .uc{text-decoration:underline}"
+         ".go{cursor:pointer}.go:hover,a:hover .uc,.ur a:hover{text-decoration:underline}"
          ".tree{transition:opacity .24s}.focus .tree{opacity:.2}")
 
 
@@ -72,7 +73,7 @@ def first(g, s, p):
 def read(g, onto=None):
     """The boxes, by key: a class's IRI, a class expression's node, or ANY. Each has its
     name, its hover text, its rows and the rows that reach it. With them, each
-    class's superclasses, and the classes that have a card on the page."""
+    class's superclasses, and the classes and properties that have a card on the page."""
     ns, prefix = namespace(g, onto)
     ours = lambda x: str(x).startswith(ns)
     classes = sorted({c for c in g.subjects(RDF.type, OWL.Class) if isinstance(c, URIRef) and ours(c)}, key=str)
@@ -102,12 +103,13 @@ def read(g, onto=None):
 
     rows = defaultdict(list)
 
-    def add(owner, p, data, filler, text, tip):
+    def add(owner, p, data, filler, label, tip):
+        """A row: its label is in parts, each with the property it names, if any."""
         parts = range_of(filler, data)
         said = " or ".join(t for t, _ in parts)
         if len(said) > LONG:             # a long union is cut short; the hover text and the card have it whole
             parts = [(said[:LONG - 1].rstrip() + "…", None)]
-        rows[owner].append({"name": text, "data": data, "parts": parts, "type": " or ".join(t for t, _ in parts) or None,
+        rows[owner].append({"name": "".join(t for t, _ in label), "label": label, "data": data, "parts": parts, "type": " or ".join(t for t, _ in parts) or None,
                             "targets": [c for _, c in parts if c is not None], "tip": tip})
 
     for kind in (OWL.DatatypeProperty, OWL.ObjectProperty):
@@ -123,7 +125,7 @@ def read(g, onto=None):
                 continue
             under = [x for x in parents if ours(x)]
             for owner in owners:
-                add(owner, p, data, rng, name(p) + "".join(f" ⊑ {name(x)}" for x in under),
+                add(owner, p, data, rng, [(name(p), p)] + [s for x in under for s in ((" ⊑ ", None), (name(x), x))],
                     curie(p) + "".join(f" ⊑ {curie(x)}" for x in under))
     for c in classes:
         for r in restrictions(g, c):
@@ -134,7 +136,7 @@ def read(g, onto=None):
             if filler is None:           # a bare cardinality reaches the property's range
                 filler = first(g, p, RDFS.range)
             add(c, p, data or (filler is not None and is_datatype(g, filler)), filler,
-                f"{name(p)} ({word})", expression(g, r, curie))
+                [(name(p), p), (f" ({word})", None)], expression(g, r, curie))
 
     supers = {c: sorted((d for d in set(g.objects(c, RDFS.subClassOf))
                          if isinstance(d, URIRef) and d not in (c, OWL.Thing)), key=str) for c in classes}
@@ -152,10 +154,12 @@ def read(g, onto=None):
         for r in boxes[k]["out"]:
             for t in r["targets"]:
                 if t in boxes and t != k:
-                    boxes[t]["in"].append({"name": r["name"], "data": r["data"], "from": k, "tip": r["tip"]})
+                    boxes[t]["in"].append({"name": r["name"], "label": r["label"], "data": r["data"], "from": k, "tip": r["tip"]})
     for b in boxes.values():
         b["in"].sort(key=lambda r: (r["name"].lower(), boxes[r["from"]]["name"].lower()))
-    cards = {c: local(c, ns) for c in classes}
+    props = sorted({p for kind in (OWL.DatatypeProperty, OWL.ObjectProperty) for p in g.subjects(RDF.type, kind)
+                    if isinstance(p, URIRef) and ours(p)}, key=str)
+    cards = {t: local(t, ns) for t in classes + props}
     return boxes, supers, cards
 
 
@@ -299,8 +303,8 @@ def draw(g, onto=None, page=True):
         x1, y1 = clip(b, (a[0] + a[2] / 2, a[1] + a[3] / 2))
         edges.append(f'<path class="e sub also" d="M{x0:.0f},{y0:.0f} L{x1:.0f},{y1:.0f}" marker-end="url(#m-sub)"/>')
 
-    def rows_of(part, x, y, w, reached, plain):
-        """A thin line, then a row per property."""
+    def rows_of(part, x, y, w, reached, plain, linked):
+        """A thin line, then a row per property. Where linked, a property's name leads to its card."""
         out = [f'<path class="sep{"" if plain else " no"}" d="M{x:.0f},{y:.0f} H{x + w:.0f}"/>']
         for i, r in enumerate(part):
             if reached:
@@ -314,20 +318,24 @@ def draw(g, onto=None, page=True):
             else:
                 tail = ""
             out.append(f'<g class="t"><title>{escape(r["tip"])}</title><text class="ur {"data" if r["data"] else "obj"}" '
-                       f'x="{x + 14:.0f}" y="{y + PAD + ROW * i + 16:.0f}">{escape(r["name"])}{tail}</text></g>')
+                       f'x="{x + 14:.0f}" y="{y + PAD + ROW * i + 16:.0f}">{named(r["label"], linked)}{tail}</text></g>')
         return "".join(out), 2 * PAD + ROW * len(part)
+
+    def named(label, linked):
+        return "".join(f'<a href="#{escape(cards[t])}">{escape(s)}</a>' if linked and t in cards else escape(s)
+                       for s, t in label)
 
     def box(k, x, y, w, h, rows, reached, filled=False):
         b = boxes[k]
         shape, text = ("c", "uc") if b["plain"] else ("a", "an")
         name = (f'<g class="t"><title>{escape(b["tip"])}</title><text class="{text}" x="{x + w / 2:.0f}" y="{y + 26:.0f}" '
                 f'text-anchor="middle">{escape(b["name"])}</text></g>')
-        if filled and k in cards:        # in the box of a clicked class, the name leads to its card
+        if filled and k in cards:        # in the box of a clicked class, the names lead to their cards
             name = f'<a href="#{escape(cards[k])}">{name}</a>'
         out = (f'<rect class="{shape}{" f" if filled else ""}" x="{x:.0f}" y="{y:.0f}" width="{w:.0f}" height="{h:.0f}" rx="7"/>' + name)
         top = y + HEAD
         for part, back in groups(b, rows, reached):
-            drawn, used = rows_of(part, x, top, w, back, b["plain"])
+            drawn, used = rows_of(part, x, top, w, back, b["plain"], filled)
             out, top = out + drawn, top + used
         return out
 

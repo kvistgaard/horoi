@@ -598,6 +598,9 @@ class FoldedStyle(unittest.TestCase):
         self.assertIn("kept by", owner)                             # a property that reaches the class
         self.assertIn(' ← </tspan><tspan class="ty go" data-c="', owner)
         self.assertIn('<a href="#Owner">', details)                 # the name leads to the card
+        self.assertIn('><a href="#keptBy">kept by</a><tspan class="ty"> ← </tspan>', owner)   # and so does a property's
+        self.assertIn('><a href="#keptBy">kept by</a><tspan class="ty"> → </tspan>', details)
+        self.assertNotIn("href", tree)
         self.assertNotIn('class="details"', folded.draw(g, page=False))
         self.assertNotIn('class="details"', folded.draw(graph(many(folded.FULL))))
         self.assertIn('class="ur', folded.draw(graph(many(folded.FULL))))

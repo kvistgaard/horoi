@@ -333,9 +333,9 @@ class Page:
         if subs:
             rows.append(("Subclasses", " ".join(ref(o) for o in subs)))
         if dom:
-            rows.append(("Properties from it", " ".join(ref(o) for o in dom)))
+            rows.append(("Domain of", " ".join(ref(o) for o in dom)))
         if rng:
-            rows.append(("Properties to it", " ".join(ref(o) for o in rng)))
+            rows.append(("Range of", " ".join(ref(o) for o in rng)))
         return "class", rows
 
     def property_facts(self, t):
@@ -530,7 +530,7 @@ VIEW_TOOLS = ('<div class="tools">'
               '<ul class="hint" id="hint" hidden>'
               '<li>Click a class to see its properties, and those that point to it.</li>'
               '<li>Click a class named in a row to go to it.</li>'
-              '<li>Click the name at the top of the box to go to the class’s card.</li>'
+              '<li>Click the class’s name at the top of the box, or a property’s name, to go to its card.</li>'
               '<li>Click outside the box, or press Esc, to go back.</li>'
               '<li>Drag to move the diagram.</li>'
               '<li>Zoom with + and −, or with Ctrl and the mouse wheel.</li></ul>')
