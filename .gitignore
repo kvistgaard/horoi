@@ -8,3 +8,7 @@ __pycache__/
 
 # Local task list
 TODO.md
+
+# Working notes: the development plan and its measuring scripts
+DEV-PLAN.md
+measure/
